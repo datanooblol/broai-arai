@@ -1,0 +1,15 @@
+# execute to start a stack
+
+services:
+  db:
+    # image: postgres
+    image: ankane/pgvector
+    container_name: postgres_server
+    environment:
+      POSTGRES_DB: arai
+      POSTGRES_USER: broai
+      POSTGRES_PASSWORD: broai
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data  # 👈 mount to local folder
