@@ -53,7 +53,7 @@ class LongTermManagement:
         vector = self.embedding.run(sentences=[query])[0]
         statement = select(LongTerm)
         if sources:
-            statement.where(text("meta ->> 'source' = ANY(:sources)"))
+            statement = statement.where(text("meta ->> 'source' = ANY(:sources)"))
         statement = statement.order_by(self.embed_method.get(embed_method).l2_distance(vector)).limit(limit).params(sources=sources)
         results = session.exec(statement).all()
         session.close()

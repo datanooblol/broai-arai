@@ -1,0 +1,55 @@
+from typing import Any
+from package.databases.models.document import Document
+from sqlmodel import Session, select
+from package.utils.utils import now_utc
+from fastapi import HTTPException
+
+class DocumentManagement:
+    def __init__(self):
+        pass
+
+    def create_document(self, document: Document, session: Session):
+        # Check for unique document source and type
+        if session.exec(select(Document).where(
+            (Document.source == document.source) & (Document.type == document.type)
+        )).first():
+            session.close()
+            raise HTTPException(status_code=400, detail="Document with this source and type already exists.")
+
+        session.add(document)
+        session.commit()
+        session.refresh(document)
+        session.close()
+        return document
+    
+    def read_document(self, document_id: str, session: Session):
+        statement = select(Document).where(Document.id == document_id)
+        document = session.exec(statement).one_or_none()
+        session.close()
+        return document
+
+    def update_document(self, document: Document, session: Session):
+        document.updated_at = now_utc()
+        session.add(document)
+        session.commit()
+        session.refresh(document)
+        session.close()
+        return document
+
+    def delete_document(self, document: Document, session: Session):
+        session.delete(document)
+        session.commit()
+        session.close()
+        return document
+    
+    def read_document_longterms(self, document_id: str, session: Session):
+        document = session.get(Document, document_id)
+        longterms = document.longterms if document else []
+        session.close()
+        return longterms
+
+    def read_document_jargons(self, document_id: str, session: Session):
+        document = session.get(Document, document_id)
+        jargons = document.jargons if document else []
+        session.close()
+        return jargons
