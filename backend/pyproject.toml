@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "broai>=0.1.16",
+    "docling>=2.39.0",
     "fastapi>=0.115.13",
     "ipykernel>=6.29.5",
     "pgvector>=0.4.1",
@@ -14,5 +15,6 @@ dependencies = [
     "pydantic-settings>=2.10.0",
     "python-dotenv>=1.1.0",
     "sqlmodel>=0.0.24",
+    "torch>=2.7.1",
     "uvicorn>=0.34.3",
 ]
