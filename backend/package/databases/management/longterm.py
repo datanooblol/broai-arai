@@ -31,22 +31,23 @@ class LongTermManagement:
             return [result.combo for result in results]
         raise ValueError(f"Invalid embed_method: {embed_method}")
 
-    def embed_texts(self, embed_method: EmbedMethod, session:Session):
-        statement = select(LongTerm).where(self.embed_method.get(embed_method).is_(None))
+    def embed_texts(self, document_id, embed_method: EmbedMethod, session:Session):
+        statement = select(LongTerm).where(self.embed_method.get(embed_method).is_(None), LongTerm.document_id == document_id)
         results = session.exec(statement).all()
-        texts = self._get_texts(results, embed_method)
-        vectors = self.embedding.run(texts)
-        now = now_utc()
-        for result, vector in zip(results, vectors):
-            if embed_method=="raw":
-                result.raw_embedding = list(vector)
-            elif embed_method=="enrich":
-                result.enrich_embedding = list(vector)
-            elif embed_method=="combo":
-                result.combo_embedding = list(vector)
-            result.updated_at = now
-        session.add_all(results)
-        session.commit()
+        if len(results) > 0:
+            texts = self._get_texts(results, embed_method)
+            vectors = self.embedding.run(texts)
+            now = now_utc()
+            for result, vector in zip(results, vectors):
+                if embed_method=="raw":
+                    result.raw_embedding = list(vector)
+                elif embed_method=="enrich":
+                    result.enrich_embedding = list(vector)
+                elif embed_method=="combo":
+                    result.combo_embedding = list(vector)
+                result.updated_at = now
+            session.add_all(results)
+            session.commit()
         session.close()
 
     def read_similar_text(self, query:str, embed_method: EmbedMethod, session:Session, sources:list[str]|None=None, limit:int=5):
@@ -54,7 +55,7 @@ class LongTermManagement:
         statement = select(LongTerm)
         if sources:
             statement = statement.where(text("meta ->> 'source' = ANY(:sources)"))
-        statement = statement.order_by(self.embed_method.get(embed_method).l2_distance(vector)).limit(limit).params(sources=sources)
+        statement = statement.order_by(self.embed_method.get(embed_method).cosine_distance(vector)).limit(limit).params(sources=sources)
         results = session.exec(statement).all()
         session.close()
         return results
