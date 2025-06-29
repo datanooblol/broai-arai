@@ -1,0 +1,7 @@
+sentencepiece
+# broai
+sqlmodel
+psycopg2-binary
+pgvector
+pydantic
+pydantic-settings
