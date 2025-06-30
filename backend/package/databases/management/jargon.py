@@ -18,6 +18,11 @@ class JargonManagement:
         session.close()
         return jargon
 
+    def read_jargons(self, session: Session):
+        statement = select(Jargon)
+        results = session.exec(statement).all()
+        return results
+
     def update_jargon(self, jargon: Jargon, session: Session):
         jargon.updated_at = now_utc()
         session.add(jargon)

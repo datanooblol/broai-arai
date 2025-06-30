@@ -1,21 +1,30 @@
 from package.databases.management.longterm import LongTermManagement
 from package.databases.session import get_session, Depends
 from package.databases.models.longterm import LongTerm
-from package.llm.ollama import BedrockOllamaChat
+from package.agents.context_enricher import ContextEnricher
+from package.agents.jargon_extractor import JargonExtractor
+from package.databases.models.jargon import Jargon
+from package.databases.management.jargon import JargonManagement
 
 def lambda_handler(event, context):
-    model_name = event.get("model_name", "us.meta.llama3-2-11b-instruct-v1:0")
-    model = BedrockOllamaChat(model_name=model_name)
+    context_enricher = ContextEnricher()
+    jm = JargonManagement()
     ltm = LongTermManagement()
-    longterm_id = event.get("longterm_id", None)
+    jargon_extractor = JargonExtractor()
+    document_id = event.get("document_id")
+    longterm_id = event.get("longterm_id")    
     longterm:LongTerm = ltm.read_longterm(longterm_id=longterm_id, session=Depends(get_session))
-    text = f"CONTEXT:\n\n{longterm.raw}\n\nINSTRUCTION: \n\nSummarize the above context and provide a concise overview of the key points."
-    messages = [model.UserMessage(text=text)]
-    system_prompt = "You are a helpful assistant that summarizes long-term memory content. Your task is to provide a concise and accurate summary of the provided context."
-    response = model.run(system_prompt=system_prompt, messages=messages)
-    longterm.enrich = response
+    context = longterm.raw
+    meta = longterm.meta
+    summary = context_enricher.run(context=context)
+    longterm.enrich = summary.summary
     longterm.combo = f"{longterm.enrich}\n\n{longterm.raw}"
     ltm.update_longterms(longterms=[longterm], session=Depends(get_session))
+    _jargons = jargon_extractor.run(context=context)
+    if _jargons is not None:
+        jargons = [Jargon(jargon=jargon.jargon, evidence=jargon.evidence, explanation=jargon.explanation, document_id=document_id, meta=meta) for jargon in _jargons]
+        jm.create_jargons(jargons=jargons, session=Depends(get_session))
     return {
-        "processed": longterm_id
+        "processed": longterm_id,
+        "document_id": document_id
     }

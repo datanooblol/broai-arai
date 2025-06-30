@@ -10,8 +10,9 @@ if TYPE_CHECKING:
 class Jargon(SQLModel, table=True):
     """This class will be updated later for searching and indexing use cases"""
     id: str = Field(default_factory=lambda: str(uuid4()), primary_key=True)
-    term: str
-    definition: str
+    jargon: str
+    evidence: str
+    explanation: str
     document_id: str = Field(foreign_key="document.id")
 
     meta: dict = Field(sa_type=JSONB, default_factory=dict)
