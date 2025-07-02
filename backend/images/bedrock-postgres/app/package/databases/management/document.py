@@ -27,6 +27,12 @@ class DocumentManagement:
         session.close()
         return document
 
+    def read_documents(self, session: Session):
+        statement = select(Document)
+        documents = session.exec(statement).all()
+        session.close()
+        return documents
+
     def update_document(self, document: Document, session: Session):
         document.updated_at = now_utc()
         session.add(document)
@@ -47,8 +53,14 @@ class DocumentManagement:
         session.close()
         return longterms
 
-    def read_document_jargons(self, document_id: str, session: Session):
+    # def read_document_jargons(self, document_id: str, session: Session):
+    #     document = session.get(Document, document_id)
+    #     jargons = document.jargons if document else []
+    #     session.close()
+    #     return jargons
+
+    def read_document_terms(self, document_id: str, session: Session):
         document = session.get(Document, document_id)
-        jargons = document.jargons if document else []
+        terms = document.terms if document else []
         session.close()
-        return jargons
+        return terms

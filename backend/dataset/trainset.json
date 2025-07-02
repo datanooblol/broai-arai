@@ -1,0 +1,206 @@
+[
+    {
+        "question": "What does DiscoVLA stand for?",
+        "type": "acronym",
+        "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+        "metadata": {"source":"DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval"}
+    },
+    {
+        "question": "What is SlideCoder?",
+        "type": "explanation",
+        "answer": "SlideCoder is a layout-aware, retrieval-augmented framework for generating editable slides from reference images.",
+        "metadata": {"source":"SlideCoder: Layout-aware RAG-enhanced Hierarchical Slide Generation from Design"}
+    },
+    {
+        "question": "What does CGSeg stand for?",
+        "type": "acronym",
+        "answer": "Color Gradients-based Segmentation",
+        "metadata": {"source":"SlideCoder: Layout-aware RAG-enhanced Hierarchical Slide Generation from Design"}
+    },
+    {
+        "question": "What does SCM stand for?",
+        "type": "acronym",
+        "answer": "TriMetric Slide Complexity Metric",
+        "metadata": {"source":"SlideCoder: Layout-aware RAG-enhanced Hierarchical Slide Generation from Design"}
+    },
+    {
+        "question": "What is LlamaRec-LKG-RAG?",
+        "type": "explanation",
+        "answer": "LlamaRec-LKG-RAG is an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance.",
+        "metadata": {"source":"LlamaRec-LKG-RAG: A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking"}
+    },
+    {
+        "question": "What is EXP4FUSE?",
+        "type": "explanation",
+        "answer": "Exp4Fuse is a query expansion method using a LLM to enhance sparse retrievers.",
+        "metadata": {"source":"EXP4FUSE: A RANK FUSION FRAMEWORK FOR ENHANCED SPARSE RETRIEVAL USING LARGE LANGUAGE MODEL-BASED QUERY EXPANSION"}
+    },
+    {
+        "question": "What does RARE stand for?",
+        "type": "acronym",
+        "answer": "Retrieval-Aware Robustness Evaluation",
+        "metadata": {"source":"RARE: Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems"}
+    },
+    {
+        "question": "What is PAKTON?",
+        "type": "explanation",
+        "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+        "metadata": {"source":"PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements"}
+    },
+    {
+        "question": "What does SORCE stand for?",
+        "type": "acronym",
+        "answer": "Small Object Retrieval in Complex Environments",
+        "metadata": {"source":"SORCE: Small Object Retrieval in Complex Environments"}
+    },
+    {
+        "question": "What is SORCE?",
+        "type": "explanation",
+        "answer": "SORCE is a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+        "metadata": {"source":"SORCE: Small Object Retrieval in Complex Environments"}
+    },    
+    {
+        "question": "What does ReP stand for?",
+        "type": "acronym",
+        "answer": "Regional Prompts",
+        "metadata": {"source":"SORCE: Small Object Retrieval in Complex Environments"}
+    },
+    {
+        "question": "What does T2IR stand for?",
+        "type": "acronym",
+        "answer": "Text-to-Image Retrieval",
+        "metadata": {"source":"SORCE: Small Object Retrieval in Complex Environments"}
+    },    
+    {
+        "question": "What is ClueAnchor?",
+        "type": "explanation",
+        "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+        "metadata": {"source":"ClueAnchor: Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation"}
+    },
+    {
+        "question": "What is MASKSEARCH?",
+        "type": "explanation",
+        "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+        "metadata": {"source":"MASKSEARCH: A Universal Pre-Training Framework to Enhance Agentic Search Capability"}
+    },
+    {
+        "question": "What is REARANK?",
+        "type": "explanation",
+        "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+        "metadata": {"source":"REARANK: Reasoning Re-ranking Agent via Reinforcement Learning"}
+    },
+    {
+        "question": "What is GenKI?",
+        "type": "explanation",
+        "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+        "metadata": {"source":"GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models"}
+    },
+    {
+        "question": "What is LOGICOL?",
+        "type": "explanation",
+        "answer": "LOGICOL is a logically-informed contrastive learning objective for dense retrievers.",
+        "metadata": {"source":"LOGICOL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval"}
+    },
+    {
+        "question": "What is LOGICOL?",
+        "type": "explanation",
+        "answer": "LOGICOL is a logically-informed contrastive learning framework for retrieval with queries containing logical connectives.",
+        "metadata": {"source":"LOGICOL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval"}
+    },
+    {
+        "question": "What does POQD stand for?",
+        "type": "acronym",
+        "answer": "Performance-Oriented Query Decomposer",
+        "metadata": {"source":"POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval"}
+    },
+    {
+        "question": "What is POQD?",
+        "type": "explanation",
+        "answer": "POQD is a novel query decomposition framework for MVR",
+        "metadata": {"source":"POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval"}
+    },
+    {
+        "question": "What is POQD?",
+        "type": "explanation",
+        "answer": "POQD is a novel performance-driven query decomposition framework",
+        "metadata": {"source":"POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval"}
+    },    
+    {
+        "question": "What is POQD?",
+        "type": "explanation",
+        "answer": "POQD is a novel query decomposition framework that can perform query decomposition for optimizing multi-vector retrieval performance",
+        "metadata": {"source":"POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval"}
+    },      
+    {
+        "question": "What does MVR stand for?",
+        "type": "acronym",
+        "answer": "Multi-Vector Retrieval",
+        "metadata": {"source":"POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval"}
+    },
+    {
+        "question": "What is AcuRank?",
+        "type": "explanation",
+        "answer": "AcuRank is an adaptive reranking framework that dynamically adjusts both the amount and target of computation based on uncertainty estimates over document relevance.",
+        "metadata": {"source":"AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking"}
+    },
+    {
+        "question": "What is AcuRank?",
+        "type": "explanation",
+        "answer": "AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation",
+        "metadata": {"source":"AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking"}
+    },    
+    {
+        "question": "What does AcuRank stand for?",
+        "type": "acronym",
+        "answer": "Uncertainty-aware Adaptive Computation",
+        "metadata": {"source":"AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking"}
+    },
+    {
+        "question": "What is GainRAG?",
+        "type": "explanation",
+        "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, “gain”, which measure how well an input passage contributes to correct outputs",
+        "metadata": {"source":"GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis"}
+    },
+    {
+        "question": "What is mmRAG?",
+        "type": "explanation",
+        "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, “gain”, which measure how well an input passage contributes to correct outputsmmRAG, a multi-modal and modular benchmark designed to evaluate the main components of RAG beyond generation, including query routing and retrieval.",
+        "metadata": {"source":"GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal SynthesismmRAG: A Modular Benchmark for Retrieval-Augmented Generation over Text, Tables, and Knowledge Graphs"}
+    },
+    {
+        "question": "What is TracLLM?",
+        "type": "explanation",
+        "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",
+        "metadata": {"source":"TracLLM: A Generic Framework for Attributing Long Context LLMs"}
+    },
+    {
+        "question": "What is HippoRAG?",
+        "type": "explanation",
+        "answer": "HippoRAG is a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences",
+        "metadata": {"source":"HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models"}
+    },
+    {
+        "question": "What is HippoRAG?",
+        "type": "explanation",
+        "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+        "metadata": {"source":"HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models"}
+    },
+    {
+        "question": "What is STORM?",
+        "type": "explanation",
+        "answer": "STORM is a writing system for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+        "metadata": {"source":"Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models"}
+    },
+    {
+        "question": "What does STORM stand for?",
+        "type": "acronym",
+        "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+        "metadata": {"source":"Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models"}
+    },
+    {
+        "question": "What is FreshWiki?",
+        "type": "explanation",
+        "answer": "FreshWiki is a dataset of recent high-quality Wikipedia articles",
+        "metadata": {"source":"Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models"}
+    }
+]

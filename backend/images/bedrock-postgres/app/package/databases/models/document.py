@@ -14,8 +14,9 @@ class DocumentStatus(str, Enum):
 
 if TYPE_CHECKING:
     from .project import Project  # Avoid circular import issues
-    from .jargon import Jargon  # Avoid circular import issues
+    # from ._jargon import Jargon  # Avoid circular import issues
     from .longterm import LongTerm  # Avoid circular import issues
+    from .term import Term
 
 class Document(SQLModel, table=True):
     id: str = Field(default_factory=lambda: str(uuid4()), primary_key=True)
@@ -29,8 +30,11 @@ class Document(SQLModel, table=True):
         back_populates="documents",
         link_model=ProjectDocumentLink,
     )
-    jargons: List["Jargon"] = Relationship(
-        back_populates="document",
+    # jargons: List["Jargon"] = Relationship(
+    #     back_populates="document",
+    # )
+    terms: List["Term"] = Relationship(
+        back_populates="document"
     )
     longterms: List["LongTerm"] = Relationship(
         back_populates="document",
