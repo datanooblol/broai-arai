@@ -162,12 +162,6 @@
         "metadata": {"source":"GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis"}
     },
     {
-        "question": "What is mmRAG?",
-        "type": "explanation",
-        "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, “gain”, which measure how well an input passage contributes to correct outputsmmRAG, a multi-modal and modular benchmark designed to evaluate the main components of RAG beyond generation, including query routing and retrieval.",
-        "metadata": {"source":"GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal SynthesismmRAG: A Modular Benchmark for Retrieval-Augmented Generation over Text, Tables, and Knowledge Graphs"}
-    },
-    {
         "question": "What is TracLLM?",
         "type": "explanation",
         "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",

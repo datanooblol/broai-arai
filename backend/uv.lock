@@ -208,8 +208,10 @@ dependencies = [
     { name = "pydantic" },
     { name = "pydantic-settings" },
     { name = "python-dotenv" },
+    { name = "rouge-score" },
     { name = "sqlmodel" },
     { name = "torch" },
+    { name = "transformers" },
     { name = "uvicorn" },
 ]
 
@@ -224,8 +226,10 @@ requires-dist = [
     { name = "pydantic", specifier = ">=2.11.7" },
     { name = "pydantic-settings", specifier = ">=2.10.0" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
+    { name = "rouge-score", specifier = ">=0.1.2" },
     { name = "sqlmodel", specifier = ">=0.0.24" },
     { name = "torch", specifier = ">=2.7.1" },
+    { name = "transformers", specifier = ">=4.52.4" },
     { name = "uvicorn", specifier = ">=0.34.3" },
 ]
 

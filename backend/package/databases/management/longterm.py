@@ -46,9 +46,38 @@ class LongTermManagement:
         session.close()
         return results    
     
+    def read_similar_text_with_like_source(self, vector, embed_method: EmbedMethod, session: Session, sources: list[str] | None = None, limit: int = 5):
+        statement = select(LongTerm)
+
+        if sources:
+            # Build ILIKE conditions for partial match on meta->>'source'
+            conditions = " OR ".join([
+                f"meta ->> 'source' ILIKE :source_{i}" for i in range(len(sources))
+            ])
+            statement = statement.where(text(conditions))
+            params = {f"source_{i}": f"%{s}%" for i, s in enumerate(sources)}
+        else:
+            params = {}
+
+        statement = (
+            statement.order_by(self.embed_method.get(embed_method).cosine_distance(vector))
+            .limit(limit)
+            .params(**params)
+        )
+
+        results = session.exec(statement).all()
+        session.close()
+        return results
+
     def read_longterm(self, longterm_id:str, session:Session):
         statement = select(LongTerm).where(LongTerm.id == longterm_id)
         results = session.exec(statement).first()
+        session.close()
+        return results
+
+    def read_longterms(self, session:Session):
+        statement = select(LongTerm)
+        results = session.exec(statement).all()
         session.close()
         return results
 

@@ -1,7 +1,7 @@
 from package.databases.models.document import Document
 from sqlmodel import Session, select
 from package.databases.utils import now_utc, BadRequestError
-# from fastapi import HTTPException
+from typing import List
 
 class DocumentManagement:
     def __init__(self):
@@ -27,6 +27,12 @@ class DocumentManagement:
         session.close()
         return document
 
+    def read_document_by_source(self, source:str, session: Session):
+        statement = select(Document).where(Document.source.contains(source))
+        document = session.exec(statement).one_or_none()
+        session.close()
+        return document
+
     def read_documents(self, session: Session):
         statement = select(Document)
         documents = session.exec(statement).all()
@@ -40,6 +46,14 @@ class DocumentManagement:
         session.refresh(document)
         session.close()
         return document
+
+    def update_documents(self, documents: List[Document], session: Session):
+        now = now_utc()
+        for document in documents:
+            document.updated_at = now
+        session.add_all(documents)
+        session.commit()
+        session.close()
 
     def delete_document(self, document: Document, session: Session):
         session.delete(document)
