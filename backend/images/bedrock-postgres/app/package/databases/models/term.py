@@ -17,6 +17,7 @@ class Term(SQLModel, table=True):
     evidence: str
     explanation: str
     document_id: str = Field(foreign_key="document.id")
+    longterm_id: str = Field(foreign_key="longterm.id")
 
     meta: dict = Field(sa_type=JSONB, default_factory=dict)
     created_at: datetime = Field(default_factory=now_utc)
