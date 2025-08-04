@@ -1,0 +1,81 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "c8f61072-80d2-4a5a-adba-4a93b61d2aa5",
+    "experiment_set": "a8e49d52-3ac1-423a-9937-d2d375ceb3d6",
+    "experiment_storage": "./experiments/evaluations/c8f61072-80d2-4a5a-adba-4a93b61d2aa5.json",
+    "document_id": "4cc494d9-fe5e-41b9-9b27-850b85a142bd",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\t- Evidence found: 3.2. DiscoVLA\n\t- Evidence found: DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval\n\t- Evidence found: | DiscoVLA         |\n\t- Evidence found: we propose DiscoVLA\n\t- Evidence found: DiscoVLA\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": [
+            {
+                "evidence": "3.2. DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific methodology or approach"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            },
+            {
+                "evidence": "| DiscoVLA         |",
+                "explanation": "DiscoVLA is a model or system being compared to others"
+            },
+            {
+                "evidence": "we propose DiscoVLA",
+                "explanation": "DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer"
+            },
+            {
+                "evidence": "DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific entity or model, but its meaning is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "fmeasure": 0.8235294117647058
+        },
+        "rouge2": {
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "fmeasure": 0.8
+        },
+        "rougeL": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "fmeasure": 0.8235294117647058
+        },
+        "rougeLsum": {
+            "precision": 0.7,
+            "recall": 1.0,
+            "fmeasure": 0.8235294117647058
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.8235294117647058,
+            "precision": 0.7,
+            "recall": 1.0
+        }
+    },
+    "predict": "DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

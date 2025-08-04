@@ -1,0 +1,81 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "a5d9dd7f-9e3c-4c75-95fe-0356fa87cff7",
+    "experiment_set": "05520b58-26e9-4197-b070-da81011250f4",
+    "experiment_storage": "./experiments/evaluations/a5d9dd7f-9e3c-4c75-95fe-0356fa87cff7.json",
+    "document_id": "95517b4d-6753-415d-93b2-e31e21c26df2",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\t- Explanation: HippoRAG is a system or model being discussed in the context of retrieval tasks\n\t- Explanation: HippoRAG is a pipeline for indexing passages\n\t- Explanation: HippoRAG is an acronym, possibly related to retrieval augmented generation\n\t- Explanation: HippoRAG refers to a specific pipeline example\n\t- Explanation: HippoRAG is a system or method being compared to others in terms of cost and efficiency\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": [
+            {
+                "evidence": "In Table 10, we show three more examples from three different domains that illustrate HippoRAG's potential for solving retrieval tasks",
+                "explanation": "HippoRAG is a system or model being discussed in the context of retrieval tasks"
+            },
+            {
+                "evidence": "Figure 4: HippoRAG Pipeline Example (Indexing)",
+                "explanation": "HippoRAG is a pipeline for indexing passages"
+            },
+            {
+                "evidence": "IRCoT + HippoRAG w/ ",
+                "explanation": "HippoRAG is an acronym, possibly related to retrieval augmented generation"
+            },
+            {
+                "evidence": "A HippoRAG Pipeline Example",
+                "explanation": "HippoRAG refers to a specific pipeline example"
+            },
+            {
+                "evidence": "One of HippoRAG's main advantages against iterative retrieval methods",
+                "explanation": "HippoRAG is a system or method being compared to others in terms of cost and efficiency"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.11458333333333333,
+            "recall": 0.5238095238095238,
+            "fmeasure": 0.18803418803418803
+        },
+        "rouge2": {
+            "precision": 0.031578947368421054,
+            "recall": 0.15,
+            "fmeasure": 0.052173913043478265
+        },
+        "rougeL": {
+            "precision": 0.09375,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.15384615384615383
+        },
+        "rougeLsum": {
+            "precision": 0.09375,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.15384615384615383
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.15384615384615385,
+            "precision": 0.09302325581395349,
+            "recall": 0.4444444444444444
+        }
+    },
+    "predict": "Based on the provided TERMS information, HippoRAG is a system or model being discussed in the context of retrieval tasks. It is also described as a pipeline for indexing passages and a specific pipeline example. Additionally, it is mentioned as a system or method being compared to others in terms of cost and efficiency.\n\nHowever, the most comprehensive explanation provided is that HippoRAG is a pipeline for indexing passages. This suggests that HippoRAG is a system designed to process and organize passages for retrieval tasks, likely in the context of natural language processing or information retrieval.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

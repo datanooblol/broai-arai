@@ -1,0 +1,53 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "37df22d9-07a1-4220-ada8-47dbdd5d4675",
+    "experiment_set": "caf62467-3788-453f-872a-5c3313166b7c",
+    "experiment_storage": "./experiments/evaluations2/37df22d9-07a1-4220-ada8-47dbdd5d4675.json",
+    "document_id": "fc0a57fd-6c7e-464d-b819-5e2c31a84ef4",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04938271604938271,
+            "recall": 0.38095238095238093,
+            "fmeasure": 0.08743169398907102
+        },
+        "rouge2": {
+            "precision": 0.006211180124223602,
+            "recall": 0.05,
+            "fmeasure": 0.011049723756906077
+        },
+        "rougeL": {
+            "precision": 0.043209876543209874,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.07650273224043715
+        },
+        "rougeLsum": {
+            "precision": 0.043209876543209874,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.07650273224043715
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.047619047619047616,
+            "precision": 0.026490066225165563,
+            "recall": 0.23529411764705882
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about \"MASKSEARCH.\" However, based on general knowledge, \"MASKSEARCH\" could be related to various fields such as computer science, biology, or data analysis, potentially involving the use of masks for searching or filtering data.\n\nIf \"MASKSEARCH\" is related to:\n1. **Bioinformatics or Computational Biology**: It might refer to a tool or algorithm used for searching or analyzing biological sequences (like DNA, RNA, or proteins) using masked sequences. Masking is often used to exclude certain regions (e.g., repetitive sequences) from analysis.\n\n2. **Data Analysis or Computer Science**: It could be a term used in the context of searching or filtering data using masks. In computing, a mask is often used to select or filter data.\n\n3. **Other contexts**: Without more specific information, it's challenging to provide a precise definition.\n\nTo give a more accurate answer, additional context or details about the field or subject related to \"MASKSEARCH\" would be helpful.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

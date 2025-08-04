@@ -1,0 +1,81 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "e7171e95-4156-4283-89ac-bbbab7926e01",
+    "experiment_set": "a8e49d52-3ac1-423a-9937-d2d375ceb3d6",
+    "experiment_storage": "./experiments/evaluations/e7171e95-4156-4283-89ac-bbbab7926e01.json",
+    "document_id": "52034070-d130-4886-bb30-3c3125c961cb",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\t- Evidence found: Self-RAG\n\t- Evidence found: Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM\n\t- Evidence found: The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs)\n\t- Evidence found: Standard RAG\n\t- Evidence found: Self-RAG\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": [
+            {
+                "evidence": "Self-RAG",
+                "explanation": "RAG likely stands for Retrieval Augmented Generation"
+            },
+            {
+                "evidence": "Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM",
+                "explanation": "RAG stands for retrieval augmented generation"
+            },
+            {
+                "evidence": "The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs)",
+                "explanation": "RAG stands for Retrieval-Augmented Generation, a framework that introduces a retrieval module to improve large language models"
+            },
+            {
+                "evidence": "Standard RAG",
+                "explanation": "RAG is mentioned in the context, likely referring to a specific model or system"
+            },
+            {
+                "evidence": "Self-RAG",
+                "explanation": "Self-RAG appears to be a variant of the RAG model or system"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.07109004739336493,
+            "recall": 0.4838709677419355,
+            "fmeasure": 0.12396694214876033
+        },
+        "rouge2": {
+            "precision": 0.004761904761904762,
+            "recall": 0.03333333333333333,
+            "fmeasure": 0.008333333333333333
+        },
+        "rougeL": {
+            "precision": 0.04265402843601896,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.0743801652892562
+        },
+        "rougeLsum": {
+            "precision": 0.04265402843601896,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.0743801652892562
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06635071090047394,
+            "precision": 0.03763440860215054,
+            "recall": 0.28
+        }
+    },
+    "predict": "## Step 1: Understand the given TERM information about RAG\nThe provided TERMS information defines RAG as Retrieval-Augmented Generation, a framework that introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs). It also mentions variations like Self-RAG and Standard RAG.\n\n## Step 2: Analyze the QUESTION about GainRAG\nThe question asks for the definition or explanation of GainRAG.\n\n## Step 3: Compare GainRAG with the given information about RAG\nSince there's no direct mention of \"GainRAG\" in the provided TERMS information, we need to look for possible connections or similarities between GainRAG and RAG.\n\n## Step 4: Determine the relevance of RAG to GainRAG\nGiven that there's no explicit information about GainRAG in the TERMS, we should consider if GainRAG could be a variation or related concept to RAG, or if it might be a typo or a different concept altogether.\n\n## Step 5: Provide an answer based on available information\nSince there's no information directly related to \"GainRAG\" in the provided TERMS or any other given context, and assuming there's no additional context or information available, we cannot directly define GainRAG based on the given data.\n\nThe final answer is: There is not enough information to determine what GainRAG is.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

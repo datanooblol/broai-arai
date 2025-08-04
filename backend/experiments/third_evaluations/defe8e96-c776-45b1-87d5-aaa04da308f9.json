@@ -1,0 +1,101 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "defe8e96-c776-45b1-87d5-aaa04da308f9",
+    "experiment_set": "3c9335d3-1348-47ab-b6b9-383657d9cbe4",
+    "experiment_storage": "./experiments/evaluations/defe8e96-c776-45b1-87d5-aaa04da308f9.json",
+    "document_id": "b3bc7aa5-d5b9-4d20-8e35-9a208a8e8b0e",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\t- Evidence found: PAKTON with Possible Explanation: PAKTON appears to be a specific model or system\n\t- Evidence found: PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements with Possible Explanation: PAKTON is the name of a framework\n\t- Evidence found: Figure 2: An overview of the proposed PAKTON framework and its internal components. with Possible Explanation: PAKTON is the name of a proposed framework\n\t- Evidence found: we introduce PAKTON: a fully open-source, endto-end, multi-agent framework with Possible Explanation: PAKTON is a fully open-source, end-to-end, multi-agent framework for contract analysis\n\t- Evidence found: These design choices are integral to the overall effectiveness of PAKTON. with Possible Explanation: PAKTON is the name of the system that the Interrogator is a part of.\n\t- Evidence found: 3 PAKTON Framework with Possible Explanation: PAKTON is the name of a framework for analyzing user-provided contracts\n\t- Evidence found: 3 PAKTON Framework with Possible Explanation: PAKTON Framework is a system for analyzing contracts and generating query responses\n\t- Evidence found: Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents with Possible Explanation: PAKTON is a multi-agent framework for contract analysis\n\t- Evidence found: Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents with Possible Explanation: PAKTON 2 is an iteration of the PAKTON framework\n\t- Evidence found: | 2.5 72B    | PAKTON          | with Possible Explanation: PAKTON appears to be a model or system name\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": [
+            {
+                "evidence": "PAKTON",
+                "explanation": "PAKTON appears to be a specific model or system"
+            },
+            {
+                "evidence": "PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+                "explanation": "PAKTON is the name of a framework"
+            },
+            {
+                "evidence": "Figure 2: An overview of the proposed PAKTON framework and its internal components.",
+                "explanation": "PAKTON is the name of a proposed framework"
+            },
+            {
+                "evidence": "we introduce PAKTON: a fully open-source, endto-end, multi-agent framework",
+                "explanation": "PAKTON is a fully open-source, end-to-end, multi-agent framework for contract analysis"
+            },
+            {
+                "evidence": "These design choices are integral to the overall effectiveness of PAKTON.",
+                "explanation": "PAKTON is the name of the system that the Interrogator is a part of."
+            },
+            {
+                "evidence": "3 PAKTON Framework",
+                "explanation": "PAKTON is the name of a framework for analyzing user-provided contracts"
+            },
+            {
+                "evidence": "3 PAKTON Framework",
+                "explanation": "PAKTON Framework is a system for analyzing contracts and generating query responses"
+            },
+            {
+                "evidence": "Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents",
+                "explanation": "PAKTON is a multi-agent framework for contract analysis"
+            },
+            {
+                "evidence": "Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents",
+                "explanation": "PAKTON 2 is an iteration of the PAKTON framework"
+            },
+            {
+                "evidence": "| 2.5 72B    | PAKTON          |",
+                "explanation": "PAKTON appears to be a model or system name"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.2535211267605634,
+            "recall": 0.72,
+            "fmeasure": 0.375
+        },
+        "rouge2": {
+            "precision": 0.11428571428571428,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.1702127659574468
+        },
+        "rougeL": {
+            "precision": 0.18309859154929578,
+            "recall": 0.52,
+            "fmeasure": 0.27083333333333337
+        },
+        "rougeLsum": {
+            "precision": 0.18309859154929578,
+            "recall": 0.52,
+            "fmeasure": 0.27083333333333337
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.2142857142857143,
+            "precision": 0.14516129032258066,
+            "recall": 0.4090909090909091
+        }
+    },
+    "predict": "Based on the provided terms, PAKTON appears to be a specific model, system, or framework. \n\nPAKTON is a fully open-source, end-to-end, multi-agent framework designed for analyzing contract documents, particularly long legal agreements, and generating query responses. It is used for question answering in these contracts. There are also iterations of this framework, such as PAKTON 2, which is a multi-agent framework aimed at analyzing contract documents.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

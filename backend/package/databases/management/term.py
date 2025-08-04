@@ -46,7 +46,7 @@ class TermManagement:
         term: str,
         session: Session,
         document_ids: List[str] | None = None,
-        limit: int = 5,
+        limit: int = 10,
         similarity: float = 0.3
     ):
         """Search for similar terms via fulltext or similarity, optionally filtering by document IDs."""

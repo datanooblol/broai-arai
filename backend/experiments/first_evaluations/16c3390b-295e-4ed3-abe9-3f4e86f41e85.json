@@ -1,0 +1,53 @@
+{
+    "question": "What is STORM?",
+    "answer": "STORM is a writing system for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "16c3390b-295e-4ed3-abe9-3f4e86f41e85",
+    "experiment_set": "dcc16836-a4d7-4c2f-9be7-6756d82a64ab",
+    "experiment_storage": "./experiments/evaluations/16c3390b-295e-4ed3-abe9-3f4e86f41e85.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is STORM?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.047058823529411764,
+            "recall": 0.4444444444444444,
+            "fmeasure": 0.0851063829787234
+        },
+        "rouge2": {
+            "precision": 0.011834319526627219,
+            "recall": 0.11764705882352941,
+            "fmeasure": 0.02150537634408602
+        },
+        "rougeL": {
+            "precision": 0.03529411764705882,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.06382978723404256
+        },
+        "rougeLsum": {
+            "precision": 0.03529411764705882,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.06382978723404256
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07142857142857142,
+            "precision": 0.0392156862745098,
+            "recall": 0.4
+        }
+    },
+    "predict": "To provide an accurate answer, I'll need to rely on my general knowledge as there's no additional context or terms provided. STORM can refer to multiple concepts depending on the field or context. Here are a few possible interpretations:\n\n1. **Weather Phenomenon:** A storm is a severe weather condition characterized by strong winds, heavy rainfall, thunder, and sometimes snow or hail. Storms can vary greatly in intensity and impact.\n\n2. **Computing and Technology:** STORM can also stand for various technological or computing-related acronyms or terms. For example, \"STORM\" is used in the context of big data processing as part of Apache Storm, an open-source distributed real-time computation system.\n\n3. **Other Contexts:** STORM can be used in other contexts such as literature, military operations, or as an acronym for specific projects or technologies.\n\nWithout more specific information or context, it's challenging to provide a precise definition of STORM. If you have a particular context in mind, please provide more details for a more accurate response.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

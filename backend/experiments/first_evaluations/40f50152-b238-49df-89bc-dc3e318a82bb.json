@@ -1,0 +1,81 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "40f50152-b238-49df-89bc-dc3e318a82bb",
+    "experiment_set": "ed3987c9-0b93-43b6-a055-ad114b92a8ba",
+    "experiment_storage": "./experiments/evaluations/40f50152-b238-49df-89bc-dc3e318a82bb.json",
+    "document_id": "52034070-d130-4886-bb30-3c3125c961cb",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\t- Evidence found: Self-RAG\n\t- Evidence found: Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM\n\t- Evidence found: The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs)\n\t- Evidence found: Standard RAG\n\t- Evidence found: Self-RAG\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": [
+            {
+                "evidence": "Self-RAG",
+                "explanation": "RAG likely stands for Retrieval Augmented Generation"
+            },
+            {
+                "evidence": "Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM",
+                "explanation": "RAG stands for retrieval augmented generation"
+            },
+            {
+                "evidence": "The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs)",
+                "explanation": "RAG stands for Retrieval-Augmented Generation, a framework that introduces a retrieval module to improve large language models"
+            },
+            {
+                "evidence": "Standard RAG",
+                "explanation": "RAG is mentioned in the context, likely referring to a specific model or system"
+            },
+            {
+                "evidence": "Self-RAG",
+                "explanation": "Self-RAG appears to be a variant of the RAG model or system"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06790123456790123,
+            "recall": 0.3548387096774194,
+            "fmeasure": 0.11398963730569948
+        },
+        "rouge2": {
+            "precision": 0.012422360248447204,
+            "recall": 0.06666666666666667,
+            "fmeasure": 0.02094240837696335
+        },
+        "rougeL": {
+            "precision": 0.043209876543209874,
+            "recall": 0.22580645161290322,
+            "fmeasure": 0.07253886010362694
+        },
+        "rougeLsum": {
+            "precision": 0.043209876543209874,
+            "recall": 0.22580645161290322,
+            "fmeasure": 0.07253886010362694
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.08187134502923976,
+            "precision": 0.04794520547945205,
+            "recall": 0.28
+        }
+    },
+    "predict": "Based on the provided TERMS information, I couldn't find any direct mention of \"GainRAG.\" However, the information provided discusses RAG (Retrieval-Augmented Generation) and its variants, such as Standard RAG and Self-RAG.\n\nGiven that \"GainRAG\" is not explicitly mentioned in the TERMS information, I would infer that GainRAG might be a specific implementation, optimization, or a related concept to RAG, but I couldn't find a clear definition.\n\nIf you have more context or information about GainRAG, I'd be happy to try and help you further. \n\nHowever, based on the available information, I can provide that RAG is a framework that introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs). \n\nIf GainRAG is related to RAG, it might be worth exploring if it is another optimization technique or framework related to or based on RAG. \n\nPlease provide more information or context about GainRAG for a more accurate and direct answer.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

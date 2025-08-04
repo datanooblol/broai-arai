@@ -1,0 +1,53 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "b0751bce-20e3-45b6-9c44-45c4ccfaba4a",
+    "experiment_set": "3f8d33bc-3d25-4ed4-8176-571773db5c23",
+    "experiment_storage": "./experiments/evaluations/b0751bce-20e3-45b6-9c44-45c4ccfaba4a.json",
+    "document_id": "e809f8ae-921d-4130-bafd-f074319b3ed6",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.024752475247524754,
+            "recall": 0.4166666666666667,
+            "fmeasure": 0.04672897196261683
+        },
+        "rouge2": {
+            "precision": 0.009950248756218905,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.018867924528301886
+        },
+        "rougeL": {
+            "precision": 0.019801980198019802,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.037383177570093455
+        },
+        "rougeLsum": {
+            "precision": 0.019801980198019802,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.037383177570093455
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.031578947368421054,
+            "precision": 0.016666666666666666,
+            "recall": 0.3
+        }
+    },
+    "predict": "REARANK is a term that could refer to various concepts depending on the context. Without specific information about the field or context in which REARANK is used, it's challenging to provide a precise definition. \n\nHowever, based on general knowledge, \"re-rank\" or \"rearrank\" often refers to the process of changing the order or ranking of items. This can be applied in several areas such as:\n\n1. **Search Engine Results**: In the context of search engines, re-ranking could refer to the process of adjusting the order of search results based on new information, user feedback, or changes in algorithms to better match the query intent.\n\n2. **Data Analysis and Machine Learning**: In data analysis or machine learning, re-ranking might involve reordering a list of items (such as predictions or recommendations) based on additional criteria or models to improve accuracy or relevance.\n\n3. **Military or Tactical Terms**: In a military or tactical context, re-rank could refer to repositioning troops or units.\n\nWithout more specific context or terms related to REARANK, it's difficult to provide a more detailed explanation. If you have more information or a specific field in which you're interested, I could offer a more targeted response.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

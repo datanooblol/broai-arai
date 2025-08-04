@@ -1,0 +1,101 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "9ce0f3a3-2527-4cdf-b64f-6e4c2cc1a9bf",
+    "experiment_set": "cb44a70c-80a9-44cf-a56d-707677c4b549",
+    "experiment_storage": "./experiments/evaluations2/9ce0f3a3-2527-4cdf-b64f-6e4c2cc1a9bf.json",
+    "document_id": "95517b4d-6753-415d-93b2-e31e21c26df2",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\t- Evidence found: In Table 10, we show three more examples from three different domains that illustrate HippoRAG's potential for solving retrieval tasks\n\t- Evidence found: Figure 4: HippoRAG Pipeline Example (Indexing)\n\t- Evidence found: IRCoT + HippoRAG w/ \n\t- Evidence found: A HippoRAG Pipeline Example\n\t- Evidence found: One of HippoRAG's main advantages against iterative retrieval methods\n\t- Evidence found: | HippoRAG             | Contriever ColBERTv2 |\n\t- Evidence found: Figure 5: HippoRAG Pipeline Example (Retrieval)\n\t- Evidence found: HippoRAG\n\t- Evidence found: Appendix A: HippoRAG Pipeline Example\n\t- Evidence found: Figure 3: HippoRAG Pipeline Example (Question and Annotations)\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": [
+            {
+                "evidence": "In Table 10, we show three more examples from three different domains that illustrate HippoRAG's potential for solving retrieval tasks",
+                "explanation": "HippoRAG is a system or model being discussed in the context of retrieval tasks"
+            },
+            {
+                "evidence": "Figure 4: HippoRAG Pipeline Example (Indexing)",
+                "explanation": "HippoRAG is a pipeline for indexing passages"
+            },
+            {
+                "evidence": "IRCoT + HippoRAG w/ ",
+                "explanation": "HippoRAG is an acronym, possibly related to retrieval augmented generation"
+            },
+            {
+                "evidence": "A HippoRAG Pipeline Example",
+                "explanation": "HippoRAG refers to a specific pipeline example"
+            },
+            {
+                "evidence": "One of HippoRAG's main advantages against iterative retrieval methods",
+                "explanation": "HippoRAG is a system or method being compared to others in terms of cost and efficiency"
+            },
+            {
+                "evidence": "| HippoRAG             | Contriever ColBERTv2 |",
+                "explanation": "HippoRAG is the name of a model or system being evaluated"
+            },
+            {
+                "evidence": "Figure 5: HippoRAG Pipeline Example (Retrieval)",
+                "explanation": "HippoRAG is an acronym for a pipeline example related to retrieval"
+            },
+            {
+                "evidence": "HippoRAG",
+                "explanation": "HippoRAG is an approach used for path-finding multi-hop questions"
+            },
+            {
+                "evidence": "Appendix A: HippoRAG Pipeline Example",
+                "explanation": "HippoRAG is the name of a pipeline example"
+            },
+            {
+                "evidence": "Figure 3: HippoRAG Pipeline Example (Question and Annotations)",
+                "explanation": "HippoRAG is an acronym, possibly related to a pipeline or system, but its full meaning is not provided in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.09,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.1487603305785124
+        },
+        "rouge2": {
+            "precision": 0.020202020202020204,
+            "recall": 0.1,
+            "fmeasure": 0.033613445378151266
+        },
+        "rougeL": {
+            "precision": 0.07,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.11570247933884298
+        },
+        "rougeLsum": {
+            "precision": 0.07,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.11570247933884298
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.10714285714285714,
+            "precision": 0.06382978723404255,
+            "recall": 0.3333333333333333
+        }
+    },
+    "predict": "HippoRAG appears to be a retrieval method or model, likely used for information retrieval tasks. The provided evidence suggests that it has a pipeline for indexing and retrieval, and it is being compared to other models like Contriever and ColBERTv2. HippoRAG seems to have advantages over iterative retrieval methods, and it is being explored for its potential in solving retrieval tasks across different domains. However, a more detailed and specific definition of HippoRAG is not provided in the given terms, but it can be inferred that it is a model or method designed to improve or efficiently handle information retrieval.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

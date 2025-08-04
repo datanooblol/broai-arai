@@ -1,0 +1,81 @@
+{
+    "question": "What is FreshWiki?",
+    "answer": "FreshWiki is a dataset of recent high-quality Wikipedia articles",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "5c1e6e49-1cf7-416e-804c-feb27a5c7af4",
+    "experiment_set": "24bc4a50-39a0-4826-8a49-d9097fb5a2c1",
+    "experiment_storage": "./experiments/evaluations2/5c1e6e49-1cf7-416e-804c-feb27a5c7af4.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: FreshWiki\n\t- Evidence found: we randomly select 100 samples from the FreshWiki dataset\n\t- Evidence found: For evaluation, we curate FreshWiki, a dataset of recent high-quality Wikipedia articles\n\t- Evidence found: We evaluate STORM using our FreshWiki dataset (\u00a72.1) which curates recent, high-quality Wikipedia articles\n\t- Evidence found: 2 FreshWiki\n\t- Evidence found: We curate the FreshWiki dataset\n\nQUESTION:\n\nWhat is FreshWiki?\n\n",
+    "potential_terms": [
+        {
+            "term": "FreshWiki",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "FreshWiki": [
+            {
+                "evidence": "we randomly select 100 samples from the FreshWiki dataset",
+                "explanation": "FreshWiki is the name of a dataset used in the experiment."
+            },
+            {
+                "evidence": "For evaluation, we curate FreshWiki, a dataset of recent high-quality Wikipedia articles",
+                "explanation": "FreshWiki is a dataset of recent high-quality Wikipedia articles"
+            },
+            {
+                "evidence": "We evaluate STORM using our FreshWiki dataset (\u00a72.1) which curates recent, high-quality Wikipedia articles",
+                "explanation": "FreshWiki is a dataset of recent, high-quality Wikipedia articles"
+            },
+            {
+                "evidence": "2 FreshWiki",
+                "explanation": "FreshWiki is a proper name, likely referring to a project or system"
+            },
+            {
+                "evidence": "We curate the FreshWiki dataset",
+                "explanation": "FreshWiki is a curated dataset"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.2777777777777778,
+            "recall": 1.0,
+            "fmeasure": 0.4347826086956522
+        },
+        "rouge2": {
+            "precision": 0.2571428571428571,
+            "recall": 1.0,
+            "fmeasure": 0.40909090909090906
+        },
+        "rougeL": {
+            "precision": 0.2777777777777778,
+            "recall": 1.0,
+            "fmeasure": 0.4347826086956522
+        },
+        "rougeLsum": {
+            "precision": 0.2777777777777778,
+            "recall": 1.0,
+            "fmeasure": 0.4347826086956522
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.4210526315789474,
+            "precision": 0.26666666666666666,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, FreshWiki is a dataset of recent, high-quality Wikipedia articles. It is used for evaluation purposes, as seen in the context of assessing the performance of a system called STORM.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

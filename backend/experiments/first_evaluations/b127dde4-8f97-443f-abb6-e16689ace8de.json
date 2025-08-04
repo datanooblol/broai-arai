@@ -1,0 +1,81 @@
+{
+    "question": "What is SlideCoder?",
+    "answer": "SlideCoder is a layout-aware, retrieval-augmented framework for generating editable slides from reference images.",
+    "type": "explanation",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "b127dde4-8f97-443f-abb6-e16689ace8de",
+    "experiment_set": "7b7d2b5d-df9c-40f9-9995-5de465f3dd20",
+    "experiment_storage": "./experiments/evaluations/b127dde4-8f97-443f-abb6-e16689ace8de.json",
+    "document_id": "cdbe2918-c993-42ff-9354-eb4ffc266de0",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SlideCoder\n\t- Explanation: SlideCoder appears to be a specific model or system being compared\n\t- Explanation: Slide2Code appears to be a specific system, tool, or project name\n\t- Explanation: Coder is a component that generates code based on descriptions\n\t- Explanation: Slide2Code is the name of a benchmark used for evaluating slide generation models\n\t- Explanation: SlideMaster is the name of a model used in the context\n\nQUESTION:\n\nWhat is SlideCoder?\n\n",
+    "potential_terms": [
+        {
+            "term": "SlideCoder",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SlideCoder": [
+            {
+                "evidence": "| SlideCoder  | Gemini2.0-flash |",
+                "explanation": "SlideCoder appears to be a specific model or system being compared"
+            },
+            {
+                "evidence": "| Slide2Code              | Slide2Code              | Slide2Code  |",
+                "explanation": "Slide2Code appears to be a specific system, tool, or project name"
+            },
+            {
+                "evidence": "Coder uses these to query the Operation Function Knowledge Base and generate code",
+                "explanation": "Coder is a component that generates code based on descriptions"
+            },
+            {
+                "evidence": "to form the final Slide2Code benchmark",
+                "explanation": "Slide2Code is the name of a benchmark used for evaluating slide generation models"
+            },
+            {
+                "evidence": "We fine-tune our model, SlideMaster",
+                "explanation": "SlideMaster is the name of a model used in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.08139534883720931,
+            "recall": 0.4666666666666667,
+            "fmeasure": 0.13861386138613863
+        },
+        "rouge2": {
+            "precision": 0.023529411764705882,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.0404040404040404
+        },
+        "rougeL": {
+            "precision": 0.08139534883720931,
+            "recall": 0.4666666666666667,
+            "fmeasure": 0.13861386138613863
+        },
+        "rougeLsum": {
+            "precision": 0.08139534883720931,
+            "recall": 0.4666666666666667,
+            "fmeasure": 0.13861386138613863
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.13186813186813187,
+            "precision": 0.0759493670886076,
+            "recall": 0.5
+        }
+    },
+    "predict": "SlideCoder appears to be a specific model or system being compared, potentially in the context of slide generation or code synthesis. It might be related to or a part of projects like Slide2Code, which is a benchmark for evaluating slide generation models, or it could be a model similar to SlideMaster, which is used for generating slides. Without more specific information, it's difficult to provide a detailed explanation, but it seems to be involved in tasks such as generating code from descriptions or slide content.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

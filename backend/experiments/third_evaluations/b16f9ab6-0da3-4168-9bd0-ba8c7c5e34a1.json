@@ -1,0 +1,101 @@
+{
+    "question": "What is EXP4FUSE?",
+    "answer": "Exp4Fuse is a query expansion method using a LLM to enhance sparse retrievers.",
+    "type": "explanation",
+    "source": "EXP4FUSE A RANK FUSION FRAMEWORK FOR ENHANCED SPARSE RETRIEVAL USING LARGE LANGUAGE MODEL-BASED QUERY EXPANSION",
+    "experiment_id": "b16f9ab6-0da3-4168-9bd0-ba8c7c5e34a1",
+    "experiment_set": "19838f52-d662-495e-9b5d-68a399940d19",
+    "experiment_storage": "./experiments/evaluations/b16f9ab6-0da3-4168-9bd0-ba8c7c5e34a1.json",
+    "document_id": "98c7c09d-3cd0-43b5-9167-c1341a3e3b16",
+    "document_source": "EXP4FUSE A RANK FUSION FRAMEWORK FOR ENHANCED SPARSE RETRIEVAL USING LARGE LANGUAGE MODEL-BASED QUERY EXPANSION.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: EXP4FUSE\n\t- Evidence found: | + Exp4Fuse with Possible Explanation: Exp4Fuse appears to be a specific entity or concept being referenced in the context, possibly related to an experiment or a system\n\t- Evidence found: we propose Exp4Fuse, a rank fusion framework with Possible Explanation: Exp4Fuse is a rank fusion framework that improves the performance of sparse retrievers\n\t- Evidence found: | + Exp4Fuse with Possible Explanation: Exp4Fuse appears to be a specific experiment or model name\n\t- Evidence found: comprehensive experimental evaluations using Exp4Fuse with Possible Explanation: Exp4Fuse is the name of a method or system being evaluated\n\t- Evidence found: | + Exp4Fuse with Possible Explanation: Exp4Fuse appears to be a specific entity or method being added or compared in the given context\n\t- Evidence found: + Exp4Fuse with Possible Explanation: Exp4Fuse appears to be a specific entity or method being referenced in the context\n\t- Evidence found: we introduce the Exp4Fuse framework to enhance sparse retrieval through zero-shot LLM-based QE with Possible Explanation: Exp4Fuse is a framework designed to improve sparse retrieval\n\t- Evidence found: we detail the Exp4Fuse framework, illustrated in Figure 1 with Possible Explanation: Exp4Fuse is a framework that consists of two stages: multi-route query expansion and fusion ranking\n\t- Evidence found: In the second stage of the Exp4Fuse framework with Possible Explanation: Exp4Fuse is a framework that involves multiple stages for document retrieval and ranking\n\t- Evidence found: | + Exp4Fuse                                                        | 28.7 +1 . 5 with Possible Explanation: Exp4Fuse appears to be a specific experiment or model\n\nQUESTION:\n\nWhat is EXP4FUSE?\n\n",
+    "potential_terms": [
+        {
+            "term": "EXP4FUSE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "EXP4FUSE": [
+            {
+                "evidence": "| + Exp4Fuse",
+                "explanation": "Exp4Fuse appears to be a specific entity or concept being referenced in the context, possibly related to an experiment or a system"
+            },
+            {
+                "evidence": "we propose Exp4Fuse, a rank fusion framework",
+                "explanation": "Exp4Fuse is a rank fusion framework that improves the performance of sparse retrievers"
+            },
+            {
+                "evidence": "| + Exp4Fuse",
+                "explanation": "Exp4Fuse appears to be a specific experiment or model name"
+            },
+            {
+                "evidence": "comprehensive experimental evaluations using Exp4Fuse",
+                "explanation": "Exp4Fuse is the name of a method or system being evaluated"
+            },
+            {
+                "evidence": "| + Exp4Fuse",
+                "explanation": "Exp4Fuse appears to be a specific entity or method being added or compared in the given context"
+            },
+            {
+                "evidence": "+ Exp4Fuse",
+                "explanation": "Exp4Fuse appears to be a specific entity or method being referenced in the context"
+            },
+            {
+                "evidence": "we introduce the Exp4Fuse framework to enhance sparse retrieval through zero-shot LLM-based QE",
+                "explanation": "Exp4Fuse is a framework designed to improve sparse retrieval"
+            },
+            {
+                "evidence": "we detail the Exp4Fuse framework, illustrated in Figure 1",
+                "explanation": "Exp4Fuse is a framework that consists of two stages: multi-route query expansion and fusion ranking"
+            },
+            {
+                "evidence": "In the second stage of the Exp4Fuse framework",
+                "explanation": "Exp4Fuse is a framework that involves multiple stages for document retrieval and ranking"
+            },
+            {
+                "evidence": "| + Exp4Fuse                                                        | 28.7 +1 . 5",
+                "explanation": "Exp4Fuse appears to be a specific experiment or model"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.23404255319148937,
+            "recall": 0.8461538461538461,
+            "fmeasure": 0.36666666666666675
+        },
+        "rouge2": {
+            "precision": 0.13043478260869565,
+            "recall": 0.5,
+            "fmeasure": 0.20689655172413793
+        },
+        "rougeL": {
+            "precision": 0.19148936170212766,
+            "recall": 0.6923076923076923,
+            "fmeasure": 0.30000000000000004
+        },
+        "rougeLsum": {
+            "precision": 0.19148936170212766,
+            "recall": 0.6923076923076923,
+            "fmeasure": 0.30000000000000004
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.32,
+            "precision": 0.20512820512820512,
+            "recall": 0.7272727272727273
+        }
+    },
+    "predict": "Based on the provided TERMS information, EXP4FUSE is a rank fusion framework designed to improve the performance of sparse retrievers. It is a two-stage framework that involves multi-route query expansion and fusion ranking, aiming to enhance sparse retrieval through zero-shot LLM-based query expansion.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

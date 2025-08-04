@@ -1,0 +1,81 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "e874a6a6-ba99-49ef-acbf-4ff2757ae472",
+    "experiment_set": "7b7d2b5d-df9c-40f9-9995-5de465f3dd20",
+    "experiment_storage": "./experiments/evaluations/e874a6a6-ba99-49ef-acbf-4ff2757ae472.json",
+    "document_id": "4cc494d9-fe5e-41b9-9b27-850b85a142bd",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\t- Explanation: DiscoVLA appears to be a specific methodology or approach\n\t- Explanation: DiscoVLA is the name of a system or model for video-text retrieval\n\t- Explanation: DiscoVLA is a model or system being compared to others\n\t- Explanation: DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer\n\t- Explanation: DiscoVLA appears to be a specific entity or model, but its meaning is not explicitly stated in the context\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": [
+            {
+                "evidence": "3.2. DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific methodology or approach"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            },
+            {
+                "evidence": "| DiscoVLA         |",
+                "explanation": "DiscoVLA is a model or system being compared to others"
+            },
+            {
+                "evidence": "we propose DiscoVLA",
+                "explanation": "DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer"
+            },
+            {
+                "evidence": "DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific entity or model, but its meaning is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeLsum": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "Unfortunately, I couldn't find a clear explanation of what DiscoVLA stands for. The provided information describes DiscoVLA as a methodology, system, or model for video-text retrieval, but it doesn't provide a clear definition of the acronym.\n\nIf you have more context or information about DiscoVLA, I may be able to help you better. However, based on the available information, I couldn't determine the exact meaning or expansion of the term DiscoVLA.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

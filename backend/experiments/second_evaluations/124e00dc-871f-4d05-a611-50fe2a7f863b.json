@@ -1,0 +1,101 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "124e00dc-871f-4d05-a611-50fe2a7f863b",
+    "experiment_set": "24bc4a50-39a0-4826-8a49-d9097fb5a2c1",
+    "experiment_storage": "./experiments/evaluations2/124e00dc-871f-4d05-a611-50fe2a7f863b.json",
+    "document_id": "44316211-6f8d-463a-ab44-fad555690d5c",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Evidence found: This section introduces the ClueAnchor framework, which is illustrated in Figure 2.\n\t- Evidence found: ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning\n\t- Evidence found: ClueAnchor\n\t- Evidence found: we first evaluate the overall performance of ClueAnchor\n\t- Evidence found: we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization\n\t- Evidence found: ClueAnchor consists of two core modules: Knowledge Reasoning Exploration (KRE) first generates multiple reasoning paths under different knowledge conditions\n\t- Evidence found: To assess the effectiveness of Knowledge Reasoning Optimization in ClueAnchor\n\t- Evidence found: Effectiveness of Knowledge Reasoning Optimization in ClueAnchor.\n\t- Evidence found: ClueAnchor            | 50.60\n\t- Evidence found: ClueAnchor\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "This section introduces the ClueAnchor framework, which is illustrated in Figure 2.",
+                "explanation": "ClueAnchor is a framework introduced in this section"
+            },
+            {
+                "evidence": "ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning",
+                "explanation": "ClueAnchor is a model that enables clue-aware generation and reward-guided path selection"
+            },
+            {
+                "evidence": "ClueAnchor",
+                "explanation": "ClueAnchor appears to be a proper name, possibly referring to a model, system, or entity"
+            },
+            {
+                "evidence": "we first evaluate the overall performance of ClueAnchor",
+                "explanation": "ClueAnchor is a model or system being evaluated"
+            },
+            {
+                "evidence": "we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization",
+                "explanation": "ClueAnchor is a proposed framework for enhancing RAG"
+            },
+            {
+                "evidence": "ClueAnchor consists of two core modules: Knowledge Reasoning Exploration (KRE) first generates multiple reasoning paths under different knowledge conditions",
+                "explanation": "ClueAnchor is the name of a system or model"
+            },
+            {
+                "evidence": "To assess the effectiveness of Knowledge Reasoning Optimization in ClueAnchor",
+                "explanation": "ClueAnchor is a model or system being evaluated for its effectiveness"
+            },
+            {
+                "evidence": "Effectiveness of Knowledge Reasoning Optimization in ClueAnchor.",
+                "explanation": "ClueAnchor is the name of a system or method being evaluated for its effectiveness."
+            },
+            {
+                "evidence": "ClueAnchor            | 50.60",
+                "explanation": "ClueAnchor appears to be a proper name, possibly referring to a system or model"
+            },
+            {
+                "evidence": "ClueAnchor",
+                "explanation": "ClueAnchor seems to be a system, model, or technique name, but its meaning or purpose is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.22580645161290322,
+            "recall": 0.9333333333333333,
+            "fmeasure": 0.36363636363636365
+        },
+        "rouge2": {
+            "precision": 0.16393442622950818,
+            "recall": 0.7142857142857143,
+            "fmeasure": 0.26666666666666666
+        },
+        "rougeL": {
+            "precision": 0.20967741935483872,
+            "recall": 0.8666666666666667,
+            "fmeasure": 0.33766233766233766
+        },
+        "rougeLsum": {
+            "precision": 0.20967741935483872,
+            "recall": 0.8666666666666667,
+            "fmeasure": 0.33766233766233766
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3142857142857142,
+            "precision": 0.19298245614035087,
+            "recall": 0.8461538461538461
+        }
+    },
+    "predict": "ClueAnchor is a novel framework designed to enhance RAG (Retrieval-Augmented Generation) through clue-anchored reasoning exploration and optimization. It consists of two core modules: Knowledge Reasoning Exploration (KRE), which generates multiple reasoning paths under different knowledge conditions, and Knowledge Reasoning Optimization. The framework enables a model to identify key clues from noisy retrieved documents and use them as anchors for reasoning.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

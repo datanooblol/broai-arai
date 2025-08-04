@@ -1,0 +1,53 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "906b9668-f1b4-402d-ab79-760993c103af",
+    "experiment_set": "dcc16836-a4d7-4c2f-9be7-6756d82a64ab",
+    "experiment_storage": "./experiments/evaluations/906b9668-f1b4-402d-ab79-760993c103af.json",
+    "document_id": "fc0a57fd-6c7e-464d-b819-5e2c31a84ef4",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.05660377358490566,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.09448818897637797
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.05660377358490566,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.09448818897637797
+        },
+        "rougeLsum": {
+            "precision": 0.05660377358490566,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.09448818897637797
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06896551724137932,
+            "precision": 0.04040404040404041,
+            "recall": 0.23529411764705882
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about \"MASKSEARCH.\" However, based on general knowledge, \"MASKSEARCH\" could be related to various fields such as computing, data searching, or even a specific tool or algorithm. \n\nWithout additional context or terms, one possible interpretation is that \"MASKSEARCH\" might be related to a search function or algorithm that utilizes a \"mask\" to filter or narrow down search results. In computing, a mask is often used to select or filter data based on certain criteria.\n\nIf \"MASKSEARCH\" refers to a specific tool, algorithm, or concept, please provide more context or definitions for a more precise answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

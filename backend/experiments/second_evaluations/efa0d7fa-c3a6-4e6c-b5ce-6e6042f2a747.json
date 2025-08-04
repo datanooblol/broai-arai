@@ -1,0 +1,53 @@
+{
+    "question": "What is LlamaRec-LKG-RAG?",
+    "answer": "LlamaRec-LKG-RAG is an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance.",
+    "type": "explanation",
+    "source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking",
+    "experiment_id": "efa0d7fa-c3a6-4e6c-b5ce-6e6042f2a747",
+    "experiment_set": "caf62467-3788-453f-872a-5c3313166b7c",
+    "experiment_storage": "./experiments/evaluations2/efa0d7fa-c3a6-4e6c-b5ce-6e6042f2a747.json",
+    "document_id": "24f33744-2836-4c57-8108-465065b1f793",
+    "document_source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is LlamaRec-LKG-RAG?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.05511811023622047,
+            "recall": 0.56,
+            "fmeasure": 0.10035842293906809
+        },
+        "rouge2": {
+            "precision": 0.015810276679841896,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.028880866425992777
+        },
+        "rougeL": {
+            "precision": 0.03543307086614173,
+            "recall": 0.36,
+            "fmeasure": 0.06451612903225806
+        },
+        "rougeLsum": {
+            "precision": 0.03543307086614173,
+            "recall": 0.36,
+            "fmeasure": 0.06451612903225806
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06611570247933886,
+            "precision": 0.03619909502262444,
+            "recall": 0.38095238095238093
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about LlamaRec-LKG-RAG. However, based on the structure of the term, it appears to be related to a specific model or technique, possibly in the field of artificial intelligence or natural language processing.\n\nGiven the absence of explicit definitions or context, I'll attempt a general breakdown:\n\n1. **LlamaRec**: This could be related to a model or system named \"Llama\" (potentially related to Meta's Llama AI models) and \"Rec\" might imply a recommendation system or a specific task like \"recommendation.\"\n   \n2. **LKG**: This acronym could stand for a specific dataset, technique, or component related to the model or system. Without further context, it's challenging to determine its exact meaning. It might refer to a knowledge graph (often abbreviated as KG), with \"L\" potentially indicating a specific type or source.\n\n3. **RAG**: This is likely an acronym for \"Retrieval-Augmented Generation,\" a technique used in natural language processing. RAG models are designed to generate text by retrieving relevant information from a knowledge base or database and then using this information to create more accurate and informed responses.\n\nPutting it together, \"LlamaRec-LKG-RAG\" might refer to a specific model or system that combines elements of recommendation (LlamaRec), potentially utilizes a knowledge graph or a similar structured knowledge base (LKG), and employs retrieval-augmented generation (RAG) techniques. \n\nWithout more specific information or context, this is a speculative interpretation. For a precise answer, additional details about LlamaRec-LKG-RAG would be necessary.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

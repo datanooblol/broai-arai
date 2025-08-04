@@ -1,0 +1,107 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "80f9cc14-5f71-4ecd-ac9a-b618ccac49b5",
+    "experiment_set": "8f94f31e-e87f-4bb2-8149-f1298452e6db",
+    "experiment_storage": "./experiments/evaluations2/80f9cc14-5f71-4ecd-ac9a-b618ccac49b5.json",
+    "document_id": "4cc494d9-fe5e-41b9-9b27-850b85a142bd",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\t- Explanation: DiscoVLA appears to be a specific methodology or approach\n\t- Explanation: DiscoVLA is the name of a system or model for video-text retrieval\n\t- Explanation: DiscoVLA is a model or system being compared to others\n\t- Explanation: DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer\n\t- Explanation: DiscoVLA appears to be a specific entity or model, but its meaning is not explicitly stated in the context\n\t- Explanation: DiscoVLA is a novel parameter-efficient method for video-text retrieval\n\t- Explanation: DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment\n\t- Explanation: DiscoVLA is a method or model used for video understanding tasks\n\t- Explanation: DiscoVLA appears to be a specific model or system being compared to others, such as B2 and B3, based on various metrics\n\t- Explanation: DiscoVLA is the name of a system or model for video-text retrieval\n\nCONTEXTS:\n\n<|start_context|>3. Methodology\n\n3.2. DiscoVLA<|end_context|>\n<|start_context|>| -               | -               | -               | -               | -               |\n| DiscoVLA         | 0.56           | 41.2            | 72.4            | 83.6            | 197.2           | 7.8             | 41.8            | 72.8            | 84.7            | 199.3           | 6.9             |\n\nthe text-to-video task (t2v) and 47.7 %R@1inthe video-totext task (v2t), significantly outperforming previous methods. Furthermore, when using CLIP (ViT-B/16), DiscoVLA achieves improvements of 1.5 % in R@1, reaching a final score of 50.5 % R@1. The comparison results on LSMDC, ActivityNet, DiDeMo are shown in Table 2-4. Our method outperforms all existing approaches across these datasets. Existing approaches overlook the critical image-to-video language and alignment discrepancies. In contrast, our proposed DiscoVLA addresses these discrepancies across all three areas: vision, language, and alignment.<|end_context|>\n<|start_context|>25, 58] focus on the vision aspect, modeling temporal relationships to extract video-level features, while others [25, 58] attempt to reduce the modality gap between vision and language through shared parameter mechanisms. Despite these advances, these methods remain limited in both language and alignment discrepancies.\n\nTo tackle these challenges, we introduce Disc repancy Reducti o n in V ision, L anguage, and A lignment, termed DiscoVLA , a novel parameter-efficient method for videotext retrieval. Unlike previous methods that target a single gap, our method aims to simultaneously reduce all significant discrepancies, as illustrated in the table of Figure 1.\n\nSpecifically, we propose an Image-Video Features Fusion module (IVFusion), which addresses both vision and language discrepancies through a unified feature extraction approach. IVFusion effectively combines both image- and video-level features by utilizing a lightweight adapter. In addition to video-level alignment, we propose Pseudo Image-level Alignment (PImgAlign) which generates pseudo image captions and learns fine-grained imagelevel alignment. Furthermore, to reduce alignment discrepancy, we propose Image-to-Video Alignment Distillation (AlignDistill), transferring image-level alignment knowledge to improve video-level alignment. All proposed modules prioritize parameter efficiency: IVFusion requires minimal trainable parameters, while PImgAlign and AlignDistill operate without increasing inference parameters.\n\nIn summary, the main contributions are as follows:\n\n- \u00b7 We reveal, for the first time, the necessity of addressing all three image-to-video discrepancies-vision, language, and alignment-to achieve parameter-efficient VTR.\n- \u00b7 We introduce IVFusion to fuse image- and video-level features for both vision and language gaps. PImgAlign is introduced for fine-grained image-level alignment. We introduce AlignDistill to minimize alignment gaps.\n- \u00b7 Our DiscoVLA achieves state-of-the-art results on MSRVTT, LSMDC, ActivityNet, and DiDeMo. Notably, on MSRVTT with CLIP (ViT-B/16), DiscoVLA reaches 50.5 %R@1, surpassing previous methods by 1.5 %.<|end_context|>\n<|start_context|>Abstract\n\nThe parameter-efficient adaptation of the image-text pretraining model CLIP for video-text retrieval is a prominent area of research. While CLIP is focused on imagelevel vision-language matching, video-text retrieval demands comprehensive understanding at the video level. Three key discrepancies emerge in the transfer from imagelevel to video-level: vision, language, and alignment. However, existing methods mainly focus on vision while neglecting language and alignment. In this paper, we propose Disc repancy Reducti o n in V ision, L anguage, and A lignment ( DiscoVLA ), which simultaneously mitigates all three discrepancies. Specifically, we introduce Image-Video Features Fusion to integrate image-level and video-level features, effectively tackling both vision and language discrepancies. Additionally, we generate pseudo image captions to learn fine-grained image-level alignment. To mitigate alignment discrepancies, we propose Image-to-Video Alignment Distillation, which leverages image-level alignment knowledge to enhance video-level alignment. Extensive experiments demonstrate the superiority of our DiscoVLA. In particular, on MSRVTT with CLIP (ViT-B/16), DiscoVLA outperforms previous methods by 1.5 %in R@1, reaching a final score of 50.5 %R@1. The code is available at https://github.com/LunarShen/DsicoVLA .<|end_context|>\n<|start_context|>4.2. Comparisons with State-of-the-Art Methods\n\nWe compare our proposed DiscoVLA with state-of-theart methods on popular benchmarks such as MSRVTT, LSMDC, ActivityNet, and DiDeMo.\n\nFull fine-tuning refers to CLIP4Clip-meanP [37], which averages image features along the temporal dimension. All parameter-efficient methods follow this temporal average pooling strategy to obtain the final video features. Although Prompt [27], Adapter [20], and LoRA [21] are widely adopted for parameter-efficient image and NLP tasks, they lack effective temporal modeling for video-level understanding. In contrast, methods like RAP [5], VoP [22], DGL [58], and MV-Adapter [25] focus on temporal modeling in the vision modality.\n\nAs shown in Table 1, on MSRVTT, our DiscoVLA with CLIP (ViT-B/32) as the backbone achieves 47.0 % R@1 in\n\n| Method           | # Params (M)    | Text-to-Video   | Text-to-Video   | Text-to-Video   | Text-to-Video   | Text-to-Video   | Video-to-Text   | Video-to-Text   | Video-to-Text   | Video-to-Text   | Video-to-Text   |\n|------------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|\n| Method           | # Params (M)    | R@1 \u2191           | R@5 \u2191           | R@10 \u2191          | R@sum \u2191         | MnR \u2193           | R@1 \u2191           | R@5 \u2191           | R@10 \u2191          | R@sum \u2191         | MnR \u2193           |\n| CLIP (ViT-B/32)  | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) |\n| Full fine-tuning | 123.54          | 43.1            | 70.4            | 80.8            | 194.3           | 16.2            | 43.1            | 70.5            | 81.2            | 194.8           | 12.4            |\n| Prompt [27]<|end_context|>\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": [
+            {
+                "evidence": "3.2. DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific methodology or approach"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            },
+            {
+                "evidence": "| DiscoVLA         |",
+                "explanation": "DiscoVLA is a model or system being compared to others"
+            },
+            {
+                "evidence": "we propose DiscoVLA",
+                "explanation": "DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer"
+            },
+            {
+                "evidence": "DiscoVLA",
+                "explanation": "DiscoVLA appears to be a specific entity or model, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "we introduce Disc repancy Reducti o n in V ision, L anguage, and A lignment, termed DiscoVLA",
+                "explanation": "DiscoVLA is a novel parameter-efficient method for video-text retrieval"
+            },
+            {
+                "evidence": "we propose Disc repancy Reducti o n in V ision, L anguage, and A lignment ( DiscoVLA )",
+                "explanation": "DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment"
+            },
+            {
+                "evidence": "DiscoVLA",
+                "explanation": "DiscoVLA is a method or model used for video understanding tasks"
+            },
+            {
+                "evidence": "| DiscoVLA       | !            | !            | !            | 0.56           | 47.0            | 73.0            | 82.8            | 202.8           | 47.7            | 73.6",
+                "explanation": "DiscoVLA appears to be a specific model or system being compared to others, such as B2 and B3, based on various metrics"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            }
+        ]
+    },
+    "contexts": [
+        "3. Methodology\n\n3.2. DiscoVLA\n",
+        "          | -               | -               | -               | -               | -               |\n| DiscoVLA         | 0.56           | 41.2            | 72.4            | 83.6            | 197.2           | 7.8             | 41.8            | 72.8            | 84.7            | 199.3           | 6.9             |\n\nthe text-to-video task (t2v) and 47.7 %R@1inthe video-totext task (v2t), significantly outperforming previous methods. Furthermore, when using CLIP (ViT-B/16), DiscoVLA achieves improvements of 1.5 % in R@1, reaching a final score of 50.5 % R@1. The comparison results on LSMDC, ActivityNet, DiDeMo are shown in Table 2-4. Our method outperforms all existing approaches across these datasets. Existing approaches overlook the critical image-to-video language and alignment discrepancies. In contrast, our proposed DiscoVLA addresses these discrepancies across all three areas: vision, language, and alignment.\n",
+        "25, 58] focus on the vision aspect, modeling temporal relationships to extract video-level features, while others [25, 58] attempt to reduce the modality gap between vision and language through shared parameter mechanisms. Despite these advances, these methods remain limited in both language and alignment discrepancies.\n\nTo tackle these challenges, we introduce Disc repancy Reducti o n in V ision, L anguage, and A lignment, termed DiscoVLA , a novel parameter-efficient method for videotext retrieval. Unlike previous methods that target a single gap, our method aims to simultaneously reduce all significant discrepancies, as illustrated in the table of Figure 1.\n\nSpecifically, we propose an Image-Video Features Fusion module (IVFusion), which addresses both vision and language discrepancies through a unified feature extraction approach. IVFusion effectively combines both image- and video-level features by utilizing a lightweight adapter. In addition to video-level alignment, we propose Pseudo Image-level Alignment (PImgAlign) which generates pseudo image captions and learns fine-grained imagelevel alignment. Furthermore, to reduce alignment discrepancy, we propose Image-to-Video Alignment Distillation (AlignDistill), transferring image-level alignment knowledge to improve video-level alignment. All proposed modules prioritize parameter efficiency: IVFusion requires minimal trainable parameters, while PImgAlign and AlignDistill operate without increasing inference parameters.\n\nIn summary, the main contributions are as follows:\n\n- \u00b7 We reveal, for the first time, the necessity of addressing all three image-to-video discrepancies-vision, language, and alignment-to achieve parameter-efficient VTR.\n- \u00b7 We introduce IVFusion to fuse image- and video-level features for both vision and language gaps. PImgAlign is introduced for fine-grained image-level alignment. We introduce AlignDistill to minimize alignment gaps.\n- \u00b7 Our DiscoVLA achieves state-of-the-art results on MSRVTT, LSMDC, ActivityNet, and DiDeMo. Notably, on MSRVTT with CLIP (ViT-B/16), DiscoVLA reaches 50.5 %R@1, surpassing previous methods by 1.5 %.\n",
+        "Abstract\n\nThe parameter-efficient adaptation of the image-text pretraining model CLIP for video-text retrieval is a prominent area of research. While CLIP is focused on imagelevel vision-language matching, video-text retrieval demands comprehensive understanding at the video level. Three key discrepancies emerge in the transfer from imagelevel to video-level: vision, language, and alignment. However, existing methods mainly focus on vision while neglecting language and alignment. In this paper, we propose Disc repancy Reducti o n in V ision, L anguage, and A lignment ( DiscoVLA ), which simultaneously mitigates all three discrepancies. Specifically, we introduce Image-Video Features Fusion to integrate image-level and video-level features, effectively tackling both vision and language discrepancies. Additionally, we generate pseudo image captions to learn fine-grained image-level alignment. To mitigate alignment discrepancies, we propose Image-to-Video Alignment Distillation, which leverages image-level alignment knowledge to enhance video-level alignment. Extensive experiments demonstrate the superiority of our DiscoVLA. In particular, on MSRVTT with CLIP (ViT-B/16), DiscoVLA outperforms previous methods by 1.5 %in R@1, reaching a final score of 50.5 %R@1. The code is available at https://github.com/LunarShen/DsicoVLA .\n",
+        "4.2. Comparisons with State-of-the-Art Methods\n\nWe compare our proposed DiscoVLA with state-of-theart methods on popular benchmarks such as MSRVTT, LSMDC, ActivityNet, and DiDeMo.\n\nFull fine-tuning refers to CLIP4Clip-meanP [37], which averages image features along the temporal dimension. All parameter-efficient methods follow this temporal average pooling strategy to obtain the final video features. Although Prompt [27], Adapter [20], and LoRA [21] are widely adopted for parameter-efficient image and NLP tasks, they lack effective temporal modeling for video-level understanding. In contrast, methods like RAP [5], VoP [22], DGL [58], and MV-Adapter [25] focus on temporal modeling in the vision modality.\n\nAs shown in Table 1, on MSRVTT, our DiscoVLA with CLIP (ViT-B/32) as the backbone achieves 47.0 % R@1 in\n\n| Method           | # Params (M)    | Text-to-Video   | Text-to-Video   | Text-to-Video   | Text-to-Video   | Text-to-Video   | Video-to-Text   | Video-to-Text   | Video-to-Text   | Video-to-Text   | Video-to-Text   |\n|------------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|-----------------|\n| Method           | # Params (M)    | R@1 \u2191           | R@5 \u2191           | R@10 \u2191          | R@sum \u2191         | MnR \u2193           | R@1 \u2191           | R@5 \u2191           | R@10 \u2191          | R@sum \u2191         | MnR \u2193           |\n| CLIP (ViT-B/32)  | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) | CLIP (ViT-B/32) |\n| Full fine-tuning | 123.54          | 43.1            | 70.4            | 80.8            | 194.3           | 16.2            | 43.1            | 70.5            | 81.2            | 194.8           | 12.4            |\n| Prompt [27]  "
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.3888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.56
+        },
+        "rouge2": {
+            "precision": 0.35294117647058826,
+            "recall": 1.0,
+            "fmeasure": 0.5217391304347826
+        },
+        "rougeL": {
+            "precision": 0.3888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.56
+        },
+        "rougeLsum": {
+            "precision": 0.3888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.56
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5833333333333334,
+            "precision": 0.4117647058823529,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided CONTEXTS and TERMS information, DiscoVLA stands for \"Discrepancy Reduction in Vision, Language, and Alignment\".",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": true,
+    "is_rerank": true
+}

@@ -14,6 +14,8 @@ from package.databases.management.term import TermManagement, Term
 from package.embedding.baai import BAAIEmbedding
 from package.cross_encoder.cross_encoder import ReRanker
 from broprompt import parse_codeblock_to_dict
+from collections import Counter
+import string
 
 @dataclass
 class Shared:
@@ -22,7 +24,9 @@ class Shared:
     answer:str
     type:str
     source:str
-    experiment:str
+    experiment_id:str
+    experiment_set:str
+    # experiment:str
     experiment_storage: str
     document_id: Optional[str] = None
     document_source: Optional[str] = None
@@ -196,45 +200,104 @@ class Chat(Action):
         shared.predict = predict
         return shared
     
+# class Evaluator(Action):
+#     def __init__(self):
+#         super().__init__()
+#         self.metrics = ['rouge1', 'rouge2', 'rougeL', 'rougeLsum']
+#         self.scorer = rouge_scorer.RougeScorer(rouge_types=self.metrics, use_stemmer=True)
+#     def preprocess_text(self, text):
+#         if not text:
+#             return ""
+#         text = text.strip().lower()
+#         text = re.sub(r'\s+', ' ', text)  # normalize whitespace
+#         return text    
+    
+#     def get_score(self, shared:Shared):
+#         ground_truth = self.preprocess_text(shared.answer)
+#         predict = self.preprocess_text(shared.predict)
+#         score = self.scorer.score(target=ground_truth, prediction=predict)
+#         _score = {}
+#         for metric in self.metrics:
+#             _score[metric] = dict(
+#                 precision=score[metric].precision,
+#                 recall=score[metric].recall,
+#                 fmeasure=score[metric].fmeasure
+#             )
+#         return _score
+
+#     def run(self, shared:Shared):
+#         shared.evaluation = self.get_score(shared)
+#         _shared = asdict(shared)
+#         with open(shared.experiment_storage, 'w') as f:
+#             json.dump(_shared, f, indent=4)
+#         return shared
+
 class Evaluator(Action):
     def __init__(self):
         super().__init__()
         self.metrics = ['rouge1', 'rouge2', 'rougeL', 'rougeLsum']
         self.scorer = rouge_scorer.RougeScorer(rouge_types=self.metrics, use_stemmer=True)
-    def pack_evaluation(self, shared:Shared, evaluation:dict):
-        base = dict(
-            question=shared.question,
-            ground_truth=shared.answer,
-            predict=shared.predict,
-            type=shared.type,
-            source=shared.source
-        )
-        base.update(**evaluation)
-        return base
-
+    
     def preprocess_text(self, text):
         if not text:
             return ""
-        text = text.strip()
-        text = re.sub(r'\s+', ' ', text)  # normalize whitespace
-        return text    
+        text = text.strip().lower()
+        text = re.sub(r'\s+', ' ', text)
+        return text
     
-    def get_score(self, shared:Shared):
+    def normalize_answer(self, s):
+        def remove_articles(text):
+            return re.sub(r'\b(a|an|the)\b', ' ', text)
+        def remove_punc(text):
+            return ''.join(ch for ch in text if ch not in string.punctuation)
+        def white_space_fix(text):
+            return ' '.join(text.split())
+        return white_space_fix(remove_articles(remove_punc(s.lower())))
+    
+    def hotpot_scores(self, prediction, ground_truth):
+        norm_pred = self.normalize_answer(prediction)
+        norm_gt = self.normalize_answer(ground_truth)
+        
+        # Exact Match
+        em = float(norm_pred == norm_gt)
+        
+        # F1 Score
+        pred_tokens = norm_pred.split()
+        gt_tokens = norm_gt.split()
+        common = Counter(pred_tokens) & Counter(gt_tokens)
+        num_same = sum(common.values())
+        
+        if num_same == 0:
+            return {'em': em, 'f1': 0.0, 'precision': 0.0, 'recall': 0.0}
+        
+        precision = num_same / len(pred_tokens)
+        recall = num_same / len(gt_tokens)
+        f1 = (2 * precision * recall) / (precision + recall)
+        
+        return {'em': em, 'f1': f1, 'precision': precision, 'recall': recall}
+    
+    def get_score(self, shared: Shared):
+        # ROUGE scores
         ground_truth = self.preprocess_text(shared.answer)
         predict = self.preprocess_text(shared.predict)
-        score = self.scorer.score(target=ground_truth, prediction=predict)
+        rouge_score = self.scorer.score(target=ground_truth, prediction=predict)
+        
         _score = {}
         for metric in self.metrics:
             _score[metric] = dict(
-                precision=score[metric].precision,
-                recall=score[metric].recall,
-                fmeasure=score[metric].fmeasure
+                precision=rouge_score[metric].precision,
+                recall=rouge_score[metric].recall,
+                fmeasure=rouge_score[metric].fmeasure
             )
+        
+        # HotpotQA scores
+        _score['hotpot'] = self.hotpot_scores(shared.predict, shared.answer)
+        
         return _score
-
+    
     def run(self, shared:Shared):
-        shared.evaluation = self.pack_evaluation(shared, self.get_score(shared))
+        shared.evaluation = self.get_score(shared)
         _shared = asdict(shared)
         with open(shared.experiment_storage, 'w') as f:
             json.dump(_shared, f, indent=4)
-        return shared
+        return shared    

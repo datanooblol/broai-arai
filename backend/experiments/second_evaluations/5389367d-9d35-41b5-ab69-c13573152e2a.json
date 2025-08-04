@@ -1,0 +1,101 @@
+{
+    "question": "What is STORM?",
+    "answer": "STORM is a writing system for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "5389367d-9d35-41b5-ab69-c13573152e2a",
+    "experiment_set": "cb44a70c-80a9-44cf-a56d-707677c4b549",
+    "experiment_storage": "./experiments/evaluations2/5389367d-9d35-41b5-ab69-c13573152e2a.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\t- Evidence found: Table 11: Summary of major issues found on articles produced by STORM\n\t- Evidence found: STORM creates an outline before the actual writing starts\n\t- Evidence found: We present STORM to automate the pre-writing stage\n\t- Evidence found: STORM is capable of researching complicated topics and writing long articles from detailed outlines.\n\t- Evidence found: Given the input topic t , STORM discovers different perspectives ...\n\t- Evidence found: We propose STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking\n\t- Evidence found: STORM simulates a conversation between a Wikipedia writer and a topic expert\n\t- Evidence found: 4.4 STORM Implementation\n\t- Evidence found: We propose the STORM paradigm for the S ynthesis\n\t- Evidence found: We propose STORM, an LLM-based writing system\n\nQUESTION:\n\nWhat is STORM?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": [
+            {
+                "evidence": "Table 11: Summary of major issues found on articles produced by STORM",
+                "explanation": "STORM is mentioned as the producer of articles being summarized"
+            },
+            {
+                "evidence": "STORM creates an outline before the actual writing starts",
+                "explanation": "STORM is a system or model that creates an outline for article writing"
+            },
+            {
+                "evidence": "We present STORM to automate the pre-writing stage",
+                "explanation": "STORM is a system that automates the pre-writing stage"
+            },
+            {
+                "evidence": "STORM is capable of researching complicated topics and writing long articles from detailed outlines.",
+                "explanation": "STORM refers to a system or tool capable of researching and writing articles."
+            },
+            {
+                "evidence": "Given the input topic t , STORM discovers different perspectives ...",
+                "explanation": "STORM is a system that discovers different perspectives and controls the question asking process"
+            },
+            {
+                "evidence": "We propose STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking"
+            },
+            {
+                "evidence": "STORM simulates a conversation between a Wikipedia writer and a topic expert",
+                "explanation": "STORM is a system that simulates conversations"
+            },
+            {
+                "evidence": "4.4 STORM Implementation",
+                "explanation": "STORM is the name of a system or model being implemented"
+            },
+            {
+                "evidence": "We propose the STORM paradigm for the S ynthesis",
+                "explanation": "STORM is a proposed paradigm for synthesizing information"
+            },
+            {
+                "evidence": "We propose STORM, an LLM-based writing system",
+                "explanation": "STORM is a proposed writing system"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.2,
+            "recall": 1.0,
+            "fmeasure": 0.33333333333333337
+        },
+        "rouge2": {
+            "precision": 0.1797752808988764,
+            "recall": 0.9411764705882353,
+            "fmeasure": 0.3018867924528302
+        },
+        "rougeL": {
+            "precision": 0.2,
+            "recall": 1.0,
+            "fmeasure": 0.33333333333333337
+        },
+        "rougeLsum": {
+            "precision": 0.2,
+            "recall": 1.0,
+            "fmeasure": 0.33333333333333337
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3191489361702127,
+            "precision": 0.189873417721519,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, STORM is a writing system that utilizes large language models (LLMs) to automate the pre-writing stage of article creation. It is designed for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking.\n\nSTORM is capable of:\n\n* Researching complicated topics\n* Creating detailed outlines\n* Writing long articles\n* Simulating conversations between a Wikipedia writer and a topic expert\n\nIt aims to assist in the writing process by discovering different perspectives on a given topic and generating comprehensive outlines before the actual writing starts.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

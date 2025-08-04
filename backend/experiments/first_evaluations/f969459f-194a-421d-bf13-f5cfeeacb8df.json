@@ -1,0 +1,53 @@
+{
+    "question": "What is AcuRank?",
+    "answer": "AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation",
+    "type": "explanation",
+    "source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+    "experiment_id": "f969459f-194a-421d-bf13-f5cfeeacb8df",
+    "experiment_set": "3f8d33bc-3d25-4ed4-8176-571773db5c23",
+    "experiment_storage": "./experiments/evaluations/f969459f-194a-421d-bf13-f5cfeeacb8df.json",
+    "document_id": "af617836-a979-448c-bfcf-7d6385fd12a1",
+    "document_source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is AcuRank?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06451612903225806,
+            "recall": 0.1111111111111111,
+            "fmeasure": 0.08163265306122448
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.06451612903225806,
+            "recall": 0.1111111111111111,
+            "fmeasure": 0.08163265306122448
+        },
+        "rougeLsum": {
+            "precision": 0.06451612903225806,
+            "recall": 0.1111111111111111,
+            "fmeasure": 0.08163265306122448
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.044444444444444446,
+            "precision": 0.03571428571428571,
+            "recall": 0.058823529411764705
+        }
+    },
+    "predict": "I'm not familiar with the term \"AcuRank.\" Could you please provide more context or information about where you encountered this term? This will help me provide a more accurate answer.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

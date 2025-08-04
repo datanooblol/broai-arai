@@ -1,0 +1,101 @@
+{
+    "question": "What is LOGICOL?",
+    "answer": "LOGICOL is a logically-informed contrastive learning objective for dense retrievers.",
+    "type": "explanation",
+    "source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+    "experiment_id": "8e37c08e-2feb-45d4-8083-aaa8ab891e36",
+    "experiment_set": "5cb55669-6f27-48e2-a360-1c7e2d72a374",
+    "experiment_storage": "./experiments/evaluations2/8e37c08e-2feb-45d4-8083-aaa8ab891e36.json",
+    "document_id": "f38e0305-f464-4954-9fb4-809765384259",
+    "document_source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: LOGICOL\n\t- Explanation: LOGICOL is mentioned as a column header with associated numerical values\n\t- Explanation: LOGICOL is the name of a system or model that utilizes contrastive learning and regularization objectives\n\t- Explanation: LOGICOL is a framework used for document similarity distribution analysis\n\t- Explanation: LOGICOL is likely an abbreviation, but its full form is not provided in the context\n\t- Explanation: LOGICOL is an acronym that appears to be related to a method or technique, but its meaning is not explicitly stated in the context\n\t- Explanation: LOGICOL is the name of a system or model being evaluated\n\t- Explanation: LOGICOL appears to be a system or model being discussed in the context of batch strategy\n\t- Explanation: LOGICOL is a logically-informed contrastive learning objective for dense retrievers\n\t- Explanation: LOGICOL refers to a specific model or system being discussed\n\t- Explanation: LOGICOL is the name of the approach being described\n\nQUESTION:\n\nWhat is LOGICOL?\n\n",
+    "potential_terms": [
+        {
+            "term": "LOGICOL",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "LOGICOL": [
+            {
+                "evidence": "LOGICOL   | 20.21   | 8.36    | 17.23   | 33.08   | 61.86",
+                "explanation": "LOGICOL is mentioned as a column header with associated numerical values"
+            },
+            {
+                "evidence": "LOGICOL uses two regularization objectives",
+                "explanation": "LOGICOL is the name of a system or model that utilizes contrastive learning and regularization objectives"
+            },
+            {
+                "evidence": "To further validate the effectiveness of our LOGICOL framework",
+                "explanation": "LOGICOL is a framework used for document similarity distribution analysis"
+            },
+            {
+                "evidence": "| GTE-base   | SupCon LOGICOL |",
+                "explanation": "LOGICOL is likely an abbreviation, but its full form is not provided in the context"
+            },
+            {
+                "evidence": "| LOGICOL   | 20.56   | 9.76    | 20.45   | 39.38   | 71.46   | 13.84             | 4.03              | 9.50              | 20.71             | 49.16             |",
+                "explanation": "LOGICOL is an acronym that appears to be related to a method or technique, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "We evaluate LOGICOL using the QUEST benchmark dataset",
+                "explanation": "LOGICOL is the name of a system or model being evaluated"
+            },
+            {
+                "evidence": "... compared to random batching for LOGICOL",
+                "explanation": "LOGICOL appears to be a system or model being discussed in the context of batch strategy"
+            },
+            {
+                "evidence": "we introduce LOGICOL, a logically-informed contrastive learning objective for dense retrievers",
+                "explanation": "LOGICOL is a logically-informed contrastive learning objective for dense retrievers"
+            },
+            {
+                "evidence": "The key technical novelty of LOGICOL is twofold: ...",
+                "explanation": "LOGICOL refers to a specific model or system being discussed"
+            },
+            {
+                "evidence": "Our LOGICOL approach builds on top of inbatch supervised contrastive learning",
+                "explanation": "LOGICOL is the name of the approach being described"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.09401709401709402,
+            "recall": 1.0,
+            "fmeasure": 0.17187499999999997
+        },
+        "rouge2": {
+            "precision": 0.08620689655172414,
+            "recall": 1.0,
+            "fmeasure": 0.15873015873015872
+        },
+        "rougeL": {
+            "precision": 0.09401709401709402,
+            "recall": 1.0,
+            "fmeasure": 0.17187499999999997
+        },
+        "rougeLsum": {
+            "precision": 0.09401709401709402,
+            "recall": 1.0,
+            "fmeasure": 0.17187499999999997
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.16071428571428573,
+            "precision": 0.08737864077669903,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, LOGICOL appears to be a system or model that utilizes contrastive learning and regularization objectives. It is also described as a framework for document similarity distribution analysis and a logically-informed contrastive learning objective for dense retrievers.\n\nHowever, the most comprehensive explanation provided is that LOGICOL is a system or model being evaluated in the context of batch strategy, and it is likely an abbreviation with its full form not provided in the context.\n\nTherefore, the most accurate answer to the question \"What is LOGICOL?\" is that it is a system or model that utilizes contrastive learning and regularization objectives, and it is being evaluated in the context of batch strategy.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,81 @@
+{
+    "question": "What does STORM stand for?",
+    "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "acronym",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "2131d438-49bf-48b9-b95b-077058dd0d10",
+    "experiment_set": "05520b58-26e9-4197-b070-da81011250f4",
+    "experiment_storage": "./experiments/evaluations/2131d438-49bf-48b9-b95b-077058dd0d10.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\t- Explanation: STORM is mentioned as the producer of articles being summarized\n\t- Explanation: STORM is a system or model that creates an outline for article writing\n\t- Explanation: STORM is a system that automates the pre-writing stage\n\t- Explanation: STORM refers to a system or tool capable of researching and writing articles.\n\t- Explanation: STORM is a system that discovers different perspectives and controls the question asking process\n\nQUESTION:\n\nWhat does STORM stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": [
+            {
+                "evidence": "Table 11: Summary of major issues found on articles produced by STORM",
+                "explanation": "STORM is mentioned as the producer of articles being summarized"
+            },
+            {
+                "evidence": "STORM creates an outline before the actual writing starts",
+                "explanation": "STORM is a system or model that creates an outline for article writing"
+            },
+            {
+                "evidence": "We present STORM to automate the pre-writing stage",
+                "explanation": "STORM is a system that automates the pre-writing stage"
+            },
+            {
+                "evidence": "STORM is capable of researching complicated topics and writing long articles from detailed outlines.",
+                "explanation": "STORM refers to a system or tool capable of researching and writing articles."
+            },
+            {
+                "evidence": "Given the input topic t , STORM discovers different perspectives ...",
+                "explanation": "STORM is a system that discovers different perspectives and controls the question asking process"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.038461538461538464,
+            "recall": 0.45454545454545453,
+            "fmeasure": 0.07092198581560284
+        },
+        "rouge2": {
+            "precision": 0.007751937984496124,
+            "recall": 0.1,
+            "fmeasure": 0.014388489208633093
+        },
+        "rougeL": {
+            "precision": 0.038461538461538464,
+            "recall": 0.45454545454545453,
+            "fmeasure": 0.07092198581560284
+        },
+        "rougeLsum": {
+            "precision": 0.038461538461538464,
+            "recall": 0.45454545454545453,
+            "fmeasure": 0.07092198581560284
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06451612903225806,
+            "precision": 0.03508771929824561,
+            "recall": 0.4
+        }
+    },
+    "predict": "Based on the provided TERMS information, it seems that there are multiple explanations for what STORM stands for. However, since no specific definition is provided, I will provide a general answer based on the available information.\n\nUnfortunately, the TERMS information does not provide a clear, concise definition of what STORM stands for. It mentions various explanations, such as a producer of articles, a system or model for article writing, a system that automates the pre-writing stage, a system that researches and writes articles, and a system that discovers different perspectives and controls the question asking process.\n\nHowever, without a clear, definitive answer, I can only provide a general response. If you have any additional information or context, I would be happy to try and provide a more specific answer.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

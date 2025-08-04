@@ -1,0 +1,101 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "87b507da-6832-4af8-8ad2-5944c1c5ae94",
+    "experiment_set": "4254b859-ac2a-4a5d-ad96-f92e169e90e0",
+    "experiment_storage": "./experiments/evaluations/87b507da-6832-4af8-8ad2-5944c1c5ae94.json",
+    "document_id": "cdbe2918-c993-42ff-9354-eb4ffc266de0",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\t- Evidence found: the w/o CGSeg setting shows significant performance drops across all metrics with Possible Explanation: CGSeg is a mechanism used in the framework, and its removal leads to performance drops\n\t- Evidence found: w/o CGSeg with Possible Explanation: CGSeg is mentioned as something that can be removed or not used, but its meaning is not explicitly stated in the context\n\t- Evidence found: we proposed CGSeg, a recursive color gradient-based segmentation algorithm with Possible Explanation: CGSeg is a recursive color gradient-based segmentation algorithm for dividing slide design into blocks\n\t- Evidence found: computed via the gradient-based segmentation algorithm CGSeg with Possible Explanation: CGSeg is a gradient-based segmentation algorithm\n\t- Evidence found: Algorithm 1 Color Gradient-based Segmentation (CGSeg) with Possible Explanation: CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation\n\t- Evidence found: Figure 4: An example of CGSeg applied to a slide reference image with Possible Explanation: CGSeg is an algorithm used for segmenting images\n\t- Evidence found: apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm with Possible Explanation: CGSeg stands for Color Gradients-based Segmentation algorithm.\n\t- Evidence found: ... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ... with Possible Explanation: CGSeg is a mechanism proposed to enhance model performance\n\t- Evidence found: Disables the CGSeg mechanism with Possible Explanation: CGSeg is a mechanism related to code generation and segmentation\n\t- Evidence found: SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details with Possible Explanation: CGSeg is a mechanism used in SlideCoder, but its full meaning is not explicitly stated in the context\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": [
+            {
+                "evidence": "the w/o CGSeg setting shows significant performance drops across all metrics",
+                "explanation": "CGSeg is a mechanism used in the framework, and its removal leads to performance drops"
+            },
+            {
+                "evidence": "w/o CGSeg",
+                "explanation": "CGSeg is mentioned as something that can be removed or not used, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "we proposed CGSeg, a recursive color gradient-based segmentation algorithm",
+                "explanation": "CGSeg is a recursive color gradient-based segmentation algorithm for dividing slide design into blocks"
+            },
+            {
+                "evidence": "computed via the gradient-based segmentation algorithm CGSeg",
+                "explanation": "CGSeg is a gradient-based segmentation algorithm"
+            },
+            {
+                "evidence": "Algorithm 1 Color Gradient-based Segmentation (CGSeg)",
+                "explanation": "CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation"
+            },
+            {
+                "evidence": "Figure 4: An example of CGSeg applied to a slide reference image",
+                "explanation": "CGSeg is an algorithm used for segmenting images"
+            },
+            {
+                "evidence": "apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm",
+                "explanation": "CGSeg stands for Color Gradients-based Segmentation algorithm."
+            },
+            {
+                "evidence": "... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ...",
+                "explanation": "CGSeg is a mechanism proposed to enhance model performance"
+            },
+            {
+                "evidence": "Disables the CGSeg mechanism",
+                "explanation": "CGSeg is a mechanism related to code generation and segmentation"
+            },
+            {
+                "evidence": "SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details",
+                "explanation": "CGSeg is a mechanism used in SlideCoder, but its full meaning is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04395604395604396,
+            "recall": 1.0,
+            "fmeasure": 0.08421052631578947
+        },
+        "rouge2": {
+            "precision": 0.03333333333333333,
+            "recall": 1.0,
+            "fmeasure": 0.06451612903225806
+        },
+        "rougeL": {
+            "precision": 0.04395604395604396,
+            "recall": 1.0,
+            "fmeasure": 0.08421052631578947
+        },
+        "rougeLsum": {
+            "precision": 0.04395604395604396,
+            "recall": 1.0,
+            "fmeasure": 0.08421052631578947
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07317073170731708,
+            "precision": 0.0379746835443038,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, the most accurate answer to the question \"What does CGSeg stand for?\" is:\n\nCGSeg stands for Color Gradient-based Segmentation.\n\nThis conclusion is drawn from the following evidence:\n\n- \"Algorithm 1 Color Gradient-based Segmentation (CGSeg)\"\n- \"Color Gradients-based Segmentation (CGSeg) algorithm\"\n- \"Color Gradient-based Segmentation (CGSeg) with Possible Explanation: CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation\"\n\nThese multiple instances of \"Color Gradient-based Segmentation\" in relation to CGSeg provide strong evidence that CGSeg is an acronym for this phrase.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

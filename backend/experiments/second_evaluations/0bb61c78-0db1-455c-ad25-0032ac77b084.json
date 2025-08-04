@@ -1,0 +1,139 @@
+{
+    "question": "What is LlamaRec-LKG-RAG?",
+    "answer": "LlamaRec-LKG-RAG is an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance.",
+    "type": "explanation",
+    "source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking",
+    "experiment_id": "0bb61c78-0db1-455c-ad25-0032ac77b084",
+    "experiment_set": "5cb55669-6f27-48e2-a360-1c7e2d72a374",
+    "experiment_storage": "./experiments/evaluations2/0bb61c78-0db1-455c-ad25-0032ac77b084.json",
+    "document_id": "24f33744-2836-4c57-8108-465065b1f793",
+    "document_source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: LKG\n\t- Explanation: LLAMAREC-LKG-RAG is the name of a framework\n\t- Explanation: LLAMAREC-LKG-RAG is an acronym, but its full form is not explicitly stated in the given context\n\t- Explanation: LlamaRec-LKG-RAG is a framework for recommendation systems that integrates personalized information from knowledge graphs\n\t- Explanation: LlamaRec-LKG-RAG is a model or system name\n\t- Explanation: LlamaRec-LKG-RAG is a framework for LLM-based recommendation ranking\n\t- Explanation: LlamaRec-LKG-RAG is a proposed framework for recommendation\n\t- Explanation: LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems for improved ranking performance.\n\t- Explanation: LlamaRec-LKG-RAG refers to the name of the model being evaluated\nTERM found: RAG\n\t- Explanation: RAG stands for retrieval augmented generation\n\t- Explanation: LLAMAREC-LKG-RAG is the name of a framework\n\t- Explanation: LLAMAREC-LKG-RAG is an acronym, but its full form is not explicitly stated in the given context\n\t- Explanation: LlamaRec-KG-RAG refers to a specific model or system\n\t- Explanation: RAG refers to Retrieval Augmented Generation, a technique used in natural language processing\n\t- Explanation: RAG stands for Retrieval-Augmented Generation\n\t- Explanation: LlamaRec-LKG-RAG is a framework for recommendation systems that integrates personalized information from knowledge graphs\n\t- Explanation: RAG stands for retrieval augmented generation\n\t- Explanation: RAG stands for Retrieval Augmented Generation\n\t- Explanation: LlamaRec-LKG-RAG is a model or system name\n\nQUESTION:\n\nWhat is LlamaRec-LKG-RAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "LKG",
+            "confidence": 0.8
+        },
+        {
+            "term": "RAG",
+            "confidence": 1.0
+        }
+    ],
+    "detailed_terms": {
+        "LKG": [
+            {
+                "evidence": "LLAMAREC-LKG-RAG: A SINGLE-PASS, LEARNABLE KNOWLEDGE GRAPH-RAG FRAMEWORK",
+                "explanation": "LLAMAREC-LKG-RAG is the name of a framework"
+            },
+            {
+                "evidence": "2.0.3 LLAMAREC-LKG-RAG",
+                "explanation": "LLAMAREC-LKG-RAG is an acronym, but its full form is not explicitly stated in the given context"
+            },
+            {
+                "evidence": "This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework for recommendation systems that integrates personalized information from knowledge graphs"
+            },
+            {
+                "evidence": "Performance comparison between LlamaRec-LKG-RAG and LlamaRec",
+                "explanation": "LlamaRec-LKG-RAG is a model or system name"
+            },
+            {
+                "evidence": "We introduce LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework for LLM-based recommendation ranking"
+            },
+            {
+                "evidence": "Overview of the LlamaRec-LKG-RAG framework",
+                "explanation": "LlamaRec-LKG-RAG is a proposed framework for recommendation"
+            },
+            {
+                "evidence": "This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance.",
+                "explanation": "LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems for improved ranking performance."
+            },
+            {
+                "evidence": "The performance comparison between our model (LlamaRec-LKG-RAG) and LlamaRec",
+                "explanation": "LlamaRec-LKG-RAG refers to the name of the model being evaluated"
+            }
+        ],
+        "RAG": [
+            {
+                "evidence": "KNOWLEDGE GRAPH-RAG FRAMEWORK",
+                "explanation": "RAG stands for retrieval augmented generation"
+            },
+            {
+                "evidence": "LLAMAREC-LKG-RAG: A SINGLE-PASS, LEARNABLE KNOWLEDGE GRAPH-RAG FRAMEWORK",
+                "explanation": "LLAMAREC-LKG-RAG is the name of a framework"
+            },
+            {
+                "evidence": "2.0.3 LLAMAREC-LKG-RAG",
+                "explanation": "LLAMAREC-LKG-RAG is an acronym, but its full form is not explicitly stated in the given context"
+            },
+            {
+                "evidence": "which does not utilize the user preference module, generated by LlamaRec-KG-RAG",
+                "explanation": "LlamaRec-KG-RAG refers to a specific model or system"
+            },
+            {
+                "evidence": "LlamaRec-KG-RAG",
+                "explanation": "RAG refers to Retrieval Augmented Generation, a technique used in natural language processing"
+            },
+            {
+                "evidence": "Retrieval-Augmented Generation (RAG) frameworks integrate LLMs with external retrieval mechanisms",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework for recommendation systems that integrates personalized information from knowledge graphs"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG",
+                "explanation": "RAG stands for retrieval augmented generation"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG",
+                "explanation": "RAG stands for Retrieval Augmented Generation"
+            },
+            {
+                "evidence": "Performance comparison between LlamaRec-LKG-RAG and LlamaRec",
+                "explanation": "LlamaRec-LKG-RAG is a model or system name"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5,
+            "recall": 0.72,
+            "fmeasure": 0.5901639344262295
+        },
+        "rouge2": {
+            "precision": 0.34285714285714286,
+            "recall": 0.5,
+            "fmeasure": 0.4067796610169492
+        },
+        "rougeL": {
+            "precision": 0.4722222222222222,
+            "recall": 0.68,
+            "fmeasure": 0.5573770491803278
+        },
+        "rougeLsum": {
+            "precision": 0.4722222222222222,
+            "recall": 0.68,
+            "fmeasure": 0.5573770491803278
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5769230769230769,
+            "precision": 0.4838709677419355,
+            "recall": 0.7142857142857143
+        }
+    },
+    "predict": "Based on the provided TERMS information, LlamaRec-LKG-RAG is a framework for recommendation systems that integrates personalized information from knowledge graphs. It is specifically designed for LLM-based recommendation ranking, aiming to improve ranking performance.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

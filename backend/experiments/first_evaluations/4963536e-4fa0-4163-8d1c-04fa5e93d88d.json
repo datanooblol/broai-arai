@@ -1,0 +1,53 @@
+{
+    "question": "What is GenKI?",
+    "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+    "type": "explanation",
+    "source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+    "experiment_id": "4963536e-4fa0-4163-8d1c-04fa5e93d88d",
+    "experiment_set": "dcc16836-a4d7-4c2f-9be7-6756d82a64ab",
+    "experiment_storage": "./experiments/evaluations/4963536e-4fa0-4163-8d1c-04fa5e93d88d.json",
+    "document_id": "d402aeb9-3e82-4c2a-a9ba-f5bdda533b58",
+    "document_source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is GenKI?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.10975609756097561,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.17475728155339804
+        },
+        "rouge2": {
+            "precision": 0.012345679012345678,
+            "recall": 0.05,
+            "fmeasure": 0.019801980198019802
+        },
+        "rougeL": {
+            "precision": 0.04878048780487805,
+            "recall": 0.19047619047619047,
+            "fmeasure": 0.07766990291262137
+        },
+        "rougeLsum": {
+            "precision": 0.04878048780487805,
+            "recall": 0.19047619047619047,
+            "fmeasure": 0.07766990291262137
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.12903225806451613,
+            "precision": 0.08108108108108109,
+            "recall": 0.3157894736842105
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about \"GenKI.\" However, based on general knowledge, \"GenKI\" could refer to various things, such as a term, a product, or a concept. \n\nOne possible interpretation is that \"GenKI\" is related to the Japanese term \"Genki,\" which means \"health\" or \"energy.\" Without more specific information, it's challenging to provide a precise answer.\n\nIf \"GenKI\" refers to a specific product, technology, or concept, could you please provide more context or details?",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

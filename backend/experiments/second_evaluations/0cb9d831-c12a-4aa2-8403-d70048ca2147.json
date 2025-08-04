@@ -1,0 +1,107 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "0cb9d831-c12a-4aa2-8403-d70048ca2147",
+    "experiment_set": "fdcd7dfb-e1a1-4722-ac6d-87bdc7695f26",
+    "experiment_storage": "./experiments/evaluations2/0cb9d831-c12a-4aa2-8403-d70048ca2147.json",
+    "document_id": "44316211-6f8d-463a-ab44-fad555690d5c",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Evidence found: This section introduces the ClueAnchor framework, which is illustrated in Figure 2.\n\t- Evidence found: ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning\n\t- Evidence found: ClueAnchor\n\t- Evidence found: we first evaluate the overall performance of ClueAnchor\n\t- Evidence found: we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization\n\t- Evidence found: ClueAnchor consists of two core modules: Knowledge Reasoning Exploration (KRE) first generates multiple reasoning paths under different knowledge conditions\n\t- Evidence found: To assess the effectiveness of Knowledge Reasoning Optimization in ClueAnchor\n\t- Evidence found: Effectiveness of Knowledge Reasoning Optimization in ClueAnchor.\n\t- Evidence found: ClueAnchor            | 50.60\n\t- Evidence found: ClueAnchor\n\nCONTEXTS:\n\n<|start_context|>6 Conclusion\n\nThis paper presents ClueAnchor, a novel framework that enhances retrieval-agmented generation by anchoring reasoning on key evidence clues extracted from retrieved documents. It combines knowledge reasoning exploration with knowledge reasoning optimization to improve the model's ability to identify and leverage critical information. Experimental results demonstrate that ClueAnchor maintains robust performance under increasingly noisy retrieval conditions. Further analysis shows that it effectively learns to trace and utilize relevant clues during inference, even without access to ground-truth supervision.<|end_context|>\n<|start_context|>Abstract\n\nRetrieval-Augmented Generation (RAG) augments Large Language Models (LLMs) with external knowledge to improve factuality. However, existing RAG systems frequently underutilize the retrieved documents, failing to extract and integrate the key clues needed to support faithful and interpretable reasoning, especially in cases where relevant evidence is implicit, scattered, or obscured by noise. To address this issue, we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization. ClueAnchor extracts key clues from retrieved content and generates multiple reasoning paths based on different knowledge configurations, optimizing the model by selecting the most effective one through reward-based preference optimization. Experiments show that ClueAnchor significantly outperforms prior RAG baselines in reasoning completeness and robustness. Further analysis confirms its strong resilience to noisy or partially relevant retrieved content, as well as its capability to identify supporting evidence even in the absence of explicit clue supervision during inference. All codes are available at https://github.com/thunlp/ClueAnchor .<|end_context|>\n<|start_context|>clueanchored reasoning guided by the predicted clue. The Knowledge Reasoning Optimization (KRO) module evaluates these candidate paths using taskspecific reward signals, and finetunes the model via preference optimization to favor the most effective one. By combining clue-aware generation with reward-guided path selection, ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning, thereby improving evidence grounding and producing more coherent and faithful outputs.\n\nOur experiments results demonstrate that ClueAnchor outperforms all baseline models, achieving an improvement of more than 3.6% compared to the previous state-of-the-art method (Li et al., 2024). This improvement highlights ClueAnchor's ability to substantially improve answer generation quality, affirming the effectiveness of its overall design under challenging retrieval conditions. Further analysis shows that ClueAnchor maintains stable performance as retrieval noise increases, indicating strong robustness to imperfect evidence and an enhanced ability to focus on key clues despite distracting content. Moreover, ClueeAnchor generalizes beyond supervised clues, effectively identifying relevant information during inference without explicit clue guidance.<|end_context|>\n<|start_context|>| 52.97                                       |\n| ClueAnchor                                  | 53.90                                       | 82.47                                       | 61.57                                       | 59.53                                       | 44.70                                       | 82.37                                       | 59.30                                       | 53.37                                       | 49.85                                       | 22.58<|end_context|>\n<|start_context|>| 47.86                                       |\n| ClueAnchor                                  | 47.70                                       | 79.40                                       | 56.80                                       | 52.50                                       | 41.43                                       | 76.93                                       | 50.43                                       | 49.93                                       | 45.20                                       | 17.33                                       | 51.77<|end_context|>\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "This section introduces the ClueAnchor framework, which is illustrated in Figure 2.",
+                "explanation": "ClueAnchor is a framework introduced in this section"
+            },
+            {
+                "evidence": "ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning",
+                "explanation": "ClueAnchor is a model that enables clue-aware generation and reward-guided path selection"
+            },
+            {
+                "evidence": "ClueAnchor",
+                "explanation": "ClueAnchor appears to be a proper name, possibly referring to a model, system, or entity"
+            },
+            {
+                "evidence": "we first evaluate the overall performance of ClueAnchor",
+                "explanation": "ClueAnchor is a model or system being evaluated"
+            },
+            {
+                "evidence": "we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization",
+                "explanation": "ClueAnchor is a proposed framework for enhancing RAG"
+            },
+            {
+                "evidence": "ClueAnchor consists of two core modules: Knowledge Reasoning Exploration (KRE) first generates multiple reasoning paths under different knowledge conditions",
+                "explanation": "ClueAnchor is the name of a system or model"
+            },
+            {
+                "evidence": "To assess the effectiveness of Knowledge Reasoning Optimization in ClueAnchor",
+                "explanation": "ClueAnchor is a model or system being evaluated for its effectiveness"
+            },
+            {
+                "evidence": "Effectiveness of Knowledge Reasoning Optimization in ClueAnchor.",
+                "explanation": "ClueAnchor is the name of a system or method being evaluated for its effectiveness."
+            },
+            {
+                "evidence": "ClueAnchor            | 50.60",
+                "explanation": "ClueAnchor appears to be a proper name, possibly referring to a system or model"
+            },
+            {
+                "evidence": "ClueAnchor",
+                "explanation": "ClueAnchor seems to be a system, model, or technique name, but its meaning or purpose is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [
+        "6 Conclusion\n\nThis paper presents ClueAnchor, a novel framework that enhances retrieval-agmented generation by anchoring reasoning on key evidence clues extracted from retrieved documents. It combines knowledge reasoning exploration with knowledge reasoning optimization to improve the model's ability to identify and leverage critical information. Experimental results demonstrate that ClueAnchor maintains robust performance under increasingly noisy retrieval conditions. Further analysis shows that it effectively learns to trace and utilize relevant clues during inference, even without access to ground-truth supervision.\n",
+        "Abstract\n\nRetrieval-Augmented Generation (RAG) augments Large Language Models (LLMs) with external knowledge to improve factuality. However, existing RAG systems frequently underutilize the retrieved documents, failing to extract and integrate the key clues needed to support faithful and interpretable reasoning, especially in cases where relevant evidence is implicit, scattered, or obscured by noise. To address this issue, we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization. ClueAnchor extracts key clues from retrieved content and generates multiple reasoning paths based on different knowledge configurations, optimizing the model by selecting the most effective one through reward-based preference optimization. Experiments show that ClueAnchor significantly outperforms prior RAG baselines in reasoning completeness and robustness. Further analysis confirms its strong resilience to noisy or partially relevant retrieved content, as well as its capability to identify supporting evidence even in the absence of explicit clue supervision during inference. All codes are available at https://github.com/thunlp/ClueAnchor .\n",
+        "clueanchored reasoning guided by the predicted clue. The Knowledge Reasoning Optimization (KRO) module evaluates these candidate paths using taskspecific reward signals, and finetunes the model via preference optimization to favor the most effective one. By combining clue-aware generation with reward-guided path selection, ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning, thereby improving evidence grounding and producing more coherent and faithful outputs.\n\nOur experiments results demonstrate that ClueAnchor outperforms all baseline models, achieving an improvement of more than 3.6% compared to the previous state-of-the-art method (Li et al., 2024). This improvement highlights ClueAnchor's ability to substantially improve answer generation quality, affirming the effectiveness of its overall design under challenging retrieval conditions. Further analysis shows that ClueAnchor maintains stable performance as retrieval noise increases, indicating strong robustness to imperfect evidence and an enhanced ability to focus on key clues despite distracting content. Moreover, ClueeAnchor generalizes beyond supervised clues, effectively identifying relevant information during inference without explicit clue guidance.\n",
+        "                               | 52.97                                       |\n| ClueAnchor                                  | 53.90                                       | 82.47                                       | 61.57                                       | 59.53                                       | 44.70                                       | 82.37                                       | 59.30                                       | 53.37                                       | 49.85                                       | 22.58                                ",
+        "                       | 47.86                                       |\n| ClueAnchor                                  | 47.70                                       | 79.40                                       | 56.80                                       | 52.50                                       | 41.43                                       | 76.93                                       | 50.43                                       | 49.93                                       | 45.20                                       | 17.33                                       | 51.77"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.08176100628930817,
+            "recall": 0.8666666666666667,
+            "fmeasure": 0.14942528735632185
+        },
+        "rouge2": {
+            "precision": 0.0379746835443038,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.06976744186046513
+        },
+        "rougeL": {
+            "precision": 0.07547169811320754,
+            "recall": 0.8,
+            "fmeasure": 0.13793103448275862
+        },
+        "rougeLsum": {
+            "precision": 0.07547169811320754,
+            "recall": 0.8,
+            "fmeasure": 0.13793103448275862
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.11392405063291139,
+            "precision": 0.06206896551724138,
+            "recall": 0.6923076923076923
+        }
+    },
+    "predict": "Based on the provided TERMS and CONTEXTS information, ClueAnchor is a novel framework that enhances Retrieval-Augmented Generation (RAG) by anchoring reasoning on key evidence clues extracted from retrieved documents. It combines knowledge reasoning exploration with knowledge reasoning optimization to improve the model's ability to identify and leverage critical information.\n\nAccording to the Abstract, ClueAnchor extracts key clues from retrieved content and generates multiple reasoning paths based on different knowledge configurations, optimizing the model by selecting the most effective one through reward-based preference optimization.\n\nIn the Conclusion section, it is mentioned that ClueAnchor presents a robust performance under increasingly noisy retrieval conditions and effectively learns to trace and utilize relevant clues during inference, even without access to ground-truth supervision.\n\nOverall, ClueAnchor is a framework designed to improve the performance of RAG systems by extracting and integrating key clues from retrieved documents, and it has been shown to outperform prior RAG baselines in reasoning completeness and robustness.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": true,
+    "is_rerank": true
+}

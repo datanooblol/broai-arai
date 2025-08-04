@@ -1,0 +1,53 @@
+{
+    "question": "What is EXP4FUSE?",
+    "answer": "Exp4Fuse is a query expansion method using a LLM to enhance sparse retrievers.",
+    "type": "explanation",
+    "source": "EXP4FUSE A RANK FUSION FRAMEWORK FOR ENHANCED SPARSE RETRIEVAL USING LARGE LANGUAGE MODEL-BASED QUERY EXPANSION",
+    "experiment_id": "8a95030e-0c27-4c4d-bdf9-74198b36b5a0",
+    "experiment_set": "dcc16836-a4d7-4c2f-9be7-6756d82a64ab",
+    "experiment_storage": "./experiments/evaluations/8a95030e-0c27-4c4d-bdf9-74198b36b5a0.json",
+    "document_id": "98c7c09d-3cd0-43b5-9167-c1341a3e3b16",
+    "document_source": "EXP4FUSE A RANK FUSION FRAMEWORK FOR ENHANCED SPARSE RETRIEVAL USING LARGE LANGUAGE MODEL-BASED QUERY EXPANSION.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is EXP4FUSE?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04375,
+            "recall": 0.5384615384615384,
+            "fmeasure": 0.08092485549132948
+        },
+        "rouge2": {
+            "precision": 0.012578616352201259,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.023391812865497078
+        },
+        "rougeL": {
+            "precision": 0.0375,
+            "recall": 0.46153846153846156,
+            "fmeasure": 0.06936416184971099
+        },
+        "rougeLsum": {
+            "precision": 0.0375,
+            "recall": 0.46153846153846156,
+            "fmeasure": 0.06936416184971099
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.05063291139240507,
+            "precision": 0.027210884353741496,
+            "recall": 0.36363636363636365
+        }
+    },
+    "predict": "To provide an accurate answer, I'll rely on my general knowledge since no additional information (TERMS or CONTEXTS) is provided.\n\nEXP4FUSE, also known as eXperimental File System in User Space (though this might not be the exact expansion), doesn't seem to be a widely recognized term based on my general knowledge. However, a plausible guess is that it could be related to FUSE (Filesystem in Userspace), which is a software framework for developing file systems that run in user space.\n\nOne possibility is that EXP4FUSE is an experimental or specific implementation related to the ext4 file system, potentially utilizing FUSE. Ext4 is a file system used by Linux. If EXP4FUSE exists, it might be an experimental or userspace implementation of ext4 or related to ext4 functionality.\n\nFor a precise definition, more context or information about EXP4FUSE would be necessary. If you have any additional details or sources regarding EXP4FUSE, I could attempt to provide a more specific answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

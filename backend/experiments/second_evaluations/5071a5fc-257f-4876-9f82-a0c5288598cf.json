@@ -1,0 +1,53 @@
+{
+    "question": "What is TracLLM?",
+    "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",
+    "type": "explanation",
+    "source": "TracLLM A Generic Framework for Attributing Long Context LLMs",
+    "experiment_id": "5071a5fc-257f-4876-9f82-a0c5288598cf",
+    "experiment_set": "caf62467-3788-453f-872a-5c3313166b7c",
+    "experiment_storage": "./experiments/evaluations2/5071a5fc-257f-4876-9f82-a0c5288598cf.json",
+    "document_id": "ed281e35-924a-45e9-9fa8-d4238213437d",
+    "document_source": "TracLLM A Generic Framework for Attributing Long Context LLMs.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is TracLLM?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.07692307692307693,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.13793103448275862
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.04807692307692308,
+            "recall": 0.4166666666666667,
+            "fmeasure": 0.08620689655172414
+        },
+        "rougeLsum": {
+            "precision": 0.04807692307692308,
+            "recall": 0.4166666666666667,
+            "fmeasure": 0.08620689655172414
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0900900900900901,
+            "precision": 0.05,
+            "recall": 0.45454545454545453
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about TracLLM. However, based on my general knowledge, I couldn't find any widely recognized information about TracLLM.\n\nIf you have any additional details or context regarding TracLLM, such as its application, industry, or any related concepts, I would be happy to try and help further. \n\nFor now, I can suggest that TracLLM could potentially be related to \"Trace\" and \"LLM\" (Large Language Model), possibly indicating a tool or technique related to tracing or tracking the performance, output, or behavior of large language models. Without more specific information, this is purely speculative.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

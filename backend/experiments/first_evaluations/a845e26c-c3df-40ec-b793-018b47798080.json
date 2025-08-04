@@ -1,0 +1,81 @@
+{
+    "question": "What is GenKI?",
+    "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+    "type": "explanation",
+    "source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+    "experiment_id": "a845e26c-c3df-40ec-b793-018b47798080",
+    "experiment_set": "364a7eec-8ce5-4480-9d48-890cbc701c35",
+    "experiment_storage": "./experiments/evaluations/a845e26c-c3df-40ec-b793-018b47798080.json",
+    "document_id": "d402aeb9-3e82-4c2a-a9ba-f5bdda533b58",
+    "document_source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: GenKI\n\t- Evidence found: GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models\n\t- Evidence found: GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models\n\t- Evidence found: GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models\n\t- Evidence found: Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI.\n\t- Evidence found: We present the overall performance of GenKI and all baselines in Tables 2, 3 and 4 on TriviaQA, MSMARCO, and CMRC, respectively.\n\nQUESTION:\n\nWhat is GenKI?\n\n",
+    "potential_terms": [
+        {
+            "term": "GenKI",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "GenKI": [
+            {
+                "evidence": "GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+                "explanation": "GenKI is the name of a system or model for enhancing open-domain question answering"
+            },
+            {
+                "evidence": "GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+                "explanation": "GenKI refers to a specific system or model for question answering"
+            },
+            {
+                "evidence": "GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+                "explanation": "GenKI is the name of a system or model for enhancing open-domain question answering"
+            },
+            {
+                "evidence": "Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI.",
+                "explanation": "GenKI appears to be the name of a specific project or system"
+            },
+            {
+                "evidence": "We present the overall performance of GenKI and all baselines in Tables 2, 3 and 4 on TriviaQA, MSMARCO, and CMRC, respectively.",
+                "explanation": "GenKI is a system or model being evaluated"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.35714285714285715,
+            "recall": 0.47619047619047616,
+            "fmeasure": 0.40816326530612246
+        },
+        "rouge2": {
+            "precision": 0.2222222222222222,
+            "recall": 0.3,
+            "fmeasure": 0.25531914893617025
+        },
+        "rougeL": {
+            "precision": 0.2857142857142857,
+            "recall": 0.38095238095238093,
+            "fmeasure": 0.32653061224489793
+        },
+        "rougeLsum": {
+            "precision": 0.2857142857142857,
+            "recall": 0.38095238095238093,
+            "fmeasure": 0.32653061224489793
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3636363636363636,
+            "precision": 0.32,
+            "recall": 0.42105263157894735
+        }
+    },
+    "predict": "Based on the provided TERMS information, GenKI is a system or model that enhances open-domain question answering with knowledge integration and controllable generation in large language models.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

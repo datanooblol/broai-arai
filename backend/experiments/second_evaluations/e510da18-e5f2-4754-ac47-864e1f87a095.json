@@ -1,0 +1,53 @@
+{
+    "question": "What does STORM stand for?",
+    "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "acronym",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "e510da18-e5f2-4754-ac47-864e1f87a095",
+    "experiment_set": "9db641e7-8353-41dd-819a-77f25482f4df",
+    "experiment_storage": "./experiments/evaluations2/e510da18-e5f2-4754-ac47-864e1f87a095.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat does STORM stand for?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.01834862385321101,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.03333333333333333
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.01834862385321101,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.03333333333333333
+        },
+        "rougeLsum": {
+            "precision": 0.01834862385321101,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.03333333333333333
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.03703703703703703,
+            "precision": 0.02040816326530612,
+            "recall": 0.2
+        }
+    },
+    "predict": "I don't have any additional information about the context or terms related to \"STORM\". However, I can provide a general answer.\n\nSTORM can stand for several things depending on the context:\n\n- STORM can stand for Severe Thunderstorm Observation Reporting Method.\n- STORM can also stand for Stormwater Treatment, Operations, Research, and Maintenance.\n- STORM can also be an acronym for other things such as STORM (Software for the Treatment of Outcomes and Responses in Medicine), STORM (Soci\u00e9t\u00e9 des Transports de l'Outaouais Region de Montr\u00e9al), etc.\n\nIf you have more context or information about the specific STORM you are referring to, I can provide a more accurate answer.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

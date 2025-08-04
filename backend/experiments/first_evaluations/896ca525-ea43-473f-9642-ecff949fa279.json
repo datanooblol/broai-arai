@@ -1,0 +1,53 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "896ca525-ea43-473f-9642-ecff949fa279",
+    "experiment_set": "3f8d33bc-3d25-4ed4-8176-571773db5c23",
+    "experiment_storage": "./experiments/evaluations/896ca525-ea43-473f-9642-ecff949fa279.json",
+    "document_id": "95517b4d-6753-415d-93b2-e31e21c26df2",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.07368421052631578,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.12068965517241378
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.05263157894736842,
+            "recall": 0.23809523809523808,
+            "fmeasure": 0.08620689655172414
+        },
+        "rougeLsum": {
+            "precision": 0.05263157894736842,
+            "recall": 0.23809523809523808,
+            "fmeasure": 0.08620689655172414
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0808080808080808,
+            "precision": 0.04938271604938271,
+            "recall": 0.2222222222222222
+        }
+    },
+    "predict": "HippoRAG seems to be a term that might be related to technology or a specific project, but without additional context or information, I couldn't find a widely recognized definition or explanation for it. It's possible that it's a new term, a project name, or an acronym specific to a certain field or community.\n\nIf you have more context or details about HippoRAG, such as the field it relates to (e.g., technology, biology, etc.) or where you encountered the term, I might be able to provide a more accurate or helpful response.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

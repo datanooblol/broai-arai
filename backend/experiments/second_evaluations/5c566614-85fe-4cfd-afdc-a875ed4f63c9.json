@@ -1,0 +1,101 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel query decomposition framework for MVR",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "5c566614-85fe-4cfd-afdc-a875ed4f63c9",
+    "experiment_set": "f8e4aaad-44d5-4eb7-a86c-931666169d3a",
+    "experiment_storage": "./experiments/evaluations2/5c566614-85fe-4cfd-afdc-a875ed4f63c9.json",
+    "document_id": "18342d7e-0d2f-4b74-a1d9-0caadffddddf",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: POQD\n\t- Explanation: POQD is mentioned as a method for generating optimal sub-queries\n\t- Explanation: POQD stands for Performance-Oriented Query Decomposer\n\t- Explanation: POQD is used as a method for decomposing queries\n\t- Explanation: POQD is a method being studied for its effectiveness on RAG tasks\n\t- Explanation: POQD is an acronym, but its meaning is not explicitly stated in the provided context\n\t- Explanation: POQD is an acronym, but its meaning is not explicitly stated in the context\n\t- Explanation: POQD is an acronym related to performance on the WebQA dataset\n\t- Explanation: POQD is an acronym for a model or system being compared in the table\n\t- Explanation: POQD is an acronym for a specific model or system being compared in the table\n\t- Explanation: POQD stands for PerformanceOriented Query Decomposer\n\nQUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [
+        {
+            "term": "POQD",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "POQD": [
+            {
+                "evidence": "illustrating how to generate optimal sub-queries with POQD",
+                "explanation": "POQD is mentioned as a method for generating optimal sub-queries"
+            },
+            {
+                "evidence": "POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval",
+                "explanation": "POQD stands for Performance-Oriented Query Decomposer"
+            },
+            {
+                "evidence": "we decompose the query appearing in Figure 1 using POQD and baseline methods",
+                "explanation": "POQD is used as a method for decomposing queries"
+            },
+            {
+                "evidence": "we primarily study the effectiveness of POQD on RAG tasks",
+                "explanation": "POQD is a method being studied for its effectiveness on RAG tasks"
+            },
+            {
+                "evidence": "we decompose documents or images in the same way across all baseline methods and POQD",
+                "explanation": "POQD is an acronym, but its meaning is not explicitly stated in the provided context"
+            },
+            {
+                "evidence": "POQD",
+                "explanation": "POQD is an acronym, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "POQD            | 43.88                      |         61.51 |",
+                "explanation": "POQD is an acronym related to performance on the WebQA dataset"
+            },
+            {
+                "evidence": "| POQD            | 42.33   | 58.26                   | 28.67         | 53.24   | 80.58                  | 92.35         |",
+                "explanation": "POQD is an acronym for a model or system being compared in the table"
+            },
+            {
+                "evidence": "| POQD( \u03c4 =3)     | 82.83      | 61.74        | 37.92       | 62.22     | 68.10        | 81.27       | 75.55      |",
+                "explanation": "POQD is an acronym for a specific model or system being compared in the table"
+            },
+            {
+                "evidence": "PerformanceOriented Query Decomposer (POQD for abbreviation)",
+                "explanation": "POQD stands for PerformanceOriented Query Decomposer"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1282051282051282,
+            "recall": 0.5555555555555556,
+            "fmeasure": 0.20833333333333334
+        },
+        "rouge2": {
+            "precision": 0.02631578947368421,
+            "recall": 0.125,
+            "fmeasure": 0.043478260869565216
+        },
+        "rougeL": {
+            "precision": 0.1282051282051282,
+            "recall": 0.5555555555555556,
+            "fmeasure": 0.20833333333333334
+        },
+        "rougeLsum": {
+            "precision": 0.1282051282051282,
+            "recall": 0.5555555555555556,
+            "fmeasure": 0.20833333333333334
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.18604651162790695,
+            "precision": 0.11428571428571428,
+            "recall": 0.5
+        }
+    },
+    "predict": "POQD stands for Performance-Oriented Query Decomposer. It is a method used for generating optimal sub-queries and decomposing queries, particularly being studied for its effectiveness on RAG (Retrieval-Augmented Generation) tasks and its performance on datasets like WebQA.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

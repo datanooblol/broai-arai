@@ -1,0 +1,107 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "614508e5-efb6-459a-b03f-2db1daa81341",
+    "experiment_set": "878fee17-3126-4108-b239-7c4ddc954bc4",
+    "experiment_storage": "./experiments/evaluations/614508e5-efb6-459a-b03f-2db1daa81341.json",
+    "document_id": "cdbe2918-c993-42ff-9354-eb4ffc266de0",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\t- Evidence found: the w/o CGSeg setting shows significant performance drops across all metrics with Possible Explanation: CGSeg is a mechanism used in the framework, and its removal leads to performance drops\n\t- Evidence found: w/o CGSeg with Possible Explanation: CGSeg is mentioned as something that can be removed or not used, but its meaning is not explicitly stated in the context\n\t- Evidence found: we proposed CGSeg, a recursive color gradient-based segmentation algorithm with Possible Explanation: CGSeg is a recursive color gradient-based segmentation algorithm for dividing slide design into blocks\n\t- Evidence found: computed via the gradient-based segmentation algorithm CGSeg with Possible Explanation: CGSeg is a gradient-based segmentation algorithm\n\t- Evidence found: Algorithm 1 Color Gradient-based Segmentation (CGSeg) with Possible Explanation: CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation\n\t- Evidence found: Figure 4: An example of CGSeg applied to a slide reference image with Possible Explanation: CGSeg is an algorithm used for segmenting images\n\t- Evidence found: apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm with Possible Explanation: CGSeg stands for Color Gradients-based Segmentation algorithm.\n\t- Evidence found: ... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ... with Possible Explanation: CGSeg is a mechanism proposed to enhance model performance\n\t- Evidence found: Disables the CGSeg mechanism with Possible Explanation: CGSeg is a mechanism related to code generation and segmentation\n\t- Evidence found: SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details with Possible Explanation: CGSeg is a mechanism used in SlideCoder, but its full meaning is not explicitly stated in the context\n\nCONTEXTS:\n\n<|start_context|>4.1 Color Gradient-based Segmentation\n\nTo reduce the difficulty of MLLM in understanding complex slide design, we proposed CGSeg, a recursive color gradient-based segmentation algorithm to divide slide design into blocks. As shown in Algorithm 1, CGSeg starts by dividing the input image (Figure 4a) into a grid and computing the Sobel magnitude for each block to measure the intensity of the color gradient (lines 4-5). Blocks with gradient magnitudes significantly higher than the median are marked as activated block (lines 6-14), as visualized in Figure 4b. To group visually coherent regions, CGSeg applies a flood-fill (Burtsev and Kuzmin, 1993) operation to the binary activation mask (line 15), identifying connected regions corresponding to sub-images (line 16), as shown in Figure 4c. These sub-images are further segmented recursively to ensure a hierarchical decomposition of the image I m , along with the corresponding positional information p m (lines 1-3 and 17-23),<|end_context|>\n<|start_context|>Algorithm 1 Color Gradient-based Segmentation (CGSeg)\n\nRequire: Image I , Grid size g , Depth D , Max depth D max ,\n\nThreshold T Ensure: List of segmented sub-images 1: if D = D max then 2: return \u2205 3: end if 4: G \u2190 SPLIT ( I, g ) // g \u00d7 g grid blocks 5: C \u2190 GRADMAG ( G ) // gradient magnitudes 6: C mid \u2190 MEDIAN ( C ) 7: M \u2190 0 g \u00d7 g // binary mask 8: for each c ij in C do 9: if c ij &gt; T \u00b7 C mid then 10: M ij \u2190 1 // activate the block 11: else 12: M ij \u2190 0 13: end if 14: end for 15: M \u2190 FILL ( M ) // flood-fill 16: M s \u2190 REGIONS ( M ) // split connected regions 17: R \u2190\u2205 18: for each m in M s do 19: I m , p m \u2190 CROP ( I, m ) // get sub-image 20: add I m and p m to R 21: R \u2032 \u2190 CGSEG ( I m , g, D +1 , D max , T ) 22: add all in R \u2032 to R 23: end for 24: return R\n\nwith the final segmentation result shown in Figure 4d. This recursive structure allows CGSeg to adaptively refine segment granularity based on local visual complexity, which is crucial for handling slides with heterogeneous layout densities.<|end_context|>\n<|start_context|>A.2 Detailed Analysis of Ablation Results\n\nTable 4 provides a detailed evaluation metrics under different ablation settings.\n\nIn the w/o Layout setting , the Position score under the complex level drops significantly from 81.35 to 72.16. This is primarily because, in complex cases, the CGSeg algorithm typically divides the Reference Image(RI) into more blocks, and without layout information, the Agent struggles to model spatial relationships among multiple elements. This often leads to overlapping or outof-bound content, causing a sharp decline in the Position metric and slightly affecting other metrics as well.\n\nIn the w/o CGSeg setting , both the CGSeg mechanism and the layout-aware prompt are removed. As a result, a single Describer Agent is required to handle the entire complex slide, which exceeds its processing capacity, often leading to code generation failures and a sharp drop in execution success rate. Its performance is slightly better than the Native setting due to the additional knowledge provided by H-RAG.\n\nIn the w/o H-RAG setting , the &lt;Grammar&gt; component is removed from each Agent. Excluding this component from Describer reduces its ability to accurately identify the corresponding python-pptx object. Similarly, removing it from Coder and Assembler deprives the Agents of essential syntactic guidance, often resulting in version-related errors caused by inconsistencies between the model's training data and the current version of the python-pptx library. These combined factors lead to overall performance degradation.\n\nIn the Native setting , both the CGSeg mechanism and H-RAG are removed, leaving a single Coder Agent to handle the entire slide without any auxiliary support. This reduces the framework to a plain MLLM-based inference process, severely limiting its ability to generate structured and executable code, and resulting in the lowest execution rate and overall performance.<|end_context|>\n<|start_context|>4.2 Hierarchical Retrieval-Augmented Code Generation Module\n\n4.2.1 Generation Process\n\nWedesign three collaborative MLLM agents whose code generation processes are augmented by HRAG. Describer is responsible for generating a global Design description (Overall Description) as well as block descriptions (Block Description) for each segmented blocks. Based on block and their associated block description, Coder produces corresponding code snippets. Subsequently, Assembler generates the complete slide code by layoutaware prompt, which will be elaborated in \u00a74.3, along with the Pictures provided. Executing this code produces a slide that structurally and visually aligns with the Reference Image(RI). If the generated code is not executable Assembler applies a self-refinement mechanism to correct syntax errors, where errors serves as the feedback to prompt the MLLM to re-generate the code.\n\nBeyond the above inputs, each agent draws knowledge from distinct bases according to its role.\n\nFigure 4: An example of CGSeg applied to a slide reference image. The algorithm begins by computing color gradients (a-b), fills them (c), and recursively segments sub-regions (d).\n\n<!-- image -->\n\nThe form and origin of the knowledge used in each agent's prompt are detailed in \u00a74.2.2.\n\nsnippets. Assembler uses these snippets to retrieve full syntax patterns and generate executable code.<|end_context|>\n<|start_context|>|\n| w/o H-RAG      | 84.8         | 70.7           |\n| Native Setting | 75.8         | 53.9           |\n| Native Setting | 48.5         | 37.4           |\n| Native Setting | 66.7         | 46.9           |\n\nWe design three ablation settings to validate the effectiveness of different components in our framework: (1) w/o Layout, removes the layout-aware prompt; (2) w/o CGSeg, disables both the CGSeg mechanism and the layout-aware prompt; (3) w/o H-RAG, removes the &lt;Grammar&gt; content from all prompts.(4) Native setting, which removes HRAG on top of the w/o CGSeg setting. Detailed descriptions are provided in Appendix A.1. We randomly sample 33 instances from each difficulty level, resulting in a total of 99 samples, and perform inference using GPT-4o. The overall results are reported in Table 3, with detailed metric result provided in Appendix A.2. After removing each component, both execution rate and overall score<|end_context|>\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": [
+            {
+                "evidence": "the w/o CGSeg setting shows significant performance drops across all metrics",
+                "explanation": "CGSeg is a mechanism used in the framework, and its removal leads to performance drops"
+            },
+            {
+                "evidence": "w/o CGSeg",
+                "explanation": "CGSeg is mentioned as something that can be removed or not used, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "we proposed CGSeg, a recursive color gradient-based segmentation algorithm",
+                "explanation": "CGSeg is a recursive color gradient-based segmentation algorithm for dividing slide design into blocks"
+            },
+            {
+                "evidence": "computed via the gradient-based segmentation algorithm CGSeg",
+                "explanation": "CGSeg is a gradient-based segmentation algorithm"
+            },
+            {
+                "evidence": "Algorithm 1 Color Gradient-based Segmentation (CGSeg)",
+                "explanation": "CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation"
+            },
+            {
+                "evidence": "Figure 4: An example of CGSeg applied to a slide reference image",
+                "explanation": "CGSeg is an algorithm used for segmenting images"
+            },
+            {
+                "evidence": "apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm",
+                "explanation": "CGSeg stands for Color Gradients-based Segmentation algorithm."
+            },
+            {
+                "evidence": "... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ...",
+                "explanation": "CGSeg is a mechanism proposed to enhance model performance"
+            },
+            {
+                "evidence": "Disables the CGSeg mechanism",
+                "explanation": "CGSeg is a mechanism related to code generation and segmentation"
+            },
+            {
+                "evidence": "SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details",
+                "explanation": "CGSeg is a mechanism used in SlideCoder, but its full meaning is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [
+        "4.1 Color Gradient-based Segmentation\n\nTo reduce the difficulty of MLLM in understanding complex slide design, we proposed CGSeg, a recursive color gradient-based segmentation algorithm to divide slide design into blocks. As shown in Algorithm 1, CGSeg starts by dividing the input image (Figure 4a) into a grid and computing the Sobel magnitude for each block to measure the intensity of the color gradient (lines 4-5). Blocks with gradient magnitudes significantly higher than the median are marked as activated block (lines 6-14), as visualized in Figure 4b. To group visually coherent regions, CGSeg applies a flood-fill (Burtsev and Kuzmin, 1993) operation to the binary activation mask (line 15), identifying connected regions corresponding to sub-images (line 16), as shown in Figure 4c. These sub-images are further segmented recursively to ensure a hierarchical decomposition of the image I m , along with the corresponding positional information p m (lines 1-3 and 17-23),\n",
+        "Algorithm 1 Color Gradient-based Segmentation (CGSeg)\n\nRequire: Image I , Grid size g , Depth D , Max depth D max ,\n\nThreshold T Ensure: List of segmented sub-images 1: if D = D max then 2: return \u2205 3: end if 4: G \u2190 SPLIT ( I, g ) // g \u00d7 g grid blocks 5: C \u2190 GRADMAG ( G ) // gradient magnitudes 6: C mid \u2190 MEDIAN ( C ) 7: M \u2190 0 g \u00d7 g // binary mask 8: for each c ij in C do 9: if c ij &gt; T \u00b7 C mid then 10: M ij \u2190 1 // activate the block 11: else 12: M ij \u2190 0 13: end if 14: end for 15: M \u2190 FILL ( M ) // flood-fill 16: M s \u2190 REGIONS ( M ) // split connected regions 17: R \u2190\u2205 18: for each m in M s do 19: I m , p m \u2190 CROP ( I, m ) // get sub-image 20: add I m and p m to R 21: R \u2032 \u2190 CGSEG ( I m , g, D +1 , D max , T ) 22: add all in R \u2032 to R 23: end for 24: return R\n\nwith the final segmentation result shown in Figure 4d. This recursive structure allows CGSeg to adaptively refine segment granularity based on local visual complexity, which is crucial for handling slides with heterogeneous layout densities.\n",
+        "A.2 Detailed Analysis of Ablation Results\n\nTable 4 provides a detailed evaluation metrics under different ablation settings.\n\nIn the w/o Layout setting , the Position score under the complex level drops significantly from 81.35 to 72.16. This is primarily because, in complex cases, the CGSeg algorithm typically divides the Reference Image(RI) into more blocks, and without layout information, the Agent struggles to model spatial relationships among multiple elements. This often leads to overlapping or outof-bound content, causing a sharp decline in the Position metric and slightly affecting other metrics as well.\n\nIn the w/o CGSeg setting , both the CGSeg mechanism and the layout-aware prompt are removed. As a result, a single Describer Agent is required to handle the entire complex slide, which exceeds its processing capacity, often leading to code generation failures and a sharp drop in execution success rate. Its performance is slightly better than the Native setting due to the additional knowledge provided by H-RAG.\n\nIn the w/o H-RAG setting , the &lt;Grammar&gt; component is removed from each Agent. Excluding this component from Describer reduces its ability to accurately identify the corresponding python-pptx object. Similarly, removing it from Coder and Assembler deprives the Agents of essential syntactic guidance, often resulting in version-related errors caused by inconsistencies between the model's training data and the current version of the python-pptx library. These combined factors lead to overall performance degradation.\n\nIn the Native setting , both the CGSeg mechanism and H-RAG are removed, leaving a single Coder Agent to handle the entire slide without any auxiliary support. This reduces the framework to a plain MLLM-based inference process, severely limiting its ability to generate structured and executable code, and resulting in the lowest execution rate and overall performance.\n",
+        "4.2 Hierarchical Retrieval-Augmented Code Generation Module\n\n4.2.1 Generation Process\n\nWedesign three collaborative MLLM agents whose code generation processes are augmented by HRAG. Describer is responsible for generating a global Design description (Overall Description) as well as block descriptions (Block Description) for each segmented blocks. Based on block and their associated block description, Coder produces corresponding code snippets. Subsequently, Assembler generates the complete slide code by layoutaware prompt, which will be elaborated in \u00a74.3, along with the Pictures provided. Executing this code produces a slide that structurally and visually aligns with the Reference Image(RI). If the generated code is not executable Assembler applies a self-refinement mechanism to correct syntax errors, where errors serves as the feedback to prompt the MLLM to re-generate the code.\n\nBeyond the above inputs, each agent draws knowledge from distinct bases according to its role.\n\nFigure 4: An example of CGSeg applied to a slide reference image. The algorithm begins by computing color gradients (a-b), fills them (c), and recursively segments sub-regions (d).\n\n<!-- image -->\n\nThe form and origin of the knowledge used in each agent's prompt are detailed in \u00a74.2.2.\n\nsnippets. Assembler uses these snippets to retrieve full syntax patterns and generate executable code.\n",
+        " |\n| w/o H-RAG      | 84.8         | 70.7           |\n| Native Setting | 75.8         | 53.9           |\n| Native Setting | 48.5         | 37.4           |\n| Native Setting | 66.7         | 46.9           |\n\nWe design three ablation settings to validate the effectiveness of different components in our framework: (1) w/o Layout, removes the layout-aware prompt; (2) w/o CGSeg, disables both the CGSeg mechanism and the layout-aware prompt; (3) w/o H-RAG, removes the &lt;Grammar&gt; content from all prompts.(4) Native setting, which removes HRAG on top of the w/o CGSeg setting. Detailed descriptions are provided in Appendix A.1. We randomly sample 33 instances from each difficulty level, resulting in a total of 99 samples, and perform inference using GPT-4o. The overall results are reported in Table 3, with detailed metric result provided in Appendix A.2. After removing each component, both execution rate and overall score\n"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.125,
+            "recall": 1.0,
+            "fmeasure": 0.2222222222222222
+        },
+        "rouge2": {
+            "precision": 0.0967741935483871,
+            "recall": 1.0,
+            "fmeasure": 0.17647058823529413
+        },
+        "rougeL": {
+            "precision": 0.125,
+            "recall": 1.0,
+            "fmeasure": 0.2222222222222222
+        },
+        "rougeLsum": {
+            "precision": 0.125,
+            "recall": 1.0,
+            "fmeasure": 0.2222222222222222
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.125,
+            "precision": 0.06896551724137931,
+            "recall": 0.6666666666666666
+        }
+    },
+    "predict": "CGSeg stands for Color Gradient-based Segmentation. It is a recursive algorithm used for image segmentation, specifically designed to divide complex slide designs into blocks or sub-images based on color gradients.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": true,
+    "is_rerank": false
+}

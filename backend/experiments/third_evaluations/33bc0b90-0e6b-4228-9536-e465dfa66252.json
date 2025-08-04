@@ -1,0 +1,101 @@
+{
+    "question": "What is AcuRank?",
+    "answer": "AcuRank is an adaptive reranking framework that dynamically adjusts both the amount and target of computation based on uncertainty estimates over document relevance.",
+    "type": "explanation",
+    "source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+    "experiment_id": "33bc0b90-0e6b-4228-9536-e465dfa66252",
+    "experiment_set": "4254b859-ac2a-4a5d-ad96-f92e169e90e0",
+    "experiment_storage": "./experiments/evaluations/33bc0b90-0e6b-4228-9536-e465dfa66252.json",
+    "document_id": "af617836-a979-448c-bfcf-7d6385fd12a1",
+    "document_source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: AcuRank\n\t- Evidence found: AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking with Possible Explanation: AcuRank is the name of a system or method for listwise reranking\n\t- Evidence found: We propose AcuRank, an adaptive reranking framework with Possible Explanation: AcuRank is an adaptive reranking framework\n\t- Evidence found: ...describe the components of our reranking algorithm with adaptive computation, AcuRank (\u00a73.3, Fig. 1) with Possible Explanation: AcuRank is the name of the reranking algorithm with adaptive computation\n\t- Evidence found: AcuRank improves accuracy while reducing unnecessary computation with Possible Explanation: AcuRank is the name of a system or method for efficient listwise reranking\n\t- Evidence found: we propose AcuRank , a framework for listwise reranking with U ncertainty-aware A daptive C omputation with Possible Explanation: AcuRank is a proposed framework for listwise reranking\n\t- Evidence found: 3.3 AcuRank framework with Possible Explanation: AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation\n\t- Evidence found: we propose AcuRank , a framework for listwise reranking with U ncertainty-aware A daptive C omputation with Possible Explanation: AcuRank is a framework for listwise reranking\n\t- Evidence found: While our evaluation is based on reranker call counts rather than actual latency, AcuRank supports parallel execution across calls with Possible Explanation: AcuRank is a system that supports parallel execution across calls\n\t- Evidence found: | AcuRank-9                                                      | 73.3 with Possible Explanation: AcuRank-9 appears to be a specific model or system, possibly a ranking model\n\t- Evidence found: | AcuRank with Possible Explanation: AcuRank appears to be a name, possibly of a ranking system or metric\n\nQUESTION:\n\nWhat is AcuRank?\n\n",
+    "potential_terms": [
+        {
+            "term": "AcuRank",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "AcuRank": [
+            {
+                "evidence": "AcuRank: Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+                "explanation": "AcuRank is the name of a system or method for listwise reranking"
+            },
+            {
+                "evidence": "We propose AcuRank, an adaptive reranking framework",
+                "explanation": "AcuRank is an adaptive reranking framework"
+            },
+            {
+                "evidence": "...describe the components of our reranking algorithm with adaptive computation, AcuRank (\u00a73.3, Fig. 1)",
+                "explanation": "AcuRank is the name of the reranking algorithm with adaptive computation"
+            },
+            {
+                "evidence": "AcuRank improves accuracy while reducing unnecessary computation",
+                "explanation": "AcuRank is the name of a system or method for efficient listwise reranking"
+            },
+            {
+                "evidence": "we propose AcuRank , a framework for listwise reranking with U ncertainty-aware A daptive C omputation",
+                "explanation": "AcuRank is a proposed framework for listwise reranking"
+            },
+            {
+                "evidence": "3.3 AcuRank framework",
+                "explanation": "AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation"
+            },
+            {
+                "evidence": "we propose AcuRank , a framework for listwise reranking with U ncertainty-aware A daptive C omputation",
+                "explanation": "AcuRank is a framework for listwise reranking"
+            },
+            {
+                "evidence": "While our evaluation is based on reranker call counts rather than actual latency, AcuRank supports parallel execution across calls",
+                "explanation": "AcuRank is a system that supports parallel execution across calls"
+            },
+            {
+                "evidence": "| AcuRank-9                                                      | 73.3",
+                "explanation": "AcuRank-9 appears to be a specific model or system, possibly a ranking model"
+            },
+            {
+                "evidence": "| AcuRank",
+                "explanation": "AcuRank appears to be a name, possibly of a ranking system or metric"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1875,
+            "recall": 0.5217391304347826,
+            "fmeasure": 0.27586206896551724
+        },
+        "rouge2": {
+            "precision": 0.07936507936507936,
+            "recall": 0.22727272727272727,
+            "fmeasure": 0.11764705882352942
+        },
+        "rougeL": {
+            "precision": 0.125,
+            "recall": 0.34782608695652173,
+            "fmeasure": 0.1839080459770115
+        },
+        "rougeLsum": {
+            "precision": 0.125,
+            "recall": 0.34782608695652173,
+            "fmeasure": 0.1839080459770115
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.2337662337662338,
+            "precision": 0.16071428571428573,
+            "recall": 0.42857142857142855
+        }
+    },
+    "predict": "Based on the provided TERMS information, AcuRank is a system or method for listwise reranking. It is also described as an adaptive reranking framework, a reranking algorithm with adaptive computation, and a framework for listwise reranking with uncertainty-aware adaptive computation. Additionally, it is mentioned to support parallel execution across calls and appears to be a specific model or system, possibly a ranking model.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

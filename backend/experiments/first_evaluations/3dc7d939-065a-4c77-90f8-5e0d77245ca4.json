@@ -1,0 +1,81 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "3dc7d939-065a-4c77-90f8-5e0d77245ca4",
+    "experiment_set": "a8e49d52-3ac1-423a-9937-d2d375ceb3d6",
+    "experiment_storage": "./experiments/evaluations/3dc7d939-065a-4c77-90f8-5e0d77245ca4.json",
+    "document_id": "fc0a57fd-6c7e-464d-b819-5e2c31a84ef4",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MASKSEARCH\n\t- Evidence found: As an exploration in the field of Search Agents, MASKSEARCH has the following impacts:\n\t- Evidence found: we propose a novel pre-training framework, MASKSEARCH\n\t- Evidence found: We propose MASKSEARCH , a universal pre-training framework designed to enhance the agentic search capabilities of LLMs\n\t- Evidence found: ## MASKSEARCH: A Universal Pre-Training Framework to Enhance Agentic Search Capability\n\t- Evidence found: | MASKSEARCH          | SFT            | RL              |\n\nQUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [
+        {
+            "term": "MASKSEARCH",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MASKSEARCH": [
+            {
+                "evidence": "As an exploration in the field of Search Agents, MASKSEARCH has the following impacts:",
+                "explanation": "MASKSEARCH is a specific project or system in the field of Search Agents"
+            },
+            {
+                "evidence": "we propose a novel pre-training framework, MASKSEARCH",
+                "explanation": "MASKSEARCH is a pre-training framework for enhancing universal search capability of agents"
+            },
+            {
+                "evidence": "We propose MASKSEARCH , a universal pre-training framework designed to enhance the agentic search capabilities of LLMs",
+                "explanation": "MASKSEARCH is a pre-training framework for LLMs"
+            },
+            {
+                "evidence": "## MASKSEARCH: A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+                "explanation": "MASKSEARCH is the name of a pre-training framework"
+            },
+            {
+                "evidence": "| MASKSEARCH          | SFT            | RL              |",
+                "explanation": "MASKSEARCH appears to be a specific model or system"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.8947368421052632,
+            "recall": 0.8095238095238095,
+            "fmeasure": 0.8500000000000001
+        },
+        "rouge2": {
+            "precision": 0.7777777777777778,
+            "recall": 0.7,
+            "fmeasure": 0.7368421052631577
+        },
+        "rougeL": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "fmeasure": 0.8
+        },
+        "rougeLsum": {
+            "precision": 0.8421052631578947,
+            "recall": 0.7619047619047619,
+            "fmeasure": 0.8
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.787878787878788,
+            "precision": 0.8125,
+            "recall": 0.7647058823529411
+        }
+    },
+    "predict": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of Large Language Models (LLMs).",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

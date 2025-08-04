@@ -1,0 +1,81 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "738c82bd-f401-463b-9a6d-c41ee2ad62d0",
+    "experiment_set": "8c248567-ca22-481b-952c-79380717ef17",
+    "experiment_storage": "./experiments/evaluations/738c82bd-f401-463b-9a6d-c41ee2ad62d0.json",
+    "document_id": "44316211-6f8d-463a-ab44-fad555690d5c",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Explanation: ClueAnchor is a framework introduced in this section\n\t- Explanation: ClueAnchor is a model that enables clue-aware generation and reward-guided path selection\n\t- Explanation: ClueAnchor appears to be a proper name, possibly referring to a model, system, or entity\n\t- Explanation: ClueAnchor is a model or system being evaluated\n\t- Explanation: ClueAnchor is a proposed framework for enhancing RAG\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "This section introduces the ClueAnchor framework, which is illustrated in Figure 2.",
+                "explanation": "ClueAnchor is a framework introduced in this section"
+            },
+            {
+                "evidence": "ClueAnchor enables the model to identify key clues from noisy retrieved documents and use them as anchor for reasoning",
+                "explanation": "ClueAnchor is a model that enables clue-aware generation and reward-guided path selection"
+            },
+            {
+                "evidence": "ClueAnchor",
+                "explanation": "ClueAnchor appears to be a proper name, possibly referring to a model, system, or entity"
+            },
+            {
+                "evidence": "we first evaluate the overall performance of ClueAnchor",
+                "explanation": "ClueAnchor is a model or system being evaluated"
+            },
+            {
+                "evidence": "we propose ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization",
+                "explanation": "ClueAnchor is a proposed framework for enhancing RAG"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.23684210526315788,
+            "recall": 0.6,
+            "fmeasure": 0.339622641509434
+        },
+        "rouge2": {
+            "precision": 0.05405405405405406,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.0784313725490196
+        },
+        "rougeL": {
+            "precision": 0.21052631578947367,
+            "recall": 0.5333333333333333,
+            "fmeasure": 0.3018867924528302
+        },
+        "rougeLsum": {
+            "precision": 0.21052631578947367,
+            "recall": 0.5333333333333333,
+            "fmeasure": 0.3018867924528302
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.26086956521739135,
+            "precision": 0.18181818181818182,
+            "recall": 0.46153846153846156
+        }
+    },
+    "predict": "ClueAnchor is a proposed framework designed to enhance Retrieval-Augmented Generation (RAG) by enabling clue-aware generation and reward-guided path selection. It appears to be a model or system being evaluated for its effectiveness in this context.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}
