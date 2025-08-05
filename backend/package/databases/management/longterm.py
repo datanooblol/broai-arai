@@ -33,7 +33,7 @@ class LongTermManagement:
         now = now_utc()
         for longterm in longterms:
             longterm.updated_at = now
-        session.add_all(longterms)
+            session.merge(longterm)
         session.commit()
         session.close()
     
