@@ -72,7 +72,7 @@ class Jargon(Action):
 
     def fallback(self, system_prompt, shared:Shared):
         errors = []
-        for i in range(5):
+        for i in range(3):
             try:
                 error = "Avoid below errors:\n\n{e}".format(e="\n".join(errors)) if len(errors) > 0 else ""
                 prompt = "{raw} {error}".format(raw=shared.chunk.raw, error=error).strip()
