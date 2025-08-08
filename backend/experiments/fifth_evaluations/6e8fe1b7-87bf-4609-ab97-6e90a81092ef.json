@@ -1,0 +1,53 @@
+{
+    "question": "What does POQD stand for?",
+    "answer": "Performance-Oriented Query Decomposer",
+    "type": "acronym",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "6e8fe1b7-87bf-4609-ab97-6e90a81092ef",
+    "experiment_set": "1bd47c47-a24c-4eec-b353-73a47ca3101b",
+    "experiment_storage": "./experiments/fifth_evaluations/6e8fe1b7-87bf-4609-ab97-6e90a81092ef.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat does POQD stand for?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.018518518518518517,
+            "recall": 0.25,
+            "fmeasure": 0.034482758620689655
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.018518518518518517,
+            "recall": 0.25,
+            "fmeasure": 0.034482758620689655
+        },
+        "rougeLsum": {
+            "precision": 0.018518518518518517,
+            "recall": 0.25,
+            "fmeasure": 0.034482758620689655
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "POQD stands for \"Process Oriented Quality Dashboard\". However, without more context, it's difficult to provide a specific answer as acronyms can have multiple meanings. Some possible alternatives include \"Process Oriented Quality Development\" or other organization-specific definitions. If you have more context or details, I can try to provide a more accurate answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

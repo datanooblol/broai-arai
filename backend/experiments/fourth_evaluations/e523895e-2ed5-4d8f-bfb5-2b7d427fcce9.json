@@ -1,0 +1,65 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "e523895e-2ed5-4d8f-bfb5-2b7d427fcce9",
+    "experiment_set": "00da9ad7-03fa-44ef-9ef4-498f14633df8",
+    "experiment_storage": "./experiments/fourth_evaluations/e523895e-2ed5-4d8f-bfb5-2b7d427fcce9.json",
+    "document_id": "fd16854e-86f2-4851-b123-2f1cf3b5063a",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Evidence found: w/o Anchored Clues with Possible Explanation: Anchored Clues is a term, but its meaning is not explained in the context\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "w/o Anchored Clues",
+                "explanation": "Anchored Clues is a term, but its meaning is not explained in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0625,
+            "recall": 0.4666666666666667,
+            "fmeasure": 0.11023622047244094
+        },
+        "rouge2": {
+            "precision": 0.009009009009009009,
+            "recall": 0.07142857142857142,
+            "fmeasure": 0.016
+        },
+        "rougeL": {
+            "precision": 0.05357142857142857,
+            "recall": 0.4,
+            "fmeasure": 0.09448818897637795
+        },
+        "rougeLsum": {
+            "precision": 0.05357142857142857,
+            "recall": 0.4,
+            "fmeasure": 0.09448818897637795
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06896551724137931,
+            "precision": 0.038834951456310676,
+            "recall": 0.3076923076923077
+        }
+    },
+    "predict": "Based on the provided TERM information, ClueAnchor seems to be related to \"Anchored Clues.\" However, the exact meaning of ClueAnchor and Anchored Clues is not explicitly explained.\n\nGiven the information available, I can infer that ClueAnchor might be a term or concept that involves or is derived from \"Anchored Clues,\" but without a clear definition or context, I cannot provide a precise explanation.\n\nIf more context or information about Anchored Clues and its relation to ClueAnchor is provided, I would be happy to give a more accurate and detailed answer. \n\nFor now, ClueAnchor appears to be connected to the concept of Anchored Clues, but further clarification is needed for a definitive explanation.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

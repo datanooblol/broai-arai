@@ -1,0 +1,85 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "d55fe01a-f6d7-4c33-814c-f73302f7a454",
+    "experiment_set": "ec239a8b-135f-49c0-9dfb-982ec5b47ba9",
+    "experiment_storage": "./experiments/sixth_evaluations/d55fe01a-f6d7-4c33-814c-f73302f7a454.json",
+    "document_id": "4cc494d9-fe5e-41b9-9b27-850b85a142bd",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\t- Evidence found: DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval with Possible Explanation: DiscoVLA is the name of a system or model for video-text retrieval\n\t- Evidence found: we propose DiscoVLA with Possible Explanation: DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer\n\t- Evidence found: we introduce Disc repancy Reducti o n in V ision, L anguage, and A lignment, termed DiscoVLA with Possible Explanation: DiscoVLA is a novel parameter-efficient method for video-text retrieval\n\t- Evidence found: we propose Disc repancy Reducti o n in V ision, L anguage, and A lignment ( DiscoVLA ) with Possible Explanation: DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment\n\t- Evidence found: | DiscoVLA       | !            | !            | !            | 0.56           | 47.0            | 73.0            | 82.8            | 202.8           | 47.7            | 73.6 with Possible Explanation: DiscoVLA appears to be a specific model or system being compared to others, such as B2 and B3, based on various metrics\n\t- Evidence found: DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval with Possible Explanation: DiscoVLA is the name of a system or model for video-text retrieval\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": [
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            },
+            {
+                "evidence": "we propose DiscoVLA",
+                "explanation": "DiscoVLA is proposed as a solution to address discrepancies in parameter-efficient transfer"
+            },
+            {
+                "evidence": "we introduce Disc repancy Reducti o n in V ision, L anguage, and A lignment, termed DiscoVLA",
+                "explanation": "DiscoVLA is a novel parameter-efficient method for video-text retrieval"
+            },
+            {
+                "evidence": "we propose Disc repancy Reducti o n in V ision, L anguage, and A lignment ( DiscoVLA )",
+                "explanation": "DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment"
+            },
+            {
+                "evidence": "| DiscoVLA       | !            | !            | !            | 0.56           | 47.0            | 73.0            | 82.8            | 202.8           | 47.7            | 73.6",
+                "explanation": "DiscoVLA appears to be a specific model or system being compared to others, such as B2 and B3, based on various metrics"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+                "explanation": "DiscoVLA is the name of a system or model for video-text retrieval"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.4375,
+            "recall": 1.0,
+            "fmeasure": 0.6086956521739131
+        },
+        "rouge2": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "fmeasure": 0.5714285714285715
+        },
+        "rougeL": {
+            "precision": 0.4375,
+            "recall": 1.0,
+            "fmeasure": 0.6086956521739131
+        },
+        "rougeLsum": {
+            "precision": 0.4375,
+            "recall": 1.0,
+            "fmeasure": 0.6086956521739131
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.6363636363636364,
+            "precision": 0.4666666666666667,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, DiscoVLA stands for \"Discrepancy Reduction in Vision, Language, and Alignment.\"",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

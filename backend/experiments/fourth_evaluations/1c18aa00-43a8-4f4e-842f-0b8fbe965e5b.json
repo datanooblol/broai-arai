@@ -1,0 +1,66 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "1c18aa00-43a8-4f4e-842f-0b8fbe965e5b",
+    "experiment_set": "0e5badc5-10bf-44a0-a6d3-a7bc965aae5a",
+    "experiment_storage": "./experiments/fourth_evaluations/1c18aa00-43a8-4f4e-842f-0b8fbe965e5b.json",
+    "document_id": "281cfb03-6082-438e-acaf-b6c90fe48c2c",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\nCONTEXTS:\n\n<|start_context|>4 Experiments\n\nIn this section, we report our experimental details and results, and provide an experimental analysis of GainRAG.<|end_context|>\n<|start_context|>Abstract\n\nThe Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs), and has demonstrated significant success in various NLP tasks. However, the current study points out that there is a preference gap between retrievers and LLMs in the RAG framework, which limit the further improvement of system performance. Some highly relevant passages may interfere with LLM reasoning because they contain complex or contradictory information; while some indirectly related or even inaccurate content may help LLM generate more accurate answers by providing suggestive information or logical clues. To solve this, we propose GainRAG , a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, 'gain', which measure how well an input passage contributes to correct outputs. Specifically, we propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data. In addition, we introduce a pseudo-passage strategy to mitigate degradation. The experimental results on 6 datasets verify the effectiveness of GainRAG 1 .<|end_context|>\n<|start_context|>5 Conclusion\n\nThis work analyzes the preference gap between retrievers and LLMs and proposes GainRAG to address this misalignment. We define and quantify preferences, then fine-tune a selector with signals from a small number of samples. By adding a selector and using a pseudo-passage strategy to prevent degradation, GainRAG effectively integrates internal and external knowledge of LLMs, achieving superior performance.<|end_context|>\n<|start_context|>## GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis<|end_context|>\n<|start_context|>3.1 Preliminaries\n\nBefore discussing GainRAG, we first provide a formal definition of the RAG problem. Given a query q and a corpus of documents D , RAG systems typically follow a retrieval-then-reading framework. In this approach, the retriever selects relevant passages C = { c 1 , c 2 , , c k } \u2282 D from the entire corpus D , and the generator model (LLM) utilizes these passages C to generate the answer \u02c6 a . This process can be represented as:\n\n<!-- formula-not-decoded -->\n\nwhere R denotes the retrieval function that selects k relevant passages, P represents the prompt template that combines q and C , and G is the generator, i.e., the LLM, which generates the final answer \u02c6 a .<|end_context|>\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": []
+    },
+    "contexts": [
+        "4 Experiments\n\nIn this section, we report our experimental details and results, and provide an experimental analysis of GainRAG.\n",
+        "Abstract\n\nThe Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs), and has demonstrated significant success in various NLP tasks. However, the current study points out that there is a preference gap between retrievers and LLMs in the RAG framework, which limit the further improvement of system performance. Some highly relevant passages may interfere with LLM reasoning because they contain complex or contradictory information; while some indirectly related or even inaccurate content may help LLM generate more accurate answers by providing suggestive information or logical clues. To solve this, we propose GainRAG , a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, 'gain', which measure how well an input passage contributes to correct outputs. Specifically, we propose a method to estimate these gain signals and train a middleware that aligns the preferences of the retriever and the LLM using only limited data. In addition, we introduce a pseudo-passage strategy to mitigate degradation. The experimental results on 6 datasets verify the effectiveness of GainRAG 1 .\n",
+        "5 Conclusion\n\nThis work analyzes the preference gap between retrievers and LLMs and proposes GainRAG to address this misalignment. We define and quantify preferences, then fine-tune a selector with signals from a small number of samples. By adding a selector and using a pseudo-passage strategy to prevent degradation, GainRAG effectively integrates internal and external knowledge of LLMs, achieving superior performance.\n",
+        "## GainRAG: Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis\n",
+        "3.1 Preliminaries\n\nBefore discussing GainRAG, we first provide a formal definition of the RAG problem. Given a query q and a corpus of documents D , RAG systems typically follow a retrieval-then-reading framework. In this approach, the retriever selects relevant passages C = { c 1 , c 2 , , c k } \u2282 D from the entire corpus D , and the generator model (LLM) utilizes these passages C to generate the answer \u02c6 a . This process can be represented as:\n\n<!-- formula-not-decoded -->\n\nwhere R denotes the retrieval function that selects k relevant passages, P represents the prompt template that combines q and C , and G is the generator, i.e., the LLM, which generates the final answer \u02c6 a .\n"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.4918032786885246,
+            "recall": 0.967741935483871,
+            "fmeasure": 0.6521739130434782
+        },
+        "rouge2": {
+            "precision": 0.4666666666666667,
+            "recall": 0.9333333333333333,
+            "fmeasure": 0.6222222222222223
+        },
+        "rougeL": {
+            "precision": 0.4918032786885246,
+            "recall": 0.967741935483871,
+            "fmeasure": 0.6521739130434782
+        },
+        "rougeLsum": {
+            "precision": 0.4918032786885246,
+            "recall": 0.967741935483871,
+            "fmeasure": 0.6521739130434782
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5526315789473684,
+            "precision": 0.4117647058823529,
+            "recall": 0.84
+        }
+    },
+    "predict": "Based on the provided CONTEXTS and TERMS information, GainRAG is a novel approach proposed to address the preference gap between retrievers and Large Language Models (LLMs) in the Retrieval-Augmented Generation (RAG) framework. It aims to align the retriever's and LLM's preferences by defining a new metric, 'gain', which measures how well an input passage contributes to correct outputs.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": true,
+    "is_rerank": false
+}

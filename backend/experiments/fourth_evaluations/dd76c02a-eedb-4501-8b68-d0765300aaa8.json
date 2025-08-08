@@ -1,0 +1,60 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel performance-driven query decomposition framework",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "dd76c02a-eedb-4501-8b68-d0765300aaa8",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/dd76c02a-eedb-4501-8b68-d0765300aaa8.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: POQD\n\nQUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [
+        {
+            "term": "POQD",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "POQD": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.05063291139240506,
+            "recall": 0.4444444444444444,
+            "fmeasure": 0.0909090909090909
+        },
+        "rouge2": {
+            "precision": 0.01282051282051282,
+            "recall": 0.125,
+            "fmeasure": 0.02325581395348837
+        },
+        "rougeL": {
+            "precision": 0.05063291139240506,
+            "recall": 0.4444444444444444,
+            "fmeasure": 0.0909090909090909
+        },
+        "rougeLsum": {
+            "precision": 0.05063291139240506,
+            "recall": 0.4444444444444444,
+            "fmeasure": 0.0909090909090909
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0759493670886076,
+            "precision": 0.041666666666666664,
+            "recall": 0.42857142857142855
+        }
+    },
+    "predict": "Since the term \"POQD\" is provided, I'll directly look into its definition.\n\nPOQD stands for \"Plan, Organize, Quality, and Deliver.\" However, without more context, it's difficult to provide a specific explanation. \n\nOne possible expansion is that POQD is related to project management or operational management, where it could be a framework or methodology for managing tasks or projects. \n\nIf POQD is related to a specific industry or context, please provide more information for a more accurate answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

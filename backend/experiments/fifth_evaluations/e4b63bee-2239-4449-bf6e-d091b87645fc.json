@@ -1,0 +1,101 @@
+{
+    "question": "What does STORM stand for?",
+    "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "acronym",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "e4b63bee-2239-4449-bf6e-d091b87645fc",
+    "experiment_set": "1075ce17-013f-46b6-a315-1579f101f786",
+    "experiment_storage": "./experiments/fifth_evaluations/e4b63bee-2239-4449-bf6e-d091b87645fc.json",
+    "document_id": "8170f3b0-9203-4ec2-8dcc-476eeb9c69b0",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\t- Explanation: STORM is the entity producing articles\n\t- Explanation: STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking\n\t- Explanation: STORM is a paradigm for Synthesis\n\t- Explanation: STORM is a paradigm for the synthesis of topic outlines through retrieval and multi-perspective question asking\n\t- Explanation: STORM is a system that automates the pre-writing stage\n\t- Explanation: STORM is a system or method that discovers different perspectives for a given topic\n\t- Explanation: STORM is a system that simulates a conversation\n\t- Explanation: STORM is an entity that creates an outline\n\t- Explanation: STORM is an acronym for a system capable of researching and writing articles\n\t- Explanation: STORM is a system or model built using the DSPy framework with zero-shot prompting\n\nQUESTION:\n\nWhat does STORM stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": [
+            {
+                "evidence": "articles produced by STORM",
+                "explanation": "STORM is the entity producing articles"
+            },
+            {
+                "evidence": "STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking"
+            },
+            {
+                "evidence": "we propose the STORM paradigm",
+                "explanation": "STORM is a paradigm for Synthesis"
+            },
+            {
+                "evidence": "STORM paradigm for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM is a paradigm for the synthesis of topic outlines through retrieval and multi-perspective question asking"
+            },
+            {
+                "evidence": "We present STORM to automate the pre-writing stage",
+                "explanation": "STORM is a system that automates the pre-writing stage"
+            },
+            {
+                "evidence": "STORM discovers different perspectives by surveying existing articles",
+                "explanation": "STORM is a system or method that discovers different perspectives for a given topic"
+            },
+            {
+                "evidence": "STORM simulates a conversation",
+                "explanation": "STORM is a system that simulates a conversation"
+            },
+            {
+                "evidence": "STORM creates an outline",
+                "explanation": "STORM is an entity that creates an outline"
+            },
+            {
+                "evidence": "STORM is capable of researching complicated topics and writing long articles from detailed outlines",
+                "explanation": "STORM is an acronym for a system capable of researching and writing articles"
+            },
+            {
+                "evidence": "We build STORM with zero-shot prompting using the DSPy framework",
+                "explanation": "STORM is a system or model built using the DSPy framework with zero-shot prompting"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "rouge2": {
+            "precision": 0.7692307692307693,
+            "recall": 1.0,
+            "fmeasure": 0.8695652173913044
+        },
+        "rougeL": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "rougeLsum": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.8695652173913044,
+            "precision": 0.7692307692307693,
+            "recall": 1.0
+        }
+    },
+    "predict": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

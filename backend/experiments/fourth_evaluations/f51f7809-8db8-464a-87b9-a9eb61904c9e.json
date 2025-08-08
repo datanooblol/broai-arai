@@ -1,0 +1,65 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "f51f7809-8db8-464a-87b9-a9eb61904c9e",
+    "experiment_set": "33dc9c9b-bf0d-44c6-aae3-485e7a90e475",
+    "experiment_storage": "./experiments/fourth_evaluations/f51f7809-8db8-464a-87b9-a9eb61904c9e.json",
+    "document_id": "9b8418e9-6f5f-4116-b3ed-7eef0b58c34c",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MASKSEARCH\n\t- Explanation: Search-R1 is a type of language model\n\nQUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [
+        {
+            "term": "MASKSEARCH",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MASKSEARCH": [
+            {
+                "evidence": "Search-R1 [13]",
+                "explanation": "Search-R1 is a type of language model"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.08333333333333333,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.13953488372093023
+        },
+        "rouge2": {
+            "precision": 0.018691588785046728,
+            "recall": 0.1,
+            "fmeasure": 0.03149606299212598
+        },
+        "rougeL": {
+            "precision": 0.07407407407407407,
+            "recall": 0.38095238095238093,
+            "fmeasure": 0.12403100775193798
+        },
+        "rougeLsum": {
+            "precision": 0.07407407407407407,
+            "recall": 0.38095238095238093,
+            "fmeasure": 0.12403100775193798
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.10909090909090909,
+            "precision": 0.06451612903225806,
+            "recall": 0.35294117647058826
+        }
+    },
+    "predict": "MASKSEARCH is related to Search-R1, which is a type of language model. However, without more specific information, it seems that MASKSEARCH might be a specific application, technique, or possibly a placeholder term related to Search-R1 or similar language models, potentially involving masked search techniques often used in natural language processing for tasks like predicting hidden tokens in a sequence. \n\nGiven the direct information from the term, MASKSEARCH can be understood as a concept or tool associated with Search-R1, but a precise definition or common usage isn't provided. Therefore, based on the information given:\n\nMASKSEARCH is associated with Search-R1, a type of language model.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

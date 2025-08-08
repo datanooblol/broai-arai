@@ -1,0 +1,53 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "02fc97d3-49f4-4084-b9c3-3740247d3e0d",
+    "experiment_set": "717823ec-f4ec-40be-bc62-a0b4649129ca",
+    "experiment_storage": "./experiments/fourth_evaluations/02fc97d3-49f4-4084-b9c3-3740247d3e0d.json",
+    "document_id": "fd16854e-86f2-4851-b123-2f1cf3b5063a",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04424778761061947,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.078125
+        },
+        "rouge2": {
+            "precision": 0.008928571428571428,
+            "recall": 0.07142857142857142,
+            "fmeasure": 0.015873015873015872
+        },
+        "rougeL": {
+            "precision": 0.04424778761061947,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.078125
+        },
+        "rougeLsum": {
+            "precision": 0.04424778761061947,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.078125
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.06779661016949154,
+            "precision": 0.0380952380952381,
+            "recall": 0.3076923076923077
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information about ClueAnchor. However, based on general knowledge, it seems that ClueAnchor might be related to a specific concept or tool, possibly in the context of data analysis, software development, or another technical field.\n\nWithout additional context or definitions, I can only speculate. If you provide more details or clarify the context in which ClueAnchor is used, I can give a more precise answer. \n\nFor now, I'll have to admit that I don't have enough information to determine what ClueAnchor is. If you have any CONTEXTS or TERMS related to it, please share, and I'll do my best to assist you.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

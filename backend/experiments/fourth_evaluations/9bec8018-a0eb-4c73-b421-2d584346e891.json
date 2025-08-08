@@ -1,0 +1,69 @@
+{
+    "question": "What is SORCE?",
+    "answer": "SORCE is a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+    "type": "explanation",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "9bec8018-a0eb-4c73-b421-2d584346e891",
+    "experiment_set": "00da9ad7-03fa-44ef-9ef4-498f14633df8",
+    "experiment_storage": "./experiments/fourth_evaluations/9bec8018-a0eb-4c73-b421-2d584346e891.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a dataset used for evaluation\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a benchmark\n\nQUESTION:\n\nWhat is SORCE?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a dataset used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a benchmark"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.2,
+            "recall": 0.3,
+            "fmeasure": 0.24
+        },
+        "rouge2": {
+            "precision": 0.045454545454545456,
+            "recall": 0.06896551724137931,
+            "fmeasure": 0.0547945205479452
+        },
+        "rougeL": {
+            "precision": 0.08888888888888889,
+            "recall": 0.13333333333333333,
+            "fmeasure": 0.10666666666666669
+        },
+        "rougeLsum": {
+            "precision": 0.08888888888888889,
+            "recall": 0.13333333333333333,
+            "fmeasure": 0.10666666666666669
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.1846153846153846,
+            "precision": 0.15384615384615385,
+            "recall": 0.23076923076923078
+        }
+    },
+    "predict": "Based on the provided TERMS information, SORCE refers to a dataset or benchmark, specifically known as SORCE-1K. It appears to be used for evaluation purposes. Therefore, SORCE is likely a dataset or benchmark, with SORCE-1K being a specific version or example of it.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

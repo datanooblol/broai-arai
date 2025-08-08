@@ -1,0 +1,60 @@
+{
+    "question": "What does RARE stand for?",
+    "answer": "Retrieval-Aware Robustness Evaluation",
+    "type": "acronym",
+    "source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+    "experiment_id": "5a177577-32e8-4d2c-a00b-60a0962d68db",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/5a177577-32e8-4d2c-a00b-60a0962d68db.json",
+    "document_id": "cc67a677-1a97-4b0d-9812-b62a5c8749c2",
+    "document_source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RARE\n\nQUESTION:\n\nWhat does RARE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "RARE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RARE": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeLsum": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "Since there's no specific context or expansion provided for \"RARE\" in the given TERMS or CONTEXTS, I'll provide a general answer based on common knowledge.\n\n\"RARE\" can stand for several things depending on the context. Some possible expansions include:\n\n1. **Rare (as in not common)**: Not a specific acronym but used in various contexts to denote something that is uncommon.\n2. **RARE (in medical or scientific contexts)**: Might refer to a rare disease or condition.\n3. **RARE (in technology or specific industries)**: Could be an acronym specific to a project, organization, or technology.\n\nWithout more context, one common expansion is \"Rare Action for Reptile Conservation\" or other organization/project-specific acronyms. However, a well-known expansion is from the computing and technology sector: **RARE (R\u00e9seau Associ\u00e9 pour la Recherche Europ\u00e9enne)**, which was an early European research network.\n\nIf you have a specific context in mind, please provide more details for a more accurate answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

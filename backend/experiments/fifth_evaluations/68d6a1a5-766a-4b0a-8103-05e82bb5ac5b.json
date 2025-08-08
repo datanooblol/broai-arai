@@ -1,0 +1,101 @@
+{
+    "question": "What is LOGICOL?",
+    "answer": "LOGICOL is a logically-informed contrastive learning framework for retrieval with queries containing logical connectives.",
+    "type": "explanation",
+    "source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+    "experiment_id": "68d6a1a5-766a-4b0a-8103-05e82bb5ac5b",
+    "experiment_set": "bcb4ec10-e560-4dd9-a193-bf083b5fd918",
+    "experiment_storage": "./experiments/fifth_evaluations/68d6a1a5-766a-4b0a-8103-05e82bb5ac5b.json",
+    "document_id": "df47df55-be76-403e-b7c8-fc57d0e3935c",
+    "document_source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: LOGICOL\n\t- Evidence found: compared to random batching for LOGICOL with Possible Explanation: LOGICOL is the subject of the batching strategy comparison\n\t- Evidence found: LOGICOL framework with Possible Explanation: LOGICOL is a framework used for retrieval tasks\n\t- Evidence found: LOGICOL, a logically-informed contrastive learning framework with Possible Explanation: LOGICOL is a logically-informed contrastive learning framework\n\t- Evidence found: LOGICOL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval with Possible Explanation: LOGICOL stands for Logically-Informed Contrastive Learning for Set-based Dense Retrieval\n\t- Evidence found: LOGICOL, a logically-informed contrastive learning objective for dense retrievers with Possible Explanation: LOGICOL is a learning objective for dense retrievers that incorporates logical constraints\n\t- Evidence found: we propose LOGICOL, a logically-informed contrastive learning framework with Possible Explanation: LOGICOL is a logically-informed contrastive learning framework\n\t- Evidence found: LOGICOL, a logically-informed contrastive learning framework for retrieval with queries containing logical connectives with Possible Explanation: LOGICOL is a logically-informed contrastive learning framework for retrieval\n\t- Evidence found: models trained with LOGICOL (\u00a73) show cleaner separation in the query embedding representations with Possible Explanation: LOGICOL is a method or approach used to train models, likely related to logical reasoning or retrieval tasks\n\t- Evidence found: the components of the LOGICOL learning objective with Possible Explanation: LOGICOL is a learning objective\n\t- Evidence found: Our LOGICOL approach builds on top of inbatch supervised contrastive learning with Possible Explanation: LOGICOL is an approach that builds on inbatch supervised contrastive learning\n\nQUESTION:\n\nWhat is LOGICOL?\n\n",
+    "potential_terms": [
+        {
+            "term": "LOGICOL",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "LOGICOL": [
+            {
+                "evidence": "compared to random batching for LOGICOL",
+                "explanation": "LOGICOL is the subject of the batching strategy comparison"
+            },
+            {
+                "evidence": "LOGICOL framework",
+                "explanation": "LOGICOL is a framework used for retrieval tasks"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning framework",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework"
+            },
+            {
+                "evidence": "LOGICOL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+                "explanation": "LOGICOL stands for Logically-Informed Contrastive Learning for Set-based Dense Retrieval"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning objective for dense retrievers",
+                "explanation": "LOGICOL is a learning objective for dense retrievers that incorporates logical constraints"
+            },
+            {
+                "evidence": "we propose LOGICOL, a logically-informed contrastive learning framework",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning framework for retrieval with queries containing logical connectives",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework for retrieval"
+            },
+            {
+                "evidence": "models trained with LOGICOL (\u00a73) show cleaner separation in the query embedding representations",
+                "explanation": "LOGICOL is a method or approach used to train models, likely related to logical reasoning or retrieval tasks"
+            },
+            {
+                "evidence": "the components of the LOGICOL learning objective",
+                "explanation": "LOGICOL is a learning objective"
+            },
+            {
+                "evidence": "Our LOGICOL approach builds on top of inbatch supervised contrastive learning",
+                "explanation": "LOGICOL is an approach that builds on inbatch supervised contrastive learning"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.24193548387096775,
+            "recall": 1.0,
+            "fmeasure": 0.38961038961038963
+        },
+        "rouge2": {
+            "precision": 0.18032786885245902,
+            "recall": 0.7857142857142857,
+            "fmeasure": 0.29333333333333333
+        },
+        "rougeL": {
+            "precision": 0.24193548387096775,
+            "recall": 1.0,
+            "fmeasure": 0.38961038961038963
+        },
+        "rougeLsum": {
+            "precision": 0.24193548387096775,
+            "recall": 1.0,
+            "fmeasure": 0.38961038961038963
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.36619718309859156,
+            "precision": 0.22413793103448276,
+            "recall": 1.0
+        }
+    },
+    "predict": "LOGICOL stands for Logically-Informed Contrastive Learning for Set-based Dense Retrieval. It is a logically-informed contrastive learning framework or objective used for retrieval tasks, particularly for dense retrievers. LOGICOL incorporates logical constraints and is designed to work with queries containing logical connectives. It builds on top of inbatch supervised contrastive learning and is used to train models for retrieval tasks.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

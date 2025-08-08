@@ -1,0 +1,60 @@
+{
+    "question": "What does MVR stand for?",
+    "answer": "Multi-Vector Retrieval",
+    "type": "acronym",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "86460da9-a9c2-4267-8552-d3613e7c2a66",
+    "experiment_set": "a39ef2d4-aeda-45fc-8c40-b0974ab15c5b",
+    "experiment_storage": "./experiments/fourth_evaluations/86460da9-a9c2-4267-8552-d3613e7c2a66.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MVR\n\nQUESTION:\n\nWhat does MVR stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "MVR",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MVR": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.007042253521126761,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.013793103448275864
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.007042253521126761,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.013793103448275864
+        },
+        "rougeLsum": {
+            "precision": 0.007042253521126761,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.013793103448275864
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "To provide an accurate answer, I need more information about the term \"MVR\" as it can have multiple meanings depending on the context. However, some common expansions of \"MVR\" include:\n\n1. **Motor Vehicle Report/Record**: Often used in the context of driving records or vehicle history reports.\n2. **Motor Vehicle Registration**: Refers to the registration process or documentation for vehicles.\n3. **Minimum Vectoring Resolution**: Could be related to technical or engineering contexts, possibly referring to the resolution or precision in vector calculations or measurements.\n4. **Other contexts**: MVR can stand for various other terms depending on the field or industry, such as \"Manual Vehicle Registration\" or specific technical terms.\n\nWithout a specific context, it's challenging to determine the exact meaning of \"MVR.\" If you have a particular context or industry in mind, please provide more details for a more accurate answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

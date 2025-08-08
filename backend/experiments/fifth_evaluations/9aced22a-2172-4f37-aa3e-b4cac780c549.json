@@ -1,0 +1,81 @@
+{
+    "question": "What does T2IR stand for?",
+    "answer": "Text-to-Image Retrieval",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "9aced22a-2172-4f37-aa3e-b4cac780c549",
+    "experiment_set": "4b69fdab-471a-4abf-9d98-743a3cb38554",
+    "experiment_storage": "./experiments/fifth_evaluations/9aced22a-2172-4f37-aa3e-b4cac780c549.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: T2IR\n\t- Evidence found: Text-to-Image Retrieval (T2IR)\n\t- Evidence found: the first T2IR benchmark\n\t- Evidence found: Text-to-Image Retrieval (T2IR) is a highly valuable task\n\t- Evidence found: Text-to-Image Retrieval (T2IR)\n\t- Evidence found: Text-to-Image Retrieval (T2IR)\n\nQUESTION:\n\nWhat does T2IR stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "T2IR",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "T2IR": [
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR)",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            },
+            {
+                "evidence": "the first T2IR benchmark",
+                "explanation": "T2IR is a type of benchmark, likely related to text-to-image retrieval"
+            },
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR) is a highly valuable task",
+                "explanation": "T2IR stands for Text-to-Image Retrieval, a task that matches textual queries to images"
+            },
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR)",
+                "explanation": "T2IR is a task that involves retrieving images based on textual queries"
+            },
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR)",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "fmeasure": 0.888888888888889
+        },
+        "rouge2": {
+            "precision": 0.75,
+            "recall": 1.0,
+            "fmeasure": 0.8571428571428571
+        },
+        "rougeL": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "fmeasure": 0.888888888888889
+        },
+        "rougeLsum": {
+            "precision": 0.8,
+            "recall": 1.0,
+            "fmeasure": 0.888888888888889
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.8,
+            "precision": 0.6666666666666666,
+            "recall": 1.0
+        }
+    },
+    "predict": "Text-to-Image Retrieval (T2IR)",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

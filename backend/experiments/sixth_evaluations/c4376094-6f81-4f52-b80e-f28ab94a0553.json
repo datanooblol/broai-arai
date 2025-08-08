@@ -1,0 +1,97 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "c4376094-6f81-4f52-b80e-f28ab94a0553",
+    "experiment_set": "cd2d8c87-c9df-4ee2-9e81-3ddf521a63e3",
+    "experiment_storage": "./experiments/sixth_evaluations/c4376094-6f81-4f52-b80e-f28ab94a0553.json",
+    "document_id": "b3bc7aa5-d5b9-4d20-8e35-9a208a8e8b0e",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\t- Evidence found: PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements\n\t- Evidence found: Figure 2: An overview of the proposed PAKTON framework and its internal components.\n\t- Evidence found: we introduce PAKTON: a fully open-source, endto-end, multi-agent framework\n\t- Evidence found: These design choices are integral to the overall effectiveness of PAKTON.\n\t- Evidence found: 3 PAKTON Framework\n\t- Evidence found: 3 PAKTON Framework\n\t- Evidence found: Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents\n\t- Evidence found: Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents\n\t- Evidence found: | 2.5 72B    | PAKTON          |\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": [
+            {
+                "evidence": "PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+                "explanation": "PAKTON is the name of a framework"
+            },
+            {
+                "evidence": "Figure 2: An overview of the proposed PAKTON framework and its internal components.",
+                "explanation": "PAKTON is the name of a proposed framework"
+            },
+            {
+                "evidence": "we introduce PAKTON: a fully open-source, endto-end, multi-agent framework",
+                "explanation": "PAKTON is a fully open-source, end-to-end, multi-agent framework for contract analysis"
+            },
+            {
+                "evidence": "These design choices are integral to the overall effectiveness of PAKTON.",
+                "explanation": "PAKTON is the name of the system that the Interrogator is a part of."
+            },
+            {
+                "evidence": "3 PAKTON Framework",
+                "explanation": "PAKTON is the name of a framework for analyzing user-provided contracts"
+            },
+            {
+                "evidence": "3 PAKTON Framework",
+                "explanation": "PAKTON Framework is a system for analyzing contracts and generating query responses"
+            },
+            {
+                "evidence": "Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents",
+                "explanation": "PAKTON is a multi-agent framework for contract analysis"
+            },
+            {
+                "evidence": "Within this context, we introduce PAKTON 2 (Fig. 1), a multi-agent framework designed to analyze contract documents",
+                "explanation": "PAKTON 2 is an iteration of the PAKTON framework"
+            },
+            {
+                "evidence": "| 2.5 72B    | PAKTON          |",
+                "explanation": "PAKTON appears to be a model or system name"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.25,
+            "recall": 0.68,
+            "fmeasure": 0.3655913978494624
+        },
+        "rouge2": {
+            "precision": 0.13432835820895522,
+            "recall": 0.375,
+            "fmeasure": 0.19780219780219782
+        },
+        "rougeL": {
+            "precision": 0.19117647058823528,
+            "recall": 0.52,
+            "fmeasure": 0.27956989247311825
+        },
+        "rougeLsum": {
+            "precision": 0.19117647058823528,
+            "recall": 0.52,
+            "fmeasure": 0.27956989247311825
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.27848101265822783,
+            "precision": 0.19298245614035087,
+            "recall": 0.5
+        }
+    },
+    "predict": "Based on the provided TERMS information, PAKTON is described as:\n\n\"PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements\"\n\nAdditionally, it is mentioned as:\n\n\"a fully open-source, end-to-end, multi-agent framework\"\n\nand\n\n\"a multi-agent framework designed to analyze contract documents\"\n\nTherefore, PAKTON appears to be a software framework designed to analyze and answer questions within long legal agreements, specifically contract documents.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

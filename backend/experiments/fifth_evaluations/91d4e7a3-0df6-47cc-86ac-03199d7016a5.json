@@ -1,0 +1,93 @@
+{
+    "question": "What is TracLLM?",
+    "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",
+    "type": "explanation",
+    "source": "TracLLM A Generic Framework for Attributing Long Context LLMs",
+    "experiment_id": "91d4e7a3-0df6-47cc-86ac-03199d7016a5",
+    "experiment_set": "29fea9bd-1c0f-4c11-962b-8e94d58599f6",
+    "experiment_storage": "./experiments/fifth_evaluations/91d4e7a3-0df6-47cc-86ac-03199d7016a5.json",
+    "document_id": "c57f5e97-b936-4d03-9709-64685eb948bb",
+    "document_source": "TracLLM A Generic Framework for Attributing Long Context LLMs.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: TracLLM\n\t- Evidence found: TracLLM outperforms Shapley and LIME/Context-Cite under all settings with Possible Explanation: TracLLM is a method that outperforms Shapley and LIME/Context-Cite in tracing back to malicious texts\n\t- Evidence found: TracLLM outperforms Shapley and LIME/Context-Cite under all settings with Possible Explanation: TracLLM is a method or technique that outperforms Shapley and LIME/Context-Cite\n\t- Evidence found: we develop TracLLM, the first generic context traceback framework with Possible Explanation: TracLLM is a context traceback framework tailored to long context LLMs\n\t- Evidence found: TracLLM           | 0.94       | 0.76       | 373.5 with Possible Explanation: TracLLM is mentioned with some metrics, but its exact meaning is not clear from the given context.\n\t- Evidence found: Comparing TracLLM with STC with Possible Explanation: TracLLM is a method being compared with STC\n\t- Evidence found: TracLLM: A Generic Framework for Attributing Long Context LLMs with Possible Explanation: TracLLM is a generic framework\n\t- Evidence found: TracLLM can be broadly used for many applications with Possible Explanation: TracLLM is a system or method used for identifying important texts contributing to the output of an LLM\n\t- Evidence found: We propose TracLLM, a generic context traceback framework tailored to long context LLMs. with Possible Explanation: TracLLM is a generic context traceback framework tailored to long context LLMs\n\nQUESTION:\n\nWhat is TracLLM?\n\n",
+    "potential_terms": [
+        {
+            "term": "TracLLM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "TracLLM": [
+            {
+                "evidence": "TracLLM outperforms Shapley and LIME/Context-Cite under all settings",
+                "explanation": "TracLLM is a method that outperforms Shapley and LIME/Context-Cite in tracing back to malicious texts"
+            },
+            {
+                "evidence": "TracLLM outperforms Shapley and LIME/Context-Cite under all settings",
+                "explanation": "TracLLM is a method or technique that outperforms Shapley and LIME/Context-Cite"
+            },
+            {
+                "evidence": "we develop TracLLM, the first generic context traceback framework",
+                "explanation": "TracLLM is a context traceback framework tailored to long context LLMs"
+            },
+            {
+                "evidence": "TracLLM           | 0.94       | 0.76       | 373.5",
+                "explanation": "TracLLM is mentioned with some metrics, but its exact meaning is not clear from the given context."
+            },
+            {
+                "evidence": "Comparing TracLLM with STC",
+                "explanation": "TracLLM is a method being compared with STC"
+            },
+            {
+                "evidence": "TracLLM: A Generic Framework for Attributing Long Context LLMs",
+                "explanation": "TracLLM is a generic framework"
+            },
+            {
+                "evidence": "TracLLM can be broadly used for many applications",
+                "explanation": "TracLLM is a system or method used for identifying important texts contributing to the output of an LLM"
+            },
+            {
+                "evidence": "We propose TracLLM, a generic context traceback framework tailored to long context LLMs.",
+                "explanation": "TracLLM is a generic context traceback framework tailored to long context LLMs"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.17391304347826086,
+            "recall": 1.0,
+            "fmeasure": 0.29629629629629634
+        },
+        "rouge2": {
+            "precision": 0.14705882352941177,
+            "recall": 0.9090909090909091,
+            "fmeasure": 0.25316455696202533
+        },
+        "rougeL": {
+            "precision": 0.17391304347826086,
+            "recall": 1.0,
+            "fmeasure": 0.29629629629629634
+        },
+        "rougeLsum": {
+            "precision": 0.17391304347826086,
+            "recall": 1.0,
+            "fmeasure": 0.29629629629629634
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3013698630136986,
+            "precision": 0.1774193548387097,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, TracLLM is a generic context traceback framework tailored to long context Large Language Models (LLMs). It is a method or technique that outperforms other methods like Shapley and LIME/Context-Cite in tracing back to malicious texts or attributing important texts contributing to the output of an LLM. TracLLM is designed for identifying important texts and can be broadly used for many applications.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

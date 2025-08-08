@@ -1,0 +1,93 @@
+{
+    "question": "What is SORCE?",
+    "answer": "SORCE is a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+    "type": "explanation",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "eff55155-8dc8-4a8b-959c-bb9c37bc9ce9",
+    "experiment_set": "bcb4ec10-e560-4dd9-a193-bf083b5fd918",
+    "experiment_storage": "./experiments/fifth_evaluations/eff55155-8dc8-4a8b-959c-bb9c37bc9ce9.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K (Ours) in Table 1 with Possible Explanation: SORCE-1K is a benchmark proposed by the authors\n\t- Evidence found: SORCE-1K (R@5) with Possible Explanation: SORCE-1K is a dataset or benchmark used for evaluation\n\t- Evidence found: SORCE-1K (R@5) with Possible Explanation: SORCE-1K is a dataset used for evaluating model performance\n\t- Evidence found: SORCE, the first T2IR benchmark focused on unsalient small objects with Possible Explanation: SORCE is a benchmark for Small Object Retrieval in Complex Environments\n\t- Evidence found: SORCE-1K, to evaluate the performance of the models with Possible Explanation: SORCE-1K is a benchmark used to evaluate model performance\n\t- Evidence found: SORCE: Small Object Retrieval in Complex Environments with Possible Explanation: SORCE stands for Small Object Retrieval in Complex Environments\n\t- Evidence found: SORCE ( S mall O bject R etrieval in C omplex E nvironments) with Possible Explanation: SORCE stands for Small Object Retrieval in Complex Environments\n\t- Evidence found: SORCE-1K, consisting of images with complex environments and textual queries with Possible Explanation: SORCE-1K is a benchmark for Small Object Retrieval in Complex Environments\n\nQUESTION:\n\nWhat is SORCE?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K (Ours) in Table 1",
+                "explanation": "SORCE-1K is a benchmark proposed by the authors"
+            },
+            {
+                "evidence": "SORCE-1K (R@5)",
+                "explanation": "SORCE-1K is a dataset or benchmark used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K (R@5)",
+                "explanation": "SORCE-1K is a dataset used for evaluating model performance"
+            },
+            {
+                "evidence": "SORCE, the first T2IR benchmark focused on unsalient small objects",
+                "explanation": "SORCE is a benchmark for Small Object Retrieval in Complex Environments"
+            },
+            {
+                "evidence": "SORCE-1K, to evaluate the performance of the models",
+                "explanation": "SORCE-1K is a benchmark used to evaluate model performance"
+            },
+            {
+                "evidence": "SORCE: Small Object Retrieval in Complex Environments",
+                "explanation": "SORCE stands for Small Object Retrieval in Complex Environments"
+            },
+            {
+                "evidence": "SORCE ( S mall O bject R etrieval in C omplex E nvironments)",
+                "explanation": "SORCE stands for Small Object Retrieval in Complex Environments"
+            },
+            {
+                "evidence": "SORCE-1K, consisting of images with complex environments and textual queries",
+                "explanation": "SORCE-1K is a benchmark for Small Object Retrieval in Complex Environments"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5666666666666667,
+            "fmeasure": 0.4197530864197531
+        },
+        "rouge2": {
+            "precision": 0.14,
+            "recall": 0.2413793103448276,
+            "fmeasure": 0.17721518987341772
+        },
+        "rougeL": {
+            "precision": 0.29411764705882354,
+            "recall": 0.5,
+            "fmeasure": 0.37037037037037035
+        },
+        "rougeLsum": {
+            "precision": 0.29411764705882354,
+            "recall": 0.5,
+            "fmeasure": 0.37037037037037035
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3888888888888889,
+            "precision": 0.30434782608695654,
+            "recall": 0.5384615384615384
+        }
+    },
+    "predict": "SORCE stands for Small Object Retrieval in Complex Environments. It is a benchmark used to evaluate the performance of models, particularly in the context of retrieving small objects in complex environments. SORCE-1K is a specific dataset or benchmark associated with SORCE, consisting of images with complex environments and textual queries.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

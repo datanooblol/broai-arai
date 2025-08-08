@@ -1,0 +1,65 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "a2d1fe8a-3bf0-48dc-aeaa-414903e26a7a",
+    "experiment_set": "d677e22f-06bf-4f6e-8774-32779cf97b82",
+    "experiment_storage": "./experiments/fourth_evaluations/a2d1fe8a-3bf0-48dc-aeaa-414903e26a7a.json",
+    "document_id": "fd16854e-86f2-4851-b123-2f1cf3b5063a",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Explanation: Anchored Clues is a term, but its meaning is not explained in the context\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "w/o Anchored Clues",
+                "explanation": "Anchored Clues is a term, but its meaning is not explained in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.05084745762711865,
+            "recall": 0.4,
+            "fmeasure": 0.09022556390977444
+        },
+        "rouge2": {
+            "precision": 0.017094017094017096,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.03053435114503817
+        },
+        "rougeL": {
+            "precision": 0.0423728813559322,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.07518796992481203
+        },
+        "rougeLsum": {
+            "precision": 0.0423728813559322,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.07518796992481203
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.05357142857142857,
+            "precision": 0.030303030303030304,
+            "recall": 0.23076923076923078
+        }
+    },
+    "predict": "Based on the provided TERMS, I found the term \"ClueAnchor\" but its explanation is not available in the context. However, I can provide a general definition of \"Anchored Clues\" which might be related to the term \"ClueAnchor\".\n\nAnchored Clues is a concept in game design, particularly in puzzle games, where a player is given a hint or a starting point (the \"anchor\") to help them solve a puzzle. This anchor can be a visual cue, a piece of information, or a specific action that guides the player towards the solution.\n\nSince the explanation for \"ClueAnchor\" is not available, I'm assuming it might be related to this concept. However, without further information, I cannot provide a definitive answer.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

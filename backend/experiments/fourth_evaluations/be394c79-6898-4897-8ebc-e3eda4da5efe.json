@@ -1,0 +1,53 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "be394c79-6898-4897-8ebc-e3eda4da5efe",
+    "experiment_set": "717823ec-f4ec-40be-bc62-a0b4649129ca",
+    "experiment_storage": "./experiments/fourth_evaluations/be394c79-6898-4897-8ebc-e3eda4da5efe.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.016129032258064516,
+            "recall": 0.5,
+            "fmeasure": 0.03125
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.016129032258064516,
+            "recall": 0.5,
+            "fmeasure": 0.03125
+        },
+        "rougeLsum": {
+            "precision": 0.016129032258064516,
+            "recall": 0.5,
+            "fmeasure": 0.03125
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.017094017094017096,
+            "precision": 0.008771929824561403,
+            "recall": 0.3333333333333333
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more context or information about what CGSeg refers to. However, based on general knowledge, CGSeg could potentially stand for various things depending on the field or context. \n\nOne possible expansion is \"Coarse-Grained Segmentation.\" This term is used in various contexts such as image processing, data analysis, or medical imaging, where it refers to the process of dividing data or images into larger, more general segments rather than finer, more detailed ones.\n\nWithout more specific information or context, it's challenging to provide a definitive answer. If you have any additional details or if there's a particular context you're referring to, please let me know, and I'll do my best to assist you.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

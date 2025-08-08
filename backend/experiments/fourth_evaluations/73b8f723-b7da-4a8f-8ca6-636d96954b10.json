@@ -1,0 +1,60 @@
+{
+    "question": "What does MVR stand for?",
+    "answer": "Multi-Vector Retrieval",
+    "type": "acronym",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "73b8f723-b7da-4a8f-8ca6-636d96954b10",
+    "experiment_set": "fc0d00d3-73d4-4a5e-909b-258051a65423",
+    "experiment_storage": "./experiments/fourth_evaluations/73b8f723-b7da-4a8f-8ca6-636d96954b10.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MVR\n\nQUESTION:\n\nWhat does MVR stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "MVR",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MVR": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeLsum": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "To provide an accurate answer, I need more information about the term \"MVR\". MVR can have multiple meanings depending on the context. Here are a few possible expansions:\n\n1. **Motor Vehicle Report/Record**: Often used in the context of driving records or vehicle history.\n2. **Motor Vehicle Registration**: Related to the registration process of vehicles.\n3. **Minimum Valve Reliability**: Used in some technical or industrial contexts.\n4. **Other meanings**: MVR can stand for other terms depending on the specific field or industry (e.g., medical, technical, etc.).\n\nWithout more context, it's challenging to determine the exact meaning. If you have a specific context or industry in mind, please provide it for a more accurate answer.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

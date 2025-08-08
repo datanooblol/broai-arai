@@ -1,0 +1,101 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "6734cb1a-1e75-45fe-8add-42a4287a3571",
+    "experiment_set": "4b69fdab-471a-4abf-9d98-743a3cb38554",
+    "experiment_storage": "./experiments/fifth_evaluations/6734cb1a-1e75-45fe-8add-42a4287a3571.json",
+    "document_id": "281cfb03-6082-438e-acaf-b6c90fe48c2c",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\t- Evidence found: Self-rag: Learning to retrieve, generate, and critique through self-reflection, The power of noise: Redefining retrieval for RAG systems, A survey on RAG meeting LLMs: Towards retrieval-augmented large language models, Retrieval-augmented generation for large language models: A survey\n\t- Evidence found: W-rag: Weakly supervised dense retrieval in rag for open-domain question answering\n\t- Evidence found: RAG optimization\n\t- Evidence found: RAG problem\n\t- Evidence found: DPA-RAG (Dong et al., 2024) synthesizes data and trains the reranker and LLM to align the preferences of the two\n\t- Evidence found: retrieval-augmented generation (RAG) models\n\t- Evidence found: Retrieval-Augmented Generation (RAG) framework\n\t- Evidence found: Retrieval Augmented Generation (RAG) framework\n\t- Evidence found: DPA-RAG (Dong et al., 2024)\n\t- Evidence found: DPA-RAG (Dong et al., 2024)\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": [
+            {
+                "evidence": "Self-rag: Learning to retrieve, generate, and critique through self-reflection, The power of noise: Redefining retrieval for RAG systems, A survey on RAG meeting LLMs: Towards retrieval-augmented large language models, Retrieval-augmented generation for large language models: A survey",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "W-rag: Weakly supervised dense retrieval in rag for open-domain question answering",
+                "explanation": "RAG is used in the context of open-domain question answering"
+            },
+            {
+                "evidence": "RAG optimization",
+                "explanation": "RAG is an optimization technique, likely referring to Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "RAG problem",
+                "explanation": "RAG is a problem related to a system that follows a retrieval-then-reading framework"
+            },
+            {
+                "evidence": "DPA-RAG (Dong et al., 2024) synthesizes data and trains the reranker and LLM to align the preferences of the two",
+                "explanation": "DPA-RAG is a method that synthesizes data and trains the reranker and LLM to align their preferences"
+            },
+            {
+                "evidence": "retrieval-augmented generation (RAG) models",
+                "explanation": "RAG stands for retrieval-augmented generation"
+            },
+            {
+                "evidence": "Retrieval-Augmented Generation (RAG) framework",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "Retrieval Augmented Generation (RAG) framework",
+                "explanation": "RAG stands for Retrieval Augmented Generation"
+            },
+            {
+                "evidence": "DPA-RAG (Dong et al., 2024)",
+                "explanation": "DPA-RAG is a related work or framework mentioned"
+            },
+            {
+                "evidence": "DPA-RAG (Dong et al., 2024)",
+                "explanation": "DPA-RAG is an acronym for a method referenced in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06111111111111111,
+            "recall": 0.3548387096774194,
+            "fmeasure": 0.10426540284360189
+        },
+        "rouge2": {
+            "precision": 0.00558659217877095,
+            "recall": 0.03333333333333333,
+            "fmeasure": 0.009569377990430622
+        },
+        "rougeL": {
+            "precision": 0.044444444444444446,
+            "recall": 0.25806451612903225,
+            "fmeasure": 0.07582938388625593
+        },
+        "rougeLsum": {
+            "precision": 0.044444444444444446,
+            "recall": 0.25806451612903225,
+            "fmeasure": 0.07582938388625593
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.054644808743169404,
+            "precision": 0.03164556962025317,
+            "recall": 0.2
+        }
+    },
+    "predict": "## Step 1: Review the provided TERMS information for any mention of \"GainRAG\".\nThe TERMS information provided includes various references to \"RAG\" (Retrieval-Augmented Generation) and its related concepts, variations, and applications, but does not directly mention \"GainRAG\".\n\n## Step 2: Analyze the context and related terms to see if \"GainRAG\" could be a variation or related concept to \"RAG\".\nGiven that \"RAG\" stands for Retrieval-Augmented Generation and is associated with several variations and related research (e.g., Self-RAG, W-RAG, DPA-RAG), it's possible that \"GainRAG\" could be another variation or related concept. However, there is no direct evidence or mention of \"GainRAG\" in the provided TERMS.\n\n## Step 3: Determine the appropriate response based on the available information.\nSince \"GainRAG\" is not mentioned in the provided TERMS or any other given information (like CONTEXTS), and there's no general knowledge provided about \"GainRAG\" within the instructions, the most accurate response is that there is not enough information to define \"GainRAG\" based on the given data.\n\nThe final answer is: $\\boxed{GainRAG is not defined in the provided information.}$",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

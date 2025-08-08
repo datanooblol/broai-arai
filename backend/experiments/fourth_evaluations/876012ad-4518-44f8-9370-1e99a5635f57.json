@@ -1,0 +1,60 @@
+{
+    "question": "What is STORM?",
+    "answer": "STORM is a writing system for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "876012ad-4518-44f8-9370-1e99a5635f57",
+    "experiment_set": "d677e22f-06bf-4f6e-8774-32779cf97b82",
+    "experiment_storage": "./experiments/fourth_evaluations/876012ad-4518-44f8-9370-1e99a5635f57.json",
+    "document_id": "8170f3b0-9203-4ec2-8dcc-476eeb9c69b0",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\nQUESTION:\n\nWhat is STORM?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.12244897959183673,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.17910447761194032
+        },
+        "rouge2": {
+            "precision": 0.020833333333333332,
+            "recall": 0.058823529411764705,
+            "fmeasure": 0.03076923076923077
+        },
+        "rougeL": {
+            "precision": 0.10204081632653061,
+            "recall": 0.2777777777777778,
+            "fmeasure": 0.1492537313432836
+        },
+        "rougeLsum": {
+            "precision": 0.10204081632653061,
+            "recall": 0.2777777777777778,
+            "fmeasure": 0.1492537313432836
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.13559322033898305,
+            "precision": 0.09090909090909091,
+            "recall": 0.26666666666666666
+        }
+    },
+    "predict": "Based on the provided TERMS, I found the definition of STORM:\n\n**STORM:** A severe weather condition characterized by strong winds, heavy rainfall, thunder, lightning, and sometimes hail or tornadoes. It is a temporary and intense disturbance of the atmosphere that can cause damage to property and disrupt daily life.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

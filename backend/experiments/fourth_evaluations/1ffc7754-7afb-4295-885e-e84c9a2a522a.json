@@ -1,0 +1,60 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "1ffc7754-7afb-4295-885e-e84c9a2a522a",
+    "experiment_set": "918ed6a4-7e0d-493f-8f7d-d2aed1d62a55",
+    "experiment_storage": "./experiments/fourth_evaluations/1ffc7754-7afb-4295-885e-e84c9a2a522a.json",
+    "document_id": "add5f9b0-189d-48d2-81db-a492b0259643",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1956521739130435,
+            "recall": 0.32142857142857145,
+            "fmeasure": 0.24324324324324326
+        },
+        "rouge2": {
+            "precision": 0.022222222222222223,
+            "recall": 0.037037037037037035,
+            "fmeasure": 0.027777777777777776
+        },
+        "rougeL": {
+            "precision": 0.15217391304347827,
+            "recall": 0.25,
+            "fmeasure": 0.1891891891891892
+        },
+        "rougeLsum": {
+            "precision": 0.15217391304347827,
+            "recall": 0.25,
+            "fmeasure": 0.1891891891891892
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.19047619047619047,
+            "precision": 0.15789473684210525,
+            "recall": 0.24
+        }
+    },
+    "predict": "Based on the provided TERMS, I found the definition of HippoRAG.\n\nHippoRAG stands for Hippocampal Regeneration Associated Gene. It is a gene that has been identified as playing a role in the regeneration of the hippocampus, a region of the brain involved in memory and learning.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

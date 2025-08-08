@@ -1,0 +1,53 @@
+{
+    "question": "What does RARE stand for?",
+    "answer": "Retrieval-Aware Robustness Evaluation",
+    "type": "acronym",
+    "source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+    "experiment_id": "6d0c7a7e-ce30-434f-bc98-85d275ff277e",
+    "experiment_set": "717823ec-f4ec-40be-bc62-a0b4649129ca",
+    "experiment_storage": "./experiments/fourth_evaluations/6d0c7a7e-ce30-434f-bc98-85d275ff277e.json",
+    "document_id": "cc67a677-1a97-4b0d-9812-b62a5c8749c2",
+    "document_source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat does RARE stand for?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeLsum": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more context or information about what \"RARE\" refers to. However, based on general knowledge, \"RARE\" can stand for several things depending on the context:\n\n1. **In Medical Contexts:** RARE can refer to a condition or disease that affects a small percentage of the population, often defined as fewer than 1 in 2,000 people in some regions.\n\n2. **In Computing and Technology:** RARE can be an acronym for various technical terms or organizations, but without more context, it's hard to determine the exact meaning.\n\n3. **In General Usage:** It can simply mean something that is not common or is unusual.\n\nSome specific examples include:\n- **RARE (organization):** The RARE (R\u00e9seau Associ\u00e9 pour la Recherche Europ\u00e9enne) association, now known as TERENA (Trans-European Research and Education Networking Association), was involved in European research networking.\n\nWithout more specific information or context, it's challenging to provide a definitive answer. If you have a particular context in mind, please provide more details.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,101 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "197e1234-294e-4ea0-bbc1-248512bc8eb1",
+    "experiment_set": "1075ce17-013f-46b6-a315-1579f101f786",
+    "experiment_storage": "./experiments/fifth_evaluations/197e1234-294e-4ea0-bbc1-248512bc8eb1.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\t- Explanation: CGSeg is an algorithm or technique applied to a slide reference image\n\t- Explanation: w/o CGSeg refers to disabling the CGSeg mechanism\n\t- Explanation: CGSeg is a mechanism related to code generation or assembly\n\t- Explanation: CSeg is a component related to the framework's functionality\n\t- Explanation: CGSeg is a gradient-based segmentation algorithm used to compute the Element Coverage Ratio\n\t- Explanation: CGSeg is an algorithm that segments the input Design into semantically meaningful regions\n\t- Explanation: CGSeg is a recursive color gradient-based segmentation algorithm\n\t- Explanation: CGSeg is a Color Gradient-based Segmentation algorithm\n\t- Explanation: CGSEG is a recursive algorithm for Color Gradient-based Segmentation\n\t- Explanation: CGSeg is a Color Gradients-based Segmentation algorithm\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": [
+            {
+                "evidence": "An example of CGSeg applied to a slide reference image",
+                "explanation": "CGSeg is an algorithm or technique applied to a slide reference image"
+            },
+            {
+                "evidence": "w/o CGSeg: Disables the CGSeg mechanism",
+                "explanation": "w/o CGSeg refers to disabling the CGSeg mechanism"
+            },
+            {
+                "evidence": "Disables the CGSeg mechanism",
+                "explanation": "CGSeg is a mechanism related to code generation or assembly"
+            },
+            {
+                "evidence": "Disables both H-RAG and CSeg components",
+                "explanation": "CSeg is a component related to the framework's functionality"
+            },
+            {
+                "evidence": "computed via the gradient-based segmentation algorithm CGSeg",
+                "explanation": "CGSeg is a gradient-based segmentation algorithm used to compute the Element Coverage Ratio"
+            },
+            {
+                "evidence": "Color Gradients-based Segmentation (CGSeg) algorithm segments the input Design into semantically meaningful regions",
+                "explanation": "CGSeg is an algorithm that segments the input Design into semantically meaningful regions"
+            },
+            {
+                "evidence": "CGSeg, a recursive color gradient-based segmentation algorithm",
+                "explanation": "CGSeg is a recursive color gradient-based segmentation algorithm"
+            },
+            {
+                "evidence": "Algorithm 1 Color Gradient-based Segmentation (CGSeg)",
+                "explanation": "CGSeg is a Color Gradient-based Segmentation algorithm"
+            },
+            {
+                "evidence": "R \u2032 \u2190 CGSEG ( I m , g, D +1 , D max , T )",
+                "explanation": "CGSEG is a recursive algorithm for Color Gradient-based Segmentation"
+            },
+            {
+                "evidence": "Color Gradients-based Segmentation (CGSeg) algorithm",
+                "explanation": "CGSeg is a Color Gradients-based Segmentation algorithm"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.08888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.163265306122449
+        },
+        "rouge2": {
+            "precision": 0.06818181818181818,
+            "recall": 1.0,
+            "fmeasure": 0.1276595744680851
+        },
+        "rougeL": {
+            "precision": 0.08888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.163265306122449
+        },
+        "rougeLsum": {
+            "precision": 0.08888888888888889,
+            "recall": 1.0,
+            "fmeasure": 0.163265306122449
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.14634146341463414,
+            "precision": 0.07894736842105263,
+            "recall": 1.0
+        }
+    },
+    "predict": "CGSeg stands for Color Gradient-based Segmentation. Various explanations provided confirm this, with slight variations in wording, such as \"Color Gradients-based Segmentation\" or simply describing it as a gradient-based or color gradient-based segmentation algorithm. The core meaning remains consistent across the explanations.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

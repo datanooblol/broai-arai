@@ -1,0 +1,89 @@
+{
+    "question": "What does MVR stand for?",
+    "answer": "Multi-Vector Retrieval",
+    "type": "acronym",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "0d2bfa3b-75c7-4347-bcb2-38373f58a162",
+    "experiment_set": "bcb4ec10-e560-4dd9-a193-bf083b5fd918",
+    "experiment_storage": "./experiments/fifth_evaluations/0d2bfa3b-75c7-4347-bcb2-38373f58a162.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MVR\n\t- Evidence found: Multi-Vector Retrieval (MVR) with Possible Explanation: MVR stands for Multi-Vector Retrieval\n\t- Evidence found: develop a new MVR strategy to enhance the performance of arbitrary retrieval-based systems with Possible Explanation: MVR stands for Multi-Vector Retrieval\n\t- Evidence found: perform MVR with a mini-query 'Hong Kong' with Possible Explanation: MVR is a process or technique being used for analysis\n\t- Evidence found: performing MVR with these sub-queries with Possible Explanation: MVR is a process used with sub-queries, likely standing for a specific retrieval or processing method\n\t- Evidence found: perform MVR in the downstream retrieval-based system with Possible Explanation: MVR is a process performed in a retrieval-based system\n\t- Evidence found: perform MVRin the downstream retrieval-based system with Possible Explanation: MVR is a component used in the downstream retrieval-based system\n\t- Evidence found: Multi-Vector Retrieval (MVR) with Possible Explanation: MVR stands for Multi-Vector Retrieval\n\nQUESTION:\n\nWhat does MVR stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "MVR",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MVR": [
+            {
+                "evidence": "Multi-Vector Retrieval (MVR)",
+                "explanation": "MVR stands for Multi-Vector Retrieval"
+            },
+            {
+                "evidence": "develop a new MVR strategy to enhance the performance of arbitrary retrieval-based systems",
+                "explanation": "MVR stands for Multi-Vector Retrieval"
+            },
+            {
+                "evidence": "perform MVR with a mini-query 'Hong Kong'",
+                "explanation": "MVR is a process or technique being used for analysis"
+            },
+            {
+                "evidence": "performing MVR with these sub-queries",
+                "explanation": "MVR is a process used with sub-queries, likely standing for a specific retrieval or processing method"
+            },
+            {
+                "evidence": "perform MVR in the downstream retrieval-based system",
+                "explanation": "MVR is a process performed in a retrieval-based system"
+            },
+            {
+                "evidence": "perform MVRin the downstream retrieval-based system",
+                "explanation": "MVR is a component used in the downstream retrieval-based system"
+            },
+            {
+                "evidence": "Multi-Vector Retrieval (MVR)",
+                "explanation": "MVR stands for Multi-Vector Retrieval"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "rouge2": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "fmeasure": 0.5714285714285715
+        },
+        "rougeL": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "rougeLsum": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5714285714285715,
+            "precision": 0.4,
+            "recall": 1.0
+        }
+    },
+    "predict": "MVR stands for Multi-Vector Retrieval.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

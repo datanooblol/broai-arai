@@ -1,0 +1,101 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "f3c23522-969b-45e5-ad1b-22cdf09a33ac",
+    "experiment_set": "10c33865-8a09-45ce-8d5f-f4b212fb6dd6",
+    "experiment_storage": "./experiments/fifth_evaluations/f3c23522-969b-45e5-ad1b-22cdf09a33ac.json",
+    "document_id": "add5f9b0-189d-48d2-81db-a492b0259643",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\t- Evidence found: HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models\n\t- Evidence found: HippoRAG, a novel retrieval framework\n\t- Evidence found: HippoRAG, a RAG framework that serves as a long-term memory for LLMs\n\t- Evidence found: we propose HippoRAG, a RAG framework that serves as a long-term memory for LLMs\n\t- Evidence found: HippoRAG's indexing and retrieval design\n\t- Evidence found: the hippocampus , salient signals are included in the hippocampal index and associated with each other\n\t- Evidence found: Our proposed approach, HippoRAG, is closely inspired by the process described above.\n\t- Evidence found: Detailed HippoRAG Methodology\n\t- Evidence found: HippoRAG (Contriever)\n\t- Evidence found: Combining HippoRAG with standard multi-step retrieval methods like IRCoT results in strong complementary improvements\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": [
+            {
+                "evidence": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+                "explanation": "HippoRAG is a neurobiologically inspired long-term memory for large language models"
+            },
+            {
+                "evidence": "HippoRAG, a novel retrieval framework",
+                "explanation": "HippoRAG is a novel retrieval framework"
+            },
+            {
+                "evidence": "HippoRAG, a RAG framework that serves as a long-term memory for LLMs",
+                "explanation": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking the model of human memory"
+            },
+            {
+                "evidence": "we propose HippoRAG, a RAG framework that serves as a long-term memory for LLMs",
+                "explanation": "HippoRAG is a RAG framework for LLMs"
+            },
+            {
+                "evidence": "HippoRAG's indexing and retrieval design",
+                "explanation": "HippoRAG is a system with an indexing and retrieval design inspired by the hippocampal memory indexing theory"
+            },
+            {
+                "evidence": "the hippocampus , salient signals are included in the hippocampal index and associated with each other",
+                "explanation": "The hippocampus is a region that creates an index of salient signals and associates them with each other."
+            },
+            {
+                "evidence": "Our proposed approach, HippoRAG, is closely inspired by the process described above.",
+                "explanation": "HippoRAG is a proposed approach inspired by human long-term memory process"
+            },
+            {
+                "evidence": "Detailed HippoRAG Methodology",
+                "explanation": "HippoRAG is a methodology that models human long-term memory"
+            },
+            {
+                "evidence": "HippoRAG (Contriever)",
+                "explanation": "HippoRAG is a model or method used for retrieval performance"
+            },
+            {
+                "evidence": "Combining HippoRAG with standard multi-step retrieval methods like IRCoT results in strong complementary improvements",
+                "explanation": "HippoRAG is a method that can be combined with other retrieval methods to improve performance"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.37209302325581395,
+            "recall": 0.5714285714285714,
+            "fmeasure": 0.45070422535211263
+        },
+        "rouge2": {
+            "precision": 0.21428571428571427,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.2608695652173913
+        },
+        "rougeL": {
+            "precision": 0.27906976744186046,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.3380281690140845
+        },
+        "rougeLsum": {
+            "precision": 0.27906976744186046,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.3380281690140845
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.3870967741935484,
+            "precision": 0.32432432432432434,
+            "recall": 0.48
+        }
+    },
+    "predict": "Based on the provided TERMS information, HippoRAG is a novel retrieval framework that serves as a long-term memory for Large Language Models (LLMs). It is inspired by the neurobiological process of the hippocampus and is designed to index and retrieve salient signals.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

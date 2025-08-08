@@ -1,0 +1,85 @@
+{
+    "question": "What does T2IR stand for?",
+    "answer": "Text-to-Image Retrieval",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "f81f230e-6631-47ac-990e-a36d07befb2e",
+    "experiment_set": "d533db06-bf9b-4cbb-8bb6-7203900c7456",
+    "experiment_storage": "./experiments/sixth_evaluations/f81f230e-6631-47ac-990e-a36d07befb2e.json",
+    "document_id": "1736cec1-9901-4634-ac31-2bac14137406",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: T2IR\n\t- Evidence found: Text-to-Image Retrieval (T2IR) aims to retrieve relevant images from a candidate pool based on a given textual query. with Possible Explanation: T2IR stands for Text-to-Image Retrieval\n\t- Evidence found: We introduce SORCE, a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries. with Possible Explanation: T2IR stands for Text-to-Image Retrieval\n\t- Evidence found: While traditional Text-to-Image Retrieval (T2IR) focuses on retrieving images that match a given textual query with Possible Explanation: T2IR stands for Text-to-Image Retrieval\n\t- Evidence found: Text-to-Image Retrieval (T2IR) is a highly valuable task with Possible Explanation: T2IR stands for Text-to-Image Retrieval\n\t- Evidence found: an overlooked demand in T2IR with Possible Explanation: T2IR is mentioned as a relevant field of study, but its meaning is not explicitly defined in the given context\n\t- Evidence found: the first T2IR benchmark focused on unsalient small objects with Possible Explanation: T2IR is a benchmark type, but its full form is not explicitly mentioned in the context\n\nQUESTION:\n\nWhat does T2IR stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "T2IR",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "T2IR": [
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR) aims to retrieve relevant images from a candidate pool based on a given textual query.",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            },
+            {
+                "evidence": "We introduce SORCE, a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            },
+            {
+                "evidence": "While traditional Text-to-Image Retrieval (T2IR) focuses on retrieving images that match a given textual query",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            },
+            {
+                "evidence": "Text-to-Image Retrieval (T2IR) is a highly valuable task",
+                "explanation": "T2IR stands for Text-to-Image Retrieval"
+            },
+            {
+                "evidence": "an overlooked demand in T2IR",
+                "explanation": "T2IR is mentioned as a relevant field of study, but its meaning is not explicitly defined in the given context"
+            },
+            {
+                "evidence": "the first T2IR benchmark focused on unsalient small objects",
+                "explanation": "T2IR is a benchmark type, but its full form is not explicitly mentioned in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rouge2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "rougeL": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rougeLsum": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5714285714285715,
+            "precision": 0.4,
+            "recall": 1.0
+        }
+    },
+    "predict": "T2IR stands for Text-to-Image Retrieval.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

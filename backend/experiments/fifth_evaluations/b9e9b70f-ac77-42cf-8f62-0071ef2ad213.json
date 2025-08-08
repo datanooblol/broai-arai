@@ -1,0 +1,53 @@
+{
+    "question": "What is LOGICOL?",
+    "answer": "LOGICOL is a logically-informed contrastive learning objective for dense retrievers.",
+    "type": "explanation",
+    "source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+    "experiment_id": "b9e9b70f-ac77-42cf-8f62-0071ef2ad213",
+    "experiment_set": "1bd47c47-a24c-4eec-b353-73a47ca3101b",
+    "experiment_storage": "./experiments/fifth_evaluations/b9e9b70f-ac77-42cf-8f62-0071ef2ad213.json",
+    "document_id": "df47df55-be76-403e-b7c8-fc57d0e3935c",
+    "document_source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is LOGICOL?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0594059405940594,
+            "recall": 0.5454545454545454,
+            "fmeasure": 0.10714285714285712
+        },
+        "rouge2": {
+            "precision": 0.01,
+            "recall": 0.1,
+            "fmeasure": 0.01818181818181818
+        },
+        "rougeL": {
+            "precision": 0.04950495049504951,
+            "recall": 0.45454545454545453,
+            "fmeasure": 0.08928571428571429
+        },
+        "rougeLsum": {
+            "precision": 0.04950495049504951,
+            "recall": 0.45454545454545453,
+            "fmeasure": 0.08928571428571429
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0606060606060606,
+            "precision": 0.03333333333333333,
+            "recall": 0.3333333333333333
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about \"LOGICOL.\" However, based on general knowledge, LOGICOL could refer to a term or concept related to logic or a specific product, system, or programming language. \n\nWithout additional context or terms, one possible interpretation is that LOGICOL might be related to a logical or systematic approach to a problem or a field of study. If it's related to computing or programming, it could be a programming language, a data type, or a specific algorithm.\n\nFor a more precise answer, could you provide more context or details about LOGICOL?",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

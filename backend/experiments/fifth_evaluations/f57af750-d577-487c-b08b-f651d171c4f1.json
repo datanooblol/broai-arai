@@ -1,0 +1,103 @@
+{
+    "question": "What is GenKI?",
+    "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+    "type": "explanation",
+    "source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+    "experiment_id": "f57af750-d577-487c-b08b-f651d171c4f1",
+    "experiment_set": "036536d6-420d-4238-9183-e0c59136ab17",
+    "experiment_storage": "./experiments/fifth_evaluations/f57af750-d577-487c-b08b-f651d171c4f1.json",
+    "document_id": "78f4a8ea-a050-44bc-88ac-6bfdd51d597b",
+    "document_source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: GenKI\n\t- Evidence found: a novel framework named GenKI with Possible Explanation: GenKI is a framework for improving OpenQA performance\n\t- Evidence found: GenKI. Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI with Possible Explanation: GenKI is a project with code available on GitHub\n\t- Evidence found: a novel framework named GenKI with Possible Explanation: GenKI is a proposed framework for improving OpenQA performance\n\t- Evidence found: The overall framework of GenKI with Possible Explanation: GenKI is a framework\n\t- Evidence found: different components of GenKI contribute to its performance with Possible Explanation: GenKI is a system or model being discussed\n\t- Evidence found: Overall pseudo code of GenKI with Possible Explanation: GenKI is an algorithm\n\t- Evidence found: our framework GenKI is capable of enabling models to generate fluent, extended content with Possible Explanation: GenKI is a framework that enables models to generate fluent, extended content\n\t- Evidence found: the two main modules in GenKI with Possible Explanation: GenKI is a system with modules for Knowledge Integration and Controllable Generation\n\t- Evidence found: Our Work: LLaMA-65B \ud835\udc3a GLM-6B \ud835\udc3a with Possible Explanation: GenKI is the framework used in the experiment\n\nCONTEXTS:\n\n<|start_context|>7 Conclusion\n\nIn this paper, we introduced GenKI, a novel OpenQA framework that combines Knowledge Retrieval, Knowledge Integration, and Controllable Generation. By splitting the generation process of LLMs into two distinct phases of knowledge integration and controllable generation, we addressed the challenges of knowledge integration deficiency and answer format misalignment. GenKI has demonstrated enhanced performance in OpenQA task, surpassing both traditional methods and other LLM-based approaches. This research not only explores the relationship between provided search results and knowledge generation within LLMs but also propels LLM-based OpenQA towards the desired format.<|end_context|>\n<|start_context|>## GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models\n\nTingjia Shen University of Science and Technology of China Hefei, Anhui, China jts\\_stj@mail.ustc.edu.cn<|end_context|>\n<|start_context|>Defu Lian\n\nUniversity of Science and Technology of China Hefei, Anhui, China liandefu@ustc.edu.cn\n\nEnhong Chen University of Science and Technology of China Hefei, Anhui, China cheneh@ustc.edu.cn\n\nGenKI. Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI.<|end_context|>\n<|start_context|>| 78.3           | 91.1           |\n\n\ud835\udc45\ud835\udc34 : retriever-augmented baselines, \ud835\udc3a\ud835\udc34 : generator-augmented baselines (finetuned-LLM baselines)\n\n6.1.1 Can GenKI work when the entire knowledge base is inaccessible? In practical academic and industry contexts, models frequently depend on search engines to gather requisite knowledge, facing limitations in leveraging the entire knowledge base for fine-tuning. In such instances, our model ( \ud835\udc4b + \ud835\udc3e \ud835\udc45 + \ud835\udc43\ud835\udc5c\ud835\udc60\ud835\udc61\ud835\udc43 ) consistently surpasses baseline performances, demonstrating superiority by 3.3% in TriviaQA, 0.8% in MSMARCO, and 4.9% in CMRC. The comparative results are illustrated in Figure 5.\n\n6.1.2 Can GenKI adapt to different formats of answers? To demonstrate the adaptability of our model to another format domain, we partition the CMRC dataset, encompassing both long and shortanswer formats by their average length. Specifically, we fine-tune our model only on the short-answer segment during step \ud835\udc43\ud835\udc5c\ud835\udc60\ud835\udc61\ud835\udc43 , resulting in a noteworthy result of 71.70 on the EM metric. This achievement surpasses all recent baselines, trailing behind only one of the task-specific baselines. Notably, given that these taskspecific baselines are exclusively trained intra-domain, our model exhibits exceptional performance, underscoring its remarkable outof-domain capability, which is shown in Figure 5.\n\nTo sum up, analysis of these three datasets demonstrates that GenKIhasperformed remarkable ability in learning retrieved knowledge and multi-format controllable generation compared with taskspecific, latest baselines both on retriever and generator augmentation and LLM backbones.<|end_context|>\n<|start_context|>Abstract\n\nOpen-domain question answering (OpenQA) represents a cornerstone in natural language processing (NLP), primarily focused on extracting answers from unstructured textual data. With the rapid advancements in Large Language Models (LLMs), LLM-based OpenQA methods have reaped the benefits of emergent understanding and answering capabilities enabled by massive parameters compared to traditional methods. However, most of these methods encounter two critical challenges: how to integrate knowledge into LLMs effectively and how to adaptively generate results with specific answer formats for various task situations. To address these challenges, we propose a novel framework named GenKI , which aims to improve the OpenQA performance by exploring K nowledge I ntegration and controllable Gen eration on LLMs simultaneously. Specifically, we first train a dense passage retrieval model to retrieve associated knowledge from a given knowledge base. Subsequently, we introduce a novel knowledge integration model that incorporates the retrieval knowledge into instructions during fine-tuning to intensify the model. Furthermore, to enable controllable generation in LLMs, we leverage a certain fine-tuned LLM and an ensemble based on text consistency incorporating all coherence, fluency, and answer format assurance. Finally, extensive experiments conducted on the TriviaQA, MSMARCO, and CMRC2018 datasets, featuring diverse answer formats, have demonstrated the effectiveness of GenKI with comparison of state-of-the-art baselines. Moreover, ablation studies have disclosed a linear relationship between the frequency of retrieved knowledge and the model's ability to recall knowledge accurately against the ground truth. Tests focusing on the outof-domain scenario and knowledge base independence scenario have further affirmed the robustness and controllable capability of\n\n\u2217 Corresponding author.\n\nChinese Academy of Sciences Beijing, China chuanqin0426@gmail.com<|end_context|>\n\nQUESTION:\n\nWhat is GenKI?\n\n",
+    "potential_terms": [
+        {
+            "term": "GenKI",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "GenKI": [
+            {
+                "evidence": "a novel framework named GenKI",
+                "explanation": "GenKI is a framework for improving OpenQA performance"
+            },
+            {
+                "evidence": "GenKI. Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI",
+                "explanation": "GenKI is a project with code available on GitHub"
+            },
+            {
+                "evidence": "a novel framework named GenKI",
+                "explanation": "GenKI is a proposed framework for improving OpenQA performance"
+            },
+            {
+                "evidence": "The overall framework of GenKI",
+                "explanation": "GenKI is a framework"
+            },
+            {
+                "evidence": "different components of GenKI contribute to its performance",
+                "explanation": "GenKI is a system or model being discussed"
+            },
+            {
+                "evidence": "Overall pseudo code of GenKI",
+                "explanation": "GenKI is an algorithm"
+            },
+            {
+                "evidence": "our framework GenKI is capable of enabling models to generate fluent, extended content",
+                "explanation": "GenKI is a framework that enables models to generate fluent, extended content"
+            },
+            {
+                "evidence": "the two main modules in GenKI",
+                "explanation": "GenKI is a system with modules for Knowledge Integration and Controllable Generation"
+            },
+            {
+                "evidence": "Our Work: LLaMA-65B \ud835\udc3a GLM-6B \ud835\udc3a",
+                "explanation": "GenKI is the framework used in the experiment"
+            }
+        ]
+    },
+    "contexts": [
+        "7 Conclusion\n\nIn this paper, we introduced GenKI, a novel OpenQA framework that combines Knowledge Retrieval, Knowledge Integration, and Controllable Generation. By splitting the generation process of LLMs into two distinct phases of knowledge integration and controllable generation, we addressed the challenges of knowledge integration deficiency and answer format misalignment. GenKI has demonstrated enhanced performance in OpenQA task, surpassing both traditional methods and other LLM-based approaches. This research not only explores the relationship between provided search results and knowledge generation within LLMs but also propels LLM-based OpenQA towards the desired format.\n",
+        "## GenKI: Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models\n\nTingjia Shen University of Science and Technology of China Hefei, Anhui, China jts\\_stj@mail.ustc.edu.cn\n",
+        "Defu Lian\n\nUniversity of Science and Technology of China Hefei, Anhui, China liandefu@ustc.edu.cn\n\nEnhong Chen University of Science and Technology of China Hefei, Anhui, China cheneh@ustc.edu.cn\n\nGenKI. Our code of GenKI is available at https://github.com/USTCStarTeam/GenKI.\n",
+        "        | 78.3           | 91.1           |\n\n\ud835\udc45\ud835\udc34 : retriever-augmented baselines, \ud835\udc3a\ud835\udc34 : generator-augmented baselines (finetuned-LLM baselines)\n\n6.1.1 Can GenKI work when the entire knowledge base is inaccessible? In practical academic and industry contexts, models frequently depend on search engines to gather requisite knowledge, facing limitations in leveraging the entire knowledge base for fine-tuning. In such instances, our model ( \ud835\udc4b + \ud835\udc3e \ud835\udc45 + \ud835\udc43\ud835\udc5c\ud835\udc60\ud835\udc61\ud835\udc43 ) consistently surpasses baseline performances, demonstrating superiority by 3.3% in TriviaQA, 0.8% in MSMARCO, and 4.9% in CMRC. The comparative results are illustrated in Figure 5.\n\n6.1.2 Can GenKI adapt to different formats of answers? To demonstrate the adaptability of our model to another format domain, we partition the CMRC dataset, encompassing both long and shortanswer formats by their average length. Specifically, we fine-tune our model only on the short-answer segment during step \ud835\udc43\ud835\udc5c\ud835\udc60\ud835\udc61\ud835\udc43 , resulting in a noteworthy result of 71.70 on the EM metric. This achievement surpasses all recent baselines, trailing behind only one of the task-specific baselines. Notably, given that these taskspecific baselines are exclusively trained intra-domain, our model exhibits exceptional performance, underscoring its remarkable outof-domain capability, which is shown in Figure 5.\n\nTo sum up, analysis of these three datasets demonstrates that GenKIhasperformed remarkable ability in learning retrieved knowledge and multi-format controllable generation compared with taskspecific, latest baselines both on retriever and generator augmentation and LLM backbones.\n",
+        "Abstract\n\nOpen-domain question answering (OpenQA) represents a cornerstone in natural language processing (NLP), primarily focused on extracting answers from unstructured textual data. With the rapid advancements in Large Language Models (LLMs), LLM-based OpenQA methods have reaped the benefits of emergent understanding and answering capabilities enabled by massive parameters compared to traditional methods. However, most of these methods encounter two critical challenges: how to integrate knowledge into LLMs effectively and how to adaptively generate results with specific answer formats for various task situations. To address these challenges, we propose a novel framework named GenKI , which aims to improve the OpenQA performance by exploring K nowledge I ntegration and controllable Gen eration on LLMs simultaneously. Specifically, we first train a dense passage retrieval model to retrieve associated knowledge from a given knowledge base. Subsequently, we introduce a novel knowledge integration model that incorporates the retrieval knowledge into instructions during fine-tuning to intensify the model. Furthermore, to enable controllable generation in LLMs, we leverage a certain fine-tuned LLM and an ensemble based on text consistency incorporating all coherence, fluency, and answer format assurance. Finally, extensive experiments conducted on the TriviaQA, MSMARCO, and CMRC2018 datasets, featuring diverse answer formats, have demonstrated the effectiveness of GenKI with comparison of state-of-the-art baselines. Moreover, ablation studies have disclosed a linear relationship between the frequency of retrieved knowledge and the model's ability to recall knowledge accurately against the ground truth. Tests focusing on the outof-domain scenario and knowledge base independence scenario have further affirmed the robustness and controllable capability of\n\n\u2217 Corresponding author.\n\nChinese Academy of Sciences Beijing, China chuanqin0426@gmail.com\n"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1415929203539823,
+            "recall": 0.7619047619047619,
+            "fmeasure": 0.23880597014925373
+        },
+        "rouge2": {
+            "precision": 0.07142857142857142,
+            "recall": 0.4,
+            "fmeasure": 0.12121212121212122
+        },
+        "rougeL": {
+            "precision": 0.12389380530973451,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.20895522388059704
+        },
+        "rougeLsum": {
+            "precision": 0.12389380530973451,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.20895522388059704
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.23333333333333334,
+            "precision": 0.13861386138613863,
+            "recall": 0.7368421052631579
+        }
+    },
+    "predict": "GenKI is a novel framework designed to improve Open-Domain Question Answering (OpenQA) performance. It combines Knowledge Retrieval, Knowledge Integration, and Controllable Generation to address the challenges of knowledge integration deficiency and answer format misalignment in Large Language Models (LLMs). \n\nThe framework consists of two main modules: \n1. Knowledge Integration: This module incorporates retrieved knowledge into instructions during fine-tuning to intensify the model.\n2. Controllable Generation: This module enables LLMs to generate results with specific answer formats for various task situations.\n\nGenKI has demonstrated enhanced performance in OpenQA tasks, surpassing both traditional methods and other LLM-based approaches. The code for GenKI is available on GitHub at https://github.com/USTCStarTeam/GenKI.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": true,
+    "is_rerank": true
+}

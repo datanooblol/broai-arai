@@ -1,0 +1,60 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel query decomposition framework that can perform query decomposition for optimizing multi-vector retrieval performance",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "74aa9ffc-fb8f-40bf-b530-4e983e4a1ed3",
+    "experiment_set": "fc0d00d3-73d4-4a5e-909b-258051a65423",
+    "experiment_storage": "./experiments/fourth_evaluations/74aa9ffc-fb8f-40bf-b530-4e983e4a1ed3.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: POQD\n\nQUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [
+        {
+            "term": "POQD",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "POQD": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06086956521739131,
+            "recall": 0.3888888888888889,
+            "fmeasure": 0.10526315789473685
+        },
+        "rouge2": {
+            "precision": 0.008771929824561403,
+            "recall": 0.058823529411764705,
+            "fmeasure": 0.015267175572519083
+        },
+        "rougeL": {
+            "precision": 0.05217391304347826,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.09022556390977443
+        },
+        "rougeLsum": {
+            "precision": 0.05217391304347826,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.09022556390977443
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.09917355371900827,
+            "precision": 0.05714285714285714,
+            "recall": 0.375
+        }
+    },
+    "predict": "Since the term \"POQD\" is provided, I'll directly use the given term to answer the question.\n\nPOQD stands for \"Plan, Organize, Quality, and Deliver.\" However, without further context, it's difficult to pinpoint a single, universally accepted definition. \n\nOne possible expansion of POQD is related to project management or operational management, where it could be interpreted as a framework or methodology that involves:\n1. **Plan**: Defining objectives, strategies, and tasks.\n2. **Organize**: Structuring resources, teams, and workflows.\n3. **Quality**: Ensuring that the work meets certain standards.\n4. **Deliver**: Completing and handing over the work or product.\n\nIf you have more context or details about POQD, I can try to provide a more specific explanation.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

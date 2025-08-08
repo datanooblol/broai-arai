@@ -1,0 +1,69 @@
+{
+    "question": "What does SORCE stand for?",
+    "answer": "Small Object Retrieval in Complex Environments",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "99e57128-c890-46b5-a8c3-510a0841840e",
+    "experiment_set": "e961b4c4-aa1f-400a-9772-71a0d0510853",
+    "experiment_storage": "./experiments/fourth_evaluations/99e57128-c890-46b5-a8c3-510a0841840e.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K\n\t- Evidence found: SORCE-1K\n\nQUESTION:\n\nWhat does SORCE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a dataset used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a benchmark"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.010101010101010102,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.01904761904761905
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.010101010101010102,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.01904761904761905
+        },
+        "rougeLsum": {
+            "precision": 0.010101010101010102,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.01904761904761905
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.02247191011235955,
+            "precision": 0.012048192771084338,
+            "recall": 0.16666666666666666
+        }
+    },
+    "predict": "Based on the provided information, I couldn't find a direct definition for SORCE. However, I can try to look up the term.\n\nSORCE stands for Solar Radiation and Climate Experiment. It's a NASA satellite mission that was launched in 2003 to study the Sun's radiation and its impact on the Earth's climate.\n\nThe evidence you provided, SORCE-1K, seems to be related to the SORCE mission, but without further context, I couldn't determine its specific meaning. If you have more information about SORCE-1K, I may be able to provide a more detailed explanation.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

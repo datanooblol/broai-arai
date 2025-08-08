@@ -5,7 +5,7 @@ __pycache__/
 postgres-data/
 # C extensions
 *.so
-backend/evaluations
+# backend/evaluations
 # Distribution / packaging
 .Python
 build/

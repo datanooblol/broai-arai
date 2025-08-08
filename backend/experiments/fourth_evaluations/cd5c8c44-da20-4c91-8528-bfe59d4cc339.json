@@ -1,0 +1,60 @@
+{
+    "question": "What is AcuRank?",
+    "answer": "AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation",
+    "type": "explanation",
+    "source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+    "experiment_id": "cd5c8c44-da20-4c91-8528-bfe59d4cc339",
+    "experiment_set": "33dc9c9b-bf0d-44c6-aae3-485e7a90e475",
+    "experiment_storage": "./experiments/fourth_evaluations/cd5c8c44-da20-4c91-8528-bfe59d4cc339.json",
+    "document_id": "d6077d6c-5ea2-41fb-b7e5-517ef9922722",
+    "document_source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: AcuRank\n\nQUESTION:\n\nWhat is AcuRank?\n\n",
+    "potential_terms": [
+        {
+            "term": "AcuRank",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "AcuRank": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.03763440860215054,
+            "recall": 0.3888888888888889,
+            "fmeasure": 0.06862745098039215
+        },
+        "rouge2": {
+            "precision": 0.010810810810810811,
+            "recall": 0.11764705882352941,
+            "fmeasure": 0.019801980198019802
+        },
+        "rougeL": {
+            "precision": 0.03225806451612903,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.0588235294117647
+        },
+        "rougeLsum": {
+            "precision": 0.03225806451612903,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.0588235294117647
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.05319148936170213,
+            "precision": 0.029239766081871343,
+            "recall": 0.29411764705882354
+        }
+    },
+    "predict": "Based on the provided TERM, AcuRank, I understand that it refers to a specific concept or tool. \n\nAcuRank is a term that seems to relate to a ranking or scoring system, possibly in the context of search engine optimization (SEO) or content analysis. However, without additional information or context, I couldn't find a widely recognized or standard definition.\n\nCould you provide more context or information about AcuRank? \n\n(If you are referring to a specific tool or software) \n\nAcuRank might be a proprietary tool or metric used for a particular purpose, such as analyzing content accuracy or relevance.\n\nIf I had to take a general guess: \n\nAcuRank might be an algorithm or scoring system used to evaluate the accuracy, relevance, or ranking of content, possibly in relation to search engine results or content performance.\n\nHowever, I would like to clarify or confirm this with more information if available. \n\nFor now, I can only provide this general insight based on my understanding of similar terms and concepts. \n\nIf you could provide more context, I'd be happy to try and give a more specific and accurate definition.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,97 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "c63e9eec-bfac-4c46-b92b-bfe3ea7b6d5b",
+    "experiment_set": "cd2d8c87-c9df-4ee2-9e81-3ddf521a63e3",
+    "experiment_storage": "./experiments/sixth_evaluations/c63e9eec-bfac-4c46-b92b-bfe3ea7b6d5b.json",
+    "document_id": "cdbe2918-c993-42ff-9354-eb4ffc266de0",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\t- Evidence found: the w/o CGSeg setting shows significant performance drops across all metrics\n\t- Evidence found: we proposed CGSeg, a recursive color gradient-based segmentation algorithm\n\t- Evidence found: computed via the gradient-based segmentation algorithm CGSeg\n\t- Evidence found: Algorithm 1 Color Gradient-based Segmentation (CGSeg)\n\t- Evidence found: Figure 4: An example of CGSeg applied to a slide reference image\n\t- Evidence found: apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm\n\t- Evidence found: ... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ...\n\t- Evidence found: Disables the CGSeg mechanism\n\t- Evidence found: SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": [
+            {
+                "evidence": "the w/o CGSeg setting shows significant performance drops across all metrics",
+                "explanation": "CGSeg is a mechanism used in the framework, and its removal leads to performance drops"
+            },
+            {
+                "evidence": "we proposed CGSeg, a recursive color gradient-based segmentation algorithm",
+                "explanation": "CGSeg is a recursive color gradient-based segmentation algorithm for dividing slide design into blocks"
+            },
+            {
+                "evidence": "computed via the gradient-based segmentation algorithm CGSeg",
+                "explanation": "CGSeg is a gradient-based segmentation algorithm"
+            },
+            {
+                "evidence": "Algorithm 1 Color Gradient-based Segmentation (CGSeg)",
+                "explanation": "CGSeg stands for Color Gradient-based Segmentation, a recursive algorithm for image segmentation"
+            },
+            {
+                "evidence": "Figure 4: An example of CGSeg applied to a slide reference image",
+                "explanation": "CGSeg is an algorithm used for segmenting images"
+            },
+            {
+                "evidence": "apply proportional scaling to the Position (< x, y, w, h >) extracted from Color Gradients-based Segmentation (CGSeg) algorithm",
+                "explanation": "CGSeg stands for Color Gradients-based Segmentation algorithm."
+            },
+            {
+                "evidence": "... the proposed H-RAG and CGSeg mechanisms significantly enhance model performance ...",
+                "explanation": "CGSeg is a mechanism proposed to enhance model performance"
+            },
+            {
+                "evidence": "Disables the CGSeg mechanism",
+                "explanation": "CGSeg is a mechanism related to code generation and segmentation"
+            },
+            {
+                "evidence": "SlideCoder's CGSeg mechanism enables the MLLM to focus more effectively on fine-grained details",
+                "explanation": "CGSeg is a mechanism used in SlideCoder, but its full meaning is not explicitly stated in the context"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "fmeasure": 0.4
+        },
+        "rouge2": {
+            "precision": 0.2,
+            "recall": 1.0,
+            "fmeasure": 0.33333333333333337
+        },
+        "rougeL": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "fmeasure": 0.4
+        },
+        "rougeLsum": {
+            "precision": 0.25,
+            "recall": 1.0,
+            "fmeasure": 0.4
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.23529411764705882,
+            "precision": 0.14285714285714285,
+            "recall": 0.6666666666666666
+        }
+    },
+    "predict": "Based on the provided TERMS information, it appears that CGSeg stands for \"Color Gradient-based Segmentation\".",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

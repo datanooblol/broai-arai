@@ -1,0 +1,69 @@
+{
+    "question": "What does SORCE stand for?",
+    "answer": "Small Object Retrieval in Complex Environments",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "dc17bf7e-d2f6-4f8b-a9d1-2a2296115d6e",
+    "experiment_set": "00da9ad7-03fa-44ef-9ef4-498f14633df8",
+    "experiment_storage": "./experiments/fourth_evaluations/dc17bf7e-d2f6-4f8b-a9d1-2a2296115d6e.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a dataset used for evaluation\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a benchmark\n\nQUESTION:\n\nWhat does SORCE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a dataset used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a benchmark"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.007692307692307693,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.014705882352941178
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.007692307692307693,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.014705882352941178
+        },
+        "rougeLsum": {
+            "precision": 0.007692307692307693,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.014705882352941178
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.01694915254237288,
+            "precision": 0.008928571428571428,
+            "recall": 0.16666666666666666
+        }
+    },
+    "predict": "Based on the provided information, I couldn't find a direct explanation of what SORCE stands for. However, I found that SORCE-1K is a dataset and a benchmark used for evaluation.\n\nA possible approach to finding the meaning of SORCE is to look for its expansion in relevant contexts. \n\nOne possible expansion is that SORCE could stand for \"Solar Optical and Radio Coronal Explorer\" or other expansions depending on the context.\n\nHowever, without further context, I couldn't provide a definitive expansion of the acronym SORCE.\n\nIn the context provided (SORCE-1K), it seems more related to a dataset or benchmark; if you provide more context, I can give a more accurate expansion. \n\nA common expansion in space-related terms: \nSORCE stands for Solar Optical and Radio Coronal Explorer.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

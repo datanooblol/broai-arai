@@ -1,0 +1,60 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel query decomposition framework that can perform query decomposition for optimizing multi-vector retrieval performance",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "27c596df-1e9d-469a-b821-d92f2daa620a",
+    "experiment_set": "e961b4c4-aa1f-400a-9772-71a0d0510853",
+    "experiment_storage": "./experiments/fourth_evaluations/27c596df-1e9d-469a-b821-d92f2daa620a.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: POQD\n\nQUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [
+        {
+            "term": "POQD",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "POQD": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.05263157894736842,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.0851063829787234
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.039473684210526314,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.06382978723404256
+        },
+        "rougeLsum": {
+            "precision": 0.039473684210526314,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.06382978723404256
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07317073170731707,
+            "precision": 0.045454545454545456,
+            "recall": 0.1875
+        }
+    },
+    "predict": "Based on the provided TERM, POQD, I couldn't find a widely recognized definition. However, I can try to provide some general information.\n\nPOQD doesn't seem to match a well-known acronym or abbreviation in common use. It's possible that it's a specific term used in a particular context, industry, or organization.\n\nIf you could provide more CONTEXT or information about where you encountered POQD, I may be able to help you better.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

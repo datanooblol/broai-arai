@@ -1,0 +1,53 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "b262fdce-ea81-4393-b41d-eb801a788d36",
+    "experiment_set": "704d5336-78c8-4d18-8057-7b408295dad1",
+    "experiment_storage": "./experiments/sixth_evaluations/b262fdce-ea81-4393-b41d-eb801a788d36.json",
+    "document_id": "e809f8ae-921d-4130-bafd-f074319b3ed6",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.017241379310344827,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.03278688524590164
+        },
+        "rouge2": {
+            "precision": 0.008658008658008658,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.01652892561983471
+        },
+        "rougeL": {
+            "precision": 0.017241379310344827,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.03278688524590164
+        },
+        "rougeLsum": {
+            "precision": 0.017241379310344827,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.03278688524590164
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.027522935779816515,
+            "precision": 0.014423076923076924,
+            "recall": 0.3
+        }
+    },
+    "predict": "REARANK is a term that can be interpreted in various contexts, but without specific information on what you're referring to (e.g., technology, business, or another field), I'll provide a general explanation.\n\n1. **General Definition**: In a broad sense, \"re-rank\" or \"REARANK\" could refer to the process of changing or adjusting the ranking of items. This could apply to search engine results, data analysis, competitions, or any scenario where items are ordered based on certain criteria.\n\n2. **In Technology and Computing**: In the context of information retrieval or machine learning, re-ranking might refer to a process that adjusts the order of retrieved items (like documents, web pages, or products) based on additional criteria or more refined analysis. This is often used to improve the relevance of search results or recommendations.\n\n3. **Specific Tools or Algorithms**: There might be specific algorithms, tools, or software named REARANK used for re-ranking purposes in various domains. Without more context, it's challenging to provide a detailed explanation.\n\n4. **Business and Strategy**: In a business or strategic context, re-ranking could refer to re-evaluating priorities, such as re-ranking investment opportunities, product lines, or strategic initiatives based on new information or changing conditions.\n\nIf you could provide more context or specify the field or use case you're interested in, I could offer a more targeted and detailed explanation of REARANK.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

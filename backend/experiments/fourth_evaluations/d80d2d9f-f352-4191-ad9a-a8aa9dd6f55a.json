@@ -1,0 +1,60 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "d80d2d9f-f352-4191-ad9a-a8aa9dd6f55a",
+    "experiment_set": "e961b4c4-aa1f-400a-9772-71a0d0510853",
+    "experiment_storage": "./experiments/fourth_evaluations/d80d2d9f-f352-4191-ad9a-a8aa9dd6f55a.json",
+    "document_id": "785660bc-9463-4160-b595-9c54305c0b7a",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: REARANK\n\nQUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [
+        {
+            "term": "REARANK",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "REARANK": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.031007751937984496,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.05673758865248227
+        },
+        "rouge2": {
+            "precision": 0.0078125,
+            "recall": 0.09090909090909091,
+            "fmeasure": 0.014388489208633094
+        },
+        "rougeL": {
+            "precision": 0.031007751937984496,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.05673758865248227
+        },
+        "rougeLsum": {
+            "precision": 0.031007751937984496,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.05673758865248227
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.047244094488188976,
+            "precision": 0.02564102564102564,
+            "recall": 0.3
+        }
+    },
+    "predict": "Based on the provided TERM, REARANK, it appears to be a term that could be related to rearranging or reordering something, possibly in the context of algorithms, data processing, or information retrieval.\n\nREARANK can be defined as:\n\n- A process or algorithm used to reorder or rearrange items, such as search results, based on certain criteria or relevance.\n\nWithout additional context, it's challenging to provide a more specific definition. However, in general, re-ranking is a technique used in various fields, including information retrieval, machine learning, and data analysis, to improve the ordering or ranking of items based on specific requirements or preferences.\n\nIf you have more context or a specific domain in mind (e.g., search engines, recommendation systems), I can try to provide a more tailored explanation.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

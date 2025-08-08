@@ -1,0 +1,53 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "3aa4ee75-8887-4c89-8530-22437374ebf3",
+    "experiment_set": "1bd47c47-a24c-4eec-b353-73a47ca3101b",
+    "experiment_storage": "./experiments/fifth_evaluations/3aa4ee75-8887-4c89-8530-22437374ebf3.json",
+    "document_id": "281cfb03-6082-438e-acaf-b6c90fe48c2c",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.08333333333333333,
+            "recall": 0.25806451612903225,
+            "fmeasure": 0.12598425196850394
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.07291666666666667,
+            "recall": 0.22580645161290322,
+            "fmeasure": 0.11023622047244094
+        },
+        "rougeLsum": {
+            "precision": 0.07291666666666667,
+            "recall": 0.22580645161290322,
+            "fmeasure": 0.11023622047244094
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07407407407407407,
+            "precision": 0.04819277108433735,
+            "recall": 0.16
+        }
+    },
+    "predict": "Since there's no additional information provided (like TERMS or CONTEXTS), I'll provide a general response based on my available knowledge.\n\n\"GainRAG\" doesn't seem to be a widely recognized term in general knowledge up to my last update. It's possible that it's a specialized term, acronym, or a proper noun related to a specific field or product. Without more context, it's challenging to provide a precise answer.\n\nIf you have more information or context about GainRAG, such as its industry or application, I'd be happy to try and help further.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,65 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "b2d2bd11-1020-46bf-9672-2c220ec8fbef",
+    "experiment_set": "a39ef2d4-aeda-45fc-8c40-b0974ab15c5b",
+    "experiment_storage": "./experiments/fourth_evaluations/b2d2bd11-1020-46bf-9672-2c220ec8fbef.json",
+    "document_id": "9b8418e9-6f5f-4116-b3ed-7eef0b58c34c",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: MASKSEARCH\n\t- Evidence found: Search-R1 [13]\n\nQUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [
+        {
+            "term": "MASKSEARCH",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "MASKSEARCH": [
+            {
+                "evidence": "Search-R1 [13]",
+                "explanation": "Search-R1 is a type of language model"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06796116504854369,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.1129032258064516
+        },
+        "rouge2": {
+            "precision": 0.00980392156862745,
+            "recall": 0.05,
+            "fmeasure": 0.016393442622950817
+        },
+        "rougeL": {
+            "precision": 0.05825242718446602,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.09677419354838711
+        },
+        "rougeLsum": {
+            "precision": 0.05825242718446602,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.09677419354838711
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07339449541284403,
+            "precision": 0.043478260869565216,
+            "recall": 0.23529411764705882
+        }
+    },
+    "predict": "MASKSEARCH is related to \"Search-R1 [13]\" as per the evidence found. However, without further context or information about what \"Search-R1 [13]\" refers to, I can only provide a limited answer.\n\nIf we consider general knowledge and possible interpretations, \"MASKSEARCH\" could be related to a search function or algorithm that involves masking. In computing, a mask is often used to select or filter data. Therefore, MASKSEARCH might be a term used in a specific context or technology to describe a search operation that utilizes masking.\n\nTo provide a more accurate definition, additional context or information about \"Search-R1 [13]\" would be necessary.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

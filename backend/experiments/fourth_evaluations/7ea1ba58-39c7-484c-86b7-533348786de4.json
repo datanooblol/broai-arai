@@ -1,0 +1,60 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "7ea1ba58-39c7-484c-86b7-533348786de4",
+    "experiment_set": "a39ef2d4-aeda-45fc-8c40-b0974ab15c5b",
+    "experiment_storage": "./experiments/fourth_evaluations/7ea1ba58-39c7-484c-86b7-533348786de4.json",
+    "document_id": "2e5f6f17-2156-45a7-8ba2-c29db9de3b2a",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.015873015873015872,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.028571428571428567
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.015873015873015872,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.028571428571428567
+        },
+        "rougeLsum": {
+            "precision": 0.015873015873015872,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.028571428571428567
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.032258064516129024,
+            "precision": 0.01818181818181818,
+            "recall": 0.14285714285714285
+        }
+    },
+    "predict": "Since the term \"DiscoVLA\" is provided, I'll directly answer the question.\n\nDiscoVLA stands for \"Discover Very Large Array\". The Very Large Array (VLA) is a radio astronomy observatory located in New Mexico, USA. \"DiscoVLA\" likely refers to a project or initiative related to the VLA, possibly involving discovery or research. However, without further context, the exact meaning or project details are unclear.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,53 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "e40ae4fc-56d8-495f-9116-7238b6a613fa",
+    "experiment_set": "704d5336-78c8-4d18-8057-7b408295dad1",
+    "experiment_storage": "./experiments/sixth_evaluations/e40ae4fc-56d8-495f-9116-7238b6a613fa.json",
+    "document_id": "fc0a57fd-6c7e-464d-b819-5e2c31a84ef4",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04895104895104895,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.08536585365853658
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.04195804195804196,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.07317073170731707
+        },
+        "rougeLsum": {
+            "precision": 0.04195804195804196,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.07317073170731707
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.054421768707483,
+            "precision": 0.03076923076923077,
+            "recall": 0.23529411764705882
+        }
+    },
+    "predict": "MASKSEARCH appears to be a term that could be related to various contexts, but without specific information, it's challenging to provide a precise definition. It could potentially be a:\n\n1. **Software or Tool:** In technology or cybersecurity, it might refer to a tool or software used for searching or analyzing data, possibly related to mask or pattern recognition.\n2. **Research or Academic Term:** In academic or research contexts, it could refer to a specific method, technique, or study related to mask search or similar concepts.\n3. **Company or Product Name:** It might also be the name of a company, product, or service, possibly in the tech industry or a related field.\n\nWithout more context or information, it's difficult to provide a more detailed explanation. If you have any additional details or clarification regarding MASKSEARCH, I could offer a more accurate response.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

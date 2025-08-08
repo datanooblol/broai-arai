@@ -1,0 +1,101 @@
+{
+    "question": "What does STORM stand for?",
+    "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "acronym",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "54209714-409d-4366-bf8a-a6d0c9a6b971",
+    "experiment_set": "7d8cc6d7-2289-4e2b-bf9a-cfd1856f9b96",
+    "experiment_storage": "./experiments/sixth_evaluations/54209714-409d-4366-bf8a-a6d0c9a6b971.json",
+    "document_id": "06ad7bfc-20e0-40fb-a806-66c8f871e96a",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\t- Evidence found: Table 11: Summary of major issues found on articles produced by STORM\n\t- Evidence found: STORM creates an outline before the actual writing starts\n\t- Evidence found: We present STORM to automate the pre-writing stage\n\t- Evidence found: STORM is capable of researching complicated topics and writing long articles from detailed outlines.\n\t- Evidence found: Given the input topic t , STORM discovers different perspectives ...\n\t- Evidence found: We propose STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking\n\t- Evidence found: STORM simulates a conversation between a Wikipedia writer and a topic expert\n\t- Evidence found: 4.4 STORM Implementation\n\t- Evidence found: We propose the STORM paradigm for the S ynthesis\n\t- Evidence found: We propose STORM, an LLM-based writing system\n\nQUESTION:\n\nWhat does STORM stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": [
+            {
+                "evidence": "Table 11: Summary of major issues found on articles produced by STORM",
+                "explanation": "STORM is mentioned as the producer of articles being summarized"
+            },
+            {
+                "evidence": "STORM creates an outline before the actual writing starts",
+                "explanation": "STORM is a system or model that creates an outline for article writing"
+            },
+            {
+                "evidence": "We present STORM to automate the pre-writing stage",
+                "explanation": "STORM is a system that automates the pre-writing stage"
+            },
+            {
+                "evidence": "STORM is capable of researching complicated topics and writing long articles from detailed outlines.",
+                "explanation": "STORM refers to a system or tool capable of researching and writing articles."
+            },
+            {
+                "evidence": "Given the input topic t , STORM discovers different perspectives ...",
+                "explanation": "STORM is a system that discovers different perspectives and controls the question asking process"
+            },
+            {
+                "evidence": "We propose STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking"
+            },
+            {
+                "evidence": "STORM simulates a conversation between a Wikipedia writer and a topic expert",
+                "explanation": "STORM is a system that simulates conversations"
+            },
+            {
+                "evidence": "4.4 STORM Implementation",
+                "explanation": "STORM is the name of a system or model being implemented"
+            },
+            {
+                "evidence": "We propose the STORM paradigm for the S ynthesis",
+                "explanation": "STORM is a proposed paradigm for synthesizing information"
+            },
+            {
+                "evidence": "We propose STORM, an LLM-based writing system",
+                "explanation": "STORM is a proposed writing system"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "rouge2": {
+            "precision": 0.7692307692307693,
+            "recall": 1.0,
+            "fmeasure": 0.8695652173913044
+        },
+        "rougeL": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "rougeLsum": {
+            "precision": 0.7857142857142857,
+            "recall": 1.0,
+            "fmeasure": 0.88
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.8695652173913044,
+            "precision": 0.7692307692307693,
+            "recall": 1.0
+        }
+    },
+    "predict": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,101 @@
+{
+    "question": "What is SlideCoder?",
+    "answer": "SlideCoder is a layout-aware, retrieval-augmented framework for generating editable slides from reference images.",
+    "type": "explanation",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "0081bf81-fd5c-4855-a124-451e0936b9f0",
+    "experiment_set": "cd2d8c87-c9df-4ee2-9e81-3ddf521a63e3",
+    "experiment_storage": "./experiments/sixth_evaluations/0081bf81-fd5c-4855-a124-451e0936b9f0.json",
+    "document_id": "cdbe2918-c993-42ff-9354-eb4ffc266de0",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SlideCoder\n\t- Evidence found: | SlideCoder  | Gemini2.0-flash |\n\t- Evidence found: | Slide2Code              | Slide2Code              | Slide2Code  |\n\t- Evidence found: Coder uses these to query the Operation Function Knowledge Base and generate code\n\t- Evidence found: to form the final Slide2Code benchmark\n\t- Evidence found: We fine-tune our model, SlideMaster\n\t- Evidence found: After Coder completes the generation of code snippets for blocks, Assembler is applied to assemble these code snippets for generating the final slide in an accurate manner.\n\t- Evidence found: ... SlideCoder consistently achieves the best performance across all difficulty levels ...\n\t- Evidence found: ... the opensource fine-tuned model SlideMaster also demonstrates competitive performance ...\n\t- Evidence found: the goal of Coder is to generate partial code\n\t- Evidence found: Results on Slide2Code (top) and SLIDESBENCH (bottom) using SlideCoder and AutoPresent with different MLLMs\n\nQUESTION:\n\nWhat is SlideCoder?\n\n",
+    "potential_terms": [
+        {
+            "term": "SlideCoder",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SlideCoder": [
+            {
+                "evidence": "| SlideCoder  | Gemini2.0-flash |",
+                "explanation": "SlideCoder appears to be a specific model or system being compared"
+            },
+            {
+                "evidence": "| Slide2Code              | Slide2Code              | Slide2Code  |",
+                "explanation": "Slide2Code appears to be a specific system, tool, or project name"
+            },
+            {
+                "evidence": "Coder uses these to query the Operation Function Knowledge Base and generate code",
+                "explanation": "Coder is a component that generates code based on descriptions"
+            },
+            {
+                "evidence": "to form the final Slide2Code benchmark",
+                "explanation": "Slide2Code is the name of a benchmark used for evaluating slide generation models"
+            },
+            {
+                "evidence": "We fine-tune our model, SlideMaster",
+                "explanation": "SlideMaster is the name of a model used in the context"
+            },
+            {
+                "evidence": "After Coder completes the generation of code snippets for blocks, Assembler is applied to assemble these code snippets for generating the final slide in an accurate manner.",
+                "explanation": "Coder is a component that generates code snippets for blocks."
+            },
+            {
+                "evidence": "... SlideCoder consistently achieves the best performance across all difficulty levels ...",
+                "explanation": "SlideCoder is the name of a framework or model"
+            },
+            {
+                "evidence": "... the opensource fine-tuned model SlideMaster also demonstrates competitive performance ...",
+                "explanation": "SlideMaster is the name of a model"
+            },
+            {
+                "evidence": "the goal of Coder is to generate partial code",
+                "explanation": "Coder is a component responsible for generating partial code"
+            },
+            {
+                "evidence": "Results on Slide2Code (top) and SLIDESBENCH (bottom) using SlideCoder and AutoPresent with different MLLMs",
+                "explanation": "Slide2Code is a framework or tool used for evaluation"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.10344827586206896,
+            "recall": 0.4,
+            "fmeasure": 0.1643835616438356
+        },
+        "rouge2": {
+            "precision": 0.03508771929824561,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.056338028169014086
+        },
+        "rougeL": {
+            "precision": 0.10344827586206896,
+            "recall": 0.4,
+            "fmeasure": 0.1643835616438356
+        },
+        "rougeLsum": {
+            "precision": 0.10344827586206896,
+            "recall": 0.4,
+            "fmeasure": 0.1643835616438356
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.125,
+            "precision": 0.07692307692307693,
+            "recall": 0.3333333333333333
+        }
+    },
+    "predict": "Based on the provided TERMS information, SlideCoder is a model or system that is used to generate code snippets for blocks, and it consistently achieves the best performance across all difficulty levels. It appears to be a part of a larger system that includes Coder, Assembler, and SlideMaster, and is used to generate slides in an accurate manner.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

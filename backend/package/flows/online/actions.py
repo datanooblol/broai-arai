@@ -109,6 +109,18 @@ class TermManager(Action):
                 errors.append(str(e))
         return []
 
+    def filter_valid_terms(self, source_term:str, terms:List[Term]):
+        """add in forth evaluation"""
+        selected_terms = []
+        for term in terms:
+            mask = True
+            mask &= source_term.lower() != term.evidence.lower().strip()
+            mask &= term is not None
+            mask &= len(source_term.lower())*2 < len(term.evidence.replace("  ", "").strip().lower())
+            if mask:
+                selected_terms.append({"evidence":term.evidence, "explanation":term.explanation})
+        return selected_terms
+
     def get_detailed_terms(self, shared:Shared):
         if len(shared.potential_terms) == 0:
             return {}
@@ -117,8 +129,8 @@ class TermManager(Action):
             _term = term['term']
             confidence = term['confidence']
             similar_terms = self.retriever.read_similar_terms(term=_term, session=Depends(get_session), document_ids=[shared.document_id])
-            # detailed_terms.extend([st for st in similar_terms if st])
-            detailed_terms[_term] = [{"evidence":st.evidence, "explanation":st.explanation} for st in similar_terms if st]
+            # detailed_terms[_term] = [{"evidence":st.evidence, "explanation":st.explanation} for st in similar_terms if st]
+            detailed_terms[_term] = self.filter_valid_terms(_term, similar_terms)
         return detailed_terms
     
     def run(self, shared:Shared):
@@ -200,38 +212,6 @@ class Chat(Action):
         shared.predict = predict
         return shared
     
-# class Evaluator(Action):
-#     def __init__(self):
-#         super().__init__()
-#         self.metrics = ['rouge1', 'rouge2', 'rougeL', 'rougeLsum']
-#         self.scorer = rouge_scorer.RougeScorer(rouge_types=self.metrics, use_stemmer=True)
-#     def preprocess_text(self, text):
-#         if not text:
-#             return ""
-#         text = text.strip().lower()
-#         text = re.sub(r'\s+', ' ', text)  # normalize whitespace
-#         return text    
-    
-#     def get_score(self, shared:Shared):
-#         ground_truth = self.preprocess_text(shared.answer)
-#         predict = self.preprocess_text(shared.predict)
-#         score = self.scorer.score(target=ground_truth, prediction=predict)
-#         _score = {}
-#         for metric in self.metrics:
-#             _score[metric] = dict(
-#                 precision=score[metric].precision,
-#                 recall=score[metric].recall,
-#                 fmeasure=score[metric].fmeasure
-#             )
-#         return _score
-
-#     def run(self, shared:Shared):
-#         shared.evaluation = self.get_score(shared)
-#         _shared = asdict(shared)
-#         with open(shared.experiment_storage, 'w') as f:
-#             json.dump(_shared, f, indent=4)
-#         return shared
-
 class Evaluator(Action):
     def __init__(self):
         super().__init__()
@@ -298,6 +278,8 @@ class Evaluator(Action):
     def run(self, shared:Shared):
         shared.evaluation = self.get_score(shared)
         _shared = asdict(shared)
+        import os
+        os.makedirs(os.path.dirname(shared.experiment_storage), exist_ok=True)        
         with open(shared.experiment_storage, 'w') as f:
             json.dump(_shared, f, indent=4)
         return shared    

@@ -1,0 +1,69 @@
+{
+    "question": "What does SORCE stand for?",
+    "answer": "Small Object Retrieval in Complex Environments",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "ff24349d-0861-4403-8053-8e805c2abacd",
+    "experiment_set": "fc0d00d3-73d4-4a5e-909b-258051a65423",
+    "experiment_storage": "./experiments/fourth_evaluations/ff24349d-0861-4403-8053-8e805c2abacd.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a dataset used for evaluation\n\t- Evidence found: SORCE-1K with Possible Explanation: SORCE-1K is a benchmark\n\nQUESTION:\n\nWhat does SORCE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a dataset used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a benchmark"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0051813471502590676,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.010050251256281407
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.0051813471502590676,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.010050251256281407
+        },
+        "rougeLsum": {
+            "precision": 0.0051813471502590676,
+            "recall": 0.16666666666666666,
+            "fmeasure": 0.010050251256281407
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.011299435028248588,
+            "precision": 0.005847953216374269,
+            "recall": 0.16666666666666666
+        }
+    },
+    "predict": "## Step 1: Understand the given information\nThe term SORCE is given, and it is associated with SORCE-1K, which is described as a dataset used for evaluation and a benchmark.\n\n## Step 2: Identify the meaning of SORCE\nTo determine what SORCE stands for, we need to look into the context or definition provided. Although the exact expansion of SORCE is not directly given, understanding its association with SORCE-1K is crucial.\n\n## Step 3: Analyze the context of SORCE-1K\nSORCE-1K being a dataset and a benchmark suggests it is used in a specific field or task, possibly related to research or evaluation in that field.\n\n## Step 4: Recall or research the expansion of SORCE\nGiven that SORCE is related to a dataset or benchmark (SORCE-1K), and without a direct expansion provided, one might need to refer to known datasets or benchmarks. SORCE is known to be related to solar irradiance measurements.\n\n## Step 5: Provide the expansion of SORCE based on known information\nSORCE stands for Solar Radiation and Climate Experiment. It is a NASA mission that was launched to measure solar irradiance.\n\nThe final answer is: Solar Radiation and Climate Experiment",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

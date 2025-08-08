@@ -1,0 +1,53 @@
+{
+    "question": "What does T2IR stand for?",
+    "answer": "Text-to-Image Retrieval",
+    "type": "acronym",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "9b541ef8-1e5d-4a46-a0e0-2fca0598f90c",
+    "experiment_set": "8f728cda-edf2-4538-9a77-8396084ef861",
+    "experiment_storage": "./experiments/fourth_evaluations/9b541ef8-1e5d-4a46-a0e0-2fca0598f90c.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat does T2IR stand for?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.01818181818181818,
+            "recall": 0.5,
+            "fmeasure": 0.03508771929824561
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.01818181818181818,
+            "recall": 0.5,
+            "fmeasure": 0.03508771929824561
+        },
+        "rougeLsum": {
+            "precision": 0.01818181818181818,
+            "recall": 0.5,
+            "fmeasure": 0.03508771929824561
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about what T2IR refers to, as it might stand for different things depending on the field or context.\n\nCould you please provide more details or specify the context in which T2IR is used? \n\nFor example, is it related to medical imaging, technology, or another field? \n\nWithout specific information, a general search suggests that T2IR could stand for \"T2-weighted Inversion Recovery,\" a term used in magnetic resonance imaging (MRI), particularly in medical contexts.\n\nIf you have a specific context or field in mind, please let me know, and I'll do my best to provide a precise answer.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

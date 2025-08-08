@@ -1,0 +1,69 @@
+{
+    "question": "What does SCM stand for?",
+    "answer": "TriMetric Slide Complexity Metric",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "5d65493f-0251-41b6-8d19-1a17cd843656",
+    "experiment_set": "1075ce17-013f-46b6-a315-1579f101f786",
+    "experiment_storage": "./experiments/fifth_evaluations/5d65493f-0251-41b6-8d19-1a17cd843656.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SCM\n\t- Explanation: TriMetric Slide Complexity Metric (SCM) is a metric that integrates production difficulty and visual complexity to evaluate slide complexity\n\t- Explanation: SCM is a metric used to evaluate the complexity of slides\n\nQUESTION:\n\nWhat does SCM stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "SCM",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "SCM": [
+            {
+                "evidence": "TriMetric Slide Complexity Metric (SCM) that integrates production difficulty and visual complexity",
+                "explanation": "TriMetric Slide Complexity Metric (SCM) is a metric that integrates production difficulty and visual complexity to evaluate slide complexity"
+            },
+            {
+                "evidence": "Slide Complexity Metric (SCM) ... conducted a human subject study",
+                "explanation": "SCM is a metric used to evaluate the complexity of slides"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.23529411764705882,
+            "recall": 1.0,
+            "fmeasure": 0.38095238095238093
+        },
+        "rouge2": {
+            "precision": 0.1875,
+            "recall": 1.0,
+            "fmeasure": 0.3157894736842105
+        },
+        "rougeL": {
+            "precision": 0.23529411764705882,
+            "recall": 1.0,
+            "fmeasure": 0.38095238095238093
+        },
+        "rougeLsum": {
+            "precision": 0.23529411764705882,
+            "recall": 1.0,
+            "fmeasure": 0.38095238095238093
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.4,
+            "precision": 0.25,
+            "recall": 1.0
+        }
+    },
+    "predict": "Based on the provided TERMS information, SCM stands for Slide Complexity Metric, specifically TriMetric Slide Complexity Metric.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

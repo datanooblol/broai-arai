@@ -1,0 +1,60 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a novel retrieval framework inspired by the hippocampal indexing theory of human long-term memory to enable deeper and more efficient knowledge integration over new experiences",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "62e43d78-e36a-4a5a-a345-956c0cac2c6d",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/62e43d78-e36a-4a5a-a345-956c0cac2c6d.json",
+    "document_id": "add5f9b0-189d-48d2-81db-a492b0259643",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.14545454545454545,
+            "recall": 0.5714285714285714,
+            "fmeasure": 0.23188405797101444
+        },
+        "rouge2": {
+            "precision": 0.03669724770642202,
+            "recall": 0.14814814814814814,
+            "fmeasure": 0.05882352941176471
+        },
+        "rougeL": {
+            "precision": 0.10909090909090909,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.17391304347826086
+        },
+        "rougeLsum": {
+            "precision": 0.10909090909090909,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.17391304347826086
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.2051282051282051,
+            "precision": 0.13043478260869565,
+            "recall": 0.48
+        }
+    },
+    "predict": "To answer the question \"What is HippoRAG?\", I will refer to the provided term definition.\n\nSince \"HippoRAG\" is given as a term, I'll assume it has a specific definition or explanation associated with it. Unfortunately, the definition of HippoRAG is not provided in the given TERMS information.\n\nHowever, based on general knowledge, HippoRAG is a knowledge graph-based retrieval-augmented generation framework that mimics the human brain's memory mechanisms. It is inspired by the hippocampus, a part of the brain that plays a key role in memory formation.\n\nIf a specific definition or context were provided, I would use that to give a more accurate and detailed explanation.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

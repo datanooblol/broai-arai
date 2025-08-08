@@ -1,0 +1,53 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "d8dbca77-9d46-42f0-8ddf-e2e8884c1373",
+    "experiment_set": "d07e0d6e-0eda-427c-bcb4-9d69df3775ab",
+    "experiment_storage": "./experiments/fifth_evaluations/d8dbca77-9d46-42f0-8ddf-e2e8884c1373.json",
+    "document_id": "fd16854e-86f2-4851-b123-2f1cf3b5063a",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.045714285714285714,
+            "recall": 0.5333333333333333,
+            "fmeasure": 0.08421052631578947
+        },
+        "rouge2": {
+            "precision": 0.011494252873563218,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.021276595744680854
+        },
+        "rougeL": {
+            "precision": 0.045714285714285714,
+            "recall": 0.5333333333333333,
+            "fmeasure": 0.08421052631578947
+        },
+        "rougeLsum": {
+            "precision": 0.045714285714285714,
+            "recall": 0.5333333333333333,
+            "fmeasure": 0.08421052631578947
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0584795321637427,
+            "precision": 0.03164556962025317,
+            "recall": 0.38461538461538464
+        }
+    },
+    "predict": "ClueAnchor is a model or a method used in natural language processing (NLP), specifically designed for open-domain question answering (ODQA) tasks. \n\nThe term \"ClueAnchor\" can be broken down based on its function:\n- \"Clue\" refers to the pieces of information or evidence that help in solving a problem or answering a question.\n- \"Anchor\" suggests a reference point or a basis for further reasoning or analysis.\n\nClueAnchor likely uses clues or pieces of text as anchors to help find more relevant information or to directly answer questions by identifying and leveraging specific parts of the text that are crucial for answering questions.\n\nFor a detailed and accurate description, especially if ClueAnchor pertains to a specific research paper, model, or technology that has been developed after my last update, I recommend checking the latest publications or resources in the field of NLP and question answering. \n\nHowever, based on general knowledge up to this point, ClueAnchor seems to be related to improving the efficiency and effectiveness of question-answering systems by focusing on key clues within the text.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

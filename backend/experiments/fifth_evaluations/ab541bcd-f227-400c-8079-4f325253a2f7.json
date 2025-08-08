@@ -1,0 +1,53 @@
+{
+    "question": "What is SORCE?",
+    "answer": "SORCE is a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+    "type": "explanation",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "ab541bcd-f227-400c-8079-4f325253a2f7",
+    "experiment_set": "d07e0d6e-0eda-427c-bcb4-9d69df3775ab",
+    "experiment_storage": "./experiments/fifth_evaluations/ab541bcd-f227-400c-8079-4f325253a2f7.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is SORCE?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.059602649006622516,
+            "recall": 0.3,
+            "fmeasure": 0.09944751381215469
+        },
+        "rouge2": {
+            "precision": 0.013333333333333334,
+            "recall": 0.06896551724137931,
+            "fmeasure": 0.0223463687150838
+        },
+        "rougeL": {
+            "precision": 0.059602649006622516,
+            "recall": 0.3,
+            "fmeasure": 0.09944751381215469
+        },
+        "rougeLsum": {
+            "precision": 0.059602649006622516,
+            "recall": 0.3,
+            "fmeasure": 0.09944751381215469
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07643312101910828,
+            "precision": 0.04580152671755725,
+            "recall": 0.23076923076923078
+        }
+    },
+    "predict": "SORCE stands for Solar Radiation and Climate Experiment. It is a NASA satellite mission that was launched on January 25, 2003. The primary goal of SORCE is to provide accurate measurements of the total solar irradiance (TSI) and spectral solar irradiance (SSI) that affect the Earth's climate. The mission aims to understand the role of solar radiation in the Earth's climate system and to provide data for climate modeling and research.\n\nSORCE carries four instruments:\n\n1. Total Solar Irradiance Monitor (TIM)\n2. Spectral Irradiance Monitor (SIM)\n3. Near-Infrared Spectrograph (NIS)\n4. X-Ray Photometer System (XPS)\n\nThese instruments work together to measure the solar radiation across various wavelengths, providing valuable data for scientists to study the impact of solar radiation on the Earth's climate.\n\nThe SORCE mission has contributed significantly to our understanding of the Sun's energy output and its effects on the Earth's climate.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

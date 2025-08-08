@@ -1,0 +1,60 @@
+{
+    "question": "What does STORM stand for?",
+    "answer": "Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "acronym",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "5a2847d5-4d49-4991-bd63-f53295a1c623",
+    "experiment_set": "fc0d00d3-73d4-4a5e-909b-258051a65423",
+    "experiment_storage": "./experiments/fourth_evaluations/5a2847d5-4d49-4991-bd63-f53295a1c623.json",
+    "document_id": "8170f3b0-9203-4ec2-8dcc-476eeb9c69b0",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\nQUESTION:\n\nWhat does STORM stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.02127659574468085,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.03809523809523809
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.010638297872340425,
+            "recall": 0.09090909090909091,
+            "fmeasure": 0.019047619047619046
+        },
+        "rougeLsum": {
+            "precision": 0.010638297872340425,
+            "recall": 0.09090909090909091,
+            "fmeasure": 0.019047619047619046
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.043010752688172046,
+            "precision": 0.024096385542168676,
+            "recall": 0.2
+        }
+    },
+    "predict": "Since the term \"STORM\" is given, I'll provide a general answer. STORM can stand for various things depending on the context. Some common expansions include:\n\n1. **Stochastic Optimization and Robustness Modeling**: Used in some mathematical or computational contexts.\n2. **STORM (microscopy)**: Stochastic Optical Reconstruction Microscopy, a technique used in super-resolution microscopy.\n3. **Strategic Tactical Operational Readiness Management**: Used in some military or management contexts.\n\nWithout a specific context, it's challenging to provide a definitive answer. However, one of the most well-known expansions is related to microscopy: Stochastic Optical Reconstruction Microscopy.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,60 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "9ea4d4be-b4e9-4348-9e6a-d39ae05592e9",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/9ea4d4be-b4e9-4348-9e6a-d39ae05592e9.json",
+    "document_id": "785660bc-9463-4160-b595-9c54305c0b7a",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: REARANK\n\nQUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [
+        {
+            "term": "REARANK",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "REARANK": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.0449438202247191,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.07920792079207921
+        },
+        "rouge2": {
+            "precision": 0.022727272727272728,
+            "recall": 0.18181818181818182,
+            "fmeasure": 0.0404040404040404
+        },
+        "rougeL": {
+            "precision": 0.033707865168539325,
+            "recall": 0.25,
+            "fmeasure": 0.05940594059405941
+        },
+        "rougeLsum": {
+            "precision": 0.033707865168539325,
+            "recall": 0.25,
+            "fmeasure": 0.05940594059405941
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.04395604395604395,
+            "precision": 0.024691358024691357,
+            "recall": 0.2
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information about the term \"REARANK.\" However, based on general knowledge, \"REARANK\" could be related to various contexts such as military, sports, or other competitive fields where ranking is relevant.\n\nWithout additional context or information, one possible interpretation is that \"REARANK\" refers to a lower or the last rank in a particular hierarchy or order. \n\nIf \"REARANK\" is a specific term from a particular field or system, please provide more context or details so I can give a more accurate explanation.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

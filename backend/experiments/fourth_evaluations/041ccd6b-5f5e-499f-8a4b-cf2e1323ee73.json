@@ -1,0 +1,60 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "041ccd6b-5f5e-499f-8a4b-cf2e1323ee73",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/041ccd6b-5f5e-499f-8a4b-cf2e1323ee73.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.013513513513513514,
+            "recall": 0.25,
+            "fmeasure": 0.025641025641025644
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.013513513513513514,
+            "recall": 0.25,
+            "fmeasure": 0.025641025641025644
+        },
+        "rougeLsum": {
+            "precision": 0.013513513513513514,
+            "recall": 0.25,
+            "fmeasure": 0.025641025641025644
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+        }
+    },
+    "predict": "Since the term \"CGSeg\" is provided, I'll directly answer based on the given term. However, the expansion or meaning of \"CGSeg\" is not defined in the provided TERMS information.\n\nIf I had to provide a general response, I would say that without further context or information, it's challenging to determine what \"CGSeg\" stands for. \n\nIf you have any additional context or details, please provide them, and I'll be happy to help.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

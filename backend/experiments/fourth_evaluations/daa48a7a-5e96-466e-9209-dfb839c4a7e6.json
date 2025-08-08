@@ -1,0 +1,65 @@
+{
+    "question": "What is FreshWiki?",
+    "answer": "FreshWiki is a dataset of recent high-quality Wikipedia articles",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "daa48a7a-5e96-466e-9209-dfb839c4a7e6",
+    "experiment_set": "69cc69a6-10e4-4cd4-8e19-920e3ca66a74",
+    "experiment_storage": "./experiments/fourth_evaluations/daa48a7a-5e96-466e-9209-dfb839c4a7e6.json",
+    "document_id": "8170f3b0-9203-4ec2-8dcc-476eeb9c69b0",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: FreshWiki\n\t- Evidence found: FreshWiki dataset\n\nQUESTION:\n\nWhat is FreshWiki?\n\n",
+    "potential_terms": [
+        {
+            "term": "FreshWiki",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "FreshWiki": [
+            {
+                "evidence": "FreshWiki dataset",
+                "explanation": "FreshWiki is a dataset curated for the study"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.11764705882352941,
+            "recall": 0.8,
+            "fmeasure": 0.20512820512820512
+        },
+        "rouge2": {
+            "precision": 0.029850746268656716,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.052631578947368425
+        },
+        "rougeL": {
+            "precision": 0.10294117647058823,
+            "recall": 0.7,
+            "fmeasure": 0.1794871794871795
+        },
+        "rougeLsum": {
+            "precision": 0.10294117647058823,
+            "recall": 0.7,
+            "fmeasure": 0.1794871794871795
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.208955223880597,
+            "precision": 0.11864406779661017,
+            "recall": 0.875
+        }
+    },
+    "predict": "Based on the provided TERMS information, I found that FreshWiki is associated with a dataset. However, without additional context, I can only provide a general answer.\n\nFreshWiki is likely a dataset or a collection of data related to Wikipedia or a similar online encyclopedia. The name suggests that it might be a fresh or updated version of a Wikipedia dataset, possibly containing recent edits, articles, or other information.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

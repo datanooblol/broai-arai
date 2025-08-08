@@ -1,0 +1,85 @@
+{
+    "question": "What is ClueAnchor?",
+    "answer": "ClueAnchor is a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization.",
+    "type": "explanation",
+    "source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+    "experiment_id": "56ac7f75-ece9-4c25-bfa5-0530197bfa37",
+    "experiment_set": "83728a4d-8e7e-47bc-9cbc-b403c6784467",
+    "experiment_storage": "./experiments/fifth_evaluations/56ac7f75-ece9-4c25-bfa5-0530197bfa37.json",
+    "document_id": "fd16854e-86f2-4851-b123-2f1cf3b5063a",
+    "document_source": "ClueAnchor Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: ClueAnchor\n\t- Explanation: ClueAnchor is a system or method where Knowledge Reasoning Optimization is applied\n\t- Explanation: ClueAnchor is a method that preserves reasoning quality by anchoring on useful clues\n\t- Explanation: ClueAnchor appears to be a term associated with numerical data, possibly a metric or a model\n\t- Explanation: ClueAnchor is a concept or technique related to Retrieval-Augmented Generation\n\t- Explanation: ClueAnchor is a framework for enhancing RAG via clue-anchored reasoning exploration and optimization\n\t- Explanation: ClueAnchor is a framework that enhances RAG through clue-anchored knowledge reasoning exploration and optimization\n\nQUESTION:\n\nWhat is ClueAnchor?\n\n",
+    "potential_terms": [
+        {
+            "term": "ClueAnchor",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "ClueAnchor": [
+            {
+                "evidence": "Effectiveness of Knowledge Reasoning Optimization in ClueAnchor",
+                "explanation": "ClueAnchor is a system or method where Knowledge Reasoning Optimization is applied"
+            },
+            {
+                "evidence": "ClueAnchor better preserves reasoning quality by anchoring on useful clues",
+                "explanation": "ClueAnchor is a method that preserves reasoning quality by anchoring on useful clues"
+            },
+            {
+                "evidence": "ClueAnchor is presented in a table with various numerical values associated with it",
+                "explanation": "ClueAnchor appears to be a term associated with numerical data, possibly a metric or a model"
+            },
+            {
+                "evidence": "ClueAnchor: Clue-Anchored Knowledge Reasoning Exploration and Optimization for Retrieval-Augmented Generation",
+                "explanation": "ClueAnchor is a concept or technique related to Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "ClueAnchor, a novel framework for enhancing RAG via clue-anchored reasoning exploration and optimization",
+                "explanation": "ClueAnchor is a framework for enhancing RAG via clue-anchored reasoning exploration and optimization"
+            },
+            {
+                "evidence": "we propose ClueAnchor, a novel framework that enhances RAG through clue-anchored knowledge reasoning exploration and optimization",
+                "explanation": "ClueAnchor is a framework that enhances RAG through clue-anchored knowledge reasoning exploration and optimization"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5,
+            "recall": 0.8,
+            "fmeasure": 0.6153846153846154
+        },
+        "rouge2": {
+            "precision": 0.2608695652173913,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.3243243243243243
+        },
+        "rougeL": {
+            "precision": 0.5,
+            "recall": 0.8,
+            "fmeasure": 0.6153846153846154
+        },
+        "rougeLsum": {
+            "precision": 0.5,
+            "recall": 0.8,
+            "fmeasure": 0.6153846153846154
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5454545454545455,
+            "precision": 0.45,
+            "recall": 0.6923076923076923
+        }
+    },
+    "predict": "Based on the provided TERMS information, ClueAnchor is a framework that enhances Retrieval-Augmented Generation (RAG) through clue-anchored knowledge reasoning exploration and optimization.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,69 @@
+{
+    "question": "What is SORCE?",
+    "answer": "SORCE is a new subfield of Text-to-Image Retrieval (T2IR) that addresses the challenge of retrieving small, less conspicuous objects within images with complex environments based on textual queries.",
+    "type": "explanation",
+    "source": "SORCE Small Object Retrieval in Complex Environments",
+    "experiment_id": "f0afe9a5-80d4-46e5-8124-57e90d08d7e3",
+    "experiment_set": "69cc69a6-10e4-4cd4-8e19-920e3ca66a74",
+    "experiment_storage": "./experiments/fourth_evaluations/f0afe9a5-80d4-46e5-8124-57e90d08d7e3.json",
+    "document_id": "3592b4a2-a57a-4c66-8966-30f7b62920b0",
+    "document_source": "SORCE Small Object Retrieval in Complex Environments.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SORCE\n\t- Evidence found: SORCE-1K\n\t- Evidence found: SORCE-1K\n\nQUESTION:\n\nWhat is SORCE?\n\n",
+    "potential_terms": [
+        {
+            "term": "SORCE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SORCE": [
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a dataset used for evaluation"
+            },
+            {
+                "evidence": "SORCE-1K",
+                "explanation": "SORCE-1K is a benchmark"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.125,
+            "recall": 0.36666666666666664,
+            "fmeasure": 0.1864406779661017
+        },
+        "rouge2": {
+            "precision": 0.034482758620689655,
+            "recall": 0.10344827586206896,
+            "fmeasure": 0.05172413793103448
+        },
+        "rougeL": {
+            "precision": 0.06818181818181818,
+            "recall": 0.2,
+            "fmeasure": 0.10169491525423728
+        },
+        "rougeLsum": {
+            "precision": 0.06818181818181818,
+            "recall": 0.2,
+            "fmeasure": 0.10169491525423728
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.1568627450980392,
+            "precision": 0.10526315789473684,
+            "recall": 0.3076923076923077
+        }
+    },
+    "predict": "Based on the provided TERMS information, it appears that SORCE is a term with evidence sources (SORCE-1K). However, without additional context, it's difficult to determine the exact meaning or field of application of SORCE.\n\nGiven the repetition of the same evidence source, it's possible that SORCE is a specific project, mission, or dataset. Unfortunately, without more information, I cannot provide a more specific answer.\n\nIf you provide more context or information about SORCE, I'll be happy to try and provide a more accurate answer.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

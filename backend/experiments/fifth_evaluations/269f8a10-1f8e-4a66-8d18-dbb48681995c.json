@@ -1,0 +1,101 @@
+{
+    "question": "What does RARE stand for?",
+    "answer": "Retrieval-Aware Robustness Evaluation",
+    "type": "acronym",
+    "source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+    "experiment_id": "269f8a10-1f8e-4a66-8d18-dbb48681995c",
+    "experiment_set": "4cde48b2-779e-477d-b5d0-c1d5f4624ac3",
+    "experiment_storage": "./experiments/fifth_evaluations/269f8a10-1f8e-4a66-8d18-dbb48681995c.json",
+    "document_id": "cc67a677-1a97-4b0d-9812-b62a5c8749c2",
+    "document_source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RARE\n\t- Evidence found: Figure 1: Illustration for the RARE framework\n\t- Evidence found: RARE-Get: a novel dynamic synthesis pipeline that automatically constructs time-sensitive evaluation data\n\t- Evidence found: RARE-Set: a large-scale benchmark comprising over 400 specialized documents and 48,322 queries\n\t- Evidence found: RARE (Retrieval-Aware Robustness Evaluation)\n\t- Evidence found: RetrievalAware Robustness Evaluation (RARE)\n\t- Evidence found: knowledge-graph-driven synthesis pipeline (RARE-Get)\n\t- Evidence found: retrieval-conditioned robustness metrics (RARE-Met)\n\t- Evidence found: dataset (RARE-Set) spanning 400 expert-level time-sensitive finance, economics, and policy documents and 48,322 questions\n\t- Evidence found: R etrievalA ware R obustness E valuation ( RARE ) framework\n\t- Evidence found: RARE-Met: a comprehensive robustness evaluation metric for measuring RAG system performance under perturbations\n\nQUESTION:\n\nWhat does RARE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "RARE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RARE": [
+            {
+                "evidence": "Figure 1: Illustration for the RARE framework",
+                "explanation": "RARE is a framework, as illustrated in Figure 1"
+            },
+            {
+                "evidence": "RARE-Get: a novel dynamic synthesis pipeline that automatically constructs time-sensitive evaluation data",
+                "explanation": "RARE-Get is a dynamic synthesis pipeline for constructing time-sensitive evaluation data"
+            },
+            {
+                "evidence": "RARE-Set: a large-scale benchmark comprising over 400 specialized documents and 48,322 queries",
+                "explanation": "RARE-Set is a large-scale benchmark for evaluating RAG systems"
+            },
+            {
+                "evidence": "RARE (Retrieval-Aware Robustness Evaluation)",
+                "explanation": "RARE stands for Retrieval-Aware Robustness Evaluation"
+            },
+            {
+                "evidence": "RetrievalAware Robustness Evaluation (RARE)",
+                "explanation": "RARE stands for RetrievalAware Robustness Evaluation"
+            },
+            {
+                "evidence": "knowledge-graph-driven synthesis pipeline (RARE-Get)",
+                "explanation": "RARE-Get is a knowledge-graph-driven synthesis pipeline"
+            },
+            {
+                "evidence": "retrieval-conditioned robustness metrics (RARE-Met)",
+                "explanation": "RARE-Met refers to retrieval-conditioned robustness metrics"
+            },
+            {
+                "evidence": "dataset (RARE-Set) spanning 400 expert-level time-sensitive finance, economics, and policy documents and 48,322 questions",
+                "explanation": "RARE-Set is a dataset containing finance, economics, and policy documents and questions"
+            },
+            {
+                "evidence": "R etrievalA ware R obustness E valuation ( RARE ) framework",
+                "explanation": "RARE stands for RetrievalAware Robustness Evaluation"
+            },
+            {
+                "evidence": "RARE-Met: a comprehensive robustness evaluation metric for measuring RAG system performance under perturbations",
+                "explanation": "RARE-Met is a comprehensive robustness evaluation metric for RAG systems"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rouge2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "rougeL": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rougeLsum": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+        }
+    },
+    "predict": "RARE stands for Retrieval-Aware Robustness Evaluation.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

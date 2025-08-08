@@ -1,0 +1,60 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "41a4f3ce-eaef-455e-bafb-387c1cf99ce6",
+    "experiment_set": "918ed6a4-7e0d-493f-8f7d-d2aed1d62a55",
+    "experiment_storage": "./experiments/fourth_evaluations/41a4f3ce-eaef-455e-bafb-387c1cf99ce6.json",
+    "document_id": "f9faaf19-f21d-4f1d-822a-41d81566e472",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.10416666666666667,
+            "recall": 0.2,
+            "fmeasure": 0.136986301369863
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.08333333333333333,
+            "recall": 0.16,
+            "fmeasure": 0.1095890410958904
+        },
+        "rougeLsum": {
+            "precision": 0.08333333333333333,
+            "recall": 0.16,
+            "fmeasure": 0.1095890410958904
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.09374999999999999,
+            "precision": 0.07142857142857142,
+            "recall": 0.13636363636363635
+        }
+    },
+    "predict": "Unfortunately, I couldn't find any information on the term \"PAKTON\". It's possible that it's a misspelling, a proprietary term, or not widely recognized. If you could provide more context or information about where you encountered this term, I may be able to help you better.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

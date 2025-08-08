@@ -1,0 +1,101 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "18ef01a5-6f37-435f-a9b6-a618eb60888d",
+    "experiment_set": "83728a4d-8e7e-47bc-9cbc-b403c6784467",
+    "experiment_storage": "./experiments/fifth_evaluations/18ef01a5-6f37-435f-a9b6-a618eb60888d.json",
+    "document_id": "785660bc-9463-4160-b595-9c54305c0b7a",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: REARANK\n\t- Explanation: REARANK stands for Reasoning Re-ranking Agent via Reinforcement Learning\n\t- Explanation: REARANK is a large language model-based listwise reasoning reranking agent\n\t- Explanation: REARANK is a proposed reranking agent that uses listwise reranking with explicit reasoning\n\t- Explanation: REARANK is a novel reasoning-based reranking agent\n\t- Explanation: REARANK is a model based on Qwen2.5-7B trained with RL approach and reasoning ability\n\t- Explanation: REARANK-7B is a specific ranking model or model variant\n\t- Explanation: REARANK-7B is a model that has been developed and evaluated\n\t- Explanation: REARANK is a system or model being analyzed\n\t- Explanation: REARANK-7B is the full model being evaluated\n\t- Explanation: REARANK is a system being trained with different reward functions\n\nQUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [
+        {
+            "term": "REARANK",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "REARANK": [
+            {
+                "evidence": "REARANK: Reasoning Re-ranking Agent via Reinforcement Learning",
+                "explanation": "REARANK stands for Reasoning Re-ranking Agent via Reinforcement Learning"
+            },
+            {
+                "evidence": "REARANK, a large language model (LLM)-based listwise reasoning reranking agent",
+                "explanation": "REARANK is a large language model-based listwise reasoning reranking agent"
+            },
+            {
+                "evidence": "we propose REARANK, the first reasoning listwise reranking agent",
+                "explanation": "REARANK is a proposed reranking agent that uses listwise reranking with explicit reasoning"
+            },
+            {
+                "evidence": "we propose REARANK, the first reasoning listwise reranking agent",
+                "explanation": "REARANK is a novel reasoning-based reranking agent"
+            },
+            {
+                "evidence": "Our REARANK, based on Qwen2.5-7B trained via our RL approach with reasoning ability",
+                "explanation": "REARANK is a model based on Qwen2.5-7B trained with RL approach and reasoning ability"
+            },
+            {
+                "evidence": "REARANK-7B demonstrates comparable performance",
+                "explanation": "REARANK-7B is a specific ranking model or model variant"
+            },
+            {
+                "evidence": "REARANK-7B even outperforms the powerful GPT4 model",
+                "explanation": "REARANK-7B is a model that has been developed and evaluated"
+            },
+            {
+                "evidence": "within REARANK, we conducted ablation studies",
+                "explanation": "REARANK is a system or model being analyzed"
+            },
+            {
+                "evidence": "REARANK-7B (full model)",
+                "explanation": "REARANK-7B is the full model being evaluated"
+            },
+            {
+                "evidence": "impact of different reward functions on REARANK's training",
+                "explanation": "REARANK is a system being trained with different reward functions"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.3235294117647059,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.4782608695652174
+        },
+        "rouge2": {
+            "precision": 0.24242424242424243,
+            "recall": 0.7272727272727273,
+            "fmeasure": 0.36363636363636365
+        },
+        "rougeL": {
+            "precision": 0.3235294117647059,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.4782608695652174
+        },
+        "rougeLsum": {
+            "precision": 0.3235294117647059,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.4782608695652174
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.4,
+            "precision": 0.26666666666666666,
+            "recall": 0.8
+        }
+    },
+    "predict": "Based on the provided TERMS information, REARANK stands for Reasoning Re-ranking Agent via Reinforcement Learning. It is a large language model-based listwise reasoning reranking agent that uses listwise reranking with explicit reasoning.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

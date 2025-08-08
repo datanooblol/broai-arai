@@ -3,8 +3,9 @@ import pickle
 from package.flows.online.flow import get_online_flow, Shared
 from uuid import uuid4
 from broflow import state
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 import json
+from tqdm import tqdm
 
 def get_trainset():
 
@@ -66,9 +67,9 @@ class ControlExperiment:
     is_rerank:bool
     experiment_set:str
 
-def one_experiment(ts, con_exp:ControlExperiment,):
+def one_experiment(ts, evaluation_storage:str, con_exp:ControlExperiment,):
     _id = str(uuid4())
-    experiment_storage = "./experiments/evaluations/{file}.json".format(file=_id)
+    experiment_storage = "./experiments/{evaluation_storage}/{file}.json".format(evaluation_storage=evaluation_storage, file=_id)
     shared = Shared(
         experiment_id=_id,
         experiment_set=con_exp.experiment_set,
@@ -89,6 +90,7 @@ def one_experiment(ts, con_exp:ControlExperiment,):
     )
     flow = get_online_flow(experiment=shared.experiment_id)
     flow.run(shared)
+    return shared
 
 @dataclass
 class ExperimentRunner:
@@ -99,6 +101,7 @@ class ExperimentRunner:
     completed_count: int = 0
     failed_count: int = 0
     experiment_path:str = './experiments/experiment_state.pkl'
+    evaluation_storage:str = 'evaluations'
 
     def run(self):
         total_exp = len(self.experiments)
@@ -115,7 +118,11 @@ class ExperimentRunner:
                         c=self.current_trainset_index+1, d=total_train
                     ))
                     self.current_trainset_index = j
-                    one_experiment(self.trainset[j], con_exp)
+                    shared = one_experiment(self.trainset[j], self.evaluation_storage, con_exp)
+                    print(experiment)
+                    print("Terms cnt: {terms} | Contexts cnt: {contexts}".format(terms=len(shared.detailed_terms.values()), contexts=len(shared.contexts)))
+                    print(shared.evaluation)
+                    print("-"*40)
                     self.completed_count += 1
                 
                 self.current_trainset_index = 0
@@ -134,10 +141,20 @@ class ExperimentRunner:
         with open(self.experiment_path, "wb") as f:
             pickle.dump(self, f)
 
+    # @classmethod
+    # def load_state(cls):
+    #     try:
+    #         with open(cls.experiment_path, 'rb') as f:
+    #             return pickle.load(f)
+    #     except FileNotFoundError as e:
+    #         print("Error:", str(e))
+    #         return None
+        
     @classmethod
-    def load_state(cls):
+    def load_state(cls, experiment_path=None):
+        path = experiment_path or './experiments/experiment_state.pkl'
         try:
-            with open(cls.experiment_path, 'rb') as f:
+            with open(path, 'rb') as f:
                 return pickle.load(f)
         except FileNotFoundError as e:
             print("Error:", str(e))
@@ -145,13 +162,15 @@ class ExperimentRunner:
 
 if __name__=='__main__':
     state.set('debug', False)
-    exp_runner = ExperimentRunner.load_state()
+    evaluation_path = 'sixth_evaluations'
+    experiment_path = f'./experiments/{evaluation_path}.pkl'.format(evaluation_path=evaluation_path)
+    exp_runner = ExperimentRunner.load_state(experiment_path)
     if exp_runner is None:
         experiments = generate_experiments(
             embed_methods=['raw'],
             chat_system_prompt_paths=['./package/flows/online/prompts/v1/chat.md'],
             term_detector_system_prompt_paths=["./package/flows/online/prompts/term_detector.md"],
-            is_terms=['both'],
+            is_terms=['skip', 'evidence', 'explanation', 'both'],
             chat_models=[
                 # "us.meta.llama3-2-1b-instruct-v1:0",
                 "us.meta.llama3-2-11b-instruct-v1:0",
@@ -163,6 +182,6 @@ if __name__=='__main__':
             term_detector_models=["us.meta.llama3-2-11b-instruct-v1:0"]
         )        
         trainset = get_trainset()
-        exp_runner = ExperimentRunner(experiments=experiments, trainset=trainset)
+        exp_runner = ExperimentRunner(experiments=experiments, trainset=trainset, experiment_path=experiment_path, evaluation_storage=evaluation_path)
     exp_runner.run()
     print("Evaluation successfully")

@@ -1,0 +1,97 @@
+{
+    "question": "What is TracLLM?",
+    "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",
+    "type": "explanation",
+    "source": "TracLLM A Generic Framework for Attributing Long Context LLMs",
+    "experiment_id": "062b4c86-68c2-473e-8cd0-a3c11ab361ca",
+    "experiment_set": "cd2d8c87-c9df-4ee2-9e81-3ddf521a63e3",
+    "experiment_storage": "./experiments/sixth_evaluations/062b4c86-68c2-473e-8cd0-a3c11ab361ca.json",
+    "document_id": "ed281e35-924a-45e9-9fa8-d4238213437d",
+    "document_source": "TracLLM A Generic Framework for Attributing Long Context LLMs.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: TracLLM\n\t- Evidence found: TracLLM: A Generic Framework for Attributing Long Context LLMs\n\t- Evidence found: 3 Design of TracLLM\n\t- Evidence found: Beyond incorrect answers, in Section 4.4, we show TracLLM can be broadly used to identify texts in a context responsible for an output of an LLM\n\t- Evidence found: Algorithm 1: TracLLM\n\t- Evidence found: Techniques to Improve TracLLM\n\t- Evidence found: Moreover, we consider that Shapley is used as the feature attribution method for TracLLM\n\t- Evidence found: TracLLM can effectively identify malicious texts crafted\n\t- Evidence found: TracLLM is compatible with different feature attribution methods\n\t- Evidence found: | TracLLM                                        | 0.94       | 0.77       | 0.96        | 0.85        | 0.98       | 0.77       |\n\nQUESTION:\n\nWhat is TracLLM?\n\n",
+    "potential_terms": [
+        {
+            "term": "TracLLM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "TracLLM": [
+            {
+                "evidence": "TracLLM: A Generic Framework for Attributing Long Context LLMs",
+                "explanation": "TracLLM is the name of a framework"
+            },
+            {
+                "evidence": "3 Design of TracLLM",
+                "explanation": "TracLLM is the name of a system or model"
+            },
+            {
+                "evidence": "Beyond incorrect answers, in Section 4.4, we show TracLLM can be broadly used to identify texts in a context responsible for an output of an LLM",
+                "explanation": "TracLLM is a system or method used for identifying texts in a context responsible for an output of an LLM"
+            },
+            {
+                "evidence": "Algorithm 1: TracLLM",
+                "explanation": "TracLLM is an algorithm for tracing the contribution of texts to the output of a large language model"
+            },
+            {
+                "evidence": "Techniques to Improve TracLLM",
+                "explanation": "TracLLM is a specific model or system being improved"
+            },
+            {
+                "evidence": "Moreover, we consider that Shapley is used as the feature attribution method for TracLLM",
+                "explanation": "TracLLM is a tool or method for analyzing LLMs"
+            },
+            {
+                "evidence": "TracLLM can effectively identify malicious texts crafted",
+                "explanation": "TracLLM is a tool used for forensic analysis and identifying malicious texts"
+            },
+            {
+                "evidence": "TracLLM is compatible with different feature attribution methods",
+                "explanation": "TracLLM is a system or model compatible with various feature attribution methods"
+            },
+            {
+                "evidence": "| TracLLM                                        | 0.94       | 0.77       | 0.96        | 0.85        | 0.98       | 0.77       |",
+                "explanation": "TracLLM appears to be a specific model or system being evaluated for its performance"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.14925373134328357,
+            "recall": 0.8333333333333334,
+            "fmeasure": 0.2531645569620253
+        },
+        "rouge2": {
+            "precision": 0.06060606060606061,
+            "recall": 0.36363636363636365,
+            "fmeasure": 0.1038961038961039
+        },
+        "rougeL": {
+            "precision": 0.11940298507462686,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.20253164556962025
+        },
+        "rougeLsum": {
+            "precision": 0.11940298507462686,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.20253164556962025
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.24999999999999997,
+            "precision": 0.14754098360655737,
+            "recall": 0.8181818181818182
+        }
+    },
+    "predict": "Based on the provided TERMS information, TracLLM is a generic framework for attributing long context large language models (LLMs). It is designed to identify the context responsible for an output of an LLM and can be used to improve the accuracy of LLMs. Additionally, TracLLM is compatible with different feature attribution methods, including Shapley, and has been shown to effectively identify malicious texts crafted to deceive LLMs.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

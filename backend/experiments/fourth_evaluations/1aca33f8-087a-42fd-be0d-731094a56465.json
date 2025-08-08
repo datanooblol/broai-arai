@@ -1,0 +1,53 @@
+{
+    "question": "What is GenKI?",
+    "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+    "type": "explanation",
+    "source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+    "experiment_id": "1aca33f8-087a-42fd-be0d-731094a56465",
+    "experiment_set": "d86865b6-b8a2-494e-9714-564234cd0d6d",
+    "experiment_storage": "./experiments/fourth_evaluations/1aca33f8-087a-42fd-be0d-731094a56465.json",
+    "document_id": "78f4a8ea-a050-44bc-88ac-6bfdd51d597b",
+    "document_source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is GenKI?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.20833333333333334,
+            "recall": 0.23809523809523808,
+            "fmeasure": 0.22222222222222224
+        },
+        "rouge2": {
+            "precision": 0.08695652173913043,
+            "recall": 0.1,
+            "fmeasure": 0.09302325581395349
+        },
+        "rougeL": {
+            "precision": 0.125,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.13333333333333333
+        },
+        "rougeLsum": {
+            "precision": 0.125,
+            "recall": 0.14285714285714285,
+            "fmeasure": 0.13333333333333333
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.14634146341463414,
+            "precision": 0.13636363636363635,
+            "recall": 0.15789473684210525
+        }
+    },
+    "predict": "I couldn't find any information about \"GenKI\" in my general knowledge. However, I found that GenKI is a Japanese language course for beginners.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

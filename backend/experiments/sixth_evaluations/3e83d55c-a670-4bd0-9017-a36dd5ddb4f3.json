@@ -1,0 +1,101 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "3e83d55c-a670-4bd0-9017-a36dd5ddb4f3",
+    "experiment_set": "92c134a4-f223-4c26-be70-50b2eb630a59",
+    "experiment_storage": "./experiments/sixth_evaluations/3e83d55c-a670-4bd0-9017-a36dd5ddb4f3.json",
+    "document_id": "52034070-d130-4886-bb30-3c3125c961cb",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\t- Evidence found: Self-RAG with Possible Explanation: RAG likely stands for Retrieval Augmented Generation\n\t- Evidence found: Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM with Possible Explanation: RAG stands for retrieval augmented generation\n\t- Evidence found: The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs) with Possible Explanation: RAG stands for Retrieval-Augmented Generation, a framework that introduces a retrieval module to improve large language models\n\t- Evidence found: Standard RAG with Possible Explanation: RAG is mentioned in the context, likely referring to a specific model or system\n\t- Evidence found: Self-RAG with Possible Explanation: Self-RAG appears to be a variant of the RAG model or system\n\t- Evidence found: Standard RAG with Possible Explanation: RAG likely stands for a specific model or technique, possibly related to retrieval and generation\n\t- Evidence found: Self-RAG with Possible Explanation: Self-RAG appears to be a variant or extension of the RAG model or technique\n\t- Evidence found: GainRAG with Possible Explanation: RAG likely stands for retrieval augmented generation, given the context of GainRAG\n\t- Evidence found: Algorithm 2 GainRAG Inference Workflow with Possible Explanation: RAG is part of the GainRAG algorithm, possibly related to retrieval augmented generation\n\t- Evidence found: Before discussing GainRAG, we first provide a formal definition of the RAG problem with Possible Explanation: RAG is mentioned as a problem to be defined\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": [
+            {
+                "evidence": "Self-RAG",
+                "explanation": "RAG likely stands for Retrieval Augmented Generation"
+            },
+            {
+                "evidence": "Many existing works achieve RAG optimization by providing a bridge between the retriever and LLM",
+                "explanation": "RAG stands for retrieval augmented generation"
+            },
+            {
+                "evidence": "The Retrieval-Augmented Generation (RAG) framework introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs)",
+                "explanation": "RAG stands for Retrieval-Augmented Generation, a framework that introduces a retrieval module to improve large language models"
+            },
+            {
+                "evidence": "Standard RAG",
+                "explanation": "RAG is mentioned in the context, likely referring to a specific model or system"
+            },
+            {
+                "evidence": "Self-RAG",
+                "explanation": "Self-RAG appears to be a variant of the RAG model or system"
+            },
+            {
+                "evidence": "Standard RAG",
+                "explanation": "RAG likely stands for a specific model or technique, possibly related to retrieval and generation"
+            },
+            {
+                "evidence": "Self-RAG",
+                "explanation": "Self-RAG appears to be a variant or extension of the RAG model or technique"
+            },
+            {
+                "evidence": "GainRAG",
+                "explanation": "RAG likely stands for retrieval augmented generation, given the context of GainRAG"
+            },
+            {
+                "evidence": "Algorithm 2 GainRAG Inference Workflow",
+                "explanation": "RAG is part of the GainRAG algorithm, possibly related to retrieval augmented generation"
+            },
+            {
+                "evidence": "Before discussing GainRAG, we first provide a formal definition of the RAG problem",
+                "explanation": "RAG is mentioned as a problem to be defined"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1,
+            "recall": 0.45161290322580644,
+            "fmeasure": 0.16374269005847955
+        },
+        "rouge2": {
+            "precision": 0.02158273381294964,
+            "recall": 0.1,
+            "fmeasure": 0.03550295857988166
+        },
+        "rougeL": {
+            "precision": 0.06428571428571428,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.10526315789473685
+        },
+        "rougeLsum": {
+            "precision": 0.06428571428571428,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.10526315789473685
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.12244897959183675,
+            "precision": 0.07377049180327869,
+            "recall": 0.36
+        }
+    },
+    "predict": "Based on the provided TERMS information, GainRAG appears to be related to RAG, which stands for Retrieval-Augmented Generation. Given that RAG is a framework that introduces a retrieval module to dynamically inject retrieved information into the input context of large language models (LLMs), GainRAG likely builds upon or modifies this concept.\n\nAlthough the exact details of GainRAG are not provided, the mention of \"Algorithm 2 GainRAG Inference Workflow\" suggests that GainRAG is a specific algorithm or technique that extends or relates to the RAG framework. \n\nTherefore, GainRAG likely refers to a variant or extension of the Retrieval-Augmented Generation (RAG) framework, possibly with a focus on optimizing or improving the retrieval and generation process. \n\nA precise definition of GainRAG would require additional context, but it is reasonable to conclude that GainRAG is a Gain-oriented Retrieval-Augmented Generation approach.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

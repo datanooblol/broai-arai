@@ -1,0 +1,53 @@
+{
+    "question": "What is TracLLM?",
+    "answer": "TracLLM is a generic context traceback framework tailored to long context LLMs",
+    "type": "explanation",
+    "source": "TracLLM A Generic Framework for Attributing Long Context LLMs",
+    "experiment_id": "eca1e998-a2e4-43e3-85ea-dcf570f86404",
+    "experiment_set": "d07e0d6e-0eda-427c-bcb4-9d69df3775ab",
+    "experiment_storage": "./experiments/fifth_evaluations/eca1e998-a2e4-43e3-85ea-dcf570f86404.json",
+    "document_id": "c57f5e97-b936-4d03-9709-64685eb948bb",
+    "document_source": "TracLLM A Generic Framework for Attributing Long Context LLMs.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is TracLLM?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.03940886699507389,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.0744186046511628
+        },
+        "rouge2": {
+            "precision": 0.0049504950495049506,
+            "recall": 0.09090909090909091,
+            "fmeasure": 0.009389671361502348
+        },
+        "rougeL": {
+            "precision": 0.029556650246305417,
+            "recall": 0.5,
+            "fmeasure": 0.05581395348837209
+        },
+        "rougeLsum": {
+            "precision": 0.029556650246305417,
+            "recall": 0.5,
+            "fmeasure": 0.05581395348837209
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.060606060606060615,
+            "precision": 0.03208556149732621,
+            "recall": 0.5454545454545454
+        }
+    },
+    "predict": "To provide an accurate answer, I'll need to search for information about TracLLM. \n\nTracLLM appears to be related to tracking or tracing large language models (LLMs), but without specific context or terms, I can only provide a general response.\n\nTracLLM could potentially refer to a method, tool, or framework designed for tracing, monitoring, or understanding the behavior of large language models. These models are complex AI systems used for various applications, including natural language processing, text generation, and more.\n\nIf you have more context or details about TracLLM, such as its application or the specific field it's used in (e.g., AI development, research), I could offer a more precise explanation. \n\nFor now, I can suggest that TracLLM might be involved in:\n\n1. **Model Interpretability:** Helping to understand how LLMs make decisions or generate text.\n2. **Model Monitoring:** Tracking the performance of LLMs in real-world applications to ensure they operate as expected.\n3. **Model Development:** Assisting in the creation and refinement of LLMs by tracing their learning processes or outputs.\n\nIf you have more information or a specific aspect of TracLLM you're interested in, please let me know, and I'll do my best to provide a detailed answer.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

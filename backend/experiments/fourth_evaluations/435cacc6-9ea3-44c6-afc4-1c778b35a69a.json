@@ -1,0 +1,60 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "435cacc6-9ea3-44c6-afc4-1c778b35a69a",
+    "experiment_set": "a39ef2d4-aeda-45fc-8c40-b0974ab15c5b",
+    "experiment_storage": "./experiments/fourth_evaluations/435cacc6-9ea3-44c6-afc4-1c778b35a69a.json",
+    "document_id": "f9faaf19-f21d-4f1d-822a-41d81566e472",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04035874439461883,
+            "recall": 0.36,
+            "fmeasure": 0.07258064516129031
+        },
+        "rouge2": {
+            "precision": 0.009009009009009009,
+            "recall": 0.08333333333333333,
+            "fmeasure": 0.016260162601626015
+        },
+        "rougeL": {
+            "precision": 0.04035874439461883,
+            "recall": 0.36,
+            "fmeasure": 0.07258064516129031
+        },
+        "rougeLsum": {
+            "precision": 0.04035874439461883,
+            "recall": 0.36,
+            "fmeasure": 0.07258064516129031
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.055299539170506916,
+            "precision": 0.03076923076923077,
+            "recall": 0.2727272727272727
+        }
+    },
+    "predict": "## Step 1: Understand the given TERM\nThe TERM provided is \"PAKTON\". To answer the question, we need to understand what \"PAKTON\" refers to.\n\n## Step 2: Recall or research the meaning of PAKTON\nSince no specific definition or context is given for \"PAKTON\" in the TERMS or CONTEXTS, we rely on general knowledge. \"PAKTON\" is not a widely recognized term in general knowledge, so it might be a specialized or less common term.\n\n## Step 3: Provide a possible answer based on available information\nAfter a general search, one possible reference for \"PAKTON\" is that it is a name or term that could be related to various things such as a place, a product, or a concept. However, without more specific information, it's challenging to provide a precise definition.\n\n## Step 4: Consider possible meanings of PAKTON\nOne possible meaning or reference for \"PAKTON\" could be related to \"Paxton,\" which has various references including a surname, places, and products. However, \"PAKTON\" as given is not a standard term.\n\n## Step 5: Provide the most accurate answer based on the information available\nGiven the lack of specific information or context about \"PAKTON,\" a definitive answer cannot be provided. However, it's possible that \"PAKTON\" could be a misspelling, a brand name, or a term specific to a certain field or community.\n\nThe final answer is: $\\boxed{PAKTON}$",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

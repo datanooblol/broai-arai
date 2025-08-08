@@ -1,0 +1,60 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "c00283ac-5075-4a37-af39-c89579236e55",
+    "experiment_set": "a39ef2d4-aeda-45fc-8c40-b0974ab15c5b",
+    "experiment_storage": "./experiments/fourth_evaluations/c00283ac-5075-4a37-af39-c89579236e55.json",
+    "document_id": "add5f9b0-189d-48d2-81db-a492b0259643",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.11009174311926606,
+            "recall": 0.5714285714285714,
+            "fmeasure": 0.1846153846153846
+        },
+        "rouge2": {
+            "precision": 0.027777777777777776,
+            "recall": 0.15,
+            "fmeasure": 0.04687500000000001
+        },
+        "rougeL": {
+            "precision": 0.08256880733944955,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.13846153846153847
+        },
+        "rougeLsum": {
+            "precision": 0.08256880733944955,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.13846153846153847
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.14414414414414414,
+            "precision": 0.08602150537634409,
+            "recall": 0.4444444444444444
+        }
+    },
+    "predict": "To answer the question \"What is HippoRAG?\", I will refer to the provided term definition.\n\nHippoRAG is a knowledge graph-based retrieval-augmented generation framework that mimics the human brain's memory mechanisms. It is designed to improve the performance of large language models by incorporating a more efficient and effective way of retrieving and utilizing knowledge from a knowledge graph. \n\nIf more information or context were available, I could potentially provide a more detailed explanation. However, based on the term definition alone, HippoRAG appears to be a novel approach to enhancing the capabilities of large language models through the use of knowledge graphs and retrieval-augmented generation techniques.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

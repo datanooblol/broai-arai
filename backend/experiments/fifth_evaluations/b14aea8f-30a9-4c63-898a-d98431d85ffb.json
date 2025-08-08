@@ -1,0 +1,101 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel query decomposition framework that can perform query decomposition for optimizing multi-vector retrieval performance",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "b14aea8f-30a9-4c63-898a-d98431d85ffb",
+    "experiment_set": "1075ce17-013f-46b6-a315-1579f101f786",
+    "experiment_storage": "./experiments/fifth_evaluations/b14aea8f-30a9-4c63-898a-d98431d85ffb.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: POQD\n\t- Explanation: POQD is used for generating optimal sub-queries\n\t- Explanation: POQD stands for Performance-Oriented Query Decomposer\n\t- Explanation: POQD stands for Performance-Oriented Query Decomposer\n\t- Explanation: POQD stands for PerformanceOriented Query Decomposer\n\t- Explanation: POQD is an acronym, likely referring to a specific method or technique, but its full form is not specified in the given context\n\t- Explanation: POQD is being studied for its effectiveness on RAG tasks, but its full form is not provided\n\t- Explanation: POQD is a query decomposition method being compared against other methods\n\t- Explanation: POQD is used in the context of QA tasks\n\t- Explanation: POQD is a method that outperforms baseline methods in retrieval performance and QA accuracy\n\t- Explanation: POQD stands for Performance-Oriented Query Decomposer\n\nQUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [
+        {
+            "term": "POQD",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "POQD": [
+            {
+                "evidence": "generate optimal sub-queries with POQD",
+                "explanation": "POQD is used for generating optimal sub-queries"
+            },
+            {
+                "evidence": "POQD, a Performance-Oriented Query Decomposer for Multi-vector retrieval",
+                "explanation": "POQD stands for Performance-Oriented Query Decomposer"
+            },
+            {
+                "evidence": "Performance-Oriented Query Decomposer (POQD)",
+                "explanation": "POQD stands for Performance-Oriented Query Decomposer"
+            },
+            {
+                "evidence": "PerformanceOriented Query Decomposer (POQD for abbreviation)",
+                "explanation": "POQD stands for PerformanceOriented Query Decomposer"
+            },
+            {
+                "evidence": "across all baseline methods and POQD",
+                "explanation": "POQD is an acronym, likely referring to a specific method or technique, but its full form is not specified in the given context"
+            },
+            {
+                "evidence": "effectiveness of POQD on RAG tasks",
+                "explanation": "POQD is being studied for its effectiveness on RAG tasks, but its full form is not provided"
+            },
+            {
+                "evidence": "POQD against the following query decomposition methods",
+                "explanation": "POQD is a query decomposition method being compared against other methods"
+            },
+            {
+                "evidence": "as well as POQD",
+                "explanation": "POQD is used in the context of QA tasks"
+            },
+            {
+                "evidence": "POQD outperforms all baseline methods",
+                "explanation": "POQD is a method that outperforms baseline methods in retrieval performance and QA accuracy"
+            },
+            {
+                "evidence": "POQD: Performance-Oriented Query Decomposer for Multi-vector retrieval",
+                "explanation": "POQD stands for Performance-Oriented Query Decomposer"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.22916666666666666,
+            "recall": 0.6111111111111112,
+            "fmeasure": 0.33333333333333337
+        },
+        "rouge2": {
+            "precision": 0.06382978723404255,
+            "recall": 0.17647058823529413,
+            "fmeasure": 0.09374999999999999
+        },
+        "rougeL": {
+            "precision": 0.1875,
+            "recall": 0.5,
+            "fmeasure": 0.2727272727272727
+        },
+        "rougeLsum": {
+            "precision": 0.1875,
+            "recall": 0.5,
+            "fmeasure": 0.2727272727272727
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.2711864406779661,
+            "precision": 0.18604651162790697,
+            "recall": 0.5
+        }
+    },
+    "predict": "POQD stands for Performance-Oriented Query Decomposer. It is a query decomposition method used for generating optimal sub-queries, particularly in the context of QA (Question Answering) tasks and RAG (Retrieval-Augmented Generation) tasks. POQD has been shown to outperform baseline methods in retrieval performance and QA accuracy.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

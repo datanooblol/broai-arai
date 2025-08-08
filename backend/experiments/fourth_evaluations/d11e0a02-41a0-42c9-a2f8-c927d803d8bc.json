@@ -1,0 +1,60 @@
+{
+    "question": "What is AcuRank?",
+    "answer": "AcuRank is a listwise reranking method that performs adaptive computation guided by probabilistic relevance modeling and uncertainty estimation",
+    "type": "explanation",
+    "source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking",
+    "experiment_id": "d11e0a02-41a0-42c9-a2f8-c927d803d8bc",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/d11e0a02-41a0-42c9-a2f8-c927d803d8bc.json",
+    "document_id": "d6077d6c-5ea2-41fb-b7e5-517ef9922722",
+    "document_source": "AcuRank Uncertainty-Aware Adaptive Computation for Listwise Reranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: AcuRank\n\nQUESTION:\n\nWhat is AcuRank?\n\n",
+    "potential_terms": [
+        {
+            "term": "AcuRank",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "AcuRank": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1111111111111111,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.14814814814814814
+        },
+        "rouge2": {
+            "precision": 0.05714285714285714,
+            "recall": 0.11764705882352941,
+            "fmeasure": 0.07692307692307693
+        },
+        "rougeL": {
+            "precision": 0.1111111111111111,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.14814814814814814
+        },
+        "rougeLsum": {
+            "precision": 0.1111111111111111,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.14814814814814814
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.125,
+            "precision": 0.0967741935483871,
+            "recall": 0.17647058823529413
+        }
+    },
+    "predict": "AcuRank is a measure used to evaluate the quality and reliability of a website or online content, particularly in the context of health and medical information. It assesses the accuracy, credibility, and trustworthiness of online sources.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

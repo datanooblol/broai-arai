@@ -1,0 +1,53 @@
+{
+    "question": "What is MASKSEARCH?",
+    "answer": "MASKSEARCH is a universal pre-training framework designed to enhance the agentic search capabilities of LLMs within a unified model architecture.",
+    "type": "explanation",
+    "source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability",
+    "experiment_id": "8901f269-f218-47be-b720-a18e14363d91",
+    "experiment_set": "d86865b6-b8a2-494e-9714-564234cd0d6d",
+    "experiment_storage": "./experiments/fourth_evaluations/8901f269-f218-47be-b720-a18e14363d91.json",
+    "document_id": "9b8418e9-6f5f-4116-b3ed-7eef0b58c34c",
+    "document_source": "MASKSEARCH A Universal Pre-Training Framework to Enhance Agentic Search Capability.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is MASKSEARCH?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.1111111111111111,
+            "recall": 0.047619047619047616,
+            "fmeasure": 0.06666666666666667
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.1111111111111111,
+            "recall": 0.047619047619047616,
+            "fmeasure": 0.06666666666666667
+        },
+        "rougeLsum": {
+            "precision": 0.1111111111111111,
+            "recall": 0.047619047619047616,
+            "fmeasure": 0.06666666666666667
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.07692307692307691,
+            "precision": 0.1111111111111111,
+            "recall": 0.058823529411764705
+        }
+    },
+    "predict": "Unfortunately, I do not have any information about MASKSEARCH.",
+    "chat_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

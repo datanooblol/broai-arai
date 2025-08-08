@@ -1,0 +1,60 @@
+{
+    "question": "What is GainRAG?",
+    "answer": "GainRAG is a novel approach that aligns the retriever's and LLM's preferences by defining a new metric, \u201cgain\u201d, which measure how well an input passage contributes to correct outputs",
+    "type": "explanation",
+    "source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis",
+    "experiment_id": "082e7785-91fc-4b21-bb97-e770a6870f27",
+    "experiment_set": "27a930d7-2e8c-400b-b6e2-6ebe47598a81",
+    "experiment_storage": "./experiments/fourth_evaluations/082e7785-91fc-4b21-bb97-e770a6870f27.json",
+    "document_id": "281cfb03-6082-438e-acaf-b6c90fe48c2c",
+    "document_source": "GainRAG Preference Alignment in Retrieval-Augmented Generation through Gain Signal Synthesis.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RAG\n\nQUESTION:\n\nWhat is GainRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "RAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RAG": []
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06372549019607843,
+            "recall": 0.41935483870967744,
+            "fmeasure": 0.11063829787234042
+        },
+        "rouge2": {
+            "precision": 0.014778325123152709,
+            "recall": 0.1,
+            "fmeasure": 0.02575107296137339
+        },
+        "rougeL": {
+            "precision": 0.04411764705882353,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.07659574468085106
+        },
+        "rougeLsum": {
+            "precision": 0.04411764705882353,
+            "recall": 0.2903225806451613,
+            "fmeasure": 0.07659574468085106
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.05970149253731343,
+            "precision": 0.03409090909090909,
+            "recall": 0.24
+        }
+    },
+    "predict": "To answer the question about GainRAG, let's first look at the provided term, RAG.\n\n## Step 1: Understand RAG\nRAG stands for Retrieval-Augmented Generation. It's a technique used in natural language processing (NLP) that combines the strengths of retrieval-based and generation-based models. The retrieval component fetches relevant information from a knowledge base or database, and the generation component uses this information to generate more accurate and contextually relevant responses.\n\n## Step 2: Relate RAG to GainRAG\nGiven that RAG is a known technique, GainRAG could be a specific implementation, variation, or application of the RAG technique. Without a direct definition provided for GainRAG in the TERMS, we can hypothesize that GainRAG might be related to or built upon the principles of RAG.\n\n## Step 3: Provide an Answer Based on Available Information\nSince there's no direct information about GainRAG in the provided TERMS or CONTEXTS, and assuming GainRAG is related to RAG, we can infer that GainRAG is likely a model or system that utilizes the Retrieval-Augmented Generation approach. However, without more specific details, the exact nature or features of GainRAG remain speculative.\n\nThe final answer is: GainRAG is likely related to or an implementation of Retrieval-Augmented Generation (RAG).",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

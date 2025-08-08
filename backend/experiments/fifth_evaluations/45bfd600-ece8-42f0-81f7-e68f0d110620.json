@@ -1,0 +1,97 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "45bfd600-ece8-42f0-81f7-e68f0d110620",
+    "experiment_set": "bcb4ec10-e560-4dd9-a193-bf083b5fd918",
+    "experiment_storage": "./experiments/fifth_evaluations/45bfd600-ece8-42f0-81f7-e68f0d110620.json",
+    "document_id": "f9faaf19-f21d-4f1d-822a-41d81566e472",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\t- Evidence found: PAKTON is used in a table comparing various values with Possible Explanation: PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique\n\t- Evidence found: FS+Spans PAKTON is used in a table comparing various values with Possible Explanation: FS+Spans PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique\n\t- Evidence found: FS+Spans PAKTON with Possible Explanation: PAKTON is a term used in conjunction with FS+Spans, possibly a technique or method\n\t- Evidence found: We evaluate PAKTON on ContractNLI with Possible Explanation: PAKTON is a model or framework being evaluated\n\t- Evidence found: PAKTON is used in a table row comparing different values with Possible Explanation: PAKTON appears to be a term related to a specific methodology or model used, possibly in machine learning or a similar field\n\t- Evidence found: PAKTON is listed as a method or model with Possible Explanation: PAKTON is likely a model or method used in the context of the table\n\t- Evidence found: Configuration 1 serves as the primary setup for PAKTON with Possible Explanation: PAKTON is a system or setup being evaluated\n\t- Evidence found: Comparative analysis of PAKTON vs. GPT4o based on the G-EVAL framework with Possible Explanation: PAKTON is a method being compared to GPT4o\n\t- Evidence found: using PAKTON's Researcher and Archivist components with Possible Explanation: PAKTON is a system with Researcher and Archivist components\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": [
+            {
+                "evidence": "PAKTON is used in a table comparing various values",
+                "explanation": "PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique"
+            },
+            {
+                "evidence": "FS+Spans PAKTON is used in a table comparing various values",
+                "explanation": "FS+Spans PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique"
+            },
+            {
+                "evidence": "FS+Spans PAKTON",
+                "explanation": "PAKTON is a term used in conjunction with FS+Spans, possibly a technique or method"
+            },
+            {
+                "evidence": "We evaluate PAKTON on ContractNLI",
+                "explanation": "PAKTON is a model or framework being evaluated"
+            },
+            {
+                "evidence": "PAKTON is used in a table row comparing different values",
+                "explanation": "PAKTON appears to be a term related to a specific methodology or model used, possibly in machine learning or a similar field"
+            },
+            {
+                "evidence": "PAKTON is listed as a method or model",
+                "explanation": "PAKTON is likely a model or method used in the context of the table"
+            },
+            {
+                "evidence": "Configuration 1 serves as the primary setup for PAKTON",
+                "explanation": "PAKTON is a system or setup being evaluated"
+            },
+            {
+                "evidence": "Comparative analysis of PAKTON vs. GPT4o based on the G-EVAL framework",
+                "explanation": "PAKTON is a method being compared to GPT4o"
+            },
+            {
+                "evidence": "using PAKTON's Researcher and Archivist components",
+                "explanation": "PAKTON is a system with Researcher and Archivist components"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.07086614173228346,
+            "recall": 0.36,
+            "fmeasure": 0.11842105263157895
+        },
+        "rouge2": {
+            "precision": 0.015873015873015872,
+            "recall": 0.08333333333333333,
+            "fmeasure": 0.02666666666666667
+        },
+        "rougeL": {
+            "precision": 0.05511811023622047,
+            "recall": 0.28,
+            "fmeasure": 0.09210526315789473
+        },
+        "rougeLsum": {
+            "precision": 0.05511811023622047,
+            "recall": 0.28,
+            "fmeasure": 0.09210526315789473
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.08695652173913043,
+            "precision": 0.05172413793103448,
+            "recall": 0.2727272727272727
+        }
+    },
+    "predict": "Based on the provided TERMS information, PAKTON appears to be a model, method, or system used in a specific context, likely related to machine learning or a similar field. It is being evaluated and compared to other models or methods, such as GPT4o. PAKTON seems to have different components, including Researcher and Archivist. The exact nature and purpose of PAKTON are not explicitly stated, but it is used in various comparisons and evaluations, suggesting it is a significant entity in the context it is being discussed. \n\nGiven the evidence, a concise definition of PAKTON is not possible, but it can be described as a model or system with specific components, used in a particular methodology or technique, and is being evaluated and compared to other similar entities.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

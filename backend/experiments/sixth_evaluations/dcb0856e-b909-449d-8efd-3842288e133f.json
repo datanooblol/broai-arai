@@ -1,0 +1,101 @@
+{
+    "question": "What does RARE stand for?",
+    "answer": "Retrieval-Aware Robustness Evaluation",
+    "type": "acronym",
+    "source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+    "experiment_id": "dcb0856e-b909-449d-8efd-3842288e133f",
+    "experiment_set": "a2030667-1455-4d99-9f05-42cb297e5f82",
+    "experiment_storage": "./experiments/sixth_evaluations/dcb0856e-b909-449d-8efd-3842288e133f.json",
+    "document_id": "3884cc52-33bd-43a2-aa39-8747a1b74257",
+    "document_source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RARE\n\t- Explanation: RARE stands for Retrieval-Aware Robustness Evaluation\n\t- Explanation: RARE is an acronym, but its meaning is not explicitly stated in the context\n\t- Explanation: RARE framework is a system or methodology for evaluating overall robustness, as illustrated in Figure 1.\n\t- Explanation: RARE -Gen is a pipeline for generating RAG benchmark datasets\n\t- Explanation: RARE-Met stands for Retrieval-Aware Robustness Metric\n\t- Explanation: RARE-Get is a novel dynamic synthesis pipeline for constructing evaluation data\n\t- Explanation: RARE-Set is a large-scale benchmark for evaluating system performance\n\t- Explanation: RARE is a framework for evaluating RAG robustness\n\t- Explanation: RARE-Get is a pipeline for extracting relations from corpora\n\t- Explanation: RARE-Set is a benchmark comprising questions across various domains\n\nQUESTION:\n\nWhat does RARE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "RARE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RARE": [
+            {
+                "evidence": "RARE : Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+                "explanation": "RARE stands for Retrieval-Aware Robustness Evaluation"
+            },
+            {
+                "evidence": "5 RARE -Set: Large-Scale Domain-Specific RAG Dataset",
+                "explanation": "RARE is an acronym, but its meaning is not explicitly stated in the context"
+            },
+            {
+                "evidence": "Figure 1: Illustration for the RARE framework.",
+                "explanation": "RARE framework is a system or methodology for evaluating overall robustness, as illustrated in Figure 1."
+            },
+            {
+                "evidence": "we introduce RARE -Gen, a fully automated pipeline for constructing complex RAG benchmarks",
+                "explanation": "RARE -Gen is a pipeline for generating RAG benchmark datasets"
+            },
+            {
+                "evidence": "3 RARE -Met: Retrieval-Aware Robustness Metric",
+                "explanation": "RARE-Met stands for Retrieval-Aware Robustness Metric"
+            },
+            {
+                "evidence": "RARE-Get : a novel dynamic synthesis pipeline that automatically constructs time-sensitive evaluation data through knowledge graph triplet extraction and traversal techniques",
+                "explanation": "RARE-Get is a novel dynamic synthesis pipeline for constructing evaluation data"
+            },
+            {
+                "evidence": "RARE-Set : a large-scale benchmark comprising over 400 specialized documents and 48,322 queries across financial, economics, and policy domains",
+                "explanation": "RARE-Set is a large-scale benchmark for evaluating system performance"
+            },
+            {
+                "evidence": "we introduce RARE , a comprehensive framework for evaluating RAG robustness",
+                "explanation": "RARE is a framework for evaluating RAG robustness"
+            },
+            {
+                "evidence": "Our knowledge graph based pipeline ( RARE -Get) automatically extracts relations from specialized corpora",
+                "explanation": "RARE-Get is a pipeline for extracting relations from corpora"
+            },
+            {
+                "evidence": "The resulting benchmark ( RARE -Set) comprises 48,322 questions across finance, economics, and policy domains",
+                "explanation": "RARE-Set is a benchmark comprising questions across various domains"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rouge2": {
+            "precision": 0.5,
+            "recall": 1.0,
+            "fmeasure": 0.6666666666666666
+        },
+        "rougeL": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "rougeLsum": {
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "fmeasure": 0.7272727272727273
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+        }
+    },
+    "predict": "RARE stands for Retrieval-Aware Robustness Evaluation.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

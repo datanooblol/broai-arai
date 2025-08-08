@@ -1,0 +1,53 @@
+{
+    "question": "What is GenKI?",
+    "answer": "GenKI is a framework which aims to improve the OpenQA performance by exploring Knowledge Integration and controllable Generation on LLMs simultaneously",
+    "type": "explanation",
+    "source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models",
+    "experiment_id": "d58b0679-b110-4ab0-9134-f695ede23157",
+    "experiment_set": "1bd47c47-a24c-4eec-b353-73a47ca3101b",
+    "experiment_storage": "./experiments/fifth_evaluations/d58b0679-b110-4ab0-9134-f695ede23157.json",
+    "document_id": "78f4a8ea-a050-44bc-88ac-6bfdd51d597b",
+    "document_source": "GenKI Enhancing Open-Domain Question Answering with Knowledge Integration and Controllable Generation in Large Language Models.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is GenKI?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.06474820143884892,
+            "recall": 0.42857142857142855,
+            "fmeasure": 0.1125
+        },
+        "rouge2": {
+            "precision": 0.014492753623188406,
+            "recall": 0.1,
+            "fmeasure": 0.02531645569620253
+        },
+        "rougeL": {
+            "precision": 0.04316546762589928,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.075
+        },
+        "rougeLsum": {
+            "precision": 0.04316546762589928,
+            "recall": 0.2857142857142857,
+            "fmeasure": 0.075
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.08333333333333334,
+            "precision": 0.048,
+            "recall": 0.3157894736842105
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information or context about \"GenKI.\" However, based on general knowledge, \"GenKI\" could refer to several things, and without more specific details, it's challenging to determine the exact reference.\n\nHere are a few possibilities:\n1. **Genki** is a Japanese term (\u5143\u6c17) that translates to \"energy,\" \"health,\" or \"vitality.\" It's often used to express someone's well-being or to wish someone good health.\n   \n2. **Genki** is also the name of various products, services, or entities. For example, Genki is a publisher of Japanese language learning materials, including textbooks and workbooks.\n\n3. In the context of technology or software, \"GenKI\" might refer to a specific project, tool, or company name. \n\nTo give a more precise answer, additional context or information about the specific \"GenKI\" you're referring to would be helpful.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}

@@ -1,0 +1,187 @@
+{
+    "question": "What is LlamaRec-LKG-RAG?",
+    "answer": "LlamaRec-LKG-RAG is an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance.",
+    "type": "explanation",
+    "source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking",
+    "experiment_id": "c77fa57f-d619-4086-aae7-9cf2e5f05353",
+    "experiment_set": "036536d6-420d-4238-9183-e0c59136ab17",
+    "experiment_storage": "./experiments/fifth_evaluations/c77fa57f-d619-4086-aae7-9cf2e5f05353.json",
+    "document_id": "405a5e09-a979-44cb-aa07-31849db4a110",
+    "document_source": "LlamaRec-LKG-RAG A Single-Pass, Learnable Knowledge Graph-RAG Framework for LLM-Based Ranking.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "TERMS:\n\nTERM found: LlamaRec\n\t- Evidence found: LLM-Rec: Large language models for recommendation with interaction and reasoning with Possible Explanation: LLM-Rec is a method or system that utilizes large language models for recommendation purposes with interaction and reasoning\n\t- Evidence found: Llama 2: Open foundation and fine-tuned chat models with Possible Explanation: Llama 2 refers to open foundation and fine-tuned chat models\n\t- Evidence found: LLM4Rec: Revolutionizing recommendation with large language models with Possible Explanation: LLM4Rec is a concept related to using large language models for recommendation\n\t- Evidence found: LLAMAREC-LKG-RAG framework with Possible Explanation: LLAMAREC-LKG-RAG is a framework for LLM-based ranking\n\t- Evidence found: following LlamaRec, we used the Llama-2-7b model with Possible Explanation: LlamaRec is a system or method used before the ranking stage\n\t- Evidence found: we used the Llama-2-7b model with Possible Explanation: Llama-2-7b is a model used in the ranking stage\n\t- Evidence found: LlamaRec employs an innovative verbalizer-based ranking approach with Possible Explanation: LlamaRec is a system that employs a verbalizer-based ranking approach\n\t- Evidence found: the Llama-2-7b model efficiently identifies the most relevant item with Possible Explanation: Llama-2-7b is a model used for identifying relevant items\n\t- Evidence found: Building on LlamaRec with Possible Explanation: LlamaRec is a recommendation system that our approach builds upon\n\t- Evidence found: LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework with Possible Explanation: LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking\nTERM found: LKG\n\t- Evidence found: LLAMAREC-LKG-RAG framework with Possible Explanation: LLAMAREC-LKG-RAG is a framework for LLM-based ranking\n\t- Evidence found: LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework with Possible Explanation: LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking\n\t- Evidence found: This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework with Possible Explanation: LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems\n\t- Evidence found: LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems with Possible Explanation: LlamaRec-LKG-RAG is a framework for integrating personalized information from KGs into LLM-based recommendation systems\n\t- Evidence found: LlamaRec-LKG-RAG framework with Possible Explanation: LlamaRec-LKG-RAG is a framework that incorporates knowledge graph reasoning\n\t- Evidence found: our model (LlamaRec-LKG-RAG) with Possible Explanation: LlamaRec-LKG-RAG is the name of the model being evaluated\n\t- Evidence found: LlamaRec-LKG-RAG consistently outperforms the baseline with Possible Explanation: LlamaRec-LKG-RAG is a model or algorithm that incorporates KG information for ranking tasks\nTERM found: RAG\n\t- Evidence found: Gnn-rag: Graph neural retrieval for large language model reasoning with Possible Explanation: Gnn-rag is a technique that uses graph neural retrieval for large language model reasoning\n\t- Evidence found: LLAMAREC-LKG-RAG framework with Possible Explanation: LLAMAREC-LKG-RAG is a framework for LLM-based ranking\n\t- Evidence found: Retrieval-Augmented Generation (RAG) paradigm with Possible Explanation: RAG stands for Retrieval-Augmented Generation\n\t- Evidence found: Retrieval-Augmented Generation (RAG) frameworks with Possible Explanation: RAG stands for Retrieval-Augmented Generation\n\t- Evidence found: LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework with Possible Explanation: LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking\n\t- Evidence found: Retrieval-Augmented Generation (RAG) with Possible Explanation: RAG stands for Retrieval-Augmented Generation\n\t- Evidence found: RAG methods, particularly GraphRAG, have emerged as practical solutions with Possible Explanation: RAG is a method used to address challenges in recommender systems\n\t- Evidence found: This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework with Possible Explanation: LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems\n\t- Evidence found: LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems with Possible Explanation: LlamaRec-LKG-RAG is a framework for integrating personalized information from KGs into LLM-based recommendation systems\n\t- Evidence found: LlamaRec-LKG-RAG framework with Possible Explanation: LlamaRec-LKG-RAG is a framework that incorporates knowledge graph reasoning\n\nCONTEXTS:\n\n<|start_context|>## LLAMAREC-LKG-RAG: A SINGLE-PASS, LEARNABLE KNOWLEDGE GRAPH-RAG FRAMEWORK FOR LLM-BASED RANKING<|end_context|>\n<|start_context|>for real-time, large-scale deployments for recommendation systems.\n\nThis work presents LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance. The proposed approach contributes two key innovations. First, we leverage the structured nature of recommendation data to construct an explicit KG comprising core entities, such as users, items, and ratings, alongside diverse relation types. This graph is further enriched with dataset-specific metadata, including item attributes (e.g., brand, category), to provide a richer semantic context. Second, we design a lightweight deep neural network called the user preference module to model sequential user-item interactions and capture dynamic user preferences over time. These preferences inform a relation-specific scoring function, enabling a precise, single-pass retrieval mechanism for extracting personalized subgraphs from the KG. The retrieved knowledge is then embedded into a carefully designed prompt template, combined with the user's historical interaction sequence and a candidate item set. This composite prompt is passed to a Llama-2-7b model, which performs the final ranking. The entire framework is trained end-to-end to optimize performance holistically, making LLM-based rankers integrate external personalized knowledge efficiently in a single pass and offering extensibility toward explainable recommendation systems. We evaluate our method against LlamaRec and report consistent improvements across standard recommendation benchmarks.<|end_context|>\n<|start_context|>Vahid Azizi, Fatemeh Koochaki\n\n{ va.azizi, fatmakoochaki } @gmail.com\n\nABSTRACT\n\nRecent advances in Large Language Models (LLMs) have driven their adoption in recommender systems through Retrieval-Augmented Generation (RAG) frameworks. However, existing RAG approaches predominantly rely on flat, similaritybased retrieval that fails to leverage the rich relational structure inherent in useritem interactions. We introduce LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework that integrates personalized knowledge graph context into LLM-based recommendation ranking. Our approach extends the LlamaRec architecture by incorporating a lightweight user preference module that dynamically identifies salient relation paths within a heterogeneous knowledge graph constructed from user behavior and item metadata. These personalized subgraphs are seamlessly integrated into prompts for a fine-tuned Llama-2 model, enabling efficient and interpretable recommendations through a unified inference step. Comprehensive experiments on ML-100K and Amazon Beauty datasets demonstrate consistent and significant improvements over LlamaRec across key ranking metrics (MRR, NDCG, Recall). LlamaRec-LKG-RAG demonstrates the critical value of structured reasoning in LLM-based recommendations and establishes a foundation for scalable, knowledge-aware personalization in next-generation recommender systems. Code is available at repository.<|end_context|>\n<|start_context|>2 METHOD\n\nWe propose a novel and efficient methodology for extracting informative, user-personalized contextual information from KGs and seamlessly integrating this structured knowledge into LlamaRec's two-stage sequential recommendation framework to significantly enhance ranking performance. Our approach transforms the conventional LlamaRec architecture by incorporating a sophisticated knowledge graph reasoning component that enables personalized subgraph retrieval and integration.\n\nFigure 1: Overview of the LlamaRec-LKG-RAG framework. A sequential recommendation module (LRURec) generates candidate items from the user's interaction history. A user preference module captures dynamic interests to guide the retrieval of a personalized subgraph from a KG. The retrieved paths, user history, and candidate items are composed into a prompt, which is passed to a Llama2-7b model for final ranking. The system is trained end-to-end to enable efficient and interpretable personalized ranking, augmented with user-specific knowledge extracted from the KG.\n\n<!-- image -->\n\nAcomprehensive overview of the proposed LlamaRec-LKG-RAG architecture is presented in Fig. 1, with detailed methodological exposition provided in the following sections.<|end_context|>\n<|start_context|>2.0.3 LLAMAREC-LKG-RAG\n\nInspired by the ToG methodology, we have enhanced the LlamaRec framework by systematically integrating personalized contextual knowledge derived from structured knowledge graphs. This significantly improves the recommendation ranking performance. Our approach involves constructing a comprehensive, dataset-specific knowledge graph where users and items are the primary entities, connected through fundamental RATED relations that capture explicit user feedback and interaction patterns. To further enrich the knowledge graph semantically, we augment it with additional metadata, such as item attributes (e.g., brand). This results in a heterogeneous knowledge graph that incorporates multiple types of nodes and relations.\n\nTo enable efficient personalized traversal of this KG, we design a lightweight user preference model that learns user-specific preferences for different relation types. The user preference model identifies and prioritizes each user's most relevant relation types based on patterns learned through interactions over time. This model consists of: (1) An embedding layer to encode each user into a dense vector representation. (2) A fully connected layer to transform these embeddings. (3) A final fully connected layer with softmax activation to predict a probability distribution over relation types in the KG. We adopt the LlamaRec prompting structure to format input for LLM inference with the following template:<|end_context|>\n\nQUESTION:\n\nWhat is LlamaRec-LKG-RAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "LlamaRec",
+            "confidence": 0.8
+        },
+        {
+            "term": "LKG",
+            "confidence": 0.7
+        },
+        {
+            "term": "RAG",
+            "confidence": 1.0
+        }
+    ],
+    "detailed_terms": {
+        "LlamaRec": [
+            {
+                "evidence": "LLM-Rec: Large language models for recommendation with interaction and reasoning",
+                "explanation": "LLM-Rec is a method or system that utilizes large language models for recommendation purposes with interaction and reasoning"
+            },
+            {
+                "evidence": "Llama 2: Open foundation and fine-tuned chat models",
+                "explanation": "Llama 2 refers to open foundation and fine-tuned chat models"
+            },
+            {
+                "evidence": "LLM4Rec: Revolutionizing recommendation with large language models",
+                "explanation": "LLM4Rec is a concept related to using large language models for recommendation"
+            },
+            {
+                "evidence": "LLAMAREC-LKG-RAG framework",
+                "explanation": "LLAMAREC-LKG-RAG is a framework for LLM-based ranking"
+            },
+            {
+                "evidence": "following LlamaRec, we used the Llama-2-7b model",
+                "explanation": "LlamaRec is a system or method used before the ranking stage"
+            },
+            {
+                "evidence": "we used the Llama-2-7b model",
+                "explanation": "Llama-2-7b is a model used in the ranking stage"
+            },
+            {
+                "evidence": "LlamaRec employs an innovative verbalizer-based ranking approach",
+                "explanation": "LlamaRec is a system that employs a verbalizer-based ranking approach"
+            },
+            {
+                "evidence": "the Llama-2-7b model efficiently identifies the most relevant item",
+                "explanation": "Llama-2-7b is a model used for identifying relevant items"
+            },
+            {
+                "evidence": "Building on LlamaRec",
+                "explanation": "LlamaRec is a recommendation system that our approach builds upon"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework",
+                "explanation": "LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking"
+            }
+        ],
+        "LKG": [
+            {
+                "evidence": "LLAMAREC-LKG-RAG framework",
+                "explanation": "LLAMAREC-LKG-RAG is a framework for LLM-based ranking"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework",
+                "explanation": "LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking"
+            },
+            {
+                "evidence": "This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems",
+                "explanation": "LlamaRec-LKG-RAG is a framework for integrating personalized information from KGs into LLM-based recommendation systems"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework that incorporates knowledge graph reasoning"
+            },
+            {
+                "evidence": "our model (LlamaRec-LKG-RAG)",
+                "explanation": "LlamaRec-LKG-RAG is the name of the model being evaluated"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG consistently outperforms the baseline",
+                "explanation": "LlamaRec-LKG-RAG is a model or algorithm that incorporates KG information for ranking tasks"
+            }
+        ],
+        "RAG": [
+            {
+                "evidence": "Gnn-rag: Graph neural retrieval for large language model reasoning",
+                "explanation": "Gnn-rag is a technique that uses graph neural retrieval for large language model reasoning"
+            },
+            {
+                "evidence": "LLAMAREC-LKG-RAG framework",
+                "explanation": "LLAMAREC-LKG-RAG is a framework for LLM-based ranking"
+            },
+            {
+                "evidence": "Retrieval-Augmented Generation (RAG) paradigm",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "Retrieval-Augmented Generation (RAG) frameworks",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework",
+                "explanation": "LlamaRec-LKG-RAG is a novel framework that integrates personalized knowledge graph context into LLM-based recommendation ranking"
+            },
+            {
+                "evidence": "Retrieval-Augmented Generation (RAG)",
+                "explanation": "RAG stands for Retrieval-Augmented Generation"
+            },
+            {
+                "evidence": "RAG methods, particularly GraphRAG, have emerged as practical solutions",
+                "explanation": "RAG is a method used to address challenges in recommender systems"
+            },
+            {
+                "evidence": "This work presents LlamaRec-LKG-RAG, an efficient and interpretable framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework that integrates personalized information from KGs into LLM-based recommendation systems"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems",
+                "explanation": "LlamaRec-LKG-RAG is a framework for integrating personalized information from KGs into LLM-based recommendation systems"
+            },
+            {
+                "evidence": "LlamaRec-LKG-RAG framework",
+                "explanation": "LlamaRec-LKG-RAG is a framework that incorporates knowledge graph reasoning"
+            }
+        ]
+    },
+    "contexts": [
+        "## LLAMAREC-LKG-RAG: A SINGLE-PASS, LEARNABLE KNOWLEDGE GRAPH-RAG FRAMEWORK FOR LLM-BASED RANKING\n",
+        "for real-time, large-scale deployments for recommendation systems.\n\nThis work presents LlamaRec-LKG-RAG, an efficient and interpretable framework that integrates personalized information from KGs into LLM-based recommendation systems, aiming to enhance ranking performance. The proposed approach contributes two key innovations. First, we leverage the structured nature of recommendation data to construct an explicit KG comprising core entities, such as users, items, and ratings, alongside diverse relation types. This graph is further enriched with dataset-specific metadata, including item attributes (e.g., brand, category), to provide a richer semantic context. Second, we design a lightweight deep neural network called the user preference module to model sequential user-item interactions and capture dynamic user preferences over time. These preferences inform a relation-specific scoring function, enabling a precise, single-pass retrieval mechanism for extracting personalized subgraphs from the KG. The retrieved knowledge is then embedded into a carefully designed prompt template, combined with the user's historical interaction sequence and a candidate item set. This composite prompt is passed to a Llama-2-7b model, which performs the final ranking. The entire framework is trained end-to-end to optimize performance holistically, making LLM-based rankers integrate external personalized knowledge efficiently in a single pass and offering extensibility toward explainable recommendation systems. We evaluate our method against LlamaRec and report consistent improvements across standard recommendation benchmarks.\n",
+        "Vahid Azizi, Fatemeh Koochaki\n\n{ va.azizi, fatmakoochaki } @gmail.com\n\nABSTRACT\n\nRecent advances in Large Language Models (LLMs) have driven their adoption in recommender systems through Retrieval-Augmented Generation (RAG) frameworks. However, existing RAG approaches predominantly rely on flat, similaritybased retrieval that fails to leverage the rich relational structure inherent in useritem interactions. We introduce LlamaRec-LKG-RAG, a novel single-pass, endto-end trainable framework that integrates personalized knowledge graph context into LLM-based recommendation ranking. Our approach extends the LlamaRec architecture by incorporating a lightweight user preference module that dynamically identifies salient relation paths within a heterogeneous knowledge graph constructed from user behavior and item metadata. These personalized subgraphs are seamlessly integrated into prompts for a fine-tuned Llama-2 model, enabling efficient and interpretable recommendations through a unified inference step. Comprehensive experiments on ML-100K and Amazon Beauty datasets demonstrate consistent and significant improvements over LlamaRec across key ranking metrics (MRR, NDCG, Recall). LlamaRec-LKG-RAG demonstrates the critical value of structured reasoning in LLM-based recommendations and establishes a foundation for scalable, knowledge-aware personalization in next-generation recommender systems. Code is available at repository.\n",
+        "2 METHOD\n\nWe propose a novel and efficient methodology for extracting informative, user-personalized contextual information from KGs and seamlessly integrating this structured knowledge into LlamaRec's two-stage sequential recommendation framework to significantly enhance ranking performance. Our approach transforms the conventional LlamaRec architecture by incorporating a sophisticated knowledge graph reasoning component that enables personalized subgraph retrieval and integration.\n\nFigure 1: Overview of the LlamaRec-LKG-RAG framework. A sequential recommendation module (LRURec) generates candidate items from the user's interaction history. A user preference module captures dynamic interests to guide the retrieval of a personalized subgraph from a KG. The retrieved paths, user history, and candidate items are composed into a prompt, which is passed to a Llama2-7b model for final ranking. The system is trained end-to-end to enable efficient and interpretable personalized ranking, augmented with user-specific knowledge extracted from the KG.\n\n<!-- image -->\n\nAcomprehensive overview of the proposed LlamaRec-LKG-RAG architecture is presented in Fig. 1, with detailed methodological exposition provided in the following sections.\n",
+        "2.0.3 LLAMAREC-LKG-RAG\n\nInspired by the ToG methodology, we have enhanced the LlamaRec framework by systematically integrating personalized contextual knowledge derived from structured knowledge graphs. This significantly improves the recommendation ranking performance. Our approach involves constructing a comprehensive, dataset-specific knowledge graph where users and items are the primary entities, connected through fundamental RATED relations that capture explicit user feedback and interaction patterns. To further enrich the knowledge graph semantically, we augment it with additional metadata, such as item attributes (e.g., brand). This results in a heterogeneous knowledge graph that incorporates multiple types of nodes and relations.\n\nTo enable efficient personalized traversal of this KG, we design a lightweight user preference model that learns user-specific preferences for different relation types. The user preference model identifies and prioritizes each user's most relevant relation types based on patterns learned through interactions over time. This model consists of: (1) An embedding layer to encode each user into a dense vector representation. (2) A fully connected layer to transform these embeddings. (3) A final fully connected layer with softmax activation to predict a probability distribution over relation types in the KG. We adopt the LlamaRec prompting structure to format input for LLM inference with the following template:\n"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.09387755102040816,
+            "recall": 0.92,
+            "fmeasure": 0.1703703703703704
+        },
+        "rouge2": {
+            "precision": 0.05737704918032787,
+            "recall": 0.5833333333333334,
+            "fmeasure": 0.10447761194029852
+        },
+        "rougeL": {
+            "precision": 0.0653061224489796,
+            "recall": 0.64,
+            "fmeasure": 0.11851851851851854
+        },
+        "rougeLsum": {
+            "precision": 0.0653061224489796,
+            "recall": 0.64,
+            "fmeasure": 0.11851851851851854
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.14782608695652172,
+            "precision": 0.08133971291866028,
+            "recall": 0.8095238095238095
+        }
+    },
+    "predict": "LlamaRec-LKG-RAG is a novel, single-pass, end-to-end trainable framework that integrates personalized knowledge graph context into LLM-based recommendation ranking. It enhances the LlamaRec architecture by incorporating a lightweight user preference module that dynamically identifies salient relation paths within a heterogeneous knowledge graph constructed from user behavior and item metadata. This framework is designed to improve the ranking performance of recommendation systems by leveraging the structured nature of recommendation data and providing a richer semantic context.\n\nThe LlamaRec-LKG-RAG framework consists of several key components:\n\n1. **Knowledge Graph Construction**: A comprehensive, dataset-specific knowledge graph is constructed with users, items, and ratings as primary entities, along with additional metadata such as item attributes.\n2. **User Preference Module**: A lightweight deep neural network that models sequential user-item interactions and captures dynamic user preferences over time, informing a relation-specific scoring function for extracting personalized subgraphs from the knowledge graph.\n3. **Personalized Subgraph Retrieval**: The user preference module identifies and prioritizes each user's most relevant relation types based on patterns learned through interactions over time.\n4. **Prompt Template and LLM Inference**: The retrieved knowledge is embedded into a carefully designed prompt template, combined with the user's historical interaction sequence and a candidate item set, and passed to a Llama-2-7b model for final ranking.\n\nLlamaRec-LKG-RAG aims to provide efficient and interpretable recommendations through a unified inference step, demonstrating significant improvements over LlamaRec across key ranking metrics.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": true,
+    "is_rerank": true
+}

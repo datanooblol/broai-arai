@@ -1,0 +1,53 @@
+{
+    "question": "What is POQD?",
+    "answer": "POQD is a novel query decomposition framework that can perform query decomposition for optimizing multi-vector retrieval performance",
+    "type": "explanation",
+    "source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval",
+    "experiment_id": "6a454261-0e9c-4cc5-a49b-596c0ceed760",
+    "experiment_set": "717823ec-f4ec-40be-bc62-a0b4649129ca",
+    "experiment_storage": "./experiments/fourth_evaluations/6a454261-0e9c-4cc5-a49b-596c0ceed760.json",
+    "document_id": "c15d3840-4701-4cc8-9842-2debdd453381",
+    "document_source": "POQD Performance-Oriented Query Decomposer for Multi-vector retrieval.pdf",
+    "chat_system_prompt": "# Chat Assistant Prompt\n\n## Persona:\n- **Name:** Assistant\n- **Description:** You are a helpful assistant who provides accurate answers based on available information.\n\n## Instructions:\n- Read the QUESTION carefully.\n- If TERMS information is provided, use it to understand key concepts and definitions.\n- If CONTEXTS information is provided, use it as the primary source for your answer.\n- Answer the question using the best available information from the provided sources.\n- If no additional information is provided, answer based on your general knowledge.\n\n## Input Format:\nYou may receive one of these combinations:\n1. **Question only:** Just the QUESTION\n2. **Question + Context:** CONTEXTS and QUESTION\n3. **Question + Term:** TERMS and QUESTION  \n4. **Question + Term + Context:** TERMS, CONTEXTS, and QUESTION\n\n## Response Guidelines:\n- Prioritize CONTEXTS information when available\n- Use TERMS definitions to clarify technical concepts\n- Provide direct, accurate answers\n- Be concise and helpful",
+    "chat_message_prompt": "QUESTION:\n\nWhat is POQD?\n\n",
+    "potential_terms": [],
+    "detailed_terms": {},
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.04838709677419355,
+            "recall": 0.3333333333333333,
+            "fmeasure": 0.08450704225352113
+        },
+        "rouge2": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "fmeasure": 0.0
+        },
+        "rougeL": {
+            "precision": 0.03225806451612903,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.056338028169014086
+        },
+        "rougeLsum": {
+            "precision": 0.03225806451612903,
+            "recall": 0.2222222222222222,
+            "fmeasure": 0.056338028169014086
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.078125,
+            "precision": 0.044642857142857144,
+            "recall": 0.3125
+        }
+    },
+    "predict": "To provide an accurate answer, I would need more information about the term \"POQD.\" It could be an acronym or abbreviation used in a specific context or industry. \n\nIf you provide more context or details about where you encountered \"POQD,\" I can give a more precise answer. \n\nThat being said, in medical contexts, \"PO QD\" is sometimes used, where \"PO\" stands for \"per os\" (Latin for \"by mouth\") and \"QD\" stands for \"quaque die\" (Latin for \"once a day\"). So, \"PO QD\" means taking a medication orally once daily. However, without the \"PO,\" \"POQD\" isn't a standard abbreviation in widely recognized medical or general terminology. \n\nIf you have more information or a specific context for \"POQD,\" I'd be happy to help further.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v1/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "skip",
+    "is_context": false,
+    "is_rerank": false
+}
