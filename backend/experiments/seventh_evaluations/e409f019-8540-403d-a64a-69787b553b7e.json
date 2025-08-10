@@ -1,0 +1,101 @@
+{
+    "question": "What does CGSeg stand for?",
+    "answer": "Color Gradients-based Segmentation",
+    "type": "acronym",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "e409f019-8540-403d-a64a-69787b553b7e",
+    "experiment_set": "f1f355dd-cf2c-4388-a212-1c1e10fdf210",
+    "experiment_storage": "./experiments/seventh_evaluations/e409f019-8540-403d-a64a-69787b553b7e.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: CGSeg\n\t- Evidence found: An example of CGSeg applied to a slide reference image with Possible Explanation: CGSeg is an algorithm or technique applied to a slide reference image\n\t- Evidence found: w/o CGSeg: Disables the CGSeg mechanism with Possible Explanation: w/o CGSeg refers to disabling the CGSeg mechanism\n\t- Evidence found: Disables the CGSeg mechanism with Possible Explanation: CGSeg is a mechanism related to code generation or assembly\n\t- Evidence found: Disables both H-RAG and CSeg components with Possible Explanation: CSeg is a component related to the framework's functionality\n\t- Evidence found: computed via the gradient-based segmentation algorithm CGSeg with Possible Explanation: CGSeg is a gradient-based segmentation algorithm used to compute the Element Coverage Ratio\n\t- Evidence found: Color Gradients-based Segmentation (CGSeg) algorithm segments the input Design into semantically meaningful regions with Possible Explanation: CGSeg is an algorithm that segments the input Design into semantically meaningful regions\n\t- Evidence found: CGSeg, a recursive color gradient-based segmentation algorithm with Possible Explanation: CGSeg is a recursive color gradient-based segmentation algorithm\n\t- Evidence found: Algorithm 1 Color Gradient-based Segmentation (CGSeg) with Possible Explanation: CGSeg is a Color Gradient-based Segmentation algorithm\n\t- Evidence found: R \u2032 \u2190 CGSEG ( I m , g, D +1 , D max , T ) with Possible Explanation: CGSEG is a recursive algorithm for Color Gradient-based Segmentation\n\t- Evidence found: Color Gradients-based Segmentation (CGSeg) algorithm with Possible Explanation: CGSeg is a Color Gradients-based Segmentation algorithm\n\nQUESTION:\n\nWhat does CGSeg stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "CGSeg",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "CGSeg": [
+            {
+                "evidence": "An example of CGSeg applied to a slide reference image",
+                "explanation": "CGSeg is an algorithm or technique applied to a slide reference image"
+            },
+            {
+                "evidence": "w/o CGSeg: Disables the CGSeg mechanism",
+                "explanation": "w/o CGSeg refers to disabling the CGSeg mechanism"
+            },
+            {
+                "evidence": "Disables the CGSeg mechanism",
+                "explanation": "CGSeg is a mechanism related to code generation or assembly"
+            },
+            {
+                "evidence": "Disables both H-RAG and CSeg components",
+                "explanation": "CSeg is a component related to the framework's functionality"
+            },
+            {
+                "evidence": "computed via the gradient-based segmentation algorithm CGSeg",
+                "explanation": "CGSeg is a gradient-based segmentation algorithm used to compute the Element Coverage Ratio"
+            },
+            {
+                "evidence": "Color Gradients-based Segmentation (CGSeg) algorithm segments the input Design into semantically meaningful regions",
+                "explanation": "CGSeg is an algorithm that segments the input Design into semantically meaningful regions"
+            },
+            {
+                "evidence": "CGSeg, a recursive color gradient-based segmentation algorithm",
+                "explanation": "CGSeg is a recursive color gradient-based segmentation algorithm"
+            },
+            {
+                "evidence": "Algorithm 1 Color Gradient-based Segmentation (CGSeg)",
+                "explanation": "CGSeg is a Color Gradient-based Segmentation algorithm"
+            },
+            {
+                "evidence": "R \u2032 \u2190 CGSEG ( I m , g, D +1 , D max , T )",
+                "explanation": "CGSEG is a recursive algorithm for Color Gradient-based Segmentation"
+            },
+            {
+                "evidence": "Color Gradients-based Segmentation (CGSeg) algorithm",
+                "explanation": "CGSeg is a Color Gradients-based Segmentation algorithm"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rouge2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeLsum": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.6666666666666666,
+            "precision": 0.6666666666666666,
+            "recall": 0.6666666666666666
+        }
+    },
+    "predict": "Color Gradient-based Segmentation",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

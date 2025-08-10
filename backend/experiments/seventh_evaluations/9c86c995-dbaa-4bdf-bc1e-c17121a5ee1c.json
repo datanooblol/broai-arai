@@ -1,0 +1,97 @@
+{
+    "question": "What is SlideCoder?",
+    "answer": "SlideCoder is a layout-aware, retrieval-augmented framework for generating editable slides from reference images.",
+    "type": "explanation",
+    "source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design",
+    "experiment_id": "9c86c995-dbaa-4bdf-bc1e-c17121a5ee1c",
+    "experiment_set": "e5199eae-1785-4b94-bf7a-25b143445540",
+    "experiment_storage": "./experiments/seventh_evaluations/9c86c995-dbaa-4bdf-bc1e-c17121a5ee1c.json",
+    "document_id": "ceb5e0fe-b08a-4d71-83ba-839bcdf210b7",
+    "document_source": "SlideCoder Layout-aware RAG-enhanced Hierarchical Slide Generation from Design.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: SlideCoder\n\t- Evidence found: propose Slide2Code, the first benchmark with difficulty-tiered samples\n\t- Evidence found: introduce SlideCoder, a layout-aware, retrieval-augmented framework\n\t- Evidence found: release SlideMaster, a 7B open-source model\n\t- Evidence found: invokes SLIDESLIB, a high-level API built on python-pptx\n\t- Evidence found: introduce SlideCoder, a layout-aware RAG-enhanced hierarchical slide generation framework\n\t- Evidence found: Coder produces corresponding code snippets\n\t- Evidence found: Coder uses these to query the Operation Function Knowledge Base and generate code\n\t- Evidence found: SlideCoder is listed as a model in the table\n\t- Evidence found: SlideMaster is listed as a model variant in the table\n\nQUESTION:\n\nWhat is SlideCoder?\n\n",
+    "potential_terms": [
+        {
+            "term": "SlideCoder",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "SlideCoder": [
+            {
+                "evidence": "propose Slide2Code, the first benchmark with difficulty-tiered samples",
+                "explanation": "Slide2Code is a benchmark for the Reference Image to Slide Generation task"
+            },
+            {
+                "evidence": "introduce SlideCoder, a layout-aware, retrieval-augmented framework",
+                "explanation": "SlideCoder is a framework for generating editable slides from reference images"
+            },
+            {
+                "evidence": "release SlideMaster, a 7B open-source model",
+                "explanation": "SlideMaster is an open-source model fine-tuned for slide generation tasks"
+            },
+            {
+                "evidence": "invokes SLIDESLIB, a high-level API built on python-pptx",
+                "explanation": "SLIDESLIB is a high-level API built on python-pptx"
+            },
+            {
+                "evidence": "introduce SlideCoder, a layout-aware RAG-enhanced hierarchical slide generation framework",
+                "explanation": "SlideCoder is a layout-aware RAG-enhanced hierarchical slide generation framework"
+            },
+            {
+                "evidence": "Coder produces corresponding code snippets",
+                "explanation": "Coder is an MLLM agent that generates code snippets based on block descriptions"
+            },
+            {
+                "evidence": "Coder uses these to query the Operation Function Knowledge Base and generate code",
+                "explanation": "Coder is a component that queries the Operation Function Knowledge Base and generates code"
+            },
+            {
+                "evidence": "SlideCoder is listed as a model in the table",
+                "explanation": "SlideCoder is a model being compared in the table"
+            },
+            {
+                "evidence": "SlideMaster is listed as a model variant in the table",
+                "explanation": "SlideMaster is a model variant being compared in the table"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.34375,
+            "recall": 0.7333333333333333,
+            "fmeasure": 0.4680851063829787
+        },
+        "rouge2": {
+            "precision": 0.25806451612903225,
+            "recall": 0.5714285714285714,
+            "fmeasure": 0.35555555555555557
+        },
+        "rougeL": {
+            "precision": 0.3125,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.425531914893617
+        },
+        "rougeLsum": {
+            "precision": 0.3125,
+            "recall": 0.6666666666666666,
+            "fmeasure": 0.425531914893617
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.30769230769230765,
+            "precision": 0.2222222222222222,
+            "recall": 0.5
+        }
+    },
+    "predict": "SlideCoder is a layout-aware, retrieval-augmented framework for slide generation that uses a hierarchical approach and is enhanced with RAG, producing corresponding code snippets by querying an Operation Function Knowledge Base.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

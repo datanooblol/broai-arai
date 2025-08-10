@@ -162,13 +162,13 @@ class ExperimentRunner:
 
 if __name__=='__main__':
     state.set('debug', False)
-    evaluation_path = 'sixth_evaluations'
+    evaluation_path = 'seventh_evaluations'
     experiment_path = f'./experiments/{evaluation_path}.pkl'.format(evaluation_path=evaluation_path)
     exp_runner = ExperimentRunner.load_state(experiment_path)
     if exp_runner is None:
         experiments = generate_experiments(
             embed_methods=['raw'],
-            chat_system_prompt_paths=['./package/flows/online/prompts/v1/chat.md'],
+            chat_system_prompt_paths=['./package/flows/online/prompts/v2/chat.md'],
             term_detector_system_prompt_paths=["./package/flows/online/prompts/term_detector.md"],
             is_terms=['skip', 'evidence', 'explanation', 'both'],
             chat_models=[

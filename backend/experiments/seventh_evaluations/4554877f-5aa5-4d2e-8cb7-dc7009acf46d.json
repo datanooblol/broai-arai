@@ -1,0 +1,101 @@
+{
+    "question": "What is HippoRAG?",
+    "answer": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking this model of human memory",
+    "type": "explanation",
+    "source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models",
+    "experiment_id": "4554877f-5aa5-4d2e-8cb7-dc7009acf46d",
+    "experiment_set": "ba1f3037-3c04-41e9-addc-5bf4dd8a7f5e",
+    "experiment_storage": "./experiments/seventh_evaluations/4554877f-5aa5-4d2e-8cb7-dc7009acf46d.json",
+    "document_id": "add5f9b0-189d-48d2-81db-a492b0259643",
+    "document_source": "HippoRAG Neurobiologically Inspired Long-Term Memory for Large Language Models.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: HippoRAG\n\t- Explanation: HippoRAG is a neurobiologically inspired long-term memory for large language models\n\t- Explanation: HippoRAG is a novel retrieval framework\n\t- Explanation: HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking the model of human memory\n\t- Explanation: HippoRAG is a RAG framework for LLMs\n\t- Explanation: HippoRAG is a system with an indexing and retrieval design inspired by the hippocampal memory indexing theory\n\t- Explanation: The hippocampus is a region that creates an index of salient signals and associates them with each other.\n\t- Explanation: HippoRAG is a proposed approach inspired by human long-term memory process\n\t- Explanation: HippoRAG is a methodology that models human long-term memory\n\t- Explanation: HippoRAG is a model or method used for retrieval performance\n\t- Explanation: HippoRAG is a method that can be combined with other retrieval methods to improve performance\n\nQUESTION:\n\nWhat is HippoRAG?\n\n",
+    "potential_terms": [
+        {
+            "term": "HippoRAG",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "HippoRAG": [
+            {
+                "evidence": "HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models",
+                "explanation": "HippoRAG is a neurobiologically inspired long-term memory for large language models"
+            },
+            {
+                "evidence": "HippoRAG, a novel retrieval framework",
+                "explanation": "HippoRAG is a novel retrieval framework"
+            },
+            {
+                "evidence": "HippoRAG, a RAG framework that serves as a long-term memory for LLMs",
+                "explanation": "HippoRAG is a RAG framework that serves as a long-term memory for LLMs by mimicking the model of human memory"
+            },
+            {
+                "evidence": "we propose HippoRAG, a RAG framework that serves as a long-term memory for LLMs",
+                "explanation": "HippoRAG is a RAG framework for LLMs"
+            },
+            {
+                "evidence": "HippoRAG's indexing and retrieval design",
+                "explanation": "HippoRAG is a system with an indexing and retrieval design inspired by the hippocampal memory indexing theory"
+            },
+            {
+                "evidence": "the hippocampus , salient signals are included in the hippocampal index and associated with each other",
+                "explanation": "The hippocampus is a region that creates an index of salient signals and associates them with each other."
+            },
+            {
+                "evidence": "Our proposed approach, HippoRAG, is closely inspired by the process described above.",
+                "explanation": "HippoRAG is a proposed approach inspired by human long-term memory process"
+            },
+            {
+                "evidence": "Detailed HippoRAG Methodology",
+                "explanation": "HippoRAG is a methodology that models human long-term memory"
+            },
+            {
+                "evidence": "HippoRAG (Contriever)",
+                "explanation": "HippoRAG is a model or method used for retrieval performance"
+            },
+            {
+                "evidence": "Combining HippoRAG with standard multi-step retrieval methods like IRCoT results in strong complementary improvements",
+                "explanation": "HippoRAG is a method that can be combined with other retrieval methods to improve performance"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.48148148148148145,
+            "recall": 0.6190476190476191,
+            "fmeasure": 0.5416666666666666
+        },
+        "rouge2": {
+            "precision": 0.19230769230769232,
+            "recall": 0.25,
+            "fmeasure": 0.2173913043478261
+        },
+        "rougeL": {
+            "precision": 0.37037037037037035,
+            "recall": 0.47619047619047616,
+            "fmeasure": 0.4166666666666667
+        },
+        "rougeLsum": {
+            "precision": 0.37037037037037035,
+            "recall": 0.47619047619047616,
+            "fmeasure": 0.4166666666666667
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5365853658536586,
+            "precision": 0.4782608695652174,
+            "recall": 0.6111111111111112
+        }
+    },
+    "predict": "HippoRAG is a neurobiologically inspired long-term memory framework for large language models that mimics the human memory model, specifically inspired by the hippocampal memory indexing theory.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

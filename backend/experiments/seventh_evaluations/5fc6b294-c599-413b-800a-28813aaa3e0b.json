@@ -1,0 +1,101 @@
+{
+    "question": "What is STORM?",
+    "answer": "STORM is a writing system for the Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking",
+    "type": "explanation",
+    "source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models",
+    "experiment_id": "5fc6b294-c599-413b-800a-28813aaa3e0b",
+    "experiment_set": "ba1f3037-3c04-41e9-addc-5bf4dd8a7f5e",
+    "experiment_storage": "./experiments/seventh_evaluations/5fc6b294-c599-413b-800a-28813aaa3e0b.json",
+    "document_id": "8170f3b0-9203-4ec2-8dcc-476eeb9c69b0",
+    "document_source": "Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: STORM\n\t- Explanation: STORM is the entity producing articles\n\t- Explanation: STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking\n\t- Explanation: STORM is a paradigm for Synthesis\n\t- Explanation: STORM is a paradigm for the synthesis of topic outlines through retrieval and multi-perspective question asking\n\t- Explanation: STORM is a system that automates the pre-writing stage\n\t- Explanation: STORM is a system or method that discovers different perspectives for a given topic\n\t- Explanation: STORM is a system that simulates a conversation\n\t- Explanation: STORM is an entity that creates an outline\n\t- Explanation: STORM is an acronym for a system capable of researching and writing articles\n\t- Explanation: STORM is a system or model built using the DSPy framework with zero-shot prompting\n\nQUESTION:\n\nWhat is STORM?\n\n",
+    "potential_terms": [
+        {
+            "term": "STORM",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "STORM": [
+            {
+                "evidence": "articles produced by STORM",
+                "explanation": "STORM is the entity producing articles"
+            },
+            {
+                "evidence": "STORM , a writing system for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM stands for Synthesis of Topic Outlines through Retrieval and Multi-perspective Question Asking"
+            },
+            {
+                "evidence": "we propose the STORM paradigm",
+                "explanation": "STORM is a paradigm for Synthesis"
+            },
+            {
+                "evidence": "STORM paradigm for the S ynthesis of T opic O utlines through R etrieval and M ulti-perspective Question Asking",
+                "explanation": "STORM is a paradigm for the synthesis of topic outlines through retrieval and multi-perspective question asking"
+            },
+            {
+                "evidence": "We present STORM to automate the pre-writing stage",
+                "explanation": "STORM is a system that automates the pre-writing stage"
+            },
+            {
+                "evidence": "STORM discovers different perspectives by surveying existing articles",
+                "explanation": "STORM is a system or method that discovers different perspectives for a given topic"
+            },
+            {
+                "evidence": "STORM simulates a conversation",
+                "explanation": "STORM is a system that simulates a conversation"
+            },
+            {
+                "evidence": "STORM creates an outline",
+                "explanation": "STORM is an entity that creates an outline"
+            },
+            {
+                "evidence": "STORM is capable of researching complicated topics and writing long articles from detailed outlines",
+                "explanation": "STORM is an acronym for a system capable of researching and writing articles"
+            },
+            {
+                "evidence": "We build STORM with zero-shot prompting using the DSPy framework",
+                "explanation": "STORM is a system or model built using the DSPy framework with zero-shot prompting"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.43902439024390244,
+            "recall": 1.0,
+            "fmeasure": 0.6101694915254238
+        },
+        "rouge2": {
+            "precision": 0.375,
+            "recall": 0.8823529411764706,
+            "fmeasure": 0.5263157894736842
+        },
+        "rougeL": {
+            "precision": 0.4146341463414634,
+            "recall": 0.9444444444444444,
+            "fmeasure": 0.576271186440678
+        },
+        "rougeLsum": {
+            "precision": 0.4146341463414634,
+            "recall": 0.9444444444444444,
+            "fmeasure": 0.576271186440678
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.5833333333333333,
+            "precision": 0.42424242424242425,
+            "recall": 0.9333333333333333
+        }
+    },
+    "predict": "STORM is a paradigm and system for the synthesis of topic outlines through retrieval and multi-perspective question asking, automating the pre-writing stage by discovering different perspectives for a given topic and creating an outline, built using the DSPy framework.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

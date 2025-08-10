@@ -1,0 +1,101 @@
+{
+    "question": "What is REARANK?",
+    "answer": "REARANK is a large language model (LLM)-based listwise reasoning reranking agent.",
+    "type": "explanation",
+    "source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning",
+    "experiment_id": "0cb5e31b-73e9-402c-8ce8-4b9e3edc28fc",
+    "experiment_set": "77a1d59a-86a6-492e-92df-7b6b23f6a83e",
+    "experiment_storage": "./experiments/seventh_evaluations/0cb5e31b-73e9-402c-8ce8-4b9e3edc28fc.json",
+    "document_id": "785660bc-9463-4160-b595-9c54305c0b7a",
+    "document_source": "REARANK Reasoning Re-ranking Agent via Reinforcement Learning.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: REARANK\n\t- Evidence found: REARANK: Reasoning Re-ranking Agent via Reinforcement Learning with Possible Explanation: REARANK stands for Reasoning Re-ranking Agent via Reinforcement Learning\n\t- Evidence found: REARANK, a large language model (LLM)-based listwise reasoning reranking agent with Possible Explanation: REARANK is a large language model-based listwise reasoning reranking agent\n\t- Evidence found: we propose REARANK, the first reasoning listwise reranking agent with Possible Explanation: REARANK is a proposed reranking agent that uses listwise reranking with explicit reasoning\n\t- Evidence found: we propose REARANK, the first reasoning listwise reranking agent with Possible Explanation: REARANK is a novel reasoning-based reranking agent\n\t- Evidence found: Our REARANK, based on Qwen2.5-7B trained via our RL approach with reasoning ability with Possible Explanation: REARANK is a model based on Qwen2.5-7B trained with RL approach and reasoning ability\n\t- Evidence found: REARANK-7B demonstrates comparable performance with Possible Explanation: REARANK-7B is a specific ranking model or model variant\n\t- Evidence found: REARANK-7B even outperforms the powerful GPT4 model with Possible Explanation: REARANK-7B is a model that has been developed and evaluated\n\t- Evidence found: within REARANK, we conducted ablation studies with Possible Explanation: REARANK is a system or model being analyzed\n\t- Evidence found: REARANK-7B (full model) with Possible Explanation: REARANK-7B is the full model being evaluated\n\t- Evidence found: impact of different reward functions on REARANK's training with Possible Explanation: REARANK is a system being trained with different reward functions\n\nQUESTION:\n\nWhat is REARANK?\n\n",
+    "potential_terms": [
+        {
+            "term": "REARANK",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "REARANK": [
+            {
+                "evidence": "REARANK: Reasoning Re-ranking Agent via Reinforcement Learning",
+                "explanation": "REARANK stands for Reasoning Re-ranking Agent via Reinforcement Learning"
+            },
+            {
+                "evidence": "REARANK, a large language model (LLM)-based listwise reasoning reranking agent",
+                "explanation": "REARANK is a large language model-based listwise reasoning reranking agent"
+            },
+            {
+                "evidence": "we propose REARANK, the first reasoning listwise reranking agent",
+                "explanation": "REARANK is a proposed reranking agent that uses listwise reranking with explicit reasoning"
+            },
+            {
+                "evidence": "we propose REARANK, the first reasoning listwise reranking agent",
+                "explanation": "REARANK is a novel reasoning-based reranking agent"
+            },
+            {
+                "evidence": "Our REARANK, based on Qwen2.5-7B trained via our RL approach with reasoning ability",
+                "explanation": "REARANK is a model based on Qwen2.5-7B trained with RL approach and reasoning ability"
+            },
+            {
+                "evidence": "REARANK-7B demonstrates comparable performance",
+                "explanation": "REARANK-7B is a specific ranking model or model variant"
+            },
+            {
+                "evidence": "REARANK-7B even outperforms the powerful GPT4 model",
+                "explanation": "REARANK-7B is a model that has been developed and evaluated"
+            },
+            {
+                "evidence": "within REARANK, we conducted ablation studies",
+                "explanation": "REARANK is a system or model being analyzed"
+            },
+            {
+                "evidence": "REARANK-7B (full model)",
+                "explanation": "REARANK-7B is the full model being evaluated"
+            },
+            {
+                "evidence": "impact of different reward functions on REARANK's training",
+                "explanation": "REARANK is a system being trained with different reward functions"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.24444444444444444,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.3859649122807018
+        },
+        "rouge2": {
+            "precision": 0.20454545454545456,
+            "recall": 0.8181818181818182,
+            "fmeasure": 0.3272727272727273
+        },
+        "rougeL": {
+            "precision": 0.24444444444444444,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.3859649122807018
+        },
+        "rougeLsum": {
+            "precision": 0.24444444444444444,
+            "recall": 0.9166666666666666,
+            "fmeasure": 0.3859649122807018
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.32000000000000006,
+            "precision": 0.2,
+            "recall": 0.8
+        }
+    },
+    "predict": "REARANK is a large language model-based listwise reasoning reranking agent, proposed as the first reasoning listwise reranking agent, which uses reinforcement learning with explicit reasoning, based on models like Qwen2.5-7B, and has demonstrated comparable or superior performance to powerful models like GPT4.",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": false,
+    "is_rerank": false
+}

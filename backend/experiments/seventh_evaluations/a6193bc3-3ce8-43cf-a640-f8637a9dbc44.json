@@ -1,0 +1,101 @@
+{
+    "question": "What is LOGICOL?",
+    "answer": "LOGICOL is a logically-informed contrastive learning framework for retrieval with queries containing logical connectives.",
+    "type": "explanation",
+    "source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+    "experiment_id": "a6193bc3-3ce8-43cf-a640-f8637a9dbc44",
+    "experiment_set": "ba1f3037-3c04-41e9-addc-5bf4dd8a7f5e",
+    "experiment_storage": "./experiments/seventh_evaluations/a6193bc3-3ce8-43cf-a640-f8637a9dbc44.json",
+    "document_id": "df47df55-be76-403e-b7c8-fc57d0e3935c",
+    "document_source": "LOGICOL Logically-Informed Contrastive Learning for Set-based Dense Retrieval.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: LOGICOL\n\t- Explanation: LOGICOL is the subject of the batching strategy comparison\n\t- Explanation: LOGICOL is a framework used for retrieval tasks\n\t- Explanation: LOGICOL is a logically-informed contrastive learning framework\n\t- Explanation: LOGICOL stands for Logically-Informed Contrastive Learning for Set-based Dense Retrieval\n\t- Explanation: LOGICOL is a learning objective for dense retrievers that incorporates logical constraints\n\t- Explanation: LOGICOL is a logically-informed contrastive learning framework\n\t- Explanation: LOGICOL is a logically-informed contrastive learning framework for retrieval\n\t- Explanation: LOGICOL is a method or approach used to train models, likely related to logical reasoning or retrieval tasks\n\t- Explanation: LOGICOL is a learning objective\n\t- Explanation: LOGICOL is an approach that builds on inbatch supervised contrastive learning\n\nQUESTION:\n\nWhat is LOGICOL?\n\n",
+    "potential_terms": [
+        {
+            "term": "LOGICOL",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "LOGICOL": [
+            {
+                "evidence": "compared to random batching for LOGICOL",
+                "explanation": "LOGICOL is the subject of the batching strategy comparison"
+            },
+            {
+                "evidence": "LOGICOL framework",
+                "explanation": "LOGICOL is a framework used for retrieval tasks"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning framework",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework"
+            },
+            {
+                "evidence": "LOGICOL: Logically-Informed Contrastive Learning for Set-based Dense Retrieval",
+                "explanation": "LOGICOL stands for Logically-Informed Contrastive Learning for Set-based Dense Retrieval"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning objective for dense retrievers",
+                "explanation": "LOGICOL is a learning objective for dense retrievers that incorporates logical constraints"
+            },
+            {
+                "evidence": "we propose LOGICOL, a logically-informed contrastive learning framework",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework"
+            },
+            {
+                "evidence": "LOGICOL, a logically-informed contrastive learning framework for retrieval with queries containing logical connectives",
+                "explanation": "LOGICOL is a logically-informed contrastive learning framework for retrieval"
+            },
+            {
+                "evidence": "models trained with LOGICOL (\u00a73) show cleaner separation in the query embedding representations",
+                "explanation": "LOGICOL is a method or approach used to train models, likely related to logical reasoning or retrieval tasks"
+            },
+            {
+                "evidence": "the components of the LOGICOL learning objective",
+                "explanation": "LOGICOL is a learning objective"
+            },
+            {
+                "evidence": "Our LOGICOL approach builds on top of inbatch supervised contrastive learning",
+                "explanation": "LOGICOL is an approach that builds on inbatch supervised contrastive learning"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.3235294117647059,
+            "recall": 0.7333333333333333,
+            "fmeasure": 0.4489795918367347
+        },
+        "rouge2": {
+            "precision": 0.24242424242424243,
+            "recall": 0.5714285714285714,
+            "fmeasure": 0.3404255319148936
+        },
+        "rougeL": {
+            "precision": 0.3235294117647059,
+            "recall": 0.7333333333333333,
+            "fmeasure": 0.4489795918367347
+        },
+        "rougeLsum": {
+            "precision": 0.3235294117647059,
+            "recall": 0.7333333333333333,
+            "fmeasure": 0.4489795918367347
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.4285714285714286,
+            "precision": 0.3103448275862069,
+            "recall": 0.6923076923076923
+        }
+    },
+    "predict": "LOGICOL is a logically-informed contrastive learning framework used for retrieval tasks, specifically a learning objective for dense retrievers that incorporates logical constraints, standing for Logically-Informed Contrastive Learning for Set-based Dense Retrieval.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "explanation",
+    "is_context": false,
+    "is_rerank": false
+}

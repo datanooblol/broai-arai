@@ -1,0 +1,101 @@
+{
+    "question": "What does RARE stand for?",
+    "answer": "Retrieval-Aware Robustness Evaluation",
+    "type": "acronym",
+    "source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems",
+    "experiment_id": "d977e771-2a52-4c7f-9714-93b1e9e596a9",
+    "experiment_set": "e5199eae-1785-4b94-bf7a-25b143445540",
+    "experiment_storage": "./experiments/seventh_evaluations/d977e771-2a52-4c7f-9714-93b1e9e596a9.json",
+    "document_id": "cc67a677-1a97-4b0d-9812-b62a5c8749c2",
+    "document_source": "RARE Retrieval-Aware Robustness Evaluation for Retrieval-Augmented Generation Systems.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: RARE\n\t- Evidence found: Figure 1: Illustration for the RARE framework\n\t- Evidence found: RARE-Get: a novel dynamic synthesis pipeline that automatically constructs time-sensitive evaluation data\n\t- Evidence found: RARE-Set: a large-scale benchmark comprising over 400 specialized documents and 48,322 queries\n\t- Evidence found: RARE (Retrieval-Aware Robustness Evaluation)\n\t- Evidence found: RetrievalAware Robustness Evaluation (RARE)\n\t- Evidence found: knowledge-graph-driven synthesis pipeline (RARE-Get)\n\t- Evidence found: retrieval-conditioned robustness metrics (RARE-Met)\n\t- Evidence found: dataset (RARE-Set) spanning 400 expert-level time-sensitive finance, economics, and policy documents and 48,322 questions\n\t- Evidence found: R etrievalA ware R obustness E valuation ( RARE ) framework\n\t- Evidence found: RARE-Met: a comprehensive robustness evaluation metric for measuring RAG system performance under perturbations\n\nQUESTION:\n\nWhat does RARE stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "RARE",
+            "confidence": 0.8
+        }
+    ],
+    "detailed_terms": {
+        "RARE": [
+            {
+                "evidence": "Figure 1: Illustration for the RARE framework",
+                "explanation": "RARE is a framework, as illustrated in Figure 1"
+            },
+            {
+                "evidence": "RARE-Get: a novel dynamic synthesis pipeline that automatically constructs time-sensitive evaluation data",
+                "explanation": "RARE-Get is a dynamic synthesis pipeline for constructing time-sensitive evaluation data"
+            },
+            {
+                "evidence": "RARE-Set: a large-scale benchmark comprising over 400 specialized documents and 48,322 queries",
+                "explanation": "RARE-Set is a large-scale benchmark for evaluating RAG systems"
+            },
+            {
+                "evidence": "RARE (Retrieval-Aware Robustness Evaluation)",
+                "explanation": "RARE stands for Retrieval-Aware Robustness Evaluation"
+            },
+            {
+                "evidence": "RetrievalAware Robustness Evaluation (RARE)",
+                "explanation": "RARE stands for RetrievalAware Robustness Evaluation"
+            },
+            {
+                "evidence": "knowledge-graph-driven synthesis pipeline (RARE-Get)",
+                "explanation": "RARE-Get is a knowledge-graph-driven synthesis pipeline"
+            },
+            {
+                "evidence": "retrieval-conditioned robustness metrics (RARE-Met)",
+                "explanation": "RARE-Met refers to retrieval-conditioned robustness metrics"
+            },
+            {
+                "evidence": "dataset (RARE-Set) spanning 400 expert-level time-sensitive finance, economics, and policy documents and 48,322 questions",
+                "explanation": "RARE-Set is a dataset containing finance, economics, and policy documents and questions"
+            },
+            {
+                "evidence": "R etrievalA ware R obustness E valuation ( RARE ) framework",
+                "explanation": "RARE stands for RetrievalAware Robustness Evaluation"
+            },
+            {
+                "evidence": "RARE-Met: a comprehensive robustness evaluation metric for measuring RAG system performance under perturbations",
+                "explanation": "RARE-Met is a comprehensive robustness evaluation metric for RAG systems"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rouge2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeLsum": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "hotpot": {
+            "em": 1.0,
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+        }
+    },
+    "predict": "Retrieval-Aware Robustness Evaluation",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

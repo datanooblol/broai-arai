@@ -1,0 +1,97 @@
+{
+    "question": "What does DiscoVLA stand for?",
+    "answer": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "type": "acronym",
+    "source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval",
+    "experiment_id": "74c940cd-021b-4425-98e8-69f1f4ffdc21",
+    "experiment_set": "91b45d54-214e-4eb2-93bc-3c1418bce101",
+    "experiment_storage": "./experiments/seventh_evaluations/74c940cd-021b-4425-98e8-69f1f4ffdc21.json",
+    "document_id": "2e5f6f17-2156-45a7-8ba2-c29db9de3b2a",
+    "document_source": "DiscoVLA Discrepancy Reduction in Vision, Language, and Alignment for Parameter-Efficient Video-Text Retrieval.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: DiscoVLA\n\t- Evidence found: enhance DiscoVLA's ability to learn robust image-level alignment\n\t- Evidence found: we propose DiscoVLA\n\t- Evidence found: our proposed DiscoVLA\n\t- Evidence found: DiscoVLA achieves improvements, our proposed DiscoVLA addresses these discrepancies\n\t- Evidence found: our full DiscoVLA improves 9.8 %R@sumint2v and 9.5 %R@sum in v2t over LoRA\n\t- Evidence found: DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment\n\t- Evidence found: Disc repancy Reducti o N in V ision, L anguage, and A lignment ( DiscoVLA )\n\t- Evidence found: DiscoVLA , a novel parameter-efficient method for videotext retrieval\n\t- Evidence found: DiscoVLA , a novel parameter-efficient method for videotext retrieval\n\nQUESTION:\n\nWhat does DiscoVLA stand for?\n\n",
+    "potential_terms": [
+        {
+            "term": "DiscoVLA",
+            "confidence": 0.9
+        }
+    ],
+    "detailed_terms": {
+        "DiscoVLA": [
+            {
+                "evidence": "enhance DiscoVLA's ability to learn robust image-level alignment",
+                "explanation": "DiscoVLA is a technical term related to learning robust image-level alignment"
+            },
+            {
+                "evidence": "we propose DiscoVLA",
+                "explanation": "DiscoVLA is a proposed method to address discrepancies in parameter-efficient transfer"
+            },
+            {
+                "evidence": "our proposed DiscoVLA",
+                "explanation": "DiscoVLA is a proposed system or model being discussed"
+            },
+            {
+                "evidence": "DiscoVLA achieves improvements, our proposed DiscoVLA addresses these discrepancies",
+                "explanation": "DiscoVLA is a proposed method that addresses discrepancies across vision, language, and alignment"
+            },
+            {
+                "evidence": "our full DiscoVLA improves 9.8 %R@sumint2v and 9.5 %R@sum in v2t over LoRA",
+                "explanation": "DiscoVLA is a full method that improves performance over LoRA"
+            },
+            {
+                "evidence": "DiscoVLA: Discrepancy Reduction in Vision, Language, and Alignment",
+                "explanation": "DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment"
+            },
+            {
+                "evidence": "Disc repancy Reducti o N in V ision, L anguage, and A lignment ( DiscoVLA )",
+                "explanation": "DiscoVLA stands for Discrepancy Reduction in Vision, Language, and Alignment"
+            },
+            {
+                "evidence": "DiscoVLA , a novel parameter-efficient method for videotext retrieval",
+                "explanation": "DiscoVLA is a method for video-text retrieval that reduces discrepancies in vision, language, and alignment"
+            },
+            {
+                "evidence": "DiscoVLA , a novel parameter-efficient method for videotext retrieval",
+                "explanation": "DiscoVLA stands for Disc repancy Reducti o n in V ision, L anguage, and A lignment"
+            }
+        ]
+    },
+    "contexts": [],
+    "evaluation": {
+        "rouge1": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rouge2": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeL": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "rougeLsum": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "fmeasure": 1.0
+        },
+        "hotpot": {
+            "em": 1.0,
+            "f1": 1.0,
+            "precision": 1.0,
+            "recall": 1.0
+        }
+    },
+    "predict": "Discrepancy Reduction in Vision, Language, and Alignment",
+    "chat_model": "us.meta.llama4-scout-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "evidence",
+    "is_context": false,
+    "is_rerank": false
+}

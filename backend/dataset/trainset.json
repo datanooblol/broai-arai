@@ -20,7 +20,7 @@
     {
         "question": "What does SCM stand for?",
         "type": "acronym",
-        "answer": "TriMetric Slide Complexity Metric",
+        "answer": "Slide Complexity Metric",
         "metadata": {"source":"SlideCoder: Layout-aware RAG-enhanced Hierarchical Slide Generation from Design"}
     },
     {

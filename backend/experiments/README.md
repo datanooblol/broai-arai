@@ -6,3 +6,4 @@
 - forth_evaluations: terms=10 with filtering mechanism # fail
 - fifth_evaluations: terms=10 with filtering mechanism # success, term_extractor=marverick
 - sixth_evaluations: terms=10 with filtering mechanism # success, term_extractor=llama3.2:70B
+- seventh_evaluations: terms=10 with filtering mechaism, term_extractor=marverick

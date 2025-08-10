@@ -1,0 +1,103 @@
+{
+    "question": "What is PAKTON?",
+    "answer": "PAKTON is a multi-agent framework designed to analyze contract documents and provide explainable, legally grounded answers to user queries along with a comprehensive report.",
+    "type": "explanation",
+    "source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements",
+    "experiment_id": "3c48dc40-e0ce-4607-933d-82214903824d",
+    "experiment_set": "4abdfdcf-6b46-4276-9eb4-65cd6f3ff42f",
+    "experiment_storage": "./experiments/seventh_evaluations/3c48dc40-e0ce-4607-933d-82214903824d.json",
+    "document_id": "f9faaf19-f21d-4f1d-822a-41d81566e472",
+    "document_source": "PAKTON A Multi-Agent Framework for Question Answering in Long Legal Agreements.pdf",
+    "chat_system_prompt": "# Technical Definition Assistant\n\n## Task:\nProvide direct, concise answers to questions about technical terms and concepts.\n\n## Instructions:\n- Read the QUESTION carefully and understand what type of answer is needed\n- Use TERMS or CONTEXTS information when provided as your primary source\n- Answer directly without introductory phrases\n- Match your response style to the question intent\n\n## Response Guidelines:\n\n**For acronym questions** (asking what something \"stands for\"):\n- Provide just the full form\n\n**For definition questions** (asking what something \"is\"):\n- Start with the term name and provide a concise definition\n\n**For other technical questions**:\n- Provide the most direct, relevant answer based on the question intent\n- Keep responses factual and concise\n\n## Examples:\n\n**Acronym Questions:**\n- Q: \"What does API stand for?\" \u00e2\u2020\u2019 A: \"Application Programming Interface\"\n- Q: \"What does GPU stand for?\" \u00e2\u2020\u2019 A: \"Graphics Processing Unit\"\n- Q: \"What does NLP stand for?\" \u00e2\u2020\u2019 A: \"Natural Language Processing\"\n- Q: \"What does CNN stand for?\" \u00e2\u2020\u2019 A: \"Convolutional Neural Network\"\n- Q: \"What does REST stand for?\" \u00e2\u2020\u2019 A: \"Representational State Transfer\"\n\n**Definition Questions:**\n- Q: \"What is TensorFlow?\" \u00e2\u2020\u2019 A: \"TensorFlow is an open-source machine learning framework developed by Google for building and training neural networks.\"\n- Q: \"What is Docker?\" \u00e2\u2020\u2019 A: \"Docker is a containerization platform that allows developers to package applications and their dependencies into lightweight, portable containers.\"\n- Q: \"What is Kubernetes?\" \u00e2\u2020\u2019 A: \"Kubernetes is an open-source container orchestration system for automating deployment, scaling, and management of containerized applications.\"\n- Q: \"What is GraphQL?\" \u00e2\u2020\u2019 A: \"GraphQL is a query language and runtime for APIs that allows clients to request exactly the data they need.\"\n- Q: \"What is Redis?\" \u00e2\u2020\u2019 A: \"Redis is an in-memory data structure store used as a database, cache, and message broker.\"\n\n## Response Rules:\n- NO introductory phrases (\"Based on\", \"According to\", \"The provided information shows\", etc.)\n- NO conversational elements or hedging language\n- Start answers immediately with the core information\n- Be concise but complete\n- If no definition available, respond: \"Definition not available\"\n",
+    "chat_message_prompt": "TERMS:\n\nTERM found: PAKTON\n\t- Evidence found: PAKTON is used in a table comparing various values with Possible Explanation: PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique\n\t- Evidence found: FS+Spans PAKTON is used in a table comparing various values with Possible Explanation: FS+Spans PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique\n\t- Evidence found: FS+Spans PAKTON with Possible Explanation: PAKTON is a term used in conjunction with FS+Spans, possibly a technique or method\n\t- Evidence found: We evaluate PAKTON on ContractNLI with Possible Explanation: PAKTON is a model or framework being evaluated\n\t- Evidence found: PAKTON is used in a table row comparing different values with Possible Explanation: PAKTON appears to be a term related to a specific methodology or model used, possibly in machine learning or a similar field\n\t- Evidence found: PAKTON is listed as a method or model with Possible Explanation: PAKTON is likely a model or method used in the context of the table\n\t- Evidence found: Configuration 1 serves as the primary setup for PAKTON with Possible Explanation: PAKTON is a system or setup being evaluated\n\t- Evidence found: Comparative analysis of PAKTON vs. GPT4o based on the G-EVAL framework with Possible Explanation: PAKTON is a method being compared to GPT4o\n\t- Evidence found: using PAKTON's Researcher and Archivist components with Possible Explanation: PAKTON is a system with Researcher and Archivist components\n\nCONTEXTS:\n\n<|start_context|>Abstract\n\nContract review is a complex and timeintensive task that typically demands specialized legal expertise, rendering it largely inaccessible to non-experts. Moreover, legal interpretation is rarely straightforward-ambiguity is pervasive, and judgments often hinge on subjective assessments. Compounding these challenges, contracts are usually confidential, restricting their use with proprietary models and necessitating reliance on open-source alternatives. To address these challenges, we introduce PAKTON: a fully open-source, endto-end, multi-agent framework with plug-andplay capabilities. PAKTON is designed to handle the complexities of contract analysis through collaborative agent workflows and a novel retrieval-augmented generation (RAG) component, enabling automated legal document review that is more accessible, adaptable, and privacy-preserving. Experiments demonstrate that PAKTON outperforms both generalpurpose and pretrained models in predictive accuracy, retrieval performance, explainability, completeness, and grounded justifications as evaluated through a human study and validated with automated metrics. 1<|end_context|>\n<|start_context|>5 Conclusion\n\nWe propose PAKTON , a multi-agent framework for contract analysis that promotes explainability, grounded reasoning, and modular retrieval. By coordinating three specialized agents, PAKTON generates transparent, well-justified, and query-specific legal reports. The system is modelagnostic-compatible with openand closedsource LLMs-requiring no fine-tuning. Automated and human evaluations show prove PAKTON's superiority against both general-purpose and fine-tuned models, not only in accuracy but also in critical dimensions such as explainability, completeness, and evidentiary support-core requirements for legal applications characterized by ambiguity and high-stakes interpretation.<|end_context|>\n<|start_context|>|\n|            |                 | 0.7966        | 0.6574        | 0.6664 0.4636               | 0.6950               |\n|            | PAKTON          |               | 0.7972        | 0.7964 0.7592               | 0.8068               |\n\nby, or not addressed in (neutral with respect to) the associated contract. Given the substantial length of the contracts, the dataset also provides annotated spans that indicate the specific portions of text necessary for making the classification decision.\n\nWe evaluate PAKTON on ContractNLI by comparing its performance against several baselines, including models specifically pretrained on legal corpora (e.g., Saul(Colombo et al., 2024b)) and models employing different prompting techniques (Table 1). The evaluation metrics presented include overall accuracy and the weighted F1-score (F1[W]), alongside the individual F1-scores for the entailment, contradiction, and neutral classes.\n\nThe prompting approaches examined include zero-shot (ZS), few-shot (FS)-where entire contractual documents are used as exemplars-and an alternative few-shot setting (FS-Spans), in which only the relevant spans influencing classification are provided. Refer to App. C for a detailed description of the experimental setup. The results indicate a clear superiority of PAKTON across all evaluated methods, notably outperforming even domain-specific fine-tuned models.\n\nResults. Firstly, PAKTON consistently outperforms the baseline methods across all models. Comparing the results of Mistral and Mixtral with Saul, we observe that PAKTON yields better performance even compared to fine-tuning on related legal corpora. Notably, Mistral 7B with PAKTON surpasses Saul 54B-a model derived from the larger Mixtral 54B and fine-tuned on legal data. Furthermore, Mistral 7B with PAKTON even outperforms GPT-4o in a FS setting.\n\nFurthermore, a notable observation emerges from comparing the performance across different core language models utilizing our framework. The variation in performance among models integrated with PAKTON was minimal, highlighting the robustness of the proposed framework. For example, the F1[W] for Llama 3.1 70B score with PAKTON is 79.03%, while for Gemma 3 27B is 82.83%, yielding a modest difference of only 3.8 percentage points. In contrast, the performance gap between these models under the ZS prompting scenario is significantly larger (22.83%), clearly demonstrating that Gemma 3 27B substantially outperforms Llama 3.1 70B in the baseline ZS setting. This considerable reduction in performance disparity indicates that PAKTON's architecture effectively mitigates the inherent variability among underlying LLMs, ensuring consistently high<|end_context|>\n<|start_context|>3 PAKTON Framework\n\nPAKTON aims to analyze user-provided contracts and generate query responses grounded in the contract's content while integrating pertinent external knowledge. A key design goal is to ensure transparent and traceable reasoning by referencing evidence spans from the contract and articulating the rationale behind each conclusion. The final output is delivered as a structured legal report.\n\nTo operationalize this functionality, the system employs a tri-agent architecture comprising the Archivist, Interrogator, and Researcher, each fulfilling a distinct role in the retrieval, reasoning, and synthesis pipeline. Each agent is implemented as a reasoning loop following the ReAct paradigm (Yao et al., 2022), which combines reasoning and action steps via a backbone LLM. This design enables agents to reason over their current state, generate tool-specific actions and iteratively refine their decisions based on intermediate outcomes. An overview of the framework is illustrated in Fig. 2. Further details are provided in App. A.<|end_context|>\n<|start_context|>## PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements<|end_context|>\n\nQUESTION:\n\nWhat is PAKTON?\n\n",
+    "potential_terms": [
+        {
+            "term": "PAKTON",
+            "confidence": 0.0
+        }
+    ],
+    "detailed_terms": {
+        "PAKTON": [
+            {
+                "evidence": "PAKTON is used in a table comparing various values",
+                "explanation": "PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique"
+            },
+            {
+                "evidence": "FS+Spans PAKTON is used in a table comparing various values",
+                "explanation": "FS+Spans PAKTON is a term used in the context of a comparison table, likely related to a specific methodology or technique"
+            },
+            {
+                "evidence": "FS+Spans PAKTON",
+                "explanation": "PAKTON is a term used in conjunction with FS+Spans, possibly a technique or method"
+            },
+            {
+                "evidence": "We evaluate PAKTON on ContractNLI",
+                "explanation": "PAKTON is a model or framework being evaluated"
+            },
+            {
+                "evidence": "PAKTON is used in a table row comparing different values",
+                "explanation": "PAKTON appears to be a term related to a specific methodology or model used, possibly in machine learning or a similar field"
+            },
+            {
+                "evidence": "PAKTON is listed as a method or model",
+                "explanation": "PAKTON is likely a model or method used in the context of the table"
+            },
+            {
+                "evidence": "Configuration 1 serves as the primary setup for PAKTON",
+                "explanation": "PAKTON is a system or setup being evaluated"
+            },
+            {
+                "evidence": "Comparative analysis of PAKTON vs. GPT4o based on the G-EVAL framework",
+                "explanation": "PAKTON is a method being compared to GPT4o"
+            },
+            {
+                "evidence": "using PAKTON's Researcher and Archivist components",
+                "explanation": "PAKTON is a system with Researcher and Archivist components"
+            }
+        ]
+    },
+    "contexts": [
+        "Abstract\n\nContract review is a complex and timeintensive task that typically demands specialized legal expertise, rendering it largely inaccessible to non-experts. Moreover, legal interpretation is rarely straightforward-ambiguity is pervasive, and judgments often hinge on subjective assessments. Compounding these challenges, contracts are usually confidential, restricting their use with proprietary models and necessitating reliance on open-source alternatives. To address these challenges, we introduce PAKTON: a fully open-source, endto-end, multi-agent framework with plug-andplay capabilities. PAKTON is designed to handle the complexities of contract analysis through collaborative agent workflows and a novel retrieval-augmented generation (RAG) component, enabling automated legal document review that is more accessible, adaptable, and privacy-preserving. Experiments demonstrate that PAKTON outperforms both generalpurpose and pretrained models in predictive accuracy, retrieval performance, explainability, completeness, and grounded justifications as evaluated through a human study and validated with automated metrics. 1\n",
+        "5 Conclusion\n\nWe propose PAKTON , a multi-agent framework for contract analysis that promotes explainability, grounded reasoning, and modular retrieval. By coordinating three specialized agents, PAKTON generates transparent, well-justified, and query-specific legal reports. The system is modelagnostic-compatible with openand closedsource LLMs-requiring no fine-tuning. Automated and human evaluations show prove PAKTON's superiority against both general-purpose and fine-tuned models, not only in accuracy but also in critical dimensions such as explainability, completeness, and evidentiary support-core requirements for legal applications characterized by ambiguity and high-stakes interpretation.\n",
+        "     |\n|            |                 | 0.7966        | 0.6574        | 0.6664 0.4636               | 0.6950               |\n|            | PAKTON          |               | 0.7972        | 0.7964 0.7592               | 0.8068               |\n\nby, or not addressed in (neutral with respect to) the associated contract. Given the substantial length of the contracts, the dataset also provides annotated spans that indicate the specific portions of text necessary for making the classification decision.\n\nWe evaluate PAKTON on ContractNLI by comparing its performance against several baselines, including models specifically pretrained on legal corpora (e.g., Saul(Colombo et al., 2024b)) and models employing different prompting techniques (Table 1). The evaluation metrics presented include overall accuracy and the weighted F1-score (F1[W]), alongside the individual F1-scores for the entailment, contradiction, and neutral classes.\n\nThe prompting approaches examined include zero-shot (ZS), few-shot (FS)-where entire contractual documents are used as exemplars-and an alternative few-shot setting (FS-Spans), in which only the relevant spans influencing classification are provided. Refer to App. C for a detailed description of the experimental setup. The results indicate a clear superiority of PAKTON across all evaluated methods, notably outperforming even domain-specific fine-tuned models.\n\nResults. Firstly, PAKTON consistently outperforms the baseline methods across all models. Comparing the results of Mistral and Mixtral with Saul, we observe that PAKTON yields better performance even compared to fine-tuning on related legal corpora. Notably, Mistral 7B with PAKTON surpasses Saul 54B-a model derived from the larger Mixtral 54B and fine-tuned on legal data. Furthermore, Mistral 7B with PAKTON even outperforms GPT-4o in a FS setting.\n\nFurthermore, a notable observation emerges from comparing the performance across different core language models utilizing our framework. The variation in performance among models integrated with PAKTON was minimal, highlighting the robustness of the proposed framework. For example, the F1[W] for Llama 3.1 70B score with PAKTON is 79.03%, while for Gemma 3 27B is 82.83%, yielding a modest difference of only 3.8 percentage points. In contrast, the performance gap between these models under the ZS prompting scenario is significantly larger (22.83%), clearly demonstrating that Gemma 3 27B substantially outperforms Llama 3.1 70B in the baseline ZS setting. This considerable reduction in performance disparity indicates that PAKTON's architecture effectively mitigates the inherent variability among underlying LLMs, ensuring consistently high",
+        "3 PAKTON Framework\n\nPAKTON aims to analyze user-provided contracts and generate query responses grounded in the contract's content while integrating pertinent external knowledge. A key design goal is to ensure transparent and traceable reasoning by referencing evidence spans from the contract and articulating the rationale behind each conclusion. The final output is delivered as a structured legal report.\n\nTo operationalize this functionality, the system employs a tri-agent architecture comprising the Archivist, Interrogator, and Researcher, each fulfilling a distinct role in the retrieval, reasoning, and synthesis pipeline. Each agent is implemented as a reasoning loop following the ReAct paradigm (Yao et al., 2022), which combines reasoning and action steps via a backbone LLM. This design enables agents to reason over their current state, generate tool-specific actions and iteratively refine their decisions based on intermediate outcomes. An overview of the framework is illustrated in Fig. 2. Further details are provided in App. A.\n",
+        "## PAKTON: A Multi-Agent Framework for Question Answering in Long Legal Agreements\n"
+    ],
+    "evaluation": {
+        "rouge1": {
+            "precision": 0.2807017543859649,
+            "recall": 0.64,
+            "fmeasure": 0.39024390243902435
+        },
+        "rouge2": {
+            "precision": 0.08928571428571429,
+            "recall": 0.20833333333333334,
+            "fmeasure": 0.125
+        },
+        "rougeL": {
+            "precision": 0.22807017543859648,
+            "recall": 0.52,
+            "fmeasure": 0.31707317073170727
+        },
+        "rougeLsum": {
+            "precision": 0.22807017543859648,
+            "recall": 0.52,
+            "fmeasure": 0.31707317073170727
+        },
+        "hotpot": {
+            "em": 0.0,
+            "f1": 0.27692307692307694,
+            "precision": 0.20930232558139536,
+            "recall": 0.4090909090909091
+        }
+    },
+    "predict": "PAKTON is a fully open-source, end-to-end, multi-agent framework designed for contract analysis, featuring plug-and-play capabilities and a novel retrieval-augmented generation (RAG) component to enable automated legal document review. It utilizes a tri-agent architecture comprising the Archivist, Interrogator, and Researcher to generate transparent, well-justified, and query-specific legal reports.",
+    "chat_model": "us.meta.llama4-maverick-17b-instruct-v1:0",
+    "chat_system_prompt_path": "./package/flows/online/prompts/v2/chat.md",
+    "term_detector_model": "us.meta.llama3-2-11b-instruct-v1:0",
+    "term_detector_system_prompt_path": "./package/flows/online/prompts/term_detector.md",
+    "embed_method": "raw",
+    "is_term": "both",
+    "is_context": true,
+    "is_rerank": false
+}
